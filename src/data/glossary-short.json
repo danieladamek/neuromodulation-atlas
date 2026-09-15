@@ -1,0 +1,2102 @@
+[
+ {
+  "id": "neuromodulation",
+  "term": "Neuromodulation",
+  "kind": "science",
+  "short": "Used in three senses: a delivered drive, the physiological change it causes, and the endogenous transmitter class. This volume means the first two.",
+  "concept": null
+ },
+ {
+  "id": "neuromodulator",
+  "term": "Neuromodulator",
+  "kind": "science",
+  "short": "An endogenous substance that changes neurons' intrinsic firing properties and effective synaptic strengths, and so reconfigures a circuit.",
+  "concept": null
+ },
+ {
+  "id": "neurostimulation",
+  "term": "Neurostimulation",
+  "kind": "science",
+  "short": "The delivered electrical or magnetic act, as distinct from the modulation it aims to produce; the two words are used interchangeably in the source documents.",
+  "concept": null
+ },
+ {
+  "id": "drive",
+  "term": "Drive",
+  "kind": "science",
+  "short": "The first link of the volume's chain: what is delivered to the organism, whether device current, field, pressure, light or molecule.",
+  "concept": null
+ },
+ {
+  "id": "drive-to-outcome-chain",
+  "term": "Drive → outcome chain",
+  "kind": "science",
+  "short": "The volume's organising sequence: drive → coupling → cellular → subcellular/molecular → circuit → system → outcome.",
+  "concept": null
+ },
+ {
+  "id": "levels-of-organisation",
+  "term": "Levels of organisation",
+  "kind": "science",
+  "short": "A commitment that an explanation must link physical scales rather than stay at one; each link names a scale and a kind of entity.",
+  "concept": null
+ },
+ {
+  "id": "coupling",
+  "term": "Coupling",
+  "kind": "science",
+  "short": "The physical or chemical event by which a delivered drive first changes excitable tissue — the join between drive and cellular response.",
+  "concept": null
+ },
+ {
+  "id": "nominal-stimulus",
+  "term": "Nominal stimulus",
+  "kind": "science",
+  "short": "What the experimenter set: device parameters, or administered amount and route. Distinguished from what actually acted on tissue.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "effective-stimulus",
+  "term": "Effective stimulus",
+  "kind": "science",
+  "short": "What actually acted on the tissue: the field at the neuron, the pressure at the transducing cell, the drug concentration at the receptor.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "dose",
+  "term": "Dose",
+  "kind": "methods",
+  "short": "Used two ways: the device-side parameter set an operator controls, and the field or exposure delivered in tissue. This volume means the first.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "exposure",
+  "term": "Exposure",
+  "kind": "methods",
+  "short": "The in-tissue quantity a drive produces: field at the neuron, in situ acoustic value, or concentration at the receptor.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "dose-parameter-set",
+  "term": "Dose parameter set",
+  "kind": "methods",
+  "short": "The named list of parameters, each with unit and provenance, that constitutes a dose for one drive class; a missing value is recorded as missing.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "three-pillars",
+  "term": "Three pillars",
+  "kind": "methods",
+  "short": "A drug programme must show exposure at the target site, target binding, and expression of pharmacological activity — separately.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "target-engagement",
+  "term": "Target engagement",
+  "kind": "methods",
+  "short": "Evidence that the drive reached and changed its intended target, shown before any claim that it changed an outcome.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "activating-function",
+  "term": "Activating function",
+  "kind": "science",
+  "short": "The driving term for extracellular excitation: the second spatial derivative of extracellular potential along a fibre.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "cable-model",
+  "term": "Cable model",
+  "kind": "methods",
+  "short": "A neuron represented as a chain of electrical compartments, each with its own membrane equation, coupled by axial resistance.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "morphologically-realistic-model",
+  "term": "Morphologically realistic neuron model",
+  "kind": "methods",
+  "short": "A cable model built on a reconstructed three-dimensional dendritic and axonal geometry, used to predict which element a field activates first.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "node-of-ranvier",
+  "term": "Node of Ranvier",
+  "kind": "science",
+  "short": "The periodic unmyelinated gap in a myelinated axon where sodium channels cluster and where a cable model places its compartments.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "myelinated-axon",
+  "term": "Myelinated axon",
+  "kind": "science",
+  "short": "An axon insulated by myelin; in the stimulation literature the element with the lowest threshold to an applied extracellular current.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "current-distance-relation",
+  "term": "Current–distance relation",
+  "kind": "methods",
+  "short": "The threshold current needed to excite an element as a function of its distance from the electrode.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "chronaxie",
+  "term": "Chronaxie",
+  "kind": "science",
+  "short": "The pulse width at which threshold is twice the value reached with an infinitely long pulse; used to infer which element is being excited.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "recruitment-order",
+  "term": "Recruitment order",
+  "kind": "science",
+  "short": "The sequence in which elements are activated as intensity rises; for applied fields it inverts the physiological order, large fibres first.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "cathodal-stimulation",
+  "term": "Cathodal stimulation",
+  "kind": "methods",
+  "short": "Current delivered with the active electrode as cathode; for myelinated fibres usually the lower-threshold polarity, and at the scalp the excitability-lowering one.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "anodal-stimulation",
+  "term": "Anodal stimulation",
+  "kind": "methods",
+  "short": "Current delivered with the active electrode as anode; at the scalp the polarity conventionally read as raising motor cortical excitability.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "polarity",
+  "term": "Polarity",
+  "kind": "notation",
+  "short": "Which electrode is anode and which cathode, or the sign of a monophasic phase; a dose parameter that can set the sign of the effect.",
+  "concept": null
+ },
+ {
+  "id": "charge-per-phase",
+  "term": "Charge per phase",
+  "kind": "science",
+  "short": "The charge delivered in one phase of a stimulus pulse; with charge density, one of the two quantities classical safety limits are written in.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "charge-density",
+  "term": "Charge density",
+  "kind": "science",
+  "short": "Charge delivered per unit electrode area per phase; with charge per phase, the quantity classical implant safety limits are written in.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "shannon-equation",
+  "term": "Shannon equation",
+  "kind": "methods",
+  "short": "A log-linear boundary between safe and damaging combinations of charge per phase and charge density, with a parameter k; widely used as a macroelectrode design rule.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "tissue-damage-threshold",
+  "term": "Tissue damage threshold",
+  "kind": "science",
+  "short": "The exposure boundary above which stimulation injures tissue; for electrodes defined jointly by charge and charge density, and contested in scope.",
+  "concept": null
+ },
+ {
+  "id": "electrode-tissue-interface",
+  "term": "Electrode–tissue interface",
+  "kind": "science",
+  "short": "The boundary where current crosses from metal to tissue, by Faradaic or non-Faradaic mechanisms; it sets charge-balance and material limits.",
+  "concept": null
+ },
+ {
+  "id": "faradaic-charge-transfer",
+  "term": "Faradaic charge transfer",
+  "kind": "science",
+  "short": "Charge crossing the electrode interface by electrochemical reaction rather than by capacitive charging of the double layer.",
+  "concept": null
+ },
+ {
+  "id": "charge-balanced-waveform",
+  "term": "Charge-balanced waveform",
+  "kind": "methods",
+  "short": "A stimulus whose phases deliver equal and opposite charge, so no net charge accumulates at the electrode.",
+  "concept": null
+ },
+ {
+  "id": "conduction-block",
+  "term": "Conduction block",
+  "kind": "science",
+  "short": "Suppression of action-potential propagation by an applied current, rather than excitation; achievable with strong cathodal or kilohertz-frequency drive.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "sodium-channel-inactivation",
+  "term": "Sodium channel inactivation",
+  "kind": "science",
+  "short": "The non-conducting state voltage-gated sodium channels enter after or without opening; the mechanism modelled for kilohertz conduction block.",
+  "concept": "cable-theory-and-activating-function"
+ },
+ {
+  "id": "uniform-field",
+  "term": "Uniform field",
+  "kind": "methods",
+  "short": "A field whose magnitude and direction are effectively constant across a single neuron, as transcranial methods produce.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "coupling-constant",
+  "term": "Polarisation coupling constant",
+  "kind": "science",
+  "short": "How much membrane polarisation a unit applied field produces; about 0.12 mV per mV/mm at the soma of rat CA1 pyramidal cells.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "somato-dendritic-axis",
+  "term": "Somato-dendritic axis",
+  "kind": "science",
+  "short": "The long axis running from a neuron's soma through its dendritic tree; the field component along it sets somatic polarisation.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "compartment-specific-polarisation",
+  "term": "Compartment-specific polarisation",
+  "kind": "science",
+  "short": "The opposite-sign polarisation of a neuron's ends in one field: the field that depolarises the soma hyperpolarises the distal dendrite.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "terminal-polarisation",
+  "term": "Terminal polarisation",
+  "kind": "science",
+  "short": "Polarisation concentrated where fibre geometry breaks — terminations, bends and gradient changes — which cable analysis predicts dominates in a uniform field.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "modulation-versus-initiation",
+  "term": "Modulation versus initiation",
+  "kind": "science",
+  "short": "Whether a field changed the firing of an already-active cell or excited a silent one; the two have very different thresholds.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "endogenous-field",
+  "term": "Endogenous field",
+  "kind": "science",
+  "short": "The electric field a brain generates during its own activity; about 2–4 mV/mm in ferret cortex, used as the yardstick for applied fields.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "network-resonance",
+  "term": "Network resonance",
+  "kind": "science",
+  "short": "Amplification of a weak periodic drive when its frequency matches a network's intrinsic rhythm.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "entrainment",
+  "term": "Entrainment",
+  "kind": "science",
+  "short": "Used two ways: a driven evoked response following the stimulus, and engagement of an endogenous rhythm. The 40 Hz and tACS disputes turn on which is scored.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "phase-locking",
+  "term": "Phase locking",
+  "kind": "statistics",
+  "short": "A consistent relationship between spike or oscillation phase and a reference rhythm; the usual measure of entrainment without a rate change.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "volts-per-metre",
+  "term": "V/m",
+  "kind": "notation",
+  "short": "Volts per metre, the SI unit of electric field strength; 1 V/m equals 1 mV/mm.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "millivolts-per-millimetre",
+  "term": "mV/mm",
+  "kind": "notation",
+  "short": "Millivolts per millimetre, the field unit used in slice and intracranial work; numerically equal to V/m.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "e-field",
+  "term": "Electric field (E-field)",
+  "kind": "science",
+  "short": "The field injected (tES) or induced (TMS) in tissue; the quantity through which both are assumed to act, and the object of dosimetry.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "dosimetry",
+  "term": "Dosimetry",
+  "kind": "methods",
+  "short": "Estimating the exposure a drive produces in tissue — modelled fields for electromagnetic drives, in situ estimates for ultrasound, fluence at depth for light.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "finite-element-head-model",
+  "term": "Finite-element head model",
+  "kind": "methods",
+  "short": "A numerical model of a person's head from MRI, used to estimate the field a montage or coil produces in their brain.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "simnibs",
+  "term": "SimNIBS",
+  "kind": "methods",
+  "short": "An open pipeline for simulating transcranial magnetic and electric stimulation fields from individual MRI.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "tissue-conductivity",
+  "term": "Tissue conductivity",
+  "kind": "science",
+  "short": "The electrical conductivity assigned to each modelled tissue; calibrating it improved agreement with intracranial field measurements.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "current-shunting",
+  "term": "Current shunting",
+  "kind": "science",
+  "short": "Loss of applied current through scalp and skull before it reaches the brain; about 75% of scalp-applied current in rodent and human measurements.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "e-field-outcome-measure",
+  "term": "E-field outcome measure",
+  "kind": "statistics",
+  "short": "The rule for reducing a modelled field to a number; a review of 202 studies found 308 different ones, poorly correlated with each other.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "motor-threshold",
+  "term": "Motor threshold",
+  "kind": "methods",
+  "short": "The minimum TMS intensity that reliably elicits a motor response; the clinical norm for dosing, expressed as a percentage.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "depth-focality-tradeoff",
+  "term": "Depth–focality tradeoff",
+  "kind": "science",
+  "short": "The constraint that reaching deeper tissue with a non-invasive field means stimulating a larger volume.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "figure-eight-coil",
+  "term": "Figure-8 coil",
+  "kind": "methods",
+  "short": "A TMS coil of two adjacent windings whose fields sum under the centre, giving more focal stimulation than a circular coil.",
+  "concept": null
+ },
+ {
+  "id": "tms",
+  "term": "Transcranial magnetic stimulation (TMS)",
+  "kind": "methods",
+  "short": "A pulsed magnetic field applied outside the head that induces an electric field in cortex, acting mainly on superficial gyral axons.",
+  "concept": null
+ },
+ {
+  "id": "rtms",
+  "term": "Repetitive TMS (rTMS)",
+  "kind": "methods",
+  "short": "Trains of TMS pulses delivered to produce effects that outlast the stimulation; graded level A for depression and neuropathic pain.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "tes",
+  "term": "Transcranial electrical stimulation (tES)",
+  "kind": "methods",
+  "short": "Low-intensity current applied through scalp electrodes; the family covering tDCS, tACS, tRNS and related waveforms.",
+  "concept": null
+ },
+ {
+  "id": "tdcs",
+  "term": "Transcranial direct current stimulation (tDCS)",
+  "kind": "methods",
+  "short": "Sustained low-intensity direct current at the scalp; its after-effect is read as polarity-specific excitability change, and that reading is disputed.",
+  "concept": null
+ },
+ {
+  "id": "tacs",
+  "term": "Transcranial alternating current stimulation (tACS)",
+  "kind": "methods",
+  "short": "Sinusoidal current at the scalp, intended to entrain ongoing oscillations; its route in humans at 1–2 mA is disputed.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "trns",
+  "term": "Transcranial random noise stimulation (tRNS)",
+  "kind": "methods",
+  "short": "Scalp current with a noise waveform; in this volume it appears only inside a pooled tES safety envelope.",
+  "concept": null
+ },
+ {
+  "id": "temporal-interference",
+  "term": "Temporal interference (TI)",
+  "kind": "methods",
+  "short": "Two kilohertz carriers at slightly different frequencies whose overlap produces a low-frequency envelope, proposed as a way to reach deep targets non-invasively.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "amplitude-envelope",
+  "term": "Amplitude envelope",
+  "kind": "notation",
+  "short": "The slow outline traced by a fast carrier's amplitude; the proposed effective stimulus in temporal interference and the culprit in ultrasound's auditory confound.",
+  "concept": null
+ },
+ {
+  "id": "rectification",
+  "term": "Rectification",
+  "kind": "science",
+  "short": "Asymmetric conversion of an oscillating input into a net directional effect; the mechanism by which a membrane could follow a kilohertz envelope.",
+  "concept": null
+ },
+ {
+  "id": "theta-burst-stimulation",
+  "term": "Theta-burst stimulation (TBS)",
+  "kind": "methods",
+  "short": "Bursts of high-frequency TMS pulses repeated at a theta rhythm; 20–190 s changes motor cortical excitability, with direction set by the pattern.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "itbs",
+  "term": "Intermittent theta-burst stimulation (iTBS)",
+  "kind": "methods",
+  "short": "Theta-burst delivered in short trains separated by pauses; conventionally facilitatory, and the clinical form used in depression protocols.",
+  "concept": null
+ },
+ {
+  "id": "ctbs",
+  "term": "Continuous theta-burst stimulation (cTBS)",
+  "kind": "methods",
+  "short": "Theta-burst delivered as one uninterrupted train; conventionally suppressive of motor evoked potentials.",
+  "concept": null
+ },
+ {
+  "id": "itbs600",
+  "term": "iTBS600",
+  "kind": "notation",
+  "short": "The 600-pulse intermittent theta-burst protocol used clinically; applied to mouse organotypic slices it produced synaptic potentiation with spine remodelling.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "paired-associative-stimulation",
+  "term": "Paired associative stimulation (PAS)",
+  "kind": "methods",
+  "short": "Peripheral nerve stimulation paired with a TMS pulse at a fixed interval; the first human protocol written on a Hebbian timing rule.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "preconditioning",
+  "term": "Preconditioning",
+  "kind": "methods",
+  "short": "Applying one stimulation protocol before another so that the prior state sets the sign of the second protocol's effect.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "state-dependence",
+  "term": "State dependence",
+  "kind": "science",
+  "short": "The dependence of a drive's effect on the activation state of the targeted neurons at the moment of delivery.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "phase-triggered-stimulation",
+  "term": "Phase-triggered stimulation",
+  "kind": "methods",
+  "short": "Delivering stimulation at a chosen phase of an ongoing rhythm, using millisecond-latency real-time EEG.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "mu-rhythm",
+  "term": "Mu rhythm",
+  "kind": "science",
+  "short": "The 8–13 Hz sensorimotor oscillation whose phase indexes corticospinal excitability in phase-triggered TMS work.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "motor-evoked-potential",
+  "term": "Motor evoked potential (MEP)",
+  "kind": "methods",
+  "short": "The muscle response to a single stimulation pulse, recorded by EMG; the workhorse readout of human stimulation studies.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "i-wave",
+  "term": "I-wave",
+  "kind": "science",
+  "short": "Indirect, trans-synaptically generated descending corticospinal volleys, as opposed to the direct D-wave; their recruitment depends on current direction.",
+  "concept": null
+ },
+ {
+  "id": "tms-evoked-potential",
+  "term": "TMS-evoked potential (TEP)",
+  "kind": "methods",
+  "short": "The EEG response to a TMS pulse; how much of it is transcranial rather than sensory is disputed.",
+  "concept": null
+ },
+ {
+  "id": "tms-eeg",
+  "term": "TMS-EEG",
+  "kind": "methods",
+  "short": "Recording EEG during TMS to read cortical responses directly; governed by consensus recommendations on recording, artefact correction and interpretation.",
+  "concept": null
+ },
+ {
+  "id": "tus",
+  "term": "Transcranial ultrasound stimulation (TUS)",
+  "kind": "methods",
+  "short": "Focused, pulsed pressure waves delivered through the skull at intensities below ablation, intended to modulate neural activity focally and deeply.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "sonication",
+  "term": "Sonication",
+  "kind": "methods",
+  "short": "One episode of ultrasound exposure; its duration is a dose parameter that predicted the direction of human effects.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "duty-cycle",
+  "term": "Duty cycle",
+  "kind": "notation",
+  "short": "The fraction of time a pulsed stimulus is on; an acoustic dose parameter whose role in setting the direction of effect is disputed.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "pulse-width",
+  "term": "Pulse width",
+  "kind": "notation",
+  "short": "How long one stimulus phase lasts; with amplitude it sets charge per phase, and it selects which neural element is recruited.",
+  "concept": null
+ },
+ {
+  "id": "pulse-frequency",
+  "term": "Pulse frequency",
+  "kind": "notation",
+  "short": "How often pulses are delivered; in vagal stimulation it set burst timing rather than total activity, and in DBS it is the parameter clinical benefit requires.",
+  "concept": null
+ },
+ {
+  "id": "train",
+  "term": "Train",
+  "kind": "notation",
+  "short": "A grouped run of pulses; train duration and inter-train interval are dose parameters in their own right.",
+  "concept": null
+ },
+ {
+  "id": "free-field-parameters",
+  "term": "Free-field acoustic parameters",
+  "kind": "methods",
+  "short": "What a transducer emits into water, measured without the skull; one of the two exposure values every ultrasound study must report.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "in-situ-exposure",
+  "term": "In situ exposure",
+  "kind": "methods",
+  "short": "The estimated acoustic exposure in the brain after transmission through the skull; estimated rather than measured in human work.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "isppa",
+  "term": "ISPPA",
+  "kind": "notation",
+  "short": "Spatial-peak pulse-average acoustic intensity, in W/cm²; the headline ultrasound intensity figure, which alone did not predict direction of effect.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "watts-per-square-centimetre",
+  "term": "W/cm²",
+  "kind": "notation",
+  "short": "Watts per square centimetre, the unit of acoustic intensity; oocyte channel modulation was reported at 0.3–4.9 W/cm².",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "megapascal",
+  "term": "MPa",
+  "kind": "notation",
+  "short": "Megapascals, the unit of acoustic pressure; barrier opening in rats occurred at a mean peak pressure of 0.28 ± 0.05 MPa.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "mechanical-index",
+  "term": "Mechanical index (MI)",
+  "kind": "notation",
+  "short": "A dimensionless index of an acoustic field's capacity for mechanical bioeffects; consensus classes ultrasound at MI ≤ 1.9 as non-significant risk.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "cem43",
+  "term": "CEM43",
+  "kind": "notation",
+  "short": "Thermal dose expressed as the equivalent exposure time at 43 °C; the one transferable dose unit in the volume's thermal literature.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "thermal-dose",
+  "term": "Thermal dose",
+  "kind": "methods",
+  "short": "Exposure expressed as an equivalent heating history rather than as applied energy; the basis of both ultrasound safety criteria and ablation planning.",
+  "concept": null
+ },
+ {
+  "id": "thermal-account",
+  "term": "Thermal account of ultrasound",
+  "kind": "science",
+  "short": "The position that low-intensity ultrasound acts by small measured temperature changes rather than by mechanical parameters.",
+  "concept": null
+ },
+ {
+  "id": "intramembrane-cavitation",
+  "term": "Intramembrane cavitation",
+  "kind": "science",
+  "short": "The account in which acoustic pressure separates the leaflets of the lipid bilayer, rectifying the wave into a capacitance change that drives current.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "cavitation",
+  "term": "Cavitation",
+  "kind": "science",
+  "short": "Used two ways: leaflet separation within the lipid bilayer (intramembrane), and oscillation or collapse of gas bubbles in the vasculature (microbubble).",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "microbubble",
+  "term": "Microbubble",
+  "kind": "drug",
+  "short": "Injected gas-filled bubbles that oscillate under ultrasound; the active agent in barrier opening, and a dose variable in its own right.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "ultraharmonic-emission",
+  "term": "Ultraharmonic emission",
+  "kind": "science",
+  "short": "Acoustic signal at half-integer multiples of the drive frequency radiated by oscillating microbubbles; used as a feedback signal for dose.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "hydrophone",
+  "term": "Hydrophone",
+  "kind": "methods",
+  "short": "An underwater microphone used to characterise an acoustic field or to listen for microbubble emissions during sonication.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "acoustic-radiation-force",
+  "term": "Acoustic radiation force",
+  "kind": "science",
+  "short": "The steady force a sound wave exerts by transferring momentum to tissue; one of the four candidate ultrasound transducing mechanisms.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "skull-density-ratio",
+  "term": "Skull density ratio",
+  "kind": "methods",
+  "short": "A CT-derived measure of skull composition that predicts acoustic transmission; it became a patient-selection criterion for focused ultrasound.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "hifu",
+  "term": "High-intensity focused ultrasound (HIFU)",
+  "kind": "methods",
+  "short": "Focused ultrasound at ablative thermal dose, used to make an incisionless lesion; the same physical modality that is reversible at low intensity.",
+  "concept": null
+ },
+ {
+  "id": "blood-brain-barrier-opening",
+  "term": "Blood–brain barrier opening",
+  "kind": "methods",
+  "short": "Transient increase of barrier permeability by microbubble oscillation under low-pressure ultrasound, imageable and reversible.",
+  "concept": null
+ },
+ {
+  "id": "sterile-inflammation",
+  "term": "Sterile inflammatory response",
+  "kind": "science",
+  "short": "Inflammation triggered by tissue stress rather than infection; reported after microbubble-assisted barrier opening, and disputed as dose-dependent.",
+  "concept": null
+ },
+ {
+  "id": "damage-associated-molecular-pattern",
+  "term": "Damage-associated molecular pattern (DAMP)",
+  "kind": "science",
+  "short": "Endogenous molecules released by stressed or dying cells that trigger inflammation without a pathogen.",
+  "concept": null
+ },
+ {
+  "id": "mechanosensitive-channel",
+  "term": "Mechanosensitive channel",
+  "kind": "science",
+  "short": "An ion channel gated by membrane force; the protein-based account of how a pressure wave becomes a current.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "piezo1",
+  "term": "Piezo1",
+  "kind": "science",
+  "short": "A mechanically gated cation channel; its conditional deletion in mouse cortex sharply reduced ultrasound-evoked responses.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "trpa1",
+  "term": "TRPA1",
+  "kind": "science",
+  "short": "A TRP-family cation channel proposed as the astrocytic ultrasound transducer, and used as an installed sonogenetic actuator.",
+  "concept": "acoustic-mechanotransduction"
+ },
+ {
+  "id": "best1",
+  "term": "Best1",
+  "kind": "science",
+  "short": "An anion channel through which astrocytes are reported to release glutamate after ultrasound-evoked calcium entry.",
+  "concept": null
+ },
+ {
+  "id": "trek-1",
+  "term": "TREK-1",
+  "kind": "science",
+  "short": "Two-pore-domain potassium channels whose currents were modulated reversibly by focused ultrasound in oocytes.",
+  "concept": null
+ },
+ {
+  "id": "cftr",
+  "term": "CFTR",
+  "kind": "science",
+  "short": "A chloride channel that passed outward current under ultrasound in HEK293T cells, extending the candidate transducer list beyond cation channels.",
+  "concept": null
+ },
+ {
+  "id": "photobiomodulation",
+  "term": "Photobiomodulation (PBM)",
+  "kind": "methods",
+  "short": "Red to near-infrared light applied to tissue to change cell function; transcranially, its delivered dose is disputed.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "fluence",
+  "term": "Fluence",
+  "kind": "notation",
+  "short": "Optical energy delivered per unit area, in J/cm²; with irradiance and wavelength, the standard photobiomodulation dose triple.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "irradiance",
+  "term": "Irradiance",
+  "kind": "notation",
+  "short": "Optical power delivered per unit area, in mW/cm²; the instantaneous counterpart of fluence.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "transmittance",
+  "term": "Transmittance",
+  "kind": "methods",
+  "short": "The fraction of incident light passing through a tissue sample; measured at under 1% through human skull for commercial devices.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "monte-carlo-photon-transport",
+  "term": "Monte Carlo photon transport",
+  "kind": "methods",
+  "short": "Stochastic simulation of photon scattering and absorption through tissue, used to estimate how much light reaches cortex.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "melanin",
+  "term": "Melanin",
+  "kind": "science",
+  "short": "The pigment whose concentration strongly attenuates near-infrared light, making skin pigmentation an optical dose covariate.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "cytochrome-c-oxidase",
+  "term": "Cytochrome c oxidase",
+  "kind": "science",
+  "short": "The terminal enzyme of the mitochondrial respiratory chain, identified as the photoacceptor for red and near-infrared light.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "action-spectrum",
+  "term": "Action spectrum",
+  "kind": "methods",
+  "short": "The efficacy of a biological effect plotted against wavelength; used to identify a photoacceptor by matching its absorption spectrum.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "nitric-oxide",
+  "term": "Nitric oxide",
+  "kind": "science",
+  "short": "A gaseous signalling molecule whose photodissociation from cytochrome c oxidase is the proposed step from light absorption to signalling.",
+  "concept": null
+ },
+ {
+  "id": "optogenetics",
+  "term": "Optogenetics",
+  "kind": "methods",
+  "short": "Installing a light-gated protein in chosen cells so that light controls their activity; the field's specificity benchmark.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "channelrhodopsin-2",
+  "term": "Channelrhodopsin-2 (ChR2)",
+  "kind": "science",
+  "short": "A light-gated cation channel from algae; it opens within about 1–2 ms and closes within 10–20 ms.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "installed-transducer",
+  "term": "Installed transducer",
+  "kind": "science",
+  "short": "An exogenous protein expressed in chosen cells so that a physical drive has a known coupling target by construction.",
+  "concept": null
+ },
+ {
+  "id": "sonogenetics",
+  "term": "Sonogenetics",
+  "kind": "methods",
+  "short": "Making chosen cells ultrasound-sensitive by expressing a mechanosensitive channel.",
+  "concept": null
+ },
+ {
+  "id": "magnetogenetics",
+  "term": "Magnetogenetics",
+  "kind": "methods",
+  "short": "The proposal that magnetic fields can gate a ferritin-tethered ion channel; challenged as physically impossible by orders of magnitude.",
+  "concept": null
+ },
+ {
+  "id": "ferritin",
+  "term": "Ferritin",
+  "kind": "science",
+  "short": "An iron-storage protein with weak paramagnetism, proposed as the magnetic element in magnetogenetic actuators.",
+  "concept": null
+ },
+ {
+  "id": "order-of-magnitude-test",
+  "term": "Order-of-magnitude test",
+  "kind": "methods",
+  "short": "Checking whether a proposed mechanism can supply the energy, force or field the claimed effect requires.",
+  "concept": null
+ },
+ {
+  "id": "transducer",
+  "term": "Transducer",
+  "kind": "science",
+  "short": "The structure that converts a delivered physical or chemical drive into a change in cell function; a node in the graph, not an edge label.",
+  "concept": null
+ },
+ {
+  "id": "receptor-occupancy",
+  "term": "Receptor occupancy",
+  "kind": "methods",
+  "short": "The fraction of a receptor population bound by a ligand, measured in humans by PET; pharmacology's closest thing to a mechanism-level dose metric.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "raclopride-pet",
+  "term": "Raclopride PET",
+  "kind": "methods",
+  "short": "PET imaging with a reversible D2 ligand, used to measure receptor occupancy and, by competition, endogenous dopamine release.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "positron-emission-tomography",
+  "term": "Positron emission tomography (PET)",
+  "kind": "methods",
+  "short": "Imaging the distribution of a radiolabelled tracer in vivo; used here for occupancy, neurotransmitter release, amyloid burden and glial markers.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "affinity",
+  "term": "Affinity",
+  "kind": "science",
+  "short": "How tightly a ligand binds its receptor; measured in a dish, it predicts nothing until exposure at the target is measured.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "intrinsic-efficacy",
+  "term": "Intrinsic efficacy",
+  "kind": "science",
+  "short": "How strongly a bound ligand activates its receptor; the term that must sit beside occupancy for occupancy to predict effect.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "partial-agonist",
+  "term": "Partial agonist",
+  "kind": "drug",
+  "short": "A ligand that activates its receptor submaximally however high the occupancy; the counterexample to a universal occupancy window.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "operational-model",
+  "term": "Operational model of agonism",
+  "kind": "methods",
+  "short": "A pharmacological framework relating occupancy to response in a functional system through an efficacy parameter.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "allosteric-modulation",
+  "term": "Allosteric modulation",
+  "kind": "science",
+  "short": "Action at a site other than the agonist's, changing the receptor's response rather than activating it directly.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "positive-allosteric-modulator",
+  "term": "Positive allosteric modulator (PAM)",
+  "kind": "drug",
+  "short": "A ligand that increases a receptor's response to its agonist without activating it directly; the mechanism of neurosteroid antidepressants.",
+  "concept": null
+ },
+ {
+  "id": "receptor-compartment",
+  "term": "Receptor compartment",
+  "kind": "science",
+  "short": "Where in or on the cell a receptor is engaged; an attribute of the coupling node, because the same agonist acts differently inside and at the surface.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "five-ht2a-receptor",
+  "term": "5-HT2A receptor",
+  "kind": "science",
+  "short": "The serotonin receptor subtype through which classic psychedelics act; whether it is necessary for their plasticity effects is disputed.",
+  "concept": null
+ },
+ {
+  "id": "blood-brain-barrier",
+  "term": "Blood–brain barrier",
+  "kind": "science",
+  "short": "The endothelial interface controlling entry of molecules into brain tissue by passive diffusion plus active influx and efflux.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "brain-extracellular-fluid",
+  "term": "Brain extracellular fluid",
+  "kind": "science",
+  "short": "The fluid bathing neurons; the concentration there, not in plasma, is the exposure that matters at the receptor.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "pbpk-model",
+  "term": "Physiologically based pharmacokinetic model",
+  "kind": "methods",
+  "short": "A compartmental model of drug distribution built from physiology, used to estimate brain target-site exposure when it cannot be measured.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "auc",
+  "term": "AUC",
+  "kind": "notation",
+  "short": "Area under the plasma concentration–time curve; the standard summary of total systemic drug exposure.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "cmax",
+  "term": "Cmax",
+  "kind": "notation",
+  "short": "The highest plasma concentration reached after a dose; with AUC, the usual summary of exposure.",
+  "concept": "dose-and-parameter-sets"
+ },
+ {
+  "id": "exposure-response-analysis",
+  "term": "Exposure–response analysis",
+  "kind": "statistics",
+  "short": "Relating a measured exposure summary to a clinical endpoint, rather than relating dose to endpoint directly.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "route-of-administration",
+  "term": "Route of administration",
+  "kind": "methods",
+  "short": "How a drug is delivered; a first-class dose variable that fixes onset, exposure profile over time and compartment reached.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "compartment",
+  "term": "Compartment",
+  "kind": "science",
+  "short": "The anatomical or cellular space a drive reaches — CSF, parenchyma, plasma, or a subcellular location.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "intrathecal",
+  "term": "Intrathecal delivery",
+  "kind": "methods",
+  "short": "Infusion into the cerebrospinal fluid space through an implanted pump and catheter, placing exposure at the spinal cord.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "convection-enhanced-delivery",
+  "term": "Convection-enhanced delivery",
+  "kind": "methods",
+  "short": "Driving infusate through brain extracellular space by a sustained pressure gradient, so distribution follows infusion physics rather than diffusion.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "intranasal",
+  "term": "Intranasal delivery",
+  "kind": "methods",
+  "short": "Deposition on nasal mucosa, claimed to reach the brain along olfactory and trigeminal routes; the direct fraction is unquantified in humans.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "active-species",
+  "term": "Active species",
+  "kind": "drug",
+  "short": "The molecule that actually engages the target, which may be a metabolite of the compound administered.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "chemogenetics",
+  "term": "Chemogenetics",
+  "kind": "methods",
+  "short": "Expressing an engineered receptor activated only by a designed ligand; slower than optogenetics by about three orders of magnitude.",
+  "concept": null
+ },
+ {
+  "id": "clozapine-n-oxide",
+  "term": "Clozapine-N-oxide (CNO)",
+  "kind": "drug",
+  "short": "The ligand designed to be inert for chemogenetics; it does not enter the brain and acts through its conversion to clozapine.",
+  "concept": null
+ },
+ {
+  "id": "ketamine",
+  "term": "Ketamine",
+  "kind": "drug",
+  "short": "An NMDA receptor antagonist whose single subanaesthetic dose produces antidepressant effects within hours that outlast its clearance.",
+  "concept": null
+ },
+ {
+  "id": "esketamine",
+  "term": "Esketamine",
+  "kind": "drug",
+  "short": "The S-enantiomer of ketamine, given as a nasal spray; its registration trial adds a blinding problem to the route question.",
+  "concept": null
+ },
+ {
+  "id": "hydroxynorketamine",
+  "term": "(2R,6R)-hydroxynorketamine",
+  "kind": "drug",
+  "short": "A ketamine metabolite reported to be antidepressant without NMDA receptor inhibition, and for which no direct target has been found.",
+  "concept": null
+ },
+ {
+  "id": "target-deconvolution",
+  "term": "Target deconvolution",
+  "kind": "methods",
+  "short": "Screening a compound against large panels of proteins to identify what it binds; for one ketamine metabolite it found nothing.",
+  "concept": null
+ },
+ {
+  "id": "nmda-receptor",
+  "term": "NMDA receptor",
+  "kind": "science",
+  "short": "A glutamate receptor whose activation gates classical plasticity; also the receptor whose blockade abolishes several human stimulation after-effects.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "ampa-receptor",
+  "term": "AMPA receptor",
+  "kind": "science",
+  "short": "The glutamate receptor carrying most fast excitatory transmission; its activation was required for a ketamine metabolite's antidepressant-like effect.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "gaba-a-receptor",
+  "term": "GABA-A receptor",
+  "kind": "science",
+  "short": "The ionotropic inhibitory receptor, target of neurosteroids and anaesthetics acting as allosteric modulators rather than agonists.",
+  "concept": null
+ },
+ {
+  "id": "gaba-b-receptor",
+  "term": "GABA-B receptor",
+  "kind": "science",
+  "short": "The metabotropic inhibitory receptor; the target of baclofen, whose effect depends on which compartment is dosed.",
+  "concept": null
+ },
+ {
+  "id": "baclofen",
+  "term": "Baclofen",
+  "kind": "drug",
+  "short": "A GABA-B agonist for spasticity; given intrathecally it works in patients in whom the oral route had failed.",
+  "concept": null
+ },
+ {
+  "id": "neurosteroid",
+  "term": "Neurosteroid",
+  "kind": "drug",
+  "short": "Steroids that modulate GABA-A receptors directly and non-genomically, acting either as circulating messengers or as locally synthesised modulators.",
+  "concept": null
+ },
+ {
+  "id": "brexanolone",
+  "term": "Brexanolone",
+  "kind": "drug",
+  "short": "An intravenous formulation of allopregnanolone given as a single 60-hour infusion for postpartum depression.",
+  "concept": null
+ },
+ {
+  "id": "zuranolone",
+  "term": "Zuranolone",
+  "kind": "drug",
+  "short": "An oral neurosteroid given as 50 mg once daily for 14 days, sharing brexanolone's target pharmacology.",
+  "concept": null
+ },
+ {
+  "id": "nitrous-oxide",
+  "term": "Nitrous oxide",
+  "kind": "drug",
+  "short": "An inhaled anaesthetic gas with antidepressant effect at 25% and 50%, whose benefit emerged weeks after exposure.",
+  "concept": null
+ },
+ {
+  "id": "general-anaesthesia",
+  "term": "General anaesthesia",
+  "kind": "science",
+  "short": "Reversible loss of consciousness produced by chemically diverse drugs acting at a small number of molecular targets.",
+  "concept": null
+ },
+ {
+  "id": "lipid-domain",
+  "term": "Ordered lipid domain",
+  "kind": "science",
+  "short": "A locally ordered region of the plasma membrane that can host drug binding sites; the pharmacological parallel of membrane-level acoustic coupling.",
+  "concept": null
+ },
+ {
+  "id": "psychedelic",
+  "term": "Psychedelic",
+  "kind": "drug",
+  "short": "A 5-HT2A agonist producing altered consciousness and, separately, lasting cortical plasticity; whether the two are linked is disputed.",
+  "concept": null
+ },
+ {
+  "id": "psilocybin",
+  "term": "Psilocybin",
+  "kind": "drug",
+  "short": "A psychedelic tryptamine; a single 25 mg dose beat active placebo by 12.3 points on a depression scale in a phase 2 trial.",
+  "concept": null
+ },
+ {
+  "id": "lsd",
+  "term": "LSD",
+  "kind": "drug",
+  "short": "A psychedelic ergoline; reported to bind TrkB with high affinity at sites partly distinct from the antidepressant site.",
+  "concept": null
+ },
+ {
+  "id": "head-twitch-response",
+  "term": "Head-twitch response",
+  "kind": "methods",
+  "short": "A rodent behaviour used as a proxy for the hallucinogenic action of 5-HT2A agonists.",
+  "concept": null
+ },
+ {
+  "id": "subjective-effects",
+  "term": "Subjective effects",
+  "kind": "science",
+  "short": "The conscious experience a drug produces; whether it is necessary for a psychedelic's enduring therapeutic effect is disputed.",
+  "concept": null
+ },
+ {
+  "id": "levodopa",
+  "term": "Levodopa",
+  "kind": "drug",
+  "short": "The dopamine precursor for Parkinson's disease; its clinical problems are attributed to erratic delivery rather than receptor pharmacology.",
+  "concept": null
+ },
+ {
+  "id": "pulsatile-exposure",
+  "term": "Pulsatile versus continuous exposure",
+  "kind": "science",
+  "short": "Whether a receptor population is engaged in peaks or steadily; the two give different long-term outcomes at the same target.",
+  "concept": "pharmacokinetics-and-routes"
+ },
+ {
+  "id": "aripiprazole",
+  "term": "Aripiprazole",
+  "kind": "drug",
+  "short": "A D2 partial agonist that keeps extrapyramidal risk low at high occupancy, breaking the universal occupancy window.",
+  "concept": null
+ },
+ {
+  "id": "d2-receptor",
+  "term": "Dopamine D2 receptor",
+  "kind": "science",
+  "short": "The dopamine receptor subtype whose occupancy defines the antipsychotic therapeutic window of about 65–80%.",
+  "concept": "receptor-theory-occupancy"
+ },
+ {
+  "id": "serotonin-transporter",
+  "term": "Serotonin transporter (SERT)",
+  "kind": "science",
+  "short": "The reuptake transporter targeted by SSRIs; 70–80% occupancy is quoted as the antidepressant window.",
+  "concept": null
+ },
+ {
+  "id": "serotonin-premise",
+  "term": "Serotonin-deficit premise",
+  "kind": "science",
+  "short": "The assumption that depression involves lowered serotonin; an umbrella review found the main research areas give it no support.",
+  "concept": null
+ },
+ {
+  "id": "long-term-potentiation",
+  "term": "Long-term potentiation (LTP)",
+  "kind": "science",
+  "short": "A lasting increase in synaptic strength after brief patterned input; first shown in anaesthetized rabbit hippocampus.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "long-term-depression",
+  "term": "Long-term depression (LTD)",
+  "kind": "science",
+  "short": "A lasting decrease in synaptic strength; the negative-direction counterpart of LTP in the borrowed plasticity vocabulary.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "ltp-like-plasticity",
+  "term": "LTP-like plasticity",
+  "kind": "science",
+  "short": "A human after-effect resembling LTP in three properties — it follows patterned input, outlasts it, and its sign depends on the pattern — but without a measured synaptic change.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "bcm-rule",
+  "term": "BCM rule",
+  "kind": "methods",
+  "short": "A learning rule in which the sign of a synaptic change depends on postsynaptic activity relative to a threshold set by the neuron's own recent average activity.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "metaplasticity",
+  "term": "Metaplasticity",
+  "kind": "science",
+  "short": "A change in a synapse's capacity for later plasticity, without necessarily changing its present strength.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "homeostatic-metaplasticity",
+  "term": "Homeostatic metaplasticity",
+  "kind": "science",
+  "short": "Plasticity that stabilises activity around a set point, lowering the plasticity threshold after activity has been reduced.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "homeostatic-synaptic-scaling",
+  "term": "Homeostatic synaptic scaling",
+  "kind": "science",
+  "short": "Uniform multiplicative adjustment of a neuron's synaptic strengths to stabilise its firing rate, preserving relative weights.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "spike-timing-dependent-plasticity",
+  "term": "Spike-timing-dependent plasticity (STDP)",
+  "kind": "science",
+  "short": "Plasticity whose sign depends on the millisecond order of pre- and postsynaptic spikes; the rule paired associative stimulation was written on.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "third-factor",
+  "term": "Third factor",
+  "kind": "science",
+  "short": "A neuromodulator whose presence is required for a timing rule to produce plasticity at all.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "gating",
+  "term": "Gating",
+  "kind": "science",
+  "short": "A brief rise in excitability, attributed to reduced intracortical inhibition, that permits a plasticity effect during practice.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "response-variability",
+  "term": "Response variability",
+  "kind": "statistics",
+  "short": "The spread of individual responses to a fixed protocol; in three standard protocols only 39–45% of people moved in the expected direction.",
+  "concept": "metaplasticity-and-state-dependence"
+ },
+ {
+  "id": "bdnf",
+  "term": "BDNF",
+  "kind": "science",
+  "short": "A neurotrophin that is the field's most cited convergence point; a rise in it distinguishes none of the routes that can produce it.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "trkb",
+  "term": "TrkB",
+  "kind": "science",
+  "short": "The BDNF receptor, reported as both a downstream requirement for stimulation-induced plasticity and a direct binding target of several drug classes.",
+  "concept": null
+ },
+ {
+  "id": "val66met",
+  "term": "BDNF Val66Met",
+  "kind": "science",
+  "short": "A common BDNF variant impairing activity-dependent release; Met carriers respond differently across several stimulation protocols, inconsistently replicated.",
+  "concept": null
+ },
+ {
+  "id": "mtor",
+  "term": "mTOR",
+  "kind": "science",
+  "short": "A translation-control kinase pathway activated rapidly by ketamine in rat prefrontal cortex, with rapamycin blocking both synaptogenesis and behaviour.",
+  "concept": null
+ },
+ {
+  "id": "rapamycin",
+  "term": "Rapamycin",
+  "kind": "drug",
+  "short": "An mTOR inhibitor used as the blocking agent that ties ketamine's synaptogenesis to its behavioural effect in rats.",
+  "concept": null
+ },
+ {
+  "id": "eef2-kinase",
+  "term": "eEF2 kinase",
+  "kind": "science",
+  "short": "A translation-elongation kinase whose deactivation after NMDA receptor blockade releases BDNF messenger RNA for translation.",
+  "concept": null
+ },
+ {
+  "id": "dendritic-spine",
+  "term": "Dendritic spine",
+  "kind": "science",
+  "short": "The postsynaptic protrusion holding most excitatory synapses; spine number and remodelling are the structural readouts of rapid plasticity.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "immediate-early-gene",
+  "term": "Immediate-early gene",
+  "kind": "science",
+  "short": "A gene transcribed within minutes of neural activity, used as a cheap, anatomically resolved marker that tissue was driven.",
+  "concept": null
+ },
+ {
+  "id": "c-fos",
+  "term": "c-Fos",
+  "kind": "science",
+  "short": "The canonical immediate-early gene product, used to mark which regions a stimulus drove.",
+  "concept": null
+ },
+ {
+  "id": "spatial-transcriptomics",
+  "term": "Spatial transcriptomics",
+  "kind": "methods",
+  "short": "Genome-wide expression measured with anatomical position retained; the modern high-resolution version of an activity-marker readout.",
+  "concept": null
+ },
+ {
+  "id": "mitochondrial-function",
+  "term": "Mitochondrial function",
+  "kind": "science",
+  "short": "Respiratory-chain activity and related metabolism; for photobiomodulation the proposed transducer, for other drives a downstream endpoint.",
+  "concept": null
+ },
+ {
+  "id": "current-density",
+  "term": "Current density",
+  "kind": "notation",
+  "short": "Current per unit area in tissue or at an electrode; one of the parameters the classical charge-density safety rule omits.",
+  "concept": "electric-field-modelling"
+ },
+ {
+  "id": "convergence",
+  "term": "Convergence",
+  "kind": "science",
+  "short": "The claim that physically unrelated drives meet at the same molecular endpoint; weaker than it looks unless the assay is shared.",
+  "concept": null
+ },
+ {
+  "id": "single-laboratory-claim",
+  "term": "Single-laboratory claim",
+  "kind": "methods",
+  "short": "A finding not yet reproduced outside the group that proposed it; flagged as such on the edge rather than merged with replicated work.",
+  "concept": "graph-analytics-basics"
+ },
+ {
+  "id": "astrocyte",
+  "term": "Astrocyte",
+  "kind": "science",
+  "short": "A glial cell type that responds to direct current on a larger scale than local neurons and is a candidate ultrasound transducer.",
+  "concept": null
+ },
+ {
+  "id": "microglia",
+  "term": "Microglia",
+  "kind": "science",
+  "short": "The brain's resident immune cells; their state is the contested effector in the 40 Hz amyloid literature.",
+  "concept": null
+ },
+ {
+  "id": "tspo",
+  "term": "TSPO",
+  "kind": "science",
+  "short": "A mitochondrial protein used as a PET marker of neuroinflammation; it rises in activated mouse microglia but not in primates or human disease.",
+  "concept": null
+ },
+ {
+  "id": "aquaporin-4",
+  "term": "AQP4",
+  "kind": "science",
+  "short": "The astrocytic water channel whose endfoot polarisation is central to glymphatic clearance.",
+  "concept": null
+ },
+ {
+  "id": "amyloid-beta",
+  "term": "Amyloid-β",
+  "kind": "science",
+  "short": "The peptide whose aggregation marks Alzheimer's disease; the endpoint in both the 40 Hz claim and the barrier-opening trial.",
+  "concept": null
+ },
+ {
+  "id": "forty-hz-stimulation",
+  "term": "40 Hz sensory stimulation",
+  "kind": "methods",
+  "short": "Driving the brain at 40 Hz by light or sound, claimed to entrain gamma and reduce amyloid; each link of that chain is separately contested.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "gamma-oscillation",
+  "term": "Gamma oscillation",
+  "kind": "science",
+  "short": "Fast (roughly 30–80 Hz) rhythmic population activity; the target of 40 Hz protocols and a control signal in adaptive deep brain stimulation.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "coherence",
+  "term": "Coherence",
+  "kind": "statistics",
+  "short": "Consistent phase alignment between two oscillating populations; in the communication-through-coherence account, the variable that gates routing.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "oscillation",
+  "term": "Oscillation",
+  "kind": "science",
+  "short": "Rhythmic population activity treated in this volume as a control variable rather than a by-product.",
+  "concept": "oscillations-and-entrainment"
+ },
+ {
+  "id": "local-field-potential",
+  "term": "Local field potential (LFP)",
+  "kind": "methods",
+  "short": "The summed extracellular voltage near a recording contact; the signal used as a control variable in adaptive deep brain stimulation.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "beta-burst",
+  "term": "Beta burst",
+  "kind": "science",
+  "short": "A transient rise in 13–30 Hz subthalamic activity treated as a pathological marker in Parkinson's disease and used to trigger stimulation.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "deep-brain-stimulation",
+  "term": "Deep brain stimulation (DBS)",
+  "kind": "methods",
+  "short": "Chronic pulsed stimulation through an implanted intracranial electrode; how its high-frequency benefit arises is disputed.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "informational-lesion",
+  "term": "Informational lesion",
+  "kind": "science",
+  "short": "The account in which high-frequency stimulation forces output spiking into a regular, variance-free pattern, so the neuron fires but carries no information.",
+  "concept": null
+ },
+ {
+  "id": "antidromic-activation",
+  "term": "Antidromic activation",
+  "kind": "science",
+  "short": "Action potentials travelling backwards along an axon toward the cell body, by which deep stimulation can recruit cortex.",
+  "concept": null
+ },
+ {
+  "id": "evoked-resonant-activity",
+  "term": "Evoked resonant neural activity (ERNA)",
+  "kind": "methods",
+  "short": "A large, focal ringing response evoked in the subthalamic nucleus by stimulation pulses; used for target verification rather than control.",
+  "concept": null
+ },
+ {
+  "id": "adaptive-dbs",
+  "term": "Adaptive deep brain stimulation",
+  "kind": "methods",
+  "short": "Deep brain stimulation whose delivery is gated by a recorded neural marker rather than run continuously.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "closed-loop-stimulation",
+  "term": "Closed-loop stimulation",
+  "kind": "methods",
+  "short": "Stimulation whose drive depends on the state it modulates, through a measured control variable and a threshold rule.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "biomarker",
+  "term": "Biomarker",
+  "kind": "methods",
+  "short": "A measured signal standing in for a state of interest; in closed loops it both indexes and is shaped by the intervention.",
+  "concept": "closed-loop-control"
+ },
+ {
+  "id": "connectivity-based-targeting",
+  "term": "Connectivity-based targeting",
+  "kind": "methods",
+  "short": "Choosing a stimulation site by its connectivity to a distant region rather than by local anatomy; how much outcome variance it explains is disputed.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "target-definition",
+  "term": "Target definition",
+  "kind": "methods",
+  "short": "Whether a target is the literature coordinate, the coil position, or the tissue a field model says was stimulated; part of the claim, not a detail.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "normative-connectome",
+  "term": "Normative connectome",
+  "kind": "methods",
+  "short": "Connectivity averaged over a healthy reference cohort, used to characterise a patient's stimulation volume without patient-specific imaging.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "functional-connectivity",
+  "term": "Functional connectivity",
+  "kind": "statistics",
+  "short": "Statistical dependence between regional activity time courses, usually from resting-state fMRI; the basis of connectivity-based targeting.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "subgenual-cingulate",
+  "term": "Subgenual cingulate",
+  "kind": "science",
+  "short": "A ventromedial prefrontal region whose anticorrelation with a prefrontal stimulation site was proposed as a targeting rule for depression.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "dlpfc",
+  "term": "Dorsolateral prefrontal cortex (DLPFC)",
+  "kind": "science",
+  "short": "The standard cortical target for antidepressant stimulation; high-frequency repetitive TMS there is graded definitely effective.",
+  "concept": "connectivity-based-targeting"
+ },
+ {
+  "id": "ascending-neuromodulator-systems",
+  "term": "Ascending neuromodulator systems",
+  "kind": "science",
+  "short": "Brainstem and basal-forebrain populations releasing acetylcholine, noradrenaline, dopamine or serotonin broadly; both targets of a drive and gates on its effect.",
+  "concept": null
+ },
+ {
+  "id": "locus-coeruleus",
+  "term": "Locus coeruleus",
+  "kind": "science",
+  "short": "The pontine noradrenergic nucleus; the best-characterised device-engageable neuromodulator source and the origin of the adaptive-gain account.",
+  "concept": null
+ },
+ {
+  "id": "adaptive-gain",
+  "term": "Adaptive gain theory",
+  "kind": "science",
+  "short": "The account in which locus coeruleus activity sets neural gain, with phasic responses supporting task engagement and elevated tonic firing favouring exploration.",
+  "concept": null
+ },
+ {
+  "id": "phasic-tonic",
+  "term": "Phasic and tonic firing",
+  "kind": "science",
+  "short": "Brief event-locked bursts against sustained background rate; two regimes of the same nucleus with different functional consequences.",
+  "concept": null
+ },
+ {
+  "id": "pupillometry",
+  "term": "Pupillometry",
+  "kind": "methods",
+  "short": "Measuring pupil size as a non-invasive stand-in for noradrenergic engagement; a monotonic but weak and state-dependent proxy.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "nucleus-basalis",
+  "term": "Nucleus basalis",
+  "kind": "science",
+  "short": "The basal-forebrain cholinergic source whose lesion abolishes device-driven cortical map plasticity in rats.",
+  "concept": null
+ },
+ {
+  "id": "cortical-map-plasticity",
+  "term": "Cortical map plasticity",
+  "kind": "science",
+  "short": "Enlargement of a body-part representation in cortex after paired training and stimulation, mapped by intracortical microstimulation.",
+  "concept": null
+ },
+ {
+  "id": "perturbation-method",
+  "term": "Perturbation method",
+  "kind": "methods",
+  "short": "How a putative requirement was tested — lesion, genetic deletion, receptor antagonism — which the necessity claim must carry.",
+  "concept": null
+ },
+ {
+  "id": "acetylcholine",
+  "term": "Acetylcholine",
+  "kind": "science",
+  "short": "The transmitter of the efferent anti-inflammatory limb and one of the four plasticity-gating modulators.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "dopamine",
+  "term": "Dopamine",
+  "kind": "science",
+  "short": "A neuromodulator measurable in humans by tracer displacement; prefrontal stimulation released it focally in the ipsilateral dorsal caudate.",
+  "concept": null
+ },
+ {
+  "id": "noradrenaline",
+  "term": "Noradrenaline",
+  "kind": "science",
+  "short": "The locus coeruleus transmitter; the system most device protocols claim to engage, indexed in humans only by weak proxies.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "serotonin",
+  "term": "Serotonin",
+  "kind": "science",
+  "short": "A neuromodulator and the target of the antidepressant class whose deficit premise an umbrella review found unsupported.",
+  "concept": null
+ },
+ {
+  "id": "sham",
+  "term": "Sham",
+  "kind": "methods",
+  "short": "A control procedure meant to reproduce a drive's sensations without its intended effect; different shams deliver different things.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "blinding",
+  "term": "Blinding",
+  "kind": "methods",
+  "short": "Keeping participants and assessors unaware of allocation; usually judged from end-of-study guesses, which may overestimate how well masking held.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "expectancy",
+  "term": "Expectancy",
+  "kind": "methods",
+  "short": "What a participant expects a treatment to do; unreported in most drug trials here, and a route by which unblinding inflates effects.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "active-placebo",
+  "term": "Active placebo",
+  "kind": "methods",
+  "short": "A control agent that produces noticeable effects of its own, used to make blinding credible when the test drug is unmistakable.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "co-stimulation",
+  "term": "Co-stimulation",
+  "kind": "science",
+  "short": "Unintended stimulation of scalp, ear or peripheral nerves accompanying every non-invasive drive; a rival explanation rather than mere noise.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "auditory-confound",
+  "term": "Auditory confound",
+  "kind": "science",
+  "short": "Activation produced through the ear by a stimulus aimed elsewhere; in ultrasound it competes with all four proposed transduction accounts.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "peripheral-route",
+  "term": "Peripheral route",
+  "kind": "science",
+  "short": "The account in which a transcranial effect is produced by stimulating scalp and cervical nerves rather than cortex directly.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "proxy",
+  "term": "Proxy",
+  "kind": "methods",
+  "short": "A measurable quantity standing in for an inaccessible one; the edge that uses it inherits its validity, which is often weak.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "readout",
+  "term": "Readout",
+  "kind": "methods",
+  "short": "The quantity a study actually measures, usually several levels away from the coupling step it makes claims about.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "hypothesis-group",
+  "term": "Hypothesis group",
+  "kind": "methods",
+  "short": "A dispute treated as a first-class object, with its rival claims attached, each carrying its own species, preparation and evidence kind.",
+  "concept": "graph-analytics-basics"
+ },
+ {
+  "id": "rival-edge",
+  "term": "Rival edge",
+  "kind": "methods",
+  "short": "Two edges between the same nodes representing competing explanations rather than duplicate assertions.",
+  "concept": "graph-analytics-basics"
+ },
+ {
+  "id": "preparation",
+  "term": "Preparation",
+  "kind": "methods",
+  "short": "The biological system an experiment was run in — culture, slice, anaesthetised animal, awake animal, person — which travels with every claim.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "species-translation",
+  "term": "Species translation",
+  "kind": "methods",
+  "short": "Carrying a result from one species to another; fields do not scale with heads, and markers do not always transfer either.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "knockout",
+  "term": "Knockout",
+  "kind": "methods",
+  "short": "Genetic deletion of a gene to test necessity; the strongest available evidence for assigning a transducer, and sensitive to where the deletion is made.",
+  "concept": null
+ },
+ {
+  "id": "organotypic-slice-culture",
+  "term": "Organotypic slice culture",
+  "kind": "methods",
+  "short": "Explanted tissue kept in culture with its local circuitry intact, allowing a clinical protocol to be applied where synapses can be measured.",
+  "concept": "ltp-ltd-plasticity"
+ },
+ {
+  "id": "reproducibility",
+  "term": "Reproducibility",
+  "kind": "methods",
+  "short": "Whether a result recurs on repetition; in a survey of electrical stimulation researchers only about 45–50% said they could routinely reproduce published results.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "icc",
+  "term": "ICC",
+  "kind": "statistics",
+  "short": "The intraclass correlation coefficient, used for test–retest reliability; across 15 studies of rTMS after-effects it was 0.29–0.70.",
+  "concept": null
+ },
+ {
+  "id": "hedges-g",
+  "term": "Hedges' g",
+  "kind": "statistics",
+  "short": "A standardised mean difference corrected for small-sample bias; the effect-size unit used throughout the volume's pooled estimates.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "standardised-mean-difference",
+  "term": "Standardised mean difference (SMD)",
+  "kind": "statistics",
+  "short": "A difference in means divided by a pooled standard deviation; the generic effect size in the volume's meta-analyses.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "bayes-factor",
+  "term": "Bayes factor",
+  "kind": "statistics",
+  "short": "The ratio of the evidence for two hypotheses; BF10 favours the effect, BF01 the null, so a null can be supported rather than merely unrejected.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "meta-analysis",
+  "term": "Meta-analysis",
+  "kind": "statistics",
+  "short": "Quantitative pooling of studies; a pooled estimate inherits whatever confounds its inputs carried, which the graph should record.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "non-inferiority",
+  "term": "Non-inferiority margin",
+  "kind": "statistics",
+  "short": "The pre-specified amount by which a new treatment may be worse and still be declared not meaningfully inferior.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "statistical-power",
+  "term": "Statistical power",
+  "kind": "statistics",
+  "short": "The probability of detecting a true effect; low power also lowers the chance a significant result is true and inflates published effect sizes.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "inverted-u-dose-response",
+  "term": "Inverted-U dose–response",
+  "kind": "statistics",
+  "short": "A relationship in which effect rises then falls with dose, so the sign or size of an effect cannot be read from amount alone.",
+  "concept": null
+ },
+ {
+  "id": "delphi-study",
+  "term": "Delphi study",
+  "kind": "methods",
+  "short": "A structured multi-round expert consultation used to produce reporting standards where no empirical basis for them exists.",
+  "concept": null
+ },
+ {
+  "id": "reporting-checklist",
+  "term": "Reporting checklist",
+  "kind": "methods",
+  "short": "An agreed item list a study should report; the nearest thing to a protocol ontology, supplying items but no identifiers or class hierarchy.",
+  "concept": "sham-and-confound-design"
+ },
+ {
+  "id": "protocol-module",
+  "term": "Protocol module",
+  "kind": "methods",
+  "short": "The part of the schema that has to be authored rather than reused, because no ontology in this corpus covers stimulation protocols or device parameters.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "evidence-level",
+  "term": "Evidence level",
+  "kind": "methods",
+  "short": "A graded statement of how certain an effect is; GRADE rates certainty and recommendation strength separately, while neuromodulation guidelines use letter scales.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "property-graph",
+  "term": "Property graph",
+  "kind": "notation",
+  "short": "A graph whose nodes and edges carry typed key–value properties, so a claim's dose, species and controls can live on the edge.",
+  "concept": "graph-analytics-basics"
+ },
+ {
+  "id": "predicate",
+  "term": "Predicate",
+  "kind": "notation",
+  "short": "The relation in a subject–predicate–object statement; the label on an edge, such as delivers, couples_via, activates or modulates.",
+  "concept": "graph-analytics-basics"
+ },
+ {
+  "id": "curie",
+  "term": "CURIE",
+  "kind": "notation",
+  "short": "A compact identifier of the form prefix:local-id, such as UBERON:0000955, by which a node cites the ontology term it means.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "uberon",
+  "term": "Uberon",
+  "kind": "notation",
+  "short": "A species-neutral anatomy ontology of more than 6,500 classes that links species-specific anatomy ontologies.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "obo-foundry-ontology",
+  "term": "OBO Foundry ontology",
+  "kind": "notation",
+  "short": "The family of interoperable biomedical ontologies from which the schema's cell, molecular and chemical identifiers come.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "evidence-and-conclusion-ontology",
+  "term": "Evidence and Conclusion Ontology (ECO)",
+  "kind": "notation",
+  "short": "A community ontology of evidence types, used by dozens of biomedical databases to record how an assertion is supported.",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "neuron-phenotype-ontology",
+  "term": "Neuron Phenotype Ontology (NPO)",
+  "kind": "notation",
+  "short": "An ontology that names a neuron type by decomposing it into phenotypes carrying identifiers from community ontologies.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "sckan",
+  "term": "SCKAN",
+  "kind": "notation",
+  "short": "A curated, ontology-backed record of the origins, terminations and routing of autonomic projections; the closest existing model for this volume's graph.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "drugmechdb",
+  "term": "DrugMechDB",
+  "kind": "notation",
+  "short": "A manually curated database representing drug mechanisms as paths through a biomedical knowledge graph; the closest precedent for the volume's shape.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "semmeddb",
+  "term": "SemMedDB",
+  "kind": "notation",
+  "short": "A database of subject–predicate–object predications extracted automatically from PubMed; the alternative acquisition route, and the one the volume distrusts.",
+  "concept": "property-graphs-and-ontologies"
+ },
+ {
+  "id": "claim-path",
+  "term": "Claim path",
+  "kind": "methods",
+  "short": "An ordered sequence of claim edges from drive to outcome, made first-class so that rival paths between the same endpoints can coexist.",
+  "concept": "graph-analytics-basics"
+ },
+ {
+  "id": "vagus-nerve-stimulation",
+  "term": "Vagus nerve stimulation (VNS)",
+  "kind": "methods",
+  "short": "Electrical stimulation of the vagus nerve, usually by an implanted cuff; the volume's best-characterised parametric drive.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "vagus-nerve",
+  "term": "Vagus nerve",
+  "kind": "science",
+  "short": "The tenth cranial nerve, mostly afferent, carrying molecularly distinct sensory classes as well as parasympathetic efferents.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "tavns",
+  "term": "Transcutaneous auricular VNS (taVNS)",
+  "kind": "methods",
+  "short": "Non-invasive stimulation at the auricular branch of the vagus; human target engagement is unproven for continuous protocols.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "inflammatory-reflex",
+  "term": "Inflammatory reflex",
+  "kind": "science",
+  "short": "The account in which the nervous system senses and regulates inflammatory state in real time through an afferent, central and efferent cholinergic loop.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "splenic-nerve",
+  "term": "Splenic nerve",
+  "kind": "science",
+  "short": "The sympathetic nerve to the spleen, whose relay to cytokine-producing cells passes through acetylcholine-making T lymphocytes.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "alpha7-nicotinic-receptor",
+  "term": "α7 nicotinic receptor",
+  "kind": "science",
+  "short": "The acetylcholine receptor subtype on cytokine-producing cells through which cholinergic signalling suppresses TNF release.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "tnf",
+  "term": "TNF",
+  "kind": "science",
+  "short": "A pro-inflammatory cytokine; the molecular endpoint that made the neuroimmune chain measurable from drive to outcome.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "nf-kb",
+  "term": "NF-κB",
+  "kind": "science",
+  "short": "A transcription factor pathway central to inflammatory gene expression; its activation after barrier opening tracked microbubble dose.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "neuropod-cell",
+  "term": "Neuropod cell",
+  "kind": "science",
+  "short": "An intestinal epithelial cell that forms a glutamatergic synapse with a vagal afferent, transducing luminal stimuli in milliseconds.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "interoception",
+  "term": "Interoception",
+  "kind": "science",
+  "short": "Sensing of the body's internal state, carried largely by vagal and other visceral afferents.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "hpa-axis",
+  "term": "HPA axis",
+  "kind": "science",
+  "short": "The hypothalamic–pituitary–adrenal endocrine cascade; the afferent vagal route to immune control, distinct from the efferent cholinergic one.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "cortisol",
+  "term": "Cortisol",
+  "kind": "science",
+  "short": "The adrenal stress hormone used as an endocrine readout; prefrontal stimulation reduced its acute response to a laboratory stressor.",
+  "concept": "inflammatory-reflex"
+ },
+ {
+  "id": "electroconvulsive-therapy",
+  "term": "Electroconvulsive therapy (ECT)",
+  "kind": "methods",
+  "short": "A transcranial drive under general anaesthesia that induces a generalised seizure; in this corpus reported only by schedule and outcome.",
+  "concept": null
+ },
+ {
+  "id": "clinical-response",
+  "term": "Response and remission",
+  "kind": "statistics",
+  "short": "Threshold outcomes on a clinical scale — usually a percentage improvement (response) or falling below a severity cut-off (remission).",
+  "concept": "evidence-grading-and-translation"
+ },
+ {
+  "id": "spinal-cord-stimulation",
+  "term": "Spinal cord stimulation (SCS)",
+  "kind": "methods",
+  "short": "Pulsed stimulation in the epidural space over the spinal cord; standard care for chronic pain, with dorsal-root afferents as the first element recruited.",
+  "concept": null
+ },
+ {
+  "id": "subthalamic-nucleus",
+  "term": "Subthalamic nucleus (STN)",
+  "kind": "science",
+  "short": "A basal ganglia nucleus and the main deep brain stimulation target in Parkinson's disease.",
+  "concept": null
+ },
+ {
+  "id": "layer-v-pyramidal-neuron",
+  "term": "Layer V pyramidal neuron",
+  "kind": "science",
+  "short": "The large deep-cortical output neuron most sensitive to applied fields in the modelling and slice literature.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "gyral-crown",
+  "term": "Gyral crown",
+  "kind": "science",
+  "short": "The outer bend of a cortical fold, where the induced field is strongest and where TMS is thought to act first.",
+  "concept": "field-neuron-coupling-geometry"
+ },
+ {
+  "id": "safety-envelope",
+  "term": "Safety envelope",
+  "kind": "methods",
+  "short": "The exposure range within which a modality has been used without serious harm; wider than the range in which efficacy is certain.",
+  "concept": null
+ },
+ {
+  "id": "mj-per-mm2",
+  "term": "mJ/mm²",
+  "kind": "notation",
+  "short": "Millijoules per square millimetre, an energy-flux-density unit used for pulsed acoustic devices; this volume's optical and acoustic sources report J/cm² and MPa instead.",
+  "concept": "photon-transport-dosimetry"
+ },
+ {
+  "id": "electromyography",
+  "term": "Electromyography (EMG)",
+  "kind": "methods",
+  "short": "Recording muscle electrical activity; the channel through which motor evoked potentials and rodent motor responses are measured.",
+  "concept": null
+ },
+ {
+  "id": "pharmaco-tms",
+  "term": "Pharmaco-TMS",
+  "kind": "methods",
+  "short": "Using a drug with known receptor action to assign a molecular identity to a stimulation-induced effect; a measurement instrument before a treatment.",
+  "concept": null
+ }
+]

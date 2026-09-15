@@ -1,0 +1,1393 @@
+{
+  "nodes": [
+    {
+      "id": "H-tes-entrainment",
+      "label": "14.1 Transcranial field entrainment",
+      "kind": "dispute",
+      "hypothesis_group": "H-tes-entrainment",
+      "question": "Do 1-2 mA transcranial currents modulate cortical neurons directly?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2,
+      "shared_evidence_refs": [
+        35,
+        40
+      ]
+    },
+    {
+      "id": "H-tes-entrainment-p1",
+      "label": "Direct cortical entrainment",
+      "kind": "position",
+      "of_dispute": "H-tes-entrainment",
+      "detail": "tACS entrained weakly locked macaque units and desynchronised strongly locked ones, and did so through topical scalp anaesthesia",
+      "species": "macaque",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        44,
+        55
+      ]
+    },
+    {
+      "id": "H-tes-entrainment-p2",
+      "label": "Peripheral, or too weak",
+      "kind": "position",
+      "of_dispute": "H-tes-entrainment",
+      "detail": "rat recordings put the minimum effective field near 1 mV/mm, and skin anaesthesia removed tACS tremor entrainment that peripheral nerve stimulation reproduced",
+      "species": "rat and human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        50,
+        54
+      ]
+    },
+    {
+      "id": "H-ti-suprathreshold",
+      "label": "14.2 Temporal interference thresholds in humans",
+      "kind": "dispute",
+      "hypothesis_group": "H-ti-suprathreshold",
+      "question": "Does temporal interference reach neural thresholds in the human brain?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 2,
+      "shared_evidence_refs": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "H-ti-suprathreshold-p1",
+      "label": "Envelope neuromodulation",
+      "kind": "position",
+      "of_dispute": "H-ti-suprathreshold",
+      "detail": "anaesthetised mice followed the envelope, and human TI changed hippocampal fMRI activity and memory accuracy",
+      "species": "mouse and human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        39,
+        45
+      ]
+    },
+    {
+      "id": "H-ti-suprathreshold-p2",
+      "label": "Unreachable in a human head",
+      "kind": "position",
+      "of_dispute": "H-ti-suprathreshold",
+      "detail": "modelled suprathreshold TI needs about 75-230 V/m against 0.1-1 V/m delivered, and passive filtering cannot demodulate the envelope",
+      "species": "human models",
+      "evidence_kind": "computational",
+      "refs": [
+        48,
+        60
+      ]
+    },
+    {
+      "id": "H-tus-mechanism",
+      "label": "14.3 The ultrasound transducer",
+      "kind": "dispute",
+      "hypothesis_group": "H-tus-mechanism",
+      "question": "What converts a pressure wave into a change in neural activity?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 4
+    },
+    {
+      "id": "H-tus-mechanism-p1",
+      "label": "Intramembrane cavitation",
+      "kind": "position",
+      "of_dispute": "H-tus-mechanism",
+      "detail": "leaflets separate under acoustic drive, rectifying pressure into a capacitance change",
+      "species": "model",
+      "evidence_kind": "computational",
+      "refs": [
+        65
+      ]
+    },
+    {
+      "id": "H-tus-mechanism-p2",
+      "label": "Acoustic radiation force",
+      "kind": "position",
+      "of_dispute": "H-tus-mechanism",
+      "detail": "retinal responses grew from 0.5 to 43 MHz, opposite to the cavitation prediction",
+      "species": "salamander, ex vivo",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        66
+      ]
+    },
+    {
+      "id": "H-tus-mechanism-p3",
+      "label": "Mechanosensitive channels",
+      "kind": "position",
+      "of_dispute": "H-tus-mechanism",
+      "detail": "Piezo1 knockout cut evoked calcium and EMG; CFTR carried ultrasound-evoked chloride current",
+      "species": "mouse and cells",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        68,
+        70
+      ]
+    },
+    {
+      "id": "H-tus-mechanism-p4",
+      "label": "Heat",
+      "kind": "position",
+      "of_dispute": "H-tus-mechanism",
+      "detail": "rat thalamic suppression tracked temperature, not duty cycle",
+      "species": "rat",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        71
+      ]
+    },
+    {
+      "id": "H-tus-confound",
+      "label": "14.4 The ultrasound auditory confound",
+      "kind": "dispute",
+      "hypothesis_group": "H-tus-confound",
+      "question": "Are reported ultrasound effects produced at the focus or through the ear?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2,
+      "shared_evidence_refs": [
+        79
+      ]
+    },
+    {
+      "id": "H-tus-confound-p1",
+      "label": "Auditory-driven",
+      "kind": "position",
+      "of_dispute": "H-tus-confound",
+      "detail": "activation abolished by auditory nerve transection, mouse imaging matched the auditory pathway, and human motor inhibition tracked auditory stimulation",
+      "species": "guinea pig, mouse, human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        74,
+        75,
+        77
+      ]
+    },
+    {
+      "id": "H-tus-confound-p2",
+      "label": "Genuine at the focus",
+      "kind": "position",
+      "of_dispute": "H-tus-confound",
+      "detail": "envelope smoothing removed the auditory brainstem response but left the mouse motor response intact, and deaf mice matched hearing ones",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        76
+      ]
+    },
+    {
+      "id": "H-fus-bbb-inflammation",
+      "label": "14.5 Barrier opening and sterile inflammation",
+      "kind": "dispute",
+      "hypothesis_group": "H-fus-bbb-inflammation",
+      "question": "Is focused-ultrasound blood-brain-barrier opening an inflammatory injury?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-fus-bbb-inflammation-p1",
+      "label": "An inflammatory event",
+      "kind": "position",
+      "of_dispute": "H-fus-bbb-inflammation",
+      "detail": "damage-associated molecular patterns and a parenchymal sterile inflammatory response lasting about 24 hours",
+      "species": "rat",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        83
+      ]
+    },
+    {
+      "id": "H-fus-bbb-inflammation-p2",
+      "label": "A dose effect",
+      "kind": "position",
+      "of_dispute": "H-fus-bbb-inflammation",
+      "detail": "NF-kB activation tracked microbubble dose, absent at clinical imaging doses",
+      "species": "rat",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        84
+      ]
+    },
+    {
+      "id": "H-pbm-dose",
+      "label": "14.6 Photobiomodulation delivered dose",
+      "kind": "dispute",
+      "hypothesis_group": "H-pbm-dose",
+      "question": "Does enough near-infrared light reach cortex for transcranial photobiomodulation?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-pbm-dose-p1",
+      "label": "Insufficient",
+      "kind": "position",
+      "of_dispute": "H-pbm-dose",
+      "detail": "maximum transmittance through human skull 0.31-0.71%, with cell responses needing 14-775 times that level",
+      "species": "human skull specimens and cells",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        22
+      ]
+    },
+    {
+      "id": "H-pbm-dose-p2",
+      "label": "Sufficient",
+      "kind": "position",
+      "of_dispute": "H-pbm-dose",
+      "detail": "Monte Carlo photon transport put up to about 15% of incident energy at cortex",
+      "species": "human models",
+      "evidence_kind": "computational",
+      "refs": [
+        23
+      ]
+    },
+    {
+      "id": "H-gamma-40hz",
+      "label": "14.7 40 Hz sensory stimulation",
+      "kind": "dispute",
+      "hypothesis_group": "H-gamma-40hz",
+      "question": "Does 40 Hz sensory stimulation entrain gamma and reduce amyloid?",
+      "split_about": "endpoint",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-gamma-40hz-p1",
+      "label": "Yes",
+      "kind": "position",
+      "of_dispute": "H-gamma-40hz",
+      "detail": "optogenetic 40 Hz lowered amyloid, and audiovisual 40 Hz raised CSF influx with clearance-dependent amyloid removal",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        123,
+        124
+      ]
+    },
+    {
+      "id": "H-gamma-40hz-p2",
+      "label": "No",
+      "kind": "position",
+      "of_dispute": "H-gamma-40hz",
+      "detail": "large-scale recordings found no native gamma engagement, flicker avoidance and no plaque change",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        125
+      ]
+    },
+    {
+      "id": "H-tdcs-plasticity",
+      "label": "14.8 The tDCS after-effect account",
+      "kind": "dispute",
+      "hypothesis_group": "H-tdcs-plasticity",
+      "question": "Is the after-effect of tDCS cortical LTP-like plasticity?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 4
+    },
+    {
+      "id": "H-tdcs-plasticity-p1",
+      "label": "LTP-like plasticity",
+      "kind": "position",
+      "of_dispute": "H-tdcs-plasticity",
+      "detail": "sustained MEP change read as associative plasticity, as in paired associative stimulation",
+      "species": "human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        97,
+        100
+      ]
+    },
+    {
+      "id": "H-tdcs-plasticity-p2",
+      "label": "Peripheral co-stimulation",
+      "kind": "position",
+      "of_dispute": "H-tdcs-plasticity",
+      "detail": "six tDCS results re-read as cranial and cervical nerve co-stimulation",
+      "species": "human",
+      "evidence_kind": "review",
+      "refs": [
+        109
+      ]
+    },
+    {
+      "id": "H-tdcs-plasticity-p3",
+      "label": "Unreliable",
+      "kind": "position",
+      "of_dispute": "H-tdcs-plasticity",
+      "detail": "430 participants across 22 theta-burst studies varied widely, and 59 studies found no single-session cognitive effect",
+      "species": "human",
+      "evidence_kind": "systematic review",
+      "refs": [
+        107,
+        108
+      ]
+    },
+    {
+      "id": "H-tdcs-plasticity-p4",
+      "label": "Glial",
+      "kind": "position",
+      "of_dispute": "H-tdcs-plasticity",
+      "detail": "the effect required astrocytic calcium",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        121
+      ]
+    },
+    {
+      "id": "H-connectivity-targeting",
+      "label": "14.9 Connectivity-based targeting",
+      "kind": "dispute",
+      "hypothesis_group": "H-connectivity-targeting",
+      "question": "Does subgenual cingulate connectivity predict rTMS outcome well enough to target by?",
+      "split_about": "endpoint",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-connectivity-targeting-p1",
+      "label": "Yes",
+      "kind": "position",
+      "of_dispute": "H-connectivity-targeting",
+      "detail": "across 98 healthy subjects, sites with better reported efficacy were more strongly anticorrelated with subgenual cingulate",
+      "species": "human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        129
+      ]
+    },
+    {
+      "id": "H-connectivity-targeting-p2",
+      "label": "Too weak to target by",
+      "kind": "position",
+      "of_dispute": "H-connectivity-targeting",
+      "detail": "in 295 treated patients the association was about r = -0.16, some 3% of outcome variance",
+      "species": "human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        130
+      ]
+    },
+    {
+      "id": "H-dbs-mechanism",
+      "label": "14.10 Deep brain stimulation mechanism",
+      "kind": "dispute",
+      "hypothesis_group": "H-dbs-mechanism",
+      "question": "How does high-frequency deep brain stimulation produce a lesion-like effect?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-dbs-mechanism-p1",
+      "label": "Informational lesion",
+      "kind": "position",
+      "of_dispute": "H-dbs-mechanism",
+      "detail": "modelled high-frequency drive makes output spiking regular and almost variance-free",
+      "species": "model",
+      "evidence_kind": "computational",
+      "refs": [
+        133
+      ]
+    },
+    {
+      "id": "H-dbs-mechanism-p2",
+      "label": "Excitation and antidromic activation",
+      "kind": "position",
+      "of_dispute": "H-dbs-mechanism",
+      "detail": "high-frequency stimulation drives efferent axons rather than silencing them",
+      "species": "model",
+      "evidence_kind": "computational",
+      "refs": [
+        60
+      ]
+    },
+    {
+      "id": "H-charge-safety",
+      "label": "14.11 The charge-density safety rule",
+      "kind": "dispute",
+      "hypothesis_group": "H-charge-safety",
+      "question": "Does the charge and charge-density rule bound safe stimulation?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 2,
+      "shared_evidence_refs": [
+        16
+      ]
+    },
+    {
+      "id": "H-charge-safety-p1",
+      "label": "The Shannon line",
+      "kind": "position",
+      "of_dispute": "H-charge-safety",
+      "detail": "a log-linear boundary fitted to tissue-damage data became the design rule for macroelectrodes",
+      "species": "cat cortex data, fitted",
+      "evidence_kind": "review",
+      "refs": [
+        17
+      ]
+    },
+    {
+      "id": "H-charge-safety-p2",
+      "label": "Out of scope",
+      "kind": "position",
+      "of_dispute": "H-charge-safety",
+      "detail": "the equation omits frequency, duty cycle, current density and electrode size, and microelectrodes deliver more charge without damage",
+      "species": "mixed",
+      "evidence_kind": "review",
+      "refs": [
+        18
+      ]
+    },
+    {
+      "id": "H-inflammatory-reflex",
+      "label": "14.12 The inflammatory-reflex framing",
+      "kind": "dispute",
+      "hypothesis_group": "H-inflammatory-reflex",
+      "question": "Is vagal control of splenic TNF a reflex arc, or a drivable pathway?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-inflammatory-reflex-p1",
+      "label": "A reflex",
+      "kind": "position",
+      "of_dispute": "H-inflammatory-reflex",
+      "detail": "a hard-wired loop with afferent limb, central integration and efferent cholinergic limb, with ChAT-expressing splenic T cells completing the arc",
+      "species": "rodent",
+      "evidence_kind": "review and primary experimental",
+      "refs": [
+        149,
+        150
+      ]
+    },
+    {
+      "id": "H-inflammatory-reflex-p2",
+      "label": "Drivable but not a reflex",
+      "kind": "position",
+      "of_dispute": "H-inflammatory-reflex",
+      "detail": "the disynaptic vagus-to-splenic-nerve link is rejected, since vagal stimulation drives no splenic nerve spikes",
+      "species": "rodent",
+      "evidence_kind": "review",
+      "refs": [
+        151
+      ]
+    },
+    {
+      "id": "H-tavns-engagement",
+      "label": "14.13 Transcutaneous vagal target engagement",
+      "kind": "dispute",
+      "hypothesis_group": "H-tavns-engagement",
+      "question": "Does transcutaneous auricular vagus nerve stimulation engage noradrenergic targets in humans?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 3
+    },
+    {
+      "id": "H-tavns-engagement-p1",
+      "label": "Null",
+      "kind": "position",
+      "of_dispute": "H-tavns-engagement",
+      "detail": "continuous cymba conchae stimulation in 66 participants left pupil, cortisol and cardiac vagal activity unchanged",
+      "species": "human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        145
+      ]
+    },
+    {
+      "id": "H-tavns-engagement-p2",
+      "label": "Protocol-dependent",
+      "kind": "position",
+      "of_dispute": "H-tavns-engagement",
+      "detail": "pulsed delivery gave an effect (g = 0.36) and continuous delivery evidence for the null (g = 0.002)",
+      "species": "human",
+      "evidence_kind": "systematic review",
+      "refs": [
+        146
+      ]
+    },
+    {
+      "id": "H-tavns-engagement-p3",
+      "label": "Weak proxy",
+      "kind": "position",
+      "of_dispute": "H-tavns-engagement",
+      "detail": "locus coeruleus recording with pupillometry gave a variable, state-dependent mapping",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        144
+      ]
+    },
+    {
+      "id": "H-hnk-active-species",
+      "label": "14.14 Ketamine's active species",
+      "kind": "dispute",
+      "hypothesis_group": "H-hnk-active-species",
+      "question": "Is (2R,6R)-hydroxynorketamine the antidepressant species, and does it have a target?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 3
+    },
+    {
+      "id": "H-hnk-active-species-p1",
+      "label": "Yes, without NMDA inhibition",
+      "kind": "position",
+      "of_dispute": "H-hnk-active-species",
+      "detail": "the metabolite acted without NMDA receptor inhibition and required AMPA receptor activation",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        117
+      ]
+    },
+    {
+      "id": "H-hnk-active-species-p2",
+      "label": "No target found",
+      "kind": "position",
+      "of_dispute": "H-hnk-active-species",
+      "detail": "screens across thousands of human proteins found no direct interaction with any proposed target",
+      "species": "human protein panels",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        167
+      ]
+    },
+    {
+      "id": "H-hnk-active-species-p3",
+      "label": "A shared downstream step",
+      "kind": "position",
+      "of_dispute": "H-hnk-active-species",
+      "detail": "NMDA antagonist pretreatment abolished the effects of ketamine, the metabolite and two unrelated compounds alike; an earlier account routes it through eEF2 kinase",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        168,
+        116
+      ]
+    },
+    {
+      "id": "H-5ht2a-necessity",
+      "label": "14.15 5-HT2A necessity",
+      "kind": "dispute",
+      "hypothesis_group": "H-5ht2a-necessity",
+      "question": "Is postsynaptic 5-HT2A signalling necessary for psychedelic-induced plasticity?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 3
+    },
+    {
+      "id": "H-5ht2a-necessity-p1",
+      "label": "Postsynaptic 5-HT2A",
+      "kind": "position",
+      "of_dispute": "H-5ht2a-necessity",
+      "detail": "the standard account, with the hallucinogenic and the plasticity question separated",
+      "species": "mixed",
+      "evidence_kind": "review",
+      "refs": [
+        173
+      ]
+    },
+    {
+      "id": "H-5ht2a-necessity-p2",
+      "label": "Presynaptic and afferent",
+      "kind": "position",
+      "of_dispute": "H-5ht2a-necessity",
+      "detail": "strengthening occurred where postsynaptic 5-HT2A is absent and needed presynaptic 5-HT2A on thalamic axons",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        174
+      ]
+    },
+    {
+      "id": "H-5ht2a-necessity-p3",
+      "label": "TrkB rather than 5-HT2A",
+      "kind": "position",
+      "of_dispute": "H-5ht2a-necessity",
+      "detail": "plasticity required TrkB, not 5-HT2A, while head-twitch required 5-HT2A",
+      "species": "mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        119
+      ]
+    },
+    {
+      "id": "H-subjective-experience",
+      "label": "14.16 The subjective-experience question",
+      "kind": "dispute",
+      "hypothesis_group": "H-subjective-experience",
+      "question": "Is the subjective experience necessary for a psychedelic's enduring therapeutic effect?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2,
+      "shared_evidence_refs": [
+        178
+      ]
+    },
+    {
+      "id": "H-subjective-experience-p1",
+      "label": "Necessary",
+      "kind": "position",
+      "of_dispute": "H-subjective-experience",
+      "detail": "with drug intensity controlled, specific subjective features predict outcome across human studies",
+      "species": "human",
+      "evidence_kind": "review",
+      "refs": [
+        175
+      ]
+    },
+    {
+      "id": "H-subjective-experience-p2",
+      "label": "Not necessary",
+      "kind": "position",
+      "of_dispute": "H-subjective-experience",
+      "detail": "the experience-to-outcome link is largely correlational, and lasting changes can occur without it",
+      "species": "mixed",
+      "evidence_kind": "review",
+      "refs": [
+        176
+      ]
+    },
+    {
+      "id": "H-ketamine-vs-ect",
+      "label": "14.17 Ketamine versus ECT",
+      "kind": "dispute",
+      "hypothesis_group": "H-ketamine-vs-ect",
+      "question": "Is ketamine non-inferior to electroconvulsive therapy for depression?",
+      "split_about": "endpoint",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-ketamine-vs-ect-p1",
+      "label": "Inferior for remission",
+      "kind": "position",
+      "of_dispute": "H-ketamine-vs-ect",
+      "detail": "remission 63% with ECT against 46% with ketamine in hospitalised patients, so non-inferiority failed",
+      "species": "human",
+      "evidence_kind": "primary clinical trial",
+      "refs": [
+        171
+      ]
+    },
+    {
+      "id": "H-ketamine-vs-ect-p2",
+      "label": "Non-inferior for response",
+      "kind": "position",
+      "of_dispute": "H-ketamine-vs-ect",
+      "detail": "response 55.4% with ketamine against 41.2% with ECT in 403 outpatients, meeting non-inferiority",
+      "species": "human",
+      "evidence_kind": "primary clinical trial",
+      "refs": [
+        170
+      ]
+    },
+    {
+      "id": "H-nose-to-brain",
+      "label": "14.18 Intranasal direct transport",
+      "kind": "dispute",
+      "hypothesis_group": "H-nose-to-brain",
+      "question": "Does intranasal dosing reach the brain other than through systemic absorption?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-nose-to-brain-p1",
+      "label": "Yes, an anatomical route",
+      "kind": "position",
+      "of_dispute": "H-nose-to-brain",
+      "detail": "olfactory and trigeminal pathways with perineural and perivascular bulk flow",
+      "species": "mixed",
+      "evidence_kind": "review",
+      "refs": [
+        161
+      ]
+    },
+    {
+      "id": "H-nose-to-brain-p2",
+      "label": "Not shown quantitatively",
+      "kind": "position",
+      "of_dispute": "H-nose-to-brain",
+      "detail": "of about 100 studies, twelve met pharmacokinetic criteria and two rat studies supported direct transport, with no human evidence",
+      "species": "mostly animal",
+      "evidence_kind": "systematic review",
+      "refs": [
+        162
+      ]
+    },
+    {
+      "id": "H-d2-occupancy",
+      "label": "14.19 Receptor-occupancy thresholds",
+      "kind": "dispute",
+      "hypothesis_group": "H-d2-occupancy",
+      "question": "Is there a universal receptor-occupancy therapeutic window?",
+      "split_about": "dose",
+      "term": "hypothesis-group",
+      "position_count": 2,
+      "shared_evidence_refs": [
+        27
+      ]
+    },
+    {
+      "id": "H-d2-occupancy-p1",
+      "label": "A threshold",
+      "kind": "position",
+      "of_dispute": "H-d2-occupancy",
+      "detail": "raclopride PET put occupancy at 38-87%, with response, extrapyramidal symptoms and hyperprolactinaemia likelier above about 65, 72 and 78%",
+      "species": "human",
+      "evidence_kind": "primary clinical trial",
+      "refs": [
+        26
+      ]
+    },
+    {
+      "id": "H-d2-occupancy-p2",
+      "label": "It breaks for partial agonists",
+      "kind": "position",
+      "of_dispute": "H-d2-occupancy",
+      "detail": "in 110 studies and 37,193 participants, extrapyramidal risk rose above 75-85% occupancy for antagonists while partial agonists kept it low",
+      "species": "human",
+      "evidence_kind": "systematic review",
+      "refs": [
+        28
+      ]
+    },
+    {
+      "id": "H-serotonin-premise",
+      "label": "14.20 The serotonin premise",
+      "kind": "dispute",
+      "hypothesis_group": "H-serotonin-premise",
+      "question": "Does the serotonin-deficit premise behind serotonergic antidepressants hold?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-serotonin-premise-p1",
+      "label": "No deficit evidence",
+      "kind": "position",
+      "of_dispute": "H-serotonin-premise",
+      "detail": "no association between serotonin metabolites and depression, and no genotype-by-stress interaction in the largest studies",
+      "species": "human",
+      "evidence_kind": "systematic review",
+      "refs": [
+        188
+      ]
+    },
+    {
+      "id": "H-serotonin-premise-p2",
+      "label": "Function-based, no deficit required",
+      "kind": "position",
+      "of_dispute": "H-serotonin-premise",
+      "detail": "the action sits in early changes to emotional and social information processing and in drug-induced plasticity",
+      "species": "human",
+      "evidence_kind": "review",
+      "refs": [
+        187
+      ]
+    },
+    {
+      "id": "H-tep-origin",
+      "label": "14.21 The origin of the TMS-evoked potential",
+      "kind": "dispute",
+      "hypothesis_group": "H-tep-origin",
+      "question": "How much of the TMS-evoked EEG potential is transcranial rather than sensory?",
+      "split_about": "endpoint",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-tep-origin-p1",
+      "label": "Largely sensory",
+      "kind": "position",
+      "of_dispute": "H-tep-origin",
+      "detail": "a realistic sham reproducing auditory and somatosensory effects evoked responses resembling real TMS, early and late",
+      "species": "human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        202
+      ]
+    },
+    {
+      "id": "H-tep-origin-p2",
+      "label": "Separable",
+      "kind": "position",
+      "of_dispute": "H-tep-origin",
+      "detail": "an optimised sham left early components and beta responses only with real TMS",
+      "species": "human",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        203
+      ]
+    },
+    {
+      "id": "H-magnetogenetics",
+      "label": "14.22 Magnetogenetics",
+      "kind": "dispute",
+      "hypothesis_group": "H-magnetogenetics",
+      "question": "Can magnetic fields gate ferritin-tethered ion channels as reported?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-magnetogenetics-p1",
+      "label": "Yes, as reported",
+      "kind": "position",
+      "of_dispute": "H-magnetogenetics",
+      "detail": "a TRPV4-ferritin fusion permitted magnetic control in imaging, slice and in vivo electrophysiology and behaviour",
+      "species": "zebrafish and mouse",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        95
+      ]
+    },
+    {
+      "id": "H-magnetogenetics-p2",
+      "label": "Physically impossible",
+      "kind": "position",
+      "of_dispute": "H-magnetogenetics",
+      "detail": "required forces, torques and heating exceed what paramagnetic ferritin can supply by five to ten orders of magnitude",
+      "species": "first-principles calculation",
+      "evidence_kind": "computational",
+      "refs": [
+        94
+      ]
+    },
+    {
+      "id": "H-dreadd-actuator",
+      "label": "14.23 The chemogenetic actuator",
+      "kind": "dispute",
+      "hypothesis_group": "H-dreadd-actuator",
+      "question": "Is clozapine-N-oxide inert at targets other than the designer receptor?",
+      "split_about": "mechanism",
+      "term": "hypothesis-group",
+      "position_count": 2
+    },
+    {
+      "id": "H-dreadd-actuator-p1",
+      "label": "Inert by design",
+      "kind": "position",
+      "of_dispute": "H-dreadd-actuator",
+      "detail": "designer receptors activated by clozapine-N-oxide and not acetylcholine, with a Gi-coupled member silencing hippocampal neurons",
+      "species": "yeast, human cells, rodent",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        93
+      ]
+    },
+    {
+      "id": "H-dreadd-actuator-p2",
+      "label": "Acting through clozapine",
+      "kind": "position",
+      "of_dispute": "H-dreadd-actuator",
+      "detail": "the injected compound does not enter the brain and binds weakly; it is converted to clozapine, which enters and occupies the receptor",
+      "species": "rodent and macaque",
+      "evidence_kind": "primary experimental",
+      "refs": [
+        29
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "H-tes-entrainment",
+      "to": "H-tes-entrainment-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        44,
+        55
+      ]
+    },
+    {
+      "from": "H-tes-entrainment",
+      "to": "H-tes-entrainment-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        50,
+        54
+      ]
+    },
+    {
+      "from": "H-ti-suprathreshold",
+      "to": "H-ti-suprathreshold-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        39,
+        45
+      ]
+    },
+    {
+      "from": "H-ti-suprathreshold",
+      "to": "H-ti-suprathreshold-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        48,
+        60
+      ]
+    },
+    {
+      "from": "H-tus-mechanism",
+      "to": "H-tus-mechanism-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        65
+      ]
+    },
+    {
+      "from": "H-tus-mechanism",
+      "to": "H-tus-mechanism-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        66
+      ]
+    },
+    {
+      "from": "H-tus-mechanism",
+      "to": "H-tus-mechanism-p3",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        68,
+        70
+      ]
+    },
+    {
+      "from": "H-tus-mechanism",
+      "to": "H-tus-mechanism-p4",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        71
+      ]
+    },
+    {
+      "from": "H-tus-confound",
+      "to": "H-tus-confound-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        74,
+        75,
+        77
+      ]
+    },
+    {
+      "from": "H-tus-confound",
+      "to": "H-tus-confound-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        76
+      ]
+    },
+    {
+      "from": "H-fus-bbb-inflammation",
+      "to": "H-fus-bbb-inflammation-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        83
+      ]
+    },
+    {
+      "from": "H-fus-bbb-inflammation",
+      "to": "H-fus-bbb-inflammation-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        84
+      ]
+    },
+    {
+      "from": "H-pbm-dose",
+      "to": "H-pbm-dose-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        22
+      ]
+    },
+    {
+      "from": "H-pbm-dose",
+      "to": "H-pbm-dose-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        23
+      ]
+    },
+    {
+      "from": "H-gamma-40hz",
+      "to": "H-gamma-40hz-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        123,
+        124
+      ]
+    },
+    {
+      "from": "H-gamma-40hz",
+      "to": "H-gamma-40hz-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        125
+      ]
+    },
+    {
+      "from": "H-tdcs-plasticity",
+      "to": "H-tdcs-plasticity-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        97,
+        100
+      ]
+    },
+    {
+      "from": "H-tdcs-plasticity",
+      "to": "H-tdcs-plasticity-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        109
+      ]
+    },
+    {
+      "from": "H-tdcs-plasticity",
+      "to": "H-tdcs-plasticity-p3",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        107,
+        108
+      ]
+    },
+    {
+      "from": "H-tdcs-plasticity",
+      "to": "H-tdcs-plasticity-p4",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        121
+      ]
+    },
+    {
+      "from": "H-connectivity-targeting",
+      "to": "H-connectivity-targeting-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        129
+      ]
+    },
+    {
+      "from": "H-connectivity-targeting",
+      "to": "H-connectivity-targeting-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        130
+      ]
+    },
+    {
+      "from": "H-dbs-mechanism",
+      "to": "H-dbs-mechanism-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        133
+      ]
+    },
+    {
+      "from": "H-dbs-mechanism",
+      "to": "H-dbs-mechanism-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        60
+      ]
+    },
+    {
+      "from": "H-charge-safety",
+      "to": "H-charge-safety-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        17
+      ]
+    },
+    {
+      "from": "H-charge-safety",
+      "to": "H-charge-safety-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        18
+      ]
+    },
+    {
+      "from": "H-inflammatory-reflex",
+      "to": "H-inflammatory-reflex-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        149,
+        150
+      ]
+    },
+    {
+      "from": "H-inflammatory-reflex",
+      "to": "H-inflammatory-reflex-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        151
+      ]
+    },
+    {
+      "from": "H-tavns-engagement",
+      "to": "H-tavns-engagement-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        145
+      ]
+    },
+    {
+      "from": "H-tavns-engagement",
+      "to": "H-tavns-engagement-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        146
+      ]
+    },
+    {
+      "from": "H-tavns-engagement",
+      "to": "H-tavns-engagement-p3",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        144
+      ]
+    },
+    {
+      "from": "H-hnk-active-species",
+      "to": "H-hnk-active-species-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        117
+      ]
+    },
+    {
+      "from": "H-hnk-active-species",
+      "to": "H-hnk-active-species-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        167
+      ]
+    },
+    {
+      "from": "H-hnk-active-species",
+      "to": "H-hnk-active-species-p3",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        168,
+        116
+      ]
+    },
+    {
+      "from": "H-5ht2a-necessity",
+      "to": "H-5ht2a-necessity-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        173
+      ]
+    },
+    {
+      "from": "H-5ht2a-necessity",
+      "to": "H-5ht2a-necessity-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        174
+      ]
+    },
+    {
+      "from": "H-5ht2a-necessity",
+      "to": "H-5ht2a-necessity-p3",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        119
+      ]
+    },
+    {
+      "from": "H-subjective-experience",
+      "to": "H-subjective-experience-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        175
+      ]
+    },
+    {
+      "from": "H-subjective-experience",
+      "to": "H-subjective-experience-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        176
+      ]
+    },
+    {
+      "from": "H-ketamine-vs-ect",
+      "to": "H-ketamine-vs-ect-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        171
+      ]
+    },
+    {
+      "from": "H-ketamine-vs-ect",
+      "to": "H-ketamine-vs-ect-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        170
+      ]
+    },
+    {
+      "from": "H-nose-to-brain",
+      "to": "H-nose-to-brain-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        161
+      ]
+    },
+    {
+      "from": "H-nose-to-brain",
+      "to": "H-nose-to-brain-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        162
+      ]
+    },
+    {
+      "from": "H-d2-occupancy",
+      "to": "H-d2-occupancy-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        26
+      ]
+    },
+    {
+      "from": "H-d2-occupancy",
+      "to": "H-d2-occupancy-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        28
+      ]
+    },
+    {
+      "from": "H-serotonin-premise",
+      "to": "H-serotonin-premise-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        188
+      ]
+    },
+    {
+      "from": "H-serotonin-premise",
+      "to": "H-serotonin-premise-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        187
+      ]
+    },
+    {
+      "from": "H-tep-origin",
+      "to": "H-tep-origin-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        202
+      ]
+    },
+    {
+      "from": "H-tep-origin",
+      "to": "H-tep-origin-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        203
+      ]
+    },
+    {
+      "from": "H-magnetogenetics",
+      "to": "H-magnetogenetics-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        95
+      ]
+    },
+    {
+      "from": "H-magnetogenetics",
+      "to": "H-magnetogenetics-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        94
+      ]
+    },
+    {
+      "from": "H-dreadd-actuator",
+      "to": "H-dreadd-actuator-p1",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        93
+      ]
+    },
+    {
+      "from": "H-dreadd-actuator",
+      "to": "H-dreadd-actuator-p2",
+      "label": "rival position",
+      "relation": "position_of",
+      "refs": [
+        29
+      ]
+    }
+  ]
+}

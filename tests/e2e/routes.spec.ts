@@ -1,0 +1,99 @@
+import { expect, test } from '@playwright/test';
+
+const ROUTES: [string, RegExp][] = [
+  ['/', /neuromodulation: an atlas of exogenous drives/i],
+  ['/read', /the review, in volumes/i],
+  ['/read/v0', /volume 0 — foundations/i],
+  ['/read/v1', /vagus and cranial nerve stimulation/i],
+  ['/glossary', /^glossary$/i],
+  ['/concepts', /concepts \(101s\)/i],
+  ['/concepts/receptor-theory-occupancy', /receptor theory and occupancy/i],
+  ['/concepts/graph-analytics-basics', /.+/],
+  ['/figures', /^figures$/i],
+  ['/figures/fig1', /the drive to outcome chain/i],
+  ['/figures/fig3', /field strengths and thresholds/i],
+  ['/figures/fig6', /the modality map/i],
+  ['/graph', /the claims graph/i],
+  ['/references', /^references$/i],
+  ['/methods', /methods & provenance/i],
+  ['/about', /^about$/i],
+  ['/nope', /page not found/i],
+];
+
+for (const [route, h1] of ROUTES) {
+  test(`route ${route} renders its h1 without console errors`, async ({ page }) => {
+    const errors: string[] = [];
+    page.on('pageerror', (e) => errors.push(e.message));
+    const res = await page.goto(route);
+    expect(res?.status()).toBe(200);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(h1);
+    expect(errors).toEqual([]);
+  });
+}
+
+test('every route is reachable from the header nav', async ({ page }) => {
+  await page.goto('/');
+  const nav = page.getByRole('navigation', { name: 'Primary' });
+  for (const label of ['Read', 'Glossary', 'Concepts', 'Figures', 'Graph', 'References', 'Methods', 'About']) {
+    await expect(nav.getByRole('link', { name: label, exact: true })).toBeVisible();
+  }
+});
+
+test('the app never implies peer review, and says the sweep date on /, /read and /about', async ({ page }) => {
+  for (const route of ['/', '/read', '/read/v0', '/about']) {
+    await page.goto(route);
+    await expect(page.getByText(/NOT PEER REVIEWED/i).first()).toBeVisible();
+    await expect(page.getByText(/2026-09-15/).first()).toBeVisible();
+  }
+});
+
+test('the volume index lists v0 as ready and v1 as coming', async ({ page }) => {
+  await page.goto('/read');
+  await expect(page.getByTestId('volume-card-v0')).toContainText(/ready/);
+  await expect(page.getByTestId('volume-card-v0')).toContainText(/30,350 words|30,350/);
+  const v1 = page.getByTestId('volume-card-v1');
+  await expect(v1).toContainText(/coming/);
+  await expect(v1.getByRole('link')).toHaveCount(0);
+});
+
+test('a deep link scrolls the reader to its section, and an old /read#section link redirects to the volume', async ({ page }) => {
+  await page.goto('/read/v0#v0-3-dose');
+  await expect(page.locator('#h-v0-3-dose')).toBeInViewport();
+  await page.goto('/read#v0-12-methods-and-confounds');
+  await expect(page).toHaveURL(/\/read\/v0#v0-12-methods-and-confounds$/);
+  await expect(page.locator('#h-v0-12-methods-and-confounds')).toBeInViewport();
+});
+
+test('provenance.json and the graph exports ship with the build', async ({ page, request }) => {
+  const res = await page.goto('/provenance.json');
+  expect(res?.status()).toBe(200);
+  const body = await res!.json();
+  expect(body.blocks.uncited).toBe(0);
+  expect(body.claims.total).toBe(458);
+  expect(body.claims.null_results).toHaveLength(9);
+  expect(body.references.unverified_but_cited).toEqual([]);
+  for (const f of ['claims.cypher', 'nodes.csv', 'edges.csv', 'claims.graphml', 'claims.json']) {
+    const r = await request.get(`/graph/${f}`);
+    expect(r.status(), f).toBe(200);
+  }
+});
+
+test('command-K search finds a section and navigates into its volume', async ({ page }) => {
+  await page.goto('/');
+  await page.keyboard.press('ControlOrMeta+k');
+  const box = page.getByRole('combobox');
+  await expect(box).toBeFocused();
+  await box.fill('coupling physics');
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/\/read\/v0#v0-/);
+});
+
+test('dark mode toggle persists across reload', async ({ page }) => {
+  await page.goto('/glossary');
+  await page.getByRole('button', { name: /switch to dark theme/i }).click();
+  await expect(page.locator('html')).toHaveClass(/dark/);
+  await page.reload();
+  await expect(page.locator('html')).toHaveClass(/dark/);
+  await page.getByRole('button', { name: /switch to light theme/i }).click();
+  await expect(page.locator('html')).not.toHaveClass(/dark/);
+});

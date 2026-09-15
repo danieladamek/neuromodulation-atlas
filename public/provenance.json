@@ -1,0 +1,163 @@
+{
+ "slug": "neuromodulation-atlas",
+ "mode": "topic",
+ "as_of": "2026-09-15",
+ "builder": {
+  "name": "Manuscript Interrogator",
+  "version": "0.7",
+  "date": "2026-09-15"
+ },
+ "volumes": [
+  {
+   "id": "v0",
+   "title": "Foundations",
+   "status": "ready",
+   "as_of": "2026-09-15",
+   "sections": 16,
+   "words": 30350,
+   "blocks": {
+    "total": 413,
+    "cited": 362,
+    "framing": 25,
+    "synthesis": 101,
+    "uncited": 0
+   },
+   "synthesis_passages": 101,
+   "claims": 458
+  },
+  {
+   "id": "v1",
+   "title": "Vagus and cranial nerve stimulation",
+   "status": "planned",
+   "as_of": "2026-09-15",
+   "sections": 0,
+   "words": 0,
+   "blocks": null,
+   "synthesis_passages": 0,
+   "claims": 0
+  }
+ ],
+ "sections": 16,
+ "words": 30350,
+ "blocks": {
+  "total": 413,
+  "cited": 362,
+  "framing": 25,
+  "synthesis": 101,
+  "uncited": 0
+ },
+ "synthesis_passages": 101,
+ "terms": {
+  "total": 300,
+  "occurring": 299,
+  "linked": 297,
+  "linked_pct_of_occurring": 99.3,
+  "unmatched": [
+   "curie"
+  ],
+  "only_in_skip_zones": [
+   "thermal-account",
+   "species-translation"
+  ],
+  "link_every_occurrence": false,
+  "variants": 1101,
+  "ambiguous_variants": []
+ },
+ "references": {
+  "total": 263,
+  "by_tier": {
+   "background": 72,
+   "current": 117,
+   "seminal": 36,
+   "classic": 38
+  },
+  "anchors": [],
+  "with_summary": 263,
+  "without_summary": [],
+  "verified": 260,
+  "unverified": [
+   7,
+   191,
+   224
+  ],
+  "unverified_but_cited": [],
+  "cited_in_text": 259,
+  "cited_anywhere": 259,
+  "unresolved_citations": []
+ },
+ "figures": {
+  "total": 9,
+  "by_kind": {
+   "pathway": 1,
+   "table": 2,
+   "chart": 2,
+   "network": 4
+  },
+  "by_synthesis": {
+   "conceptual": 5,
+   "data": 4
+  },
+  "original_image": 0
+ },
+ "concepts": 18,
+ "concept_levels": true,
+ "claims": {
+  "total": 458,
+  "by_status": {
+   "supported": 274,
+   "inferred": 65,
+   "contested": 119
+  },
+  "null_results": [
+   "C0339",
+   "C0341",
+   "C0344",
+   "C0405",
+   "C0423",
+   "C0438",
+   "C0450",
+   "C0503",
+   "C0510"
+  ],
+  "species_not_stated": 86,
+  "nodes": 880,
+  "hypothesis_groups": 25,
+  "rivals": 57,
+  "exports": [
+   {
+    "file": "graph/claims.cypher",
+    "bytes": 498398
+   },
+   {
+    "file": "graph/nodes.csv",
+    "bytes": 137317
+   },
+   {
+    "file": "graph/edges.csv",
+    "bytes": 203696
+   },
+   {
+    "file": "graph/claims.graphml",
+    "bytes": 587511
+   },
+   {
+    "file": "graph/claims.json",
+    "bytes": 614039
+   }
+  ]
+ },
+ "scope": {
+  "volumes": {
+   "v0": {
+    "queries": 400,
+    "hits": 614755,
+    "kept": 403
+   }
+  }
+ },
+ "todo": {
+  "count": 79
+ },
+ "build_errors": 0,
+ "warnings": 109
+}

@@ -1,0 +1,34 @@
+dimension,category,count,note,ref
+total,references in references.yaml,263,,self
+total,verified against abstract or full text,260,,self
+total,not verified,3,,self
+total,flagged contested,80,,self
+tier,seminal,36,,self
+tier,classic,38,,self
+tier,current,117,,self
+tier,background,72,,self
+year,1956-1979,3,,self
+year,1980-1989,6,,self
+year,1990-1999,5,,self
+year,2000-2004,15,,self
+year,2005-2009,24,,self
+year,2010-2014,30,,self
+year,2015-2019,67,,self
+year,2020-2024,87,,self
+year,2025-2026,26,,self
+species,human,120,a reference with several species tags is counted once per tag,self
+species,rodent,49,a reference with several species tags is counted once per tag,self
+species,mixed,38,a reference with several species tags is counted once per tag,self
+species,n/a,29,a reference with several species tags is counted once per tag,self
+species,computational,26,a reference with several species tags is counted once per tag,self
+species,in-vitro,24,a reference with several species tags is counted once per tag,self
+species,nhp,13,a reference with several species tags is counted once per tag,self
+evidence_kind,primary-experimental,99,,self
+evidence_kind,review,56,,self
+evidence_kind,primary-clinical-trial,36,,self
+evidence_kind,computational,20,,self
+evidence_kind,systematic-review,19,,self
+evidence_kind,consensus,12,,self
+evidence_kind,database,12,,self
+evidence_kind,guideline,8,,self
+evidence_kind,textbook,1,,self

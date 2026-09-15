@@ -1,0 +1,10 @@
+entry,value_low,value_high,unit,species,provenance,preparation,kind,ref
+tES at 2 mA: field measured in cortex,0.8,0.8,V/m,human,measured,intracranial electrodes in 10 epilepsy patients during scalp stimulation,delivered field,40
+tES peak field in superficial cortex,0.5,0.5,V/m,human and macaque,measured,intracranial recordings in epilepsy patients and non-human primates,delivered field,211
+Endogenous field during physiological activity,2,4,V/m,ferret,measured,"cortex in vivo, with slice work at matched amplitudes",reference field,37
+Minimum field that changes spiking and subthreshold activity,1,1,V/m,rat,measured,intracellular recording,threshold,50
+Upper bound of the linear somatic polarisation range (0.12 mV per mV/mm),40,40,V/m,rat,measured,hippocampal slice in a uniform DC field,coupling range,36
+Field available at tolerable scalp currents,0.1,1,V/m,human,modelled,morphologically realistic layer-5 pyramidal cell models in a head model,delivered field,48
+Suprathreshold low-frequency tACS threshold,17,47,V/m,human,modelled,morphologically realistic layer-5 pyramidal cell models,threshold,48
+Suprathreshold temporal-interference threshold,75,230,V/m,human,modelled,morphologically realistic layer-5 pyramidal cell models,threshold,48
+Conduction block under temporal interference,1700,1700,V/m,human,modelled,morphologically realistic layer-5 pyramidal cell models,threshold,48

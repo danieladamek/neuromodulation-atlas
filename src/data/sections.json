@@ -1,0 +1,704 @@
+{
+ "v0": [
+  {
+   "id": "v0-abstract",
+   "volume": "v0",
+   "title": "Abstract",
+   "depth": 1,
+   "number": null,
+   "words": 366,
+   "figures": [],
+   "subsections": [],
+   "blocks": 4,
+   "synthesis_blocks": 1
+  },
+  {
+   "id": "v0-1-what-neuromodulation-is",
+   "volume": "v0",
+   "title": "1. What neuromodulation is, and what the word hides",
+   "depth": 2,
+   "number": "1",
+   "words": 1487,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-1-what-neuromodulation-is--three-referents-for-one-word",
+     "title": "Three referents for one word"
+    },
+    {
+     "id": "v0-1-what-neuromodulation-is--what-the-clinical-bodies-say",
+     "title": "What the clinical bodies say"
+    },
+    {
+     "id": "v0-1-what-neuromodulation-is--neurostimulation-and-neuromodulation",
+     "title": "Neurostimulation and neuromodulation"
+    },
+    {
+     "id": "v0-1-what-neuromodulation-is--the-collision-with-the-cellular-sense",
+     "title": "The collision with the cellular sense"
+    },
+    {
+     "id": "v0-1-what-neuromodulation-is--the-usage-this-volume-fixes-and-its-scope",
+     "title": "The usage this volume fixes, and its scope"
+    },
+    {
+     "id": "v0-1-what-neuromodulation-is--vocabulary-standards-the-volume-borrows",
+     "title": "Vocabulary standards the volume borrows"
+    },
+    {
+     "id": "v0-1-what-neuromodulation-is--a-first-pass-at-the-levels",
+     "title": "A first pass at the levels"
+    }
+   ],
+   "blocks": 15,
+   "synthesis_blocks": 4
+  },
+  {
+   "id": "v0-2-levels-and-the-chain",
+   "volume": "v0",
+   "title": "2. Levels of organisation and the drive → outcome chain",
+   "depth": 2,
+   "number": "2",
+   "words": 1715,
+   "figures": [
+    "fig1"
+   ],
+   "subsections": [
+    {
+     "id": "v0-2-levels-and-the-chain--levels-as-a-methodological-commitment",
+     "title": "Levels as a methodological commitment"
+    },
+    {
+     "id": "v0-2-levels-and-the-chain--what-each-link-means-a-worked-example",
+     "title": "What each link means: a worked example"
+    },
+    {
+     "id": "v0-2-levels-and-the-chain--where-the-chain-breaks",
+     "title": "Where the chain breaks"
+    },
+    {
+     "id": "v0-2-levels-and-the-chain--nominal-and-effective-stimulus",
+     "title": "Nominal and effective stimulus"
+    },
+    {
+     "id": "v0-2-levels-and-the-chain--why-a-graph-forces-the-choices",
+     "title": "Why a graph forces the choices"
+    }
+   ],
+   "blocks": 21,
+   "synthesis_blocks": 6
+  },
+  {
+   "id": "v0-3-dose",
+   "volume": "v0",
+   "title": "3. Dose",
+   "depth": 2,
+   "number": "3",
+   "words": 2886,
+   "figures": [
+    "fig3",
+    "fig2"
+   ],
+   "subsections": [
+    {
+     "id": "v0-3-dose--3-1-what-dose-means-for-electric-and-magnetic-stimulation",
+     "title": "3.1 What dose means for electric and magnetic stimulation"
+    },
+    {
+     "id": "v0-3-dose--3-2-e-field-modelling-as-dosimetry-and-the-missing-metric",
+     "title": "3.2 E-field modelling as dosimetry, and the missing metric"
+    },
+    {
+     "id": "v0-3-dose--3-3-charge-and-charge-density-the-safety-limiting-quantities",
+     "title": "3.3 Charge and charge density: the safety-limiting quantities"
+    },
+    {
+     "id": "v0-3-dose--3-4-convulsive-therapy-where-charge-was-the-dose",
+     "title": "3.4 Convulsive therapy: where charge was the dose"
+    },
+    {
+     "id": "v0-3-dose--3-5-ultrasound-dose",
+     "title": "3.5 Ultrasound dose"
+    },
+    {
+     "id": "v0-3-dose--3-6-optical-dose",
+     "title": "3.6 Optical dose"
+    },
+    {
+     "id": "v0-3-dose--3-7-pharmacological-dose-exposure-not-amount",
+     "title": "3.7 Pharmacological dose: exposure, not amount"
+    },
+    {
+     "id": "v0-3-dose--3-8-what-the-schema-must-therefore-store",
+     "title": "3.8 What the schema must therefore store"
+    }
+   ],
+   "blocks": 33,
+   "synthesis_blocks": 6
+  },
+  {
+   "id": "v0-4-coupling-electromagnetic",
+   "volume": "v0",
+   "title": "4. Coupling I: electric and magnetic fields meet membranes",
+   "depth": 2,
+   "number": "4",
+   "words": 2418,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-4-coupling-electromagnetic--4-1-the-physics-of-extracellular-stimulation",
+     "title": "4.1 The physics of extracellular stimulation"
+    },
+    {
+     "id": "v0-4-coupling-electromagnetic--4-2-uniform-fields-measured-polarization-and-its-orientation",
+     "title": "4.2 Uniform fields: measured polarization and its orientation dependence"
+    },
+    {
+     "id": "v0-4-coupling-electromagnetic--4-3-how-much-field-arrives-in-a-human-brain",
+     "title": "4.3 How much field arrives in a human brain"
+    },
+    {
+     "id": "v0-4-coupling-electromagnetic--4-4-what-tms-activates",
+     "title": "4.4 What TMS activates"
+    },
+    {
+     "id": "v0-4-coupling-electromagnetic--4-5-does-1-2-ma-entrain-neurons",
+     "title": "4.5 Does 1–2 mA entrain neurons?"
+    },
+    {
+     "id": "v0-4-coupling-electromagnetic--4-6-temporal-interference",
+     "title": "4.6 Temporal interference"
+    },
+    {
+     "id": "v0-4-coupling-electromagnetic--4-7-what-the-coupling-level-requires-of-a-graph",
+     "title": "4.7 What the coupling level requires of a graph"
+    }
+   ],
+   "blocks": 24,
+   "synthesis_blocks": 4
+  },
+  {
+   "id": "v0-5-coupling-acoustic-optical-chemical",
+   "volume": "v0",
+   "title": "5. Coupling II: pressure, light, heat and ligands",
+   "depth": 2,
+   "number": "5",
+   "words": 2566,
+   "figures": [
+    "fig4"
+   ],
+   "subsections": [
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-1-what-a-pressure-wave-delivers-to-tissue",
+     "title": "5.1 What a pressure wave delivers to tissue"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-2-four-accounts-of-low-intensity-ultrasound-and-the-confou",
+     "title": "5.2 Four accounts of low-intensity ultrasound, and the confound that competes with all of them"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-3-cavitation-with-microbubbles-a-different-target",
+     "title": "5.3 Cavitation with microbubbles: a different target"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-4-thermal-coupling",
+     "title": "5.4 Thermal coupling"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-5-optical-coupling",
+     "title": "5.5 Optical coupling"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-6-the-contrast-case-transducers-that-were-installed",
+     "title": "5.6 The contrast case: transducers that were installed"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-7-chemical-coupling-binding-occupancy-efficacy-and-compart",
+     "title": "5.7 Chemical coupling: binding, occupancy, efficacy and compartment"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-8-magnetic-actuation-and-the-order-of-magnitude-test",
+     "title": "5.8 Magnetic actuation and the order-of-magnitude test"
+    },
+    {
+     "id": "v0-5-coupling-acoustic-optical-chemical--5-9-what-this-level-implies-for-a-graph",
+     "title": "5.9 What this level implies for a graph"
+    }
+   ],
+   "blocks": 25,
+   "synthesis_blocks": 3
+  },
+  {
+   "id": "v0-6-cellular-responses",
+   "volume": "v0",
+   "title": "6. What cells do about it",
+   "depth": 2,
+   "number": "6",
+   "words": 2120,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-6-cellular-responses--6-1-the-borrowed-vocabulary-and-the-preparations-it-came-fro",
+     "title": "6.1 The borrowed vocabulary, and the preparations it came from"
+    },
+    {
+     "id": "v0-6-cellular-responses--6-2-the-human-analogues-and-what-ltp-like-claims",
+     "title": "6.2 The human analogues and what \"LTP-like\" claims"
+    },
+    {
+     "id": "v0-6-cellular-responses--6-3-pharmacological-dependencies-and-how-far-they-reach",
+     "title": "6.3 Pharmacological dependencies, and how far they reach"
+    },
+    {
+     "id": "v0-6-cellular-responses--6-4-state-dependence-the-same-dose-different-sign",
+     "title": "6.4 State dependence: the same dose, different sign"
+    },
+    {
+     "id": "v0-6-cellular-responses--6-5-variability-and-one-account-reinterpreted-as-peripheral",
+     "title": "6.5 Variability, and one account reinterpreted as peripheral"
+    },
+    {
+     "id": "v0-6-cellular-responses--6-6-the-cells-that-are-not-neurons",
+     "title": "6.6 The cells that are not neurons"
+    },
+    {
+     "id": "v0-6-cellular-responses--6-7-what-this-level-requires-of-a-graph",
+     "title": "6.7 What this level requires of a graph"
+    }
+   ],
+   "blocks": 25,
+   "synthesis_blocks": 6
+  },
+  {
+   "id": "v0-7-molecular-subcellular-convergence",
+   "volume": "v0",
+   "title": "7. Where the modalities converge",
+   "depth": 2,
+   "number": "7",
+   "words": 2042,
+   "figures": [
+    "fig5"
+   ],
+   "subsections": [
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-1-the-claim-and-the-two-ways-it-goes-wrong",
+     "title": "7.1 The claim, and the two ways it goes wrong"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-2-bdnf-and-trkb",
+     "title": "7.2 BDNF and TrkB"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-3-mtor-and-rapid-synaptogenesis",
+     "title": "7.3 mTOR and rapid synaptogenesis"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-4-immediate-early-genes-and-activity-markers",
+     "title": "7.4 Immediate-early genes and activity markers"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-5-mitochondrial-and-metabolic-endpoints",
+     "title": "7.5 Mitochondrial and metabolic endpoints"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-6-glia-and-neuroinflammation-as-endpoint-and-as-effector",
+     "title": "7.6 Glia and neuroinflammation, as endpoint and as effector"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-7-a-worked-example-40-hz-sensory-stimulation",
+     "title": "7.7 A worked example: 40 Hz sensory stimulation"
+    },
+    {
+     "id": "v0-7-molecular-subcellular-convergence--7-8-what-this-level-requires-of-a-graph",
+     "title": "7.8 What this level requires of a graph"
+    }
+   ],
+   "blocks": 21,
+   "synthesis_blocks": 7
+  },
+  {
+   "id": "v0-8-circuits-networks-neuromodulators",
+   "volume": "v0",
+   "title": "8. Circuits, networks and the neuromodulator systems",
+   "depth": 2,
+   "number": "8",
+   "words": 1966,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-1-from-neuron-to-circuit-oscillation-phase-coherence",
+     "title": "8.1 From neuron to circuit: oscillation, phase, coherence"
+    },
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-2-what-high-frequency-deep-brain-stimulation-does-to-a-cir",
+     "title": "8.2 What high-frequency deep brain stimulation does to a circuit"
+    },
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-3-biomarkers-and-closed-loop-control",
+     "title": "8.3 Biomarkers and closed-loop control"
+    },
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-4-connectivity-based-targeting-where-to-stimulate",
+     "title": "8.4 Connectivity-based targeting: where to stimulate"
+    },
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-5-the-ascending-neuromodulator-systems-target-and-gate",
+     "title": "8.5 The ascending neuromodulator systems: target and gate"
+    },
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-6-proxies-and-whether-they-index-what-they-are-used-for",
+     "title": "8.6 Proxies, and whether they index what they are used for"
+    },
+    {
+     "id": "v0-8-circuits-networks-neuromodulators--8-7-what-this-level-implies-for-a-graph",
+     "title": "8.7 What this level implies for a graph"
+    }
+   ],
+   "blocks": 24,
+   "synthesis_blocks": 5
+  },
+  {
+   "id": "v0-9-body-systems",
+   "volume": "v0",
+   "title": "9. Beyond the brain: autonomic, immune, endocrine, interoceptive",
+   "depth": 2,
+   "number": "9",
+   "words": 1733,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-9-body-systems--why-the-chain-closes-here-and-not-in-the-head",
+     "title": "Why the chain closes here and not in the head"
+    },
+    {
+     "id": "v0-9-body-systems--the-inflammatory-reflex-as-it-was-demonstrated",
+     "title": "The inflammatory reflex as it was demonstrated"
+    },
+    {
+     "id": "v0-9-body-systems--the-relay-that-filled-in-the-middle",
+     "title": "The relay that filled in the middle"
+    },
+    {
+     "id": "v0-9-body-systems--what-the-anatomy-does-and-does-not-support",
+     "title": "What the anatomy does and does not support"
+    },
+    {
+     "id": "v0-9-body-systems--the-human-evidence-and-what-it-does-and-does-not-establish",
+     "title": "The human evidence, and what it does and does not establish"
+    },
+    {
+     "id": "v0-9-body-systems--the-sensory-limb",
+     "title": "The sensory limb"
+    },
+    {
+     "id": "v0-9-body-systems--anatomy-a-graph-can-stand-on",
+     "title": "Anatomy a graph can stand on"
+    },
+    {
+     "id": "v0-9-body-systems--what-this-level-implies-for-the-graph",
+     "title": "What this level implies for the graph"
+    }
+   ],
+   "blocks": 20,
+   "synthesis_blocks": 5
+  },
+  {
+   "id": "v0-10-modality-map",
+   "volume": "v0",
+   "title": "10. The map of techniques",
+   "depth": 2,
+   "number": "10",
+   "words": 1306,
+   "figures": [
+    "fig6"
+   ],
+   "subsections": [
+    {
+     "id": "v0-10-modality-map--10-1-what-the-table-is-built-from",
+     "title": "10.1 What the table is built from"
+    },
+    {
+     "id": "v0-10-modality-map--10-2-the-families-that-comparison-tables-omit",
+     "title": "10.2 The families that comparison tables omit"
+    },
+    {
+     "id": "v0-10-modality-map--10-3-the-benchmark-that-sits-outside-the-table",
+     "title": "10.3 The benchmark that sits outside the table"
+    }
+   ],
+   "blocks": 10,
+   "synthesis_blocks": 7
+  },
+  {
+   "id": "v0-11-pharmacology-as-neuromodulation",
+   "volume": "v0",
+   "title": "11. Drugs as neuromodulation",
+   "depth": 2,
+   "number": "11",
+   "words": 1915,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-1-route-is-a-first-class-variable",
+     "title": "11.1 Route is a first-class variable"
+    },
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-2-the-barrier-and-why-a-potent-compound-still-fails",
+     "title": "11.2 The barrier, and why a potent compound still fails"
+    },
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-3-the-field-s-mechanism-test-case-rapid-acting-antidepres",
+     "title": "11.3 The field's mechanism test case: rapid-acting antidepressants"
+    },
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-4-psychedelics-compartment-locus-and-the-experience",
+     "title": "11.4 Psychedelics: compartment, locus, and the experience"
+    },
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-5-neurosteroids-and-anaesthetics-the-reversible-fast-end",
+     "title": "11.5 Neurosteroids and anaesthetics: the reversible, fast end"
+    },
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-6-drug-plus-device",
+     "title": "11.6 Drug plus device"
+    },
+    {
+     "id": "v0-11-pharmacology-as-neuromodulation--11-7-what-this-level-implies-for-a-graph",
+     "title": "11.7 What this level implies for a graph"
+    }
+   ],
+   "blocks": 21,
+   "synthesis_blocks": 2
+  },
+  {
+   "id": "v0-12-methods-and-confounds",
+   "volume": "v0",
+   "title": "12. How the work is done, and how it fools you",
+   "depth": 2,
+   "number": "12",
+   "words": 1829,
+   "figures": [],
+   "subsections": [
+    {
+     "id": "v0-12-methods-and-confounds--12-1-the-anatomy-of-a-stimulation-experiment",
+     "title": "12.1 The anatomy of a stimulation experiment"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-2-sham-and-blinding",
+     "title": "12.2 Sham and blinding"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-3-co-stimulation-as-a-rival-explanation",
+     "title": "12.3 Co-stimulation as a rival explanation"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-4-readouts-and-their-validity",
+     "title": "12.4 Readouts and their validity"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-5-target-engagement-before-efficacy",
+     "title": "12.5 Target engagement before efficacy"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-6-variability-and-reproducibility",
+     "title": "12.6 Variability and reproducibility"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-7-reporting-standards",
+     "title": "12.7 Reporting standards"
+    },
+    {
+     "id": "v0-12-methods-and-confounds--12-8-what-this-implies-for-a-graph",
+     "title": "12.8 What this implies for a graph"
+    }
+   ],
+   "blocks": 35,
+   "synthesis_blocks": 5
+  },
+  {
+   "id": "v0-13-evidence-and-translation",
+   "volume": "v0",
+   "title": "13. Evidence, species and closed loops",
+   "depth": 2,
+   "number": "13",
+   "words": 1332,
+   "figures": [
+    "fig8"
+   ],
+   "subsections": [
+    {
+     "id": "v0-13-evidence-and-translation--13-1-what-a-recommendation-is-and-what-it-is-not",
+     "title": "13.1 What a recommendation is, and what it is not"
+    },
+    {
+     "id": "v0-13-evidence-and-translation--13-2-species-translation-fields-do-not-scale-with-heads",
+     "title": "13.2 Species translation: fields do not scale with heads"
+    },
+    {
+     "id": "v0-13-evidence-and-translation--13-3-preparation-translation-and-which-way-it-bends",
+     "title": "13.3 Preparation translation, and which way it bends"
+    },
+    {
+     "id": "v0-13-evidence-and-translation--13-4-closed-loops-when-the-drive-depends-on-the-state-it-mod",
+     "title": "13.4 Closed loops: when the drive depends on the state it modulates"
+    },
+    {
+     "id": "v0-13-evidence-and-translation--13-5-what-this-level-implies-for-a-graph",
+     "title": "13.5 What this level implies for a graph"
+    }
+   ],
+   "blocks": 23,
+   "synthesis_blocks": 7
+  },
+  {
+   "id": "v0-14-open-questions",
+   "volume": "v0",
+   "title": "14. What is actually in dispute",
+   "depth": 2,
+   "number": "14",
+   "words": 2931,
+   "figures": [
+    "fig7"
+   ],
+   "subsections": [
+    {
+     "id": "v0-14-open-questions--14-1-transcranial-field-entrainment-h-tes-entrainment",
+     "title": "14.1 Transcranial field entrainment (H-tes-entrainment)"
+    },
+    {
+     "id": "v0-14-open-questions--14-2-temporal-interference-thresholds-in-humans-h-ti-suprath",
+     "title": "14.2 Temporal interference thresholds in humans (H-ti-suprathreshold)"
+    },
+    {
+     "id": "v0-14-open-questions--14-3-the-ultrasound-transducer-h-tus-mechanism",
+     "title": "14.3 The ultrasound transducer (H-tus-mechanism)"
+    },
+    {
+     "id": "v0-14-open-questions--14-4-the-ultrasound-auditory-confound-h-tus-confound",
+     "title": "14.4 The ultrasound auditory confound (H-tus-confound)"
+    },
+    {
+     "id": "v0-14-open-questions--14-5-barrier-opening-and-sterile-inflammation-h-fus-bbb-infl",
+     "title": "14.5 Barrier opening and sterile inflammation (H-fus-bbb-inflammation)"
+    },
+    {
+     "id": "v0-14-open-questions--14-6-photobiomodulation-delivered-dose-h-pbm-dose",
+     "title": "14.6 Photobiomodulation delivered dose (H-pbm-dose)"
+    },
+    {
+     "id": "v0-14-open-questions--14-7-40-hz-sensory-stimulation-h-gamma-40hz",
+     "title": "14.7 40 Hz sensory stimulation (H-gamma-40hz)"
+    },
+    {
+     "id": "v0-14-open-questions--14-8-the-tdcs-after-effect-account-h-tdcs-plasticity",
+     "title": "14.8 The tDCS after-effect account (H-tdcs-plasticity)"
+    },
+    {
+     "id": "v0-14-open-questions--14-9-connectivity-based-targeting-h-connectivity-targeting",
+     "title": "14.9 Connectivity-based targeting (H-connectivity-targeting)"
+    },
+    {
+     "id": "v0-14-open-questions--14-10-deep-brain-stimulation-mechanism-h-dbs-mechanism",
+     "title": "14.10 Deep brain stimulation mechanism (H-dbs-mechanism)"
+    },
+    {
+     "id": "v0-14-open-questions--14-11-the-charge-density-safety-rule-h-charge-safety",
+     "title": "14.11 The charge-density safety rule (H-charge-safety)"
+    },
+    {
+     "id": "v0-14-open-questions--14-12-the-inflammatory-reflex-framing-h-inflammatory-reflex",
+     "title": "14.12 The inflammatory-reflex framing (H-inflammatory-reflex)"
+    },
+    {
+     "id": "v0-14-open-questions--14-13-transcutaneous-vagal-target-engagement-h-tavns-engagem",
+     "title": "14.13 Transcutaneous vagal target engagement (H-tavns-engagement)"
+    },
+    {
+     "id": "v0-14-open-questions--14-14-ketamine-s-active-species-h-hnk-active-species",
+     "title": "14.14 Ketamine's active species (H-hnk-active-species)"
+    },
+    {
+     "id": "v0-14-open-questions--14-15-5-ht2a-necessity-h-5ht2a-necessity",
+     "title": "14.15 5-HT2A necessity (H-5ht2a-necessity)"
+    },
+    {
+     "id": "v0-14-open-questions--14-16-the-subjective-experience-question-h-subjective-experi",
+     "title": "14.16 The subjective-experience question (H-subjective-experience)"
+    },
+    {
+     "id": "v0-14-open-questions--14-17-ketamine-versus-ect-h-ketamine-vs-ect",
+     "title": "14.17 Ketamine versus ECT (H-ketamine-vs-ect)"
+    },
+    {
+     "id": "v0-14-open-questions--14-18-intranasal-direct-transport-h-nose-to-brain",
+     "title": "14.18 Intranasal direct transport (H-nose-to-brain)"
+    },
+    {
+     "id": "v0-14-open-questions--14-19-receptor-occupancy-thresholds-h-d2-occupancy",
+     "title": "14.19 Receptor-occupancy thresholds (H-d2-occupancy)"
+    },
+    {
+     "id": "v0-14-open-questions--14-20-the-serotonin-premise-h-serotonin-premise",
+     "title": "14.20 The serotonin premise (H-serotonin-premise)"
+    },
+    {
+     "id": "v0-14-open-questions--14-21-the-origin-of-the-tms-evoked-potential-h-tep-origin",
+     "title": "14.21 The origin of the TMS-evoked potential (H-tep-origin)"
+    },
+    {
+     "id": "v0-14-open-questions--14-22-magnetogenetics-h-magnetogenetics",
+     "title": "14.22 Magnetogenetics (H-magnetogenetics)"
+    },
+    {
+     "id": "v0-14-open-questions--14-23-the-chemogenetic-actuator-h-dreadd-actuator",
+     "title": "14.23 The chemogenetic actuator (H-dreadd-actuator)"
+    },
+    {
+     "id": "v0-14-open-questions--14-24-what-the-catalogue-implies-for-the-graph",
+     "title": "14.24 What the catalogue implies for the graph"
+    }
+   ],
+   "blocks": 94,
+   "synthesis_blocks": 24
+  },
+  {
+   "id": "v0-15-from-text-to-graph",
+   "volume": "v0",
+   "title": "15. From this text to a graph",
+   "depth": 2,
+   "number": "15",
+   "words": 1738,
+   "figures": [
+    "fig9"
+   ],
+   "subsections": [
+    {
+     "id": "v0-15-from-text-to-graph--15-1-what-the-earlier-sections-demand-of-a-schema",
+     "title": "15.1 What the earlier sections demand of a schema"
+    },
+    {
+     "id": "v0-15-from-text-to-graph--15-2-which-ontologies-anchor-which-level",
+     "title": "15.2 Which ontologies anchor which level"
+    },
+    {
+     "id": "v0-15-from-text-to-graph--15-3-where-nothing-exists-protocols-and-devices",
+     "title": "15.3 Where nothing exists: protocols and devices"
+    },
+    {
+     "id": "v0-15-from-text-to-graph--15-4-prior-art-for-the-shape",
+     "title": "15.4 Prior art for the shape"
+    },
+    {
+     "id": "v0-15-from-text-to-graph--15-5-a-proposed-starter-schema",
+     "title": "15.5 A proposed starter schema"
+    },
+    {
+     "id": "v0-15-from-text-to-graph--15-6-how-to-read-this-literature",
+     "title": "15.6 How to read this literature"
+    }
+   ],
+   "blocks": 18,
+   "synthesis_blocks": 9
+  }
+ ]
+}

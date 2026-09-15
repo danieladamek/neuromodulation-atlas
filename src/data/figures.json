@@ -1,0 +1,3909 @@
+[
+ {
+  "id": "fig1",
+  "label": "Figure 1",
+  "title": "The drive to outcome chain, with the nominal and effective stimulus at the coupling join",
+  "kind": "pathway",
+  "synthesis": "conceptual",
+  "refs": [
+   5,
+   6,
+   8,
+   24,
+   69,
+   90,
+   128,
+   138,
+   149,
+   168,
+   187,
+   199
+  ],
+  "data": "figures/data/fig1-chain.json",
+  "caption": "The seven levels this volume uses to write any modality as one chain: drive, coupling, cellular, subcellular/molecular, circuit, system, outcome. The nominal and effective stimulus are drawn as a separate pair at the drive/coupling join, because what the operator set and what reached the tissue can differ in magnitude and, for drugs, in identity. Two joins are marked as the weakest: biophysics to molecules, where the transducing cell and molecule are often unknown, and animal mechanism to human outcome, where a trial often cannot show whether the mechanism was engaged at all. The loop back from system to circuit is there because a reflex has to be drawn as a cycle rather than a line.",
+  "how_to_read": "Read the solid arrows left to right as one pass from what is delivered to what is measured. Each arrow is a place where a separate measurement or model is needed, not a step that follows automatically from the one before it. Start at the drive, then look at the nominal/effective pair: if a study reports only the nominal stimulus, everything downstream rests on an inference. The two arrows marked as weakest joins are where this literature most often breaks, so when you read a claim that spans one of them, ask what was measured on each side and in which species. Follow the feedback arrow if the system you are reading about regulates itself, as the vagal immune loop does.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "dose-and-parameter-sets",
+   "evidence-grading-and-translation"
+  ],
+  "discussed_in": [
+   "v0-2-levels-and-the-chain"
+  ],
+  "cites": [],
+  "source": "Built from section 2 of the review. No cited paper states this seven-step chain; it is assembled by this volume from the brain-stimulation chain of induced field to local and network effects to behaviour [199] and the drug-development chain of exposure, target binding and pharmacological activity [24], with the levels-of-organisation commitment from [6] and its limits from [5,8]. The worked example along the chain is the vagal route to immune control [149]. The claim that these two joins are the weakest is the Atlas's reading across the corpus, not a statement any one source makes. Nothing in the figure is quantitative, so nothing in it is approximate; the node ordering is a conceptual scheme, not a measured sequence.",
+  "graph": {
+   "layout": "layered",
+   "nodes": [
+    {
+     "id": "drive",
+     "label": "Drive",
+     "term": "drive",
+     "level": 1,
+     "note": "What is delivered: device parameters, or an administered amount and route [199,24]."
+    },
+    {
+     "id": "nominal-stimulus",
+     "label": "Nominal stimulus",
+     "term": "nominal-stimulus",
+     "level": 1,
+     "note": "What the experimenter set [24,199]."
+    },
+    {
+     "id": "effective-stimulus",
+     "label": "Effective stimulus",
+     "term": "effective-stimulus",
+     "level": 1,
+     "note": "What acted on the tissue: field at the neuron, pressure at the transducing cell, concentration at the receptor, or a co-stimulated peripheral input [24,199]."
+    },
+    {
+     "id": "coupling",
+     "label": "Coupling",
+     "term": "coupling",
+     "level": 2,
+     "note": "The physical or chemical event by which the drive first changes tissue [199]."
+    },
+    {
+     "id": "cellular",
+     "label": "Cellular",
+     "level": 3,
+     "note": "What a neuron or glial cell does in response [149]."
+    },
+    {
+     "id": "molecular",
+     "label": "Subcellular / molecular",
+     "level": 4,
+     "note": "Signalling that follows the cellular response and often outlasts the stimulus [149]."
+    },
+    {
+     "id": "circuit",
+     "label": "Circuit",
+     "level": 5,
+     "note": "How populations of connected cells change; wiring alone does not fix circuit function [5]."
+    },
+    {
+     "id": "system",
+     "label": "System",
+     "level": 6,
+     "note": "How a whole body system changes, such as arousal, autonomic or immune control [149]."
+    },
+    {
+     "id": "outcome",
+     "label": "Outcome",
+     "level": 7,
+     "note": "What is measured in the organism [199,24]."
+    }
+   ],
+   "edges": [
+    {
+     "from": "drive",
+     "to": "nominal-stimulus",
+     "label": "is specified as",
+     "direction": "forward",
+     "note": "Device parameters, or administered dose and route [9,24]."
+    },
+    {
+     "from": "nominal-stimulus",
+     "to": "effective-stimulus",
+     "label": "is usually inferred, not measured",
+     "direction": "forward",
+     "note": "Studies report the first and infer the second [24,199]."
+    },
+    {
+     "from": "effective-stimulus",
+     "to": "coupling",
+     "label": "acts on tissue at",
+     "direction": "forward"
+    },
+    {
+     "from": "coupling",
+     "to": "cellular",
+     "label": "changes what the cell does",
+     "direction": "forward",
+     "note": "For ultrasound this arrow has rival paths, neuronal and astrocytic [69]."
+    },
+    {
+     "from": "cellular",
+     "to": "molecular",
+     "label": "sets off signalling in",
+     "direction": "forward"
+    },
+    {
+     "from": "coupling",
+     "to": "molecular",
+     "label": "biophysics to molecules",
+     "direction": "forward",
+     "weakest_join": true,
+     "note": "Weakest join 1: the transducing cell and molecule are often unknown, and the drug side has the same gap between target and downstream step [69,168]. The Atlas's reading across the corpus, not a claim of any one source [24,69,199]."
+    },
+    {
+     "from": "molecular",
+     "to": "circuit",
+     "label": "changes populations in",
+     "direction": "forward",
+     "note": "Needs its own measurement or model; wiring does not determine it [5,8]."
+    },
+    {
+     "from": "circuit",
+     "to": "system",
+     "label": "changes the state of",
+     "direction": "forward",
+     "note": "Circuit-level theories carry much of the weight here [128,138]."
+    },
+    {
+     "from": "system",
+     "to": "outcome",
+     "label": "animal mechanism to human outcome",
+     "direction": "forward",
+     "weakest_join": true,
+     "note": "Weakest join 2: in 43% of 44 Phase II programmes it was unclear whether the mechanism had been tested in people, and chronic-antidepressant accounts place middle-level frameworks between receptor occupancy and symptom change [24,187]."
+    },
+    {
+     "from": "system",
+     "to": "circuit",
+     "label": "afferent feedback: a reflex loop is a cycle, not a line",
+     "direction": "feedback",
+     "note": "Central integration sets how strongly the efferent limb fires [149]."
+    }
+   ]
+  },
+  "provenance": "synthesised: conceptual diagram"
+ },
+ {
+  "id": "fig2",
+  "label": "Figure 2",
+  "title": "What counts as dose in each drive class, and what is missing",
+  "kind": "table",
+  "synthesis": "data",
+  "refs": [
+   2,
+   9,
+   10,
+   14,
+   15,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   25,
+   27,
+   28,
+   29,
+   71,
+   79,
+   81,
+   84,
+   85,
+   86,
+   87,
+   140,
+   163,
+   164,
+   180,
+   181,
+   225,
+   226,
+   260,
+   261
+  ],
+  "data": "figures/data/fig2-dose-quantities.csv",
+  "columns": [
+   {
+    "field": "drive_class",
+    "label": "Drive class"
+   },
+   {
+    "field": "reported",
+    "label": "What is reported"
+   },
+   {
+    "field": "standardised",
+    "label": "What is standardised"
+   },
+   {
+    "field": "missing",
+    "label": "What is missing"
+   },
+   {
+    "field": "ref",
+    "label": "Sources"
+   }
+  ],
+  "caption": "Eight drive classes set side by side on three questions: which quantities the literature reports, which of them are standardised, and which are missing. No class reduces to a single intensity, and no two classes report the same kind of quantity. ECT and MST are kept as separate rows, as section 3 keeps them, because their dose traditions and their open questions differ.",
+  "how_to_read": "Pick a drive class and read across the three columns. The middle column tells you what you can expect any competent paper in that family to report; the right-hand column tells you what you will not find even in a good one. Treat the right-hand column as this volume's reading of the cited sources rather than as a claim any single source makes. The numbers in brackets are reference numbers, so you can check each cell against its source.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "dose-and-parameter-sets",
+   "pharmacokinetics-and-routes"
+  ],
+  "discussed_in": [
+   "v0-3-dose"
+  ],
+  "cites": [],
+  "source": "A transcription of the table in section 3.8 of the review, with the same cell contents and the same citations, rearranged into one row per drive class. Every row carries the reference numbers of the sources its cells rest on. The \"what is missing\" column is this volume's reading of those sources, as the prose states; the other two columns are as reported. Nothing is approximated or recomputed here.",
+  "table": {
+   "rows": [
+    {
+     "drive_class": "tES and TMS",
+     "reported": "Electrode or coil configuration, waveform, pulse parameters, and timing of pulses, trains and sessions [9]; modelled E-field, reported in 308 different forms across 202 studies [14]",
+     "standardised": "A device-side dose definition with reproducibility-based reporting principles [9]; motor-threshold intensity as the clinical norm for TMS [15]",
+     "missing": "An agreed E-field outcome measure [14]; a validated route from modelled field to physiology [10,15]",
+     "ref": "9;10;14;15"
+    },
+    {
+     "drive_class": "Implanted electrical (DBS, SCS, VNS)",
+     "reported": "Amplitude, pulse width, frequency and train timing [140]; often not the effective dose [2]",
+     "standardised": "A charge-density and charge-per-phase safety boundary, in wide use [17]",
+     "missing": "Terms for frequency, duty cycle, current density and electrode size in the safety rule [18]; routine reporting of effective dose [2]",
+     "ref": "2;17;18;140"
+    },
+    {
+     "drive_class": "ECT",
+     "reported": "Electrode placement, pulse width and charge [260]; total charge, energy or multiples of seizure threshold as dosing units [261]",
+     "standardised": "Ultrabrief right unilateral placement as a trial-supported configuration [260]",
+     "missing": "A dose definition by full parameter set, and devices that display every parameter [261]; use of the charge-minimising train frequency [226]",
+     "ref": "226;260;261"
+    },
+    {
+     "drive_class": "MST",
+     "reported": "Train frequency, pulse count and percentage of maximum stimulator output [226]; modelled field magnitude and suprathreshold volume [225]",
+     "standardised": "No dose standard in the cited sources [225,226]",
+     "missing": "Human frequency-threshold data, the current mapping being in macaques [226]; measured rather than simulated focality [225]",
+     "ref": "225;226"
+    },
+    {
+     "drive_class": "Transcranial ultrasound, low intensity",
+     "reported": "Drive settings, free-field acoustic parameters, pulse timing, in situ estimates and intensity parameters [20]",
+     "standardised": "Expert-consensus reporting checklist [20] and expert-consensus mechanical-index and thermal criteria, explicitly not regulatory limits [19]",
+     "missing": "Complete parameter reporting across studies [79]; the threshold for significant risk [19]; agreement on which parameter sets direction of effect [71,79]",
+     "ref": "19;20;71;79"
+    },
+    {
+     "drive_class": "Focused ultrasound, thermal or with microbubbles",
+     "reported": "Temperature and thermal dose [85,86]; pressure as a fraction of a measured ultraharmonic-emission threshold [81]; microbubble dose [84]",
+     "standardised": "CEM43 as the thermal-dose unit [85]",
+     "missing": "A per-patient account of skull transmission [87]; agreement on the inflammatory threshold for microbubble dose [84]",
+     "ref": "81;84;85;86;87"
+    },
+    {
+     "drive_class": "Transcranial photobiomodulation",
+     "reported": "Wavelength, irradiance in mW/cm2 and fluence in J/cm2 [21]",
+     "standardised": "No dose standard in the cited sources; parameter choice described as difficult by proponents [21]",
+     "missing": "Agreement on the fraction of light reaching cortex [22,23]; skin pigmentation as a reported covariate [23]",
+     "ref": "21;22;23"
+    },
+    {
+     "drive_class": "Pharmacological",
+     "reported": "Administered amount, route and schedule [163,180,181]; plasma exposure such as AUC and Cmax [25]",
+     "standardised": "Exposure-response practice [25]; PET occupancy windows for D2 and SERT [27]",
+     "missing": "Measured target-site concentration, usually modelled instead [164]; an efficacy term alongside occupancy [28]; identity of the acting ligand [29]",
+     "ref": "25;27;28;29;163;164;180;181"
+    }
+   ],
+   "fields": [
+    "drive_class",
+    "reported",
+    "standardised",
+    "missing",
+    "ref"
+   ]
+  },
+  "provenance": "synthesised from cited data"
+ },
+ {
+  "id": "fig3",
+  "label": "Figure 3",
+  "title": "Field strengths and thresholds, measured and modelled, on a log scale",
+  "kind": "chart",
+  "synthesis": "data",
+  "refs": [
+   36,
+   37,
+   40,
+   48,
+   50,
+   211,
+   212
+  ],
+  "data": "figures/data/fig3-field-strengths.csv",
+  "columns": [
+   {
+    "field": "entry",
+    "label": "Quantity"
+   },
+   {
+    "field": "value_low",
+    "label": "Value or range low (V/m)"
+   },
+   {
+    "field": "value_high",
+    "label": "Value or range high (V/m)"
+   },
+   {
+    "field": "species",
+    "label": "Species"
+   },
+   {
+    "field": "provenance",
+    "label": "Measured or modelled"
+   },
+   {
+    "field": "preparation",
+    "label": "Preparation"
+   },
+   {
+    "field": "ref",
+    "label": "Source"
+   }
+  ],
+  "chart": {
+   "type": "bar",
+   "orientation": "horizontal",
+   "x": {
+    "field": "entry",
+    "label": "Quantity",
+    "scale": "linear"
+   },
+   "y": {
+    "field": "value_low",
+    "label": "Value or range low (V/m)",
+    "unit": "V/m",
+    "scale": "log"
+   },
+   "y_high": "value_high",
+   "group_by": "provenance"
+  },
+  "caption": "Nine field quantities in volts per metre, on a log axis, so measured human intracranial fields, rodent thresholds and modelled temporal-interference thresholds can be seen against one another. The two measured human values sit near or below the rodent threshold for changing spiking, and the modelled temporal-interference threshold sits about two orders of magnitude above the field a tolerable scalp current delivers. 1 mV/mm equals 1 V/m; values reported in mV/mm have been written in V/m without other conversion.",
+  "how_to_read": "Read each bar as one quantity with its unit, not as a comparison of like with like. Check the \"measured or modelled\" column before you compare two bars: a measured field in a patient and a threshold from a neuron model are different kinds of number. Check the species column too, because the rodent threshold and the human delivered field come from different preparations. The axis is logarithmic, so equal spacing means equal ratio, and the gap between the delivered field and the modelled temporal-interference threshold is a factor of roughly a hundred, not a small step. Ranges are drawn as bars from the low to the high value as the source reports them.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "electric-field-modelling",
+   "field-neuron-coupling-geometry"
+  ],
+  "discussed_in": [
+   "v0-3-dose",
+   "v0-4-coupling-electromagnetic"
+  ],
+  "cites": [],
+  "source": "Values transcribed from sections 3.2, 4.2, 4.3 and 4.6 of the review, each row keeping its source, its species and whether it was measured or modelled. Unit harmonisation is the only arithmetic: mV/mm is written as V/m, which is an identity, not an approximation. The values are themselves approximate as their sources report them (about 0.8 V/m, about 0.5 mV/mm, about 1 mV/mm, ranges of 0.1-1, 17-47, 75-230 V/m). The ferret row is an endogenous field measured during physiological activity, included as a reference point rather than as a stimulation quantity, and it is neither human nor rodent. No two rows were produced by the same procedure, so the figure compares literatures, not measurements.",
+  "table": {
+   "rows": [
+    {
+     "entry": "tES at 2 mA: field measured in cortex",
+     "value_low": 0.8,
+     "value_high": 0.8,
+     "unit": "V/m",
+     "species": "human",
+     "provenance": "measured",
+     "preparation": "intracranial electrodes in 10 epilepsy patients during scalp stimulation",
+     "kind": "delivered field",
+     "ref": 40
+    },
+    {
+     "entry": "tES peak field in superficial cortex",
+     "value_low": 0.5,
+     "value_high": 0.5,
+     "unit": "V/m",
+     "species": "human and macaque",
+     "provenance": "measured",
+     "preparation": "intracranial recordings in epilepsy patients and non-human primates",
+     "kind": "delivered field",
+     "ref": 211
+    },
+    {
+     "entry": "Endogenous field during physiological activity",
+     "value_low": 2,
+     "value_high": 4,
+     "unit": "V/m",
+     "species": "ferret",
+     "provenance": "measured",
+     "preparation": "cortex in vivo, with slice work at matched amplitudes",
+     "kind": "reference field",
+     "ref": 37
+    },
+    {
+     "entry": "Minimum field that changes spiking and subthreshold activity",
+     "value_low": 1,
+     "value_high": 1,
+     "unit": "V/m",
+     "species": "rat",
+     "provenance": "measured",
+     "preparation": "intracellular recording",
+     "kind": "threshold",
+     "ref": 50
+    },
+    {
+     "entry": "Upper bound of the linear somatic polarisation range (0.12 mV per mV/mm)",
+     "value_low": 40,
+     "value_high": 40,
+     "unit": "V/m",
+     "species": "rat",
+     "provenance": "measured",
+     "preparation": "hippocampal slice in a uniform DC field",
+     "kind": "coupling range",
+     "ref": 36
+    },
+    {
+     "entry": "Field available at tolerable scalp currents",
+     "value_low": 0.1,
+     "value_high": 1,
+     "unit": "V/m",
+     "species": "human",
+     "provenance": "modelled",
+     "preparation": "morphologically realistic layer-5 pyramidal cell models in a head model",
+     "kind": "delivered field",
+     "ref": 48
+    },
+    {
+     "entry": "Suprathreshold low-frequency tACS threshold",
+     "value_low": 17,
+     "value_high": 47,
+     "unit": "V/m",
+     "species": "human",
+     "provenance": "modelled",
+     "preparation": "morphologically realistic layer-5 pyramidal cell models",
+     "kind": "threshold",
+     "ref": 48
+    },
+    {
+     "entry": "Suprathreshold temporal-interference threshold",
+     "value_low": 75,
+     "value_high": 230,
+     "unit": "V/m",
+     "species": "human",
+     "provenance": "modelled",
+     "preparation": "morphologically realistic layer-5 pyramidal cell models",
+     "kind": "threshold",
+     "ref": 48
+    },
+    {
+     "entry": "Conduction block under temporal interference",
+     "value_low": 1700,
+     "value_high": 1700,
+     "unit": "V/m",
+     "species": "human",
+     "provenance": "modelled",
+     "preparation": "morphologically realistic layer-5 pyramidal cell models",
+     "kind": "threshold",
+     "ref": 48
+    }
+   ],
+   "fields": [
+    "entry",
+    "value_low",
+    "value_high",
+    "unit",
+    "species",
+    "provenance",
+    "preparation",
+    "kind",
+    "ref"
+   ]
+  },
+  "provenance": "synthesised from cited data"
+ },
+ {
+  "id": "fig4",
+  "label": "Figure 4",
+  "title": "Coupling mechanisms and their named rivals, by drive",
+  "kind": "network",
+  "synthesis": "conceptual",
+  "refs": [
+   22,
+   23,
+   26,
+   27,
+   29,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   74,
+   75,
+   76,
+   77,
+   79,
+   80,
+   81,
+   83,
+   84,
+   85,
+   88,
+   89,
+   91,
+   92,
+   94,
+   95,
+   184
+  ],
+  "data": "figures/data/fig4-coupling-rivals.json",
+  "caption": "Six drives, each joined to the transducer its literature proposes as primary and to the rival accounts that explain the same observations. Pressure has the most crowded set: mechanosensitive channels, the lipid bilayer itself, acoustic radiation force, astrocytic TRPA1, and the auditory pathway as a confound that competes with all of them. Light and ligand have rivals that are not other transducers at all: too little light arriving, and a metabolite rather than the injected compound doing the binding. Each edge is labelled with the preparation the evidence comes from.",
+  "how_to_read": "Start at a drive node on the left and follow its edges. The edge labelled as proposed primary is the account its own literature puts first; the edges labelled as rivals are the named competitors, not weaker versions of the same idea. Read the preparation on each edge before you weigh two edges against each other: a computational model, an oocyte, an ex vivo retina and a human volunteer are not interchangeable evidence. Where a drive has several rivals, take them as unresolved rather than ranked, because the section they come from does not choose between them.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "acoustic-mechanotransduction",
+   "receptor-theory-occupancy",
+   "photon-transport-dosimetry"
+  ],
+  "discussed_in": [
+   "v0-5-coupling-acoustic-optical-chemical"
+  ],
+  "cites": [],
+  "source": "Built from section 5 of the review, with the electrical case left to section 4. The primary-versus-rival labels follow how each source presents itself and how the prose frames the dispute; they are this volume's arrangement, not a ranking of strength. Nothing in the figure is quantitative. The corpus contains no study identifying the transducer in human tissue for ultrasound, so every pressure edge is animal, in vitro or computational.",
+  "graph": {
+   "layout": "layered",
+   "nodes": [
+    {
+     "id": "drive-pressure",
+     "label": "Pressure wave (low-intensity ultrasound)",
+     "term": "tus",
+     "kind": "drive"
+    },
+    {
+     "id": "drive-microbubble",
+     "label": "Microbubble cavitation",
+     "term": "cavitation",
+     "kind": "drive"
+    },
+    {
+     "id": "drive-heat",
+     "label": "Heat",
+     "term": "thermal-dose",
+     "kind": "drive"
+    },
+    {
+     "id": "drive-light",
+     "label": "Light (red to near-infrared)",
+     "term": "photobiomodulation",
+     "kind": "drive"
+    },
+    {
+     "id": "drive-ligand",
+     "label": "Ligand",
+     "term": "receptor-occupancy",
+     "kind": "drive"
+    },
+    {
+     "id": "drive-magnetic",
+     "label": "Static or alternating magnetic field",
+     "term": "magnetogenetics",
+     "kind": "drive"
+    },
+    {
+     "id": "piezo1",
+     "label": "Piezo1 and other mechanosensitive channels",
+     "term": "piezo1",
+     "kind": "transducer",
+     "role": "proposed primary"
+    },
+    {
+     "id": "bilayer-sonophore",
+     "label": "Lipid bilayer as sonophore (intramembrane cavitation)",
+     "term": "intramembrane-cavitation",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "radiation-force",
+     "label": "Acoustic radiation force on tissue",
+     "term": "acoustic-radiation-force",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "astrocytic-trpa1",
+     "label": "Astrocytic TRPA1 with Best1 glutamate release",
+     "term": "trpa1",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "auditory-pathway",
+     "label": "Cochlea and auditory pathway (co-stimulation)",
+     "term": "auditory-confound",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "endothelium",
+     "label": "Oscillating microbubble at the vessel wall",
+     "term": "microbubble",
+     "kind": "transducer",
+     "role": "proposed primary"
+    },
+    {
+     "id": "sterile-inflammation",
+     "label": "Sterile inflammatory injury",
+     "term": "sterile-inflammation",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "temperature-kinetics",
+     "label": "Temperature dependence of channel kinetics and release",
+     "term": "thermal-account",
+     "kind": "transducer",
+     "role": "proposed primary"
+    },
+    {
+     "id": "mechanical-parameters",
+     "label": "Mechanical parameters (duty cycle, pressure)",
+     "term": "duty-cycle",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "cco",
+     "label": "Cytochrome c oxidase, with nitric oxide photodissociation",
+     "term": "cytochrome-c-oxidase",
+     "kind": "transducer",
+     "role": "proposed primary"
+    },
+    {
+     "id": "insufficient-light",
+     "label": "No transducer engaged: too little light arrives",
+     "term": "transmittance",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "surface-receptor",
+     "label": "Receptor binding site, described by affinity, occupancy and efficacy",
+     "term": "operational-model",
+     "kind": "transducer",
+     "role": "proposed primary"
+    },
+    {
+     "id": "intracellular-receptor",
+     "label": "Intracellular receptor pool and lipid-domain membrane sites",
+     "term": "receptor-compartment",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "metabolite",
+     "label": "A metabolite, not the injected compound, as the acting ligand",
+     "term": "active-species",
+     "kind": "transducer",
+     "role": "named rival"
+    },
+    {
+     "id": "ferritin-trpv4",
+     "label": "TRPV4 fused to ferritin (Magneto)",
+     "term": "ferritin",
+     "kind": "transducer",
+     "role": "proposed primary"
+    },
+    {
+     "id": "physically-infeasible",
+     "label": "No viable coupling term: forces and heating short by 5-10 orders of magnitude",
+     "term": "order-of-magnitude-test",
+     "kind": "transducer",
+     "role": "named rival"
+    }
+   ],
+   "edges": [
+    {
+     "from": "drive-pressure",
+     "to": "piezo1",
+     "label": "mouse motor cortex and amygdala, conditional knockout, ex vivo and in vivo",
+     "relation": "proposed primary",
+     "refs": [
+      68,
+      67,
+      70
+     ]
+    },
+    {
+     "from": "drive-pressure",
+     "to": "bilayer-sonophore",
+     "label": "computational bilayer-sonophore model, no measurement",
+     "relation": "rival",
+     "refs": [
+      65
+     ]
+    },
+    {
+     "from": "drive-pressure",
+     "to": "radiation-force",
+     "label": "ex vivo salamander retina, carrier frequency swept 0.5-43 MHz",
+     "relation": "rival",
+     "refs": [
+      66
+     ]
+    },
+    {
+     "from": "drive-pressure",
+     "to": "astrocytic-trpa1",
+     "label": "rodent and in vitro; in tension with neuronal Piezo1 deletion",
+     "relation": "rival",
+     "refs": [
+      69,
+      68
+     ]
+    },
+    {
+     "from": "drive-pressure",
+     "to": "auditory-pathway",
+     "label": "guinea pig nerve transection, mouse calcium imaging, four human experiments",
+     "relation": "rival",
+     "refs": [
+      74,
+      75,
+      77,
+      76
+     ]
+    },
+    {
+     "from": "drive-microbubble",
+     "to": "endothelium",
+     "label": "rabbit brain with contrast agent; rat cavitation-feedback control",
+     "relation": "proposed primary",
+     "refs": [
+      80,
+      81
+     ]
+    },
+    {
+     "from": "drive-microbubble",
+     "to": "sterile-inflammation",
+     "label": "rat, damage-associated molecular patterns at 24 h, against a microbubble-dose account",
+     "relation": "rival",
+     "refs": [
+      83,
+      84
+     ]
+    },
+    {
+     "from": "drive-heat",
+     "to": "temperature-kinetics",
+     "label": "rat thalamus with thermometry, suppression reproduced by heating through an optical fibre",
+     "relation": "proposed primary",
+     "refs": [
+      71,
+      85
+     ]
+    },
+    {
+     "from": "drive-heat",
+     "to": "mechanical-parameters",
+     "label": "human systematic review of 32 studies, self-declared tentative; predictions from the cavitation model",
+     "relation": "rival",
+     "refs": [
+      79,
+      65
+     ]
+    },
+    {
+     "from": "drive-light",
+     "to": "cco",
+     "label": "primary neuron culture against cyanide, action spectrum 670-880 nm; HeLa cells for the nitric oxide step",
+     "relation": "proposed primary",
+     "refs": [
+      88,
+      89
+     ]
+    },
+    {
+     "from": "drive-light",
+     "to": "insufficient-light",
+     "label": "human skull specimens, measured transmittance below 1%, against a Monte Carlo estimate of about 15%",
+     "relation": "rival",
+     "refs": [
+      22,
+      23
+     ]
+    },
+    {
+     "from": "drive-ligand",
+     "to": "surface-receptor",
+     "label": "receptor-theory review; human PET occupancy windows",
+     "relation": "proposed primary",
+     "refs": [
+      91,
+      26,
+      27
+     ]
+    },
+    {
+     "from": "drive-ligand",
+     "to": "intracellular-receptor",
+     "label": "rodent and in vitro, intracellular 5-HT2A; in vitro lipid domains for anaesthetics",
+     "relation": "rival",
+     "refs": [
+      92,
+      184
+     ]
+    },
+    {
+     "from": "drive-ligand",
+     "to": "metabolite",
+     "label": "rodent and macaque PET with pharmacology: clozapine-N-oxide converted to clozapine",
+     "relation": "rival",
+     "refs": [
+      29
+     ]
+    },
+    {
+     "from": "drive-magnetic",
+     "to": "ferritin-trpv4",
+     "label": "calcium imaging, slice and in vivo electrophysiology, zebrafish and mouse behaviour",
+     "relation": "proposed primary",
+     "refs": [
+      95
+     ]
+    },
+    {
+     "from": "drive-magnetic",
+     "to": "physically-infeasible",
+     "label": "first-principles calculation, no preparation",
+     "relation": "rival",
+     "refs": [
+      94
+     ]
+    }
+   ]
+  },
+  "provenance": "synthesised: conceptual diagram"
+ },
+ {
+  "id": "fig5",
+  "label": "Figure 5",
+  "title": "Convergence map: modalities and the molecular endpoints they are said to meet at",
+  "kind": "network",
+  "synthesis": "conceptual",
+  "refs": [
+   69,
+   83,
+   84,
+   88,
+   89,
+   92,
+   110,
+   111,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   119,
+   120,
+   121,
+   122,
+   123,
+   124,
+   125,
+   126,
+   127,
+   148,
+   150,
+   167,
+   168,
+   173,
+   174
+  ],
+  "data": "figures/data/fig5-convergence.json",
+  "caption": "Eleven modalities on one side and five shared molecular endpoints on the other: BDNF and TrkB, mTOR, immediate-early genes, mitochondrial and metabolic state, and glial and inflammatory signalling. Every edge carries the kind of evidence it rests on and the species it was measured in. Several edges are marked contested, and two are marked as resting on one laboratory. The map shows a shared vocabulary rather than a shared mechanism: a marker that rises by two different routes gives two different edges with the same head node.",
+  "how_to_read": "Read an edge as \"this drive was reported to change this endpoint, in this preparation, by this kind of study\" - not as \"these drives work the same way\". Before joining two edges into a convergence, check that they carry the same assay and the same species; if they do not, the join is weaker than it looks. Pay attention to the flags: contested edges have a published counter-result, single-laboratory edges have no independent replication in this corpus, and the TSPO edge is a null obtained with a marker that does not index activation in primates. Where an edge points at BDNF and TrkB, read the node's own note first, because that one name covers four different kinds of measurement.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "ltp-ltd-plasticity",
+   "evidence-grading-and-translation"
+  ],
+  "discussed_in": [
+   "v0-7-molecular-subcellular-convergence"
+  ],
+  "cites": [],
+  "source": "Built from section 7 of the review only, and restricted to the endpoints and edges that section states. No convergence is asserted that the prose does not: where the section says a marker is shared but the mechanism is not, the edges are kept separate and flagged rather than merged. The strongest form of convergence evidence named in that section - four unrelated compounds abolished by the same NMDA receptor pretreatment in mice - is carried as a property of the contested ketamine edge rather than as a node, because the section presents it as a shared requirement, not a sixth endpoint. Nothing is quantitative and nothing is approximated; the arrangement of modalities against endpoints is this volume's.",
+  "graph": {
+   "layout": "layered",
+   "nodes": [
+    {
+     "id": "anodal-dcs",
+     "label": "Anodal direct current stimulation",
+     "term": "anodal-stimulation",
+     "side": "modality"
+    },
+    {
+     "id": "tdcs",
+     "label": "tDCS (multi-session, rodent dose)",
+     "term": "tdcs",
+     "side": "modality"
+    },
+    {
+     "id": "rtms",
+     "label": "Repetitive TMS and theta-burst protocols",
+     "term": "rtms",
+     "side": "modality"
+    },
+    {
+     "id": "ketamine",
+     "label": "Ketamine and its metabolites",
+     "term": "ketamine",
+     "side": "modality"
+    },
+    {
+     "id": "antidepressants",
+     "label": "Classical and rapid-acting antidepressants",
+     "term": "trkb",
+     "side": "modality"
+    },
+    {
+     "id": "psychedelics",
+     "label": "Psychedelics (LSD, psilocin)",
+     "term": "psychedelic",
+     "side": "modality"
+    },
+    {
+     "id": "nir-light",
+     "label": "Near-infrared light",
+     "term": "photobiomodulation",
+     "side": "modality"
+    },
+    {
+     "id": "fus-microbubbles",
+     "label": "Focused ultrasound with microbubbles",
+     "term": "blood-brain-barrier-opening",
+     "side": "modality"
+    },
+    {
+     "id": "lifu",
+     "label": "Low-intensity ultrasound",
+     "term": "tus",
+     "side": "modality"
+    },
+    {
+     "id": "vns",
+     "label": "Vagus nerve stimulation",
+     "term": "vagus-nerve-stimulation",
+     "side": "modality"
+    },
+    {
+     "id": "forty-hz",
+     "label": "40 Hz sensory and optogenetic stimulation",
+     "term": "forty-hz-stimulation",
+     "side": "modality"
+    },
+    {
+     "id": "bdnf-trkb",
+     "label": "BDNF and TrkB",
+     "term": "bdnf",
+     "side": "endpoint",
+     "note": "One node name covers secreted protein in a mouse slice, translated protein after eEF2K deactivation, a human genotype and a structural claim about the receptor; the assay has to travel with the edge [110,111,116,118]."
+    },
+    {
+     "id": "mtor",
+     "label": "mTOR signalling and rapid synaptogenesis",
+     "term": "mtor",
+     "side": "endpoint"
+    },
+    {
+     "id": "ieg",
+     "label": "Immediate-early genes (c-Fos, zif268)",
+     "term": "immediate-early-gene",
+     "side": "endpoint",
+     "note": "Marks that tissue was driven; does not give the direction of a synaptic change [112]."
+    },
+    {
+     "id": "mitochondrial",
+     "label": "Mitochondrial and metabolic state",
+     "term": "mitochondrial-function",
+     "side": "endpoint"
+    },
+    {
+     "id": "cytokines",
+     "label": "Glial and inflammatory signalling, cytokines",
+     "term": "tnf",
+     "side": "endpoint"
+    }
+   ],
+   "edges": [
+    {
+     "from": "anodal-dcs",
+     "to": "bdnf-trkb",
+     "label": "experiment, mouse motor cortex slice: potentiation required BDNF secretion and TrkB activation",
+     "evidence_kind": "primary experimental",
+     "species": "mouse",
+     "refs": [
+      110
+     ]
+    },
+    {
+     "from": "anodal-dcs",
+     "to": "bdnf-trkb",
+     "label": "genotype association, human: Val66Met carriers responded differently across TMS and tDCS protocols, replication inconsistent",
+     "evidence_kind": "genotype association, indirect",
+     "species": "human",
+     "refs": [
+      111
+     ]
+    },
+    {
+     "from": "ketamine",
+     "to": "bdnf-trkb",
+     "label": "experiment, mouse: NMDA receptor blockade at rest deactivated eEF2 kinase and released BDNF mRNA for translation",
+     "evidence_kind": "primary experimental",
+     "species": "mouse",
+     "refs": [
+      116
+     ]
+    },
+    {
+     "from": "antidepressants",
+     "to": "bdnf-trkb",
+     "label": "structure, cell work and mouse behaviour from one laboratory: binding to a site in the TRKB transmembrane domain",
+     "evidence_kind": "primary experimental, single laboratory",
+     "species": "in vitro and mouse",
+     "single_laboratory": true,
+     "refs": [
+      118
+     ]
+    },
+    {
+     "from": "psychedelics",
+     "to": "bdnf-trkb",
+     "label": "same laboratory: LSD and psilocin bind TrkB, and mouse plasticity required TrkB but not 5-HT2A",
+     "evidence_kind": "primary experimental, single laboratory",
+     "species": "in vitro and mouse",
+     "single_laboratory": true,
+     "contested": true,
+     "note": "Rival accounts put the work at 5-HT2A, intracellular [92] or presynaptic [174], with the plasticity question treated as open [173].",
+     "refs": [
+      119,
+      92,
+      173,
+      174
+     ]
+    },
+    {
+     "from": "ketamine",
+     "to": "mtor",
+     "label": "experiment, rat prefrontal cortex: a single dose activated mTOR, raised synaptic proteins and added spines; rapamycin blocked both",
+     "evidence_kind": "primary experimental",
+     "species": "rat",
+     "refs": [
+      115
+     ]
+    },
+    {
+     "from": "ketamine",
+     "to": "mtor",
+     "label": "contested: no direct target found for (2R,6R)-hydroxynorketamine, against a shared downstream NMDA-receptor requirement across four unrelated compounds in mice",
+     "evidence_kind": "primary experimental and screening",
+     "species": "mouse and human protein panels",
+     "contested": true,
+     "refs": [
+      117,
+      167,
+      168,
+      120
+     ]
+    },
+    {
+     "from": "rtms",
+     "to": "ieg",
+     "label": "experiment, rat: 1 Hz and 10 Hz raised c-Fos across cortex, iTBS only in limbic cortices, so the response tracked pattern not pulse count",
+     "evidence_kind": "primary experimental",
+     "species": "rat",
+     "refs": [
+      112
+     ]
+    },
+    {
+     "from": "rtms",
+     "to": "ieg",
+     "label": "experiment, mouse: spatial transcriptomics after two low-intensity protocols changed plasticity-related genes by region, layer and protocol",
+     "evidence_kind": "primary experimental",
+     "species": "mouse",
+     "refs": [
+      113
+     ]
+    },
+    {
+     "from": "rtms",
+     "to": "bdnf-trkb",
+     "label": "direction needs a synaptic readout, not a marker: iTBS600 produced LTP with spine remodelling in mouse organotypic slice culture",
+     "evidence_kind": "primary experimental",
+     "species": "mouse",
+     "refs": [
+      114
+     ]
+    },
+    {
+     "from": "nir-light",
+     "to": "mitochondrial",
+     "label": "experiment, in vitro: light restored cytochrome c oxidase activity against cyanide, with an action spectrum matching the oxidised enzyme; nitric oxide proposed as the signalling step",
+     "evidence_kind": "primary experimental",
+     "species": "in vitro, primary neurons and HeLa cells",
+     "refs": [
+      88,
+      89
+     ]
+    },
+    {
+     "from": "tdcs",
+     "to": "mitochondrial",
+     "label": "experiment, rat: five days of 200 microamp anodal tDCS changed glycolysis, mitochondrial and calcium-signalling markers; current density far above human values",
+     "evidence_kind": "primary experimental",
+     "species": "rat",
+     "dose_does_not_transfer": true,
+     "refs": [
+      122
+     ]
+    },
+    {
+     "from": "lifu",
+     "to": "cytokines",
+     "label": "effector rather than endpoint: astrocytic TRPA1 opening drives Best1 glutamate release onto neuronal NMDA receptors",
+     "evidence_kind": "primary experimental",
+     "species": "rodent and in vitro",
+     "refs": [
+      69
+     ]
+    },
+    {
+     "from": "tdcs",
+     "to": "cytokines",
+     "label": "experiment, mouse: cortical astrocytic calcium surges with little neuronal firing change; the sensory enhancement required alpha1-adrenergic and IP3R2-dependent astrocytic calcium",
+     "evidence_kind": "primary experimental",
+     "species": "mouse",
+     "refs": [
+      121
+     ]
+    },
+    {
+     "from": "fus-microbubbles",
+     "to": "cytokines",
+     "label": "contested, rat: sterile inflammatory response lasting about 24 h, against no NF-kB change at clinical imaging microbubble doses",
+     "evidence_kind": "primary experimental",
+     "species": "rat",
+     "contested": true,
+     "refs": [
+      83,
+      84
+     ]
+    },
+    {
+     "from": "vns",
+     "to": "cytokines",
+     "label": "experiment, rat: stimulation during lethal endotoxaemia inhibited hepatic TNF synthesis, with ChAT-expressing splenic T cells required as a relay",
+     "evidence_kind": "primary experimental",
+     "species": "rat and mouse",
+     "refs": [
+      148,
+      150
+     ]
+    },
+    {
+     "from": "forty-hz",
+     "to": "cytokines",
+     "label": "contested, mouse: lower amyloid with microglial change and a glymphatic route, against a null finding no native gamma engagement and no plaque change",
+     "evidence_kind": "primary experimental",
+     "species": "mouse",
+     "contested": true,
+     "refs": [
+      123,
+      124,
+      125
+     ]
+    },
+    {
+     "from": "rtms",
+     "to": "cytokines",
+     "label": "null, macaque: cTBS or iTBS for three to four weeks changed neither TSPO PET nor MR spectroscopy, with TSPO not indexing activation in primates",
+     "evidence_kind": "primary experimental, null",
+     "species": "macaque",
+     "assay_validity_flag": true,
+     "refs": [
+      126,
+      127
+     ]
+    }
+   ]
+  },
+  "provenance": "synthesised: conceptual diagram"
+ },
+ {
+  "id": "fig6",
+  "label": "Figure 6",
+  "title": "The modality map: 36 families on eight shared axes",
+  "kind": "table",
+  "synthesis": "data",
+  "refs": [
+   2,
+   4,
+   30,
+   31,
+   33,
+   34,
+   40,
+   56,
+   79,
+   135,
+   140,
+   211,
+   227,
+   229,
+   234,
+   248,
+   250,
+   255,
+   260,
+   261
+  ],
+  "data": "figures/data/fig6-modality-map.csv",
+  "columns": [
+   {
+    "field": "family",
+    "label": "Family"
+   },
+   {
+    "field": "invasiveness",
+    "label": "Invasiveness"
+   },
+   {
+    "field": "drive_physically",
+    "label": "What the drive is physically"
+   },
+   {
+    "field": "proposed_primary_coupling",
+    "label": "Proposed primary coupling mechanism"
+   },
+   {
+    "field": "named_rival",
+    "label": "Named rival"
+   },
+   {
+    "field": "dose_quantities_reported",
+    "label": "Dose quantities actually reported"
+   },
+   {
+    "field": "resolution_reported",
+    "label": "Spatial and temporal resolution as reported"
+   },
+   {
+    "field": "dominant_evidence_base",
+    "label": "Dominant evidence base"
+   },
+   {
+    "field": "what_is_missing",
+    "label": "What is missing"
+   },
+   {
+    "field": "ref",
+    "label": "Sources"
+   }
+  ],
+  "caption": "Thirty-six human-applicable families on eight shared axes. Cells that in the review read only \"not established in this corpus\" are left empty here, so the gaps are visible as gaps: they cluster in the named-rival column and in proposed primary coupling, while the evidence-base column has none. Reading down the columns rather than across the rows shows that invasiveness does not track how well the coupling step is specified.",
+  "how_to_read": "Read one row to see what a family's own literature says about itself, and read one column to compare that claim across families. Treat an empty cell as \"no source available to this section reports it\", not as zero and not as an absence in the world. Do not compare two spatial or temporal figures directly: the TMS numbers are simulations, the tES field values are intracranial recordings, and ultrasound exposure is reported twice, as free-field output and as an in situ estimate. The reference numbers in each cell and in the sources column let you take any claim back to its paper.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "dose-and-parameter-sets",
+   "evidence-grading-and-translation",
+   "closed-loop-control"
+  ],
+  "discussed_in": [
+   "v0-10-modality-map"
+  ],
+  "cites": [],
+  "source": "A transcription of the comparison table in section 10 of the review: 36 rows and eight content columns, cell text as written there, with the citations kept inside the cells. The only change is that 21 cells whose entire content was the placeholder \"not established in this corpus\" are stored as empty values so that missing data is machine-visible; cells that qualify the placeholder with anything further are kept in full. The ref column is assembled by this figure from the reference numbers appearing anywhere in the row, so it is a row-level index rather than a per-cell citation. Every figure in the table is as reported by that family's own literature, in its own preparation and units, and no two were produced by the same procedure, so the table is a map of what each literature says about itself rather than a measurement of the families against one another.",
+  "table": {
+   "rows": [
+    {
+     "family": "DBS, open loop",
+     "invasiveness": "Implanted intracranial macroelectrode; standard care [31]",
+     "drive_physically": "Charge-balanced current pulses across an electrode–tissue interface, Faradaic and non-Faradaic charge transfer [63]",
+     "proposed_primary_coupling": "Axonal excitation; driving term is the second spatial derivative of extracellular potential along the fibre (computational) [33]; axons before somata, polarity- and orientation-dependent [34]",
+     "named_rival": "Informational lesion: high-frequency stimulation makes output regular and variance-free, so the nucleus fires but stops transmitting information (computational) [133]",
+     "dose_quantities_reported": "Amplitude, pulse width, frequency, train timing; safety bounded jointly by charge density and charge per phase, ~10–800 µC/cm² and 0.05–5 µC/phase, cat cortex [16], fitted as a log-linear limit [17]; effective dose often omitted [2]",
+     "resolution_reported": "Effective spatial unit is the connected fibre set: structural and functional connectivity independently predicted motor gain in 51 patients and replicated in a second cohort [132]; chronaxie ~50–100 µs for central myelinated axons, 200–700 µs in grey matter [34]",
+     "dominant_evidence_base": "Human clinical cohorts [132]; cat cortex damage data [16]; computational axon models [33,133]",
+     "what_is_missing": "Routine effective-dose reporting [2]; frequency, duty cycle, current density and electrode size in the safety rule [18]; adjudication of excitation versus informational lesion [133]",
+     "ref": "2;16;17;18;31;33;34;63;132;133"
+    },
+    {
+     "family": "Adaptive (closed-loop) DBS",
+     "invasiveness": "Implanted, same hardware with sensing [135]",
+     "drive_physically": "Same pulses, delivered only while a subthalamic beta-band local field potential burst exceeds threshold [135]",
+     "proposed_primary_coupling": "As open-loop DBS [33]; the biomarker gates delivery rather than altering coupling [135]",
+     "named_rival": "Not established in this corpus; random intermittent stimulation did not match adaptive stimulation, so timing rather than intermittency carried the benefit [135]",
+     "dose_quantities_reported": "Gating threshold plus the underlying pulse parameters; blinded motor scores improved 50%, about 27% better than continuous stimulation, with total stimulation time down 56% [135]",
+     "resolution_reported": "Temporal resolution set by the burst detector; spatial as open-loop DBS [135]",
+     "dominant_evidence_base": "Human, 8 patients with advanced Parkinson's disease, within-subject blinded comparison [135]",
+     "what_is_missing": "What \"dose\" denotes when delivery is state-gated [135]; long-term controlled trials, not established in this corpus",
+     "ref": "33;135"
+    },
+    {
+     "family": "ECT",
+     "invasiveness": "Transcranial drive that deliberately induces a generalised seizure, with cognitive adverse effects as its limiting cost [263]",
+     "drive_physically": "Charge-balanced current pulse trains through scalp electrodes, with placement, pulse amplitude, shape and width, and train frequency, directionality, polarity and duration as separate physical variables [261]",
+     "proposed_primary_coupling": "Contested at the level of the drive itself: the antidepressant action is attributed to the induced seizure, to the electrical stimulation, or to their interaction, and the mechanism review that poses the question leaves it open [263]",
+     "named_rival": "The seizure account against the direct-field account [263]; simulation puts ECT's suprathreshold volume well above that of magnetic seizure therapy, so comparable efficacy from a much more focal field favours the seizure [225,227]",
+     "dose_quantities_reported": "Placement and pulse width are the decisive axes: ultrabrief 0.3 ms right unilateral gave 73% remission against 35% for ultrabrief bilateral in a 2 × 2 randomised design in 90 patients, so efficacy does not follow delivered charge [260]; total charge and energy are argued to be the wrong abstraction [261]; in macaque, seizure threshold was lowest near 16 pulses per second across 5–240 pulses per second and 230–565 mA [226]; three sessions weekly for three weeks [170], median six sessions to remission [171]",
+     "resolution_reported": "Larger suprathreshold brain volume than MST in finite-element simulation of four ECT montages against three MST coils [225]; seizure induction immediate, course over weeks [260]",
+     "dominant_evidence_base": "Human: meta-analysis in which real ECT beat simulated (sham) ECT and pharmacotherapy, with bilateral placement and higher dose better than unilateral and lower dose on efficacy [262]; randomised parameter trial, n = 90 [260]; two open-label head-to-heads against intravenous ketamine, response 41.2% versus 55.4% [170] and remission 63% versus 46% [171]; macaque threshold mapping [226]",
+     "what_is_missing": "Whether the seizure or the field carries the effect [263]; a dosing abstraction better than charge or multiples of seizure threshold [261]; clinical frequencies sit far above the charge-minimising optimum measured in macaque [226]",
+     "ref": "170;171;225;226;227;260;261;262;263"
+    },
+    {
+     "family": "Magnetic seizure therapy",
+     "invasiveness": "Transcranial magnetic drive that deliberately induces a generalised seizure, with fewer cognitive adverse effects than ECT in a blinded head-to-head [227]",
+     "drive_physically": "High-intensity, high-frequency magnetic pulse trains inducing an eddy current confined largely to superficial cortex [225]",
+     "proposed_primary_coupling": "Seizure induction from a focal induced field, which reaches a smaller suprathreshold brain volume than any ECT montage at comparable clinical effect [225,227]",
+     "named_rival": "As for ECT, the seizure against the field: comparable efficacy from a much more focal field is the main argument for the seizure account [227,263]",
+     "dose_quantities_reported": "Coil design, train frequency and stimulator output: in macaque, thresholds were mapped across 5–100 pulses per second at 66–86% of maximum stimulator output, with the fewest pulses needed at mid-range frequencies [226]; field magnitude and suprathreshold volume from simulation [225]",
+     "resolution_reported": "Field confined much more to superficial cortex than four ECT electrode configurations, in a finite-element comparison [225]; MST required more treatment sessions than ECT [227]",
+     "dominant_evidence_base": "Human: one double-blind randomised trial at three hospitals in 73 adults — response 51.4% for MST against 42.1% for ultrabrief right unilateral ECT, sustained at six months, with significantly longer time to reorientation and fewer cognitive adverse effects [227]; macaque threshold mapping [226]; simulation [225]",
+     "what_is_missing": "Which train parameters set the human seizure threshold [226]; any trial beyond the single blinded head-to-head [227]",
+     "ref": "225;226;227;263"
+    },
+    {
+     "family": "Epidural cortical stimulation",
+     "invasiveness": "Implanted extradural electrode; not established in this corpus as a therapy [30,31]",
+     "drive_physically": "Not established in this corpus; the corpus's epidural material is recordings, not therapeutic drive [58]",
+     "proposed_primary_coupling": "Indirect (I-wave) trans-synaptic activation of corticospinal neurons, with recruitment depending on current direction, measured as descending volleys [58]",
+     "named_rival": null,
+     "dose_quantities_reported": null,
+     "resolution_reported": "Millisecond ordering of direct and indirect descending volleys [58]; no spatial figure",
+     "dominant_evidence_base": "Human epidural recordings, review [58]",
+     "what_is_missing": "A therapeutic epidural cortical stimulation source of any kind [30,31]",
+     "ref": "30;31;58"
+    },
+    {
+     "family": "Intracortical microstimulation",
+     "invasiveness": "Implanted penetrating intracortical microelectrode arrays [248]",
+     "drive_physically": "Charge injection directly into grey matter through one or more electrodes of an array [248]",
+     "proposed_primary_coupling": "Direct excitation of local neural elements, with axons before somata and current–distance relations setting the excited shell [34]; evoked percepts organised somatotopically by electrode [248]",
+     "named_rival": "Not a labelled line: at one electrode, amplitude and frequency decide whether the percept is cutaneous or proprioceptive, and some electrodes are multimodal [249]",
+     "dose_quantities_reported": "Amplitude grades perceived intensity [248]; detection thresholds fell from a median 31.5 µA at day 100 to 10.4 µA at day 1500 [250]; mean single-electrode phosphene threshold 66.8 ± 36.5 µA in visual cortex, falling substantially under simultaneous multi-electrode stimulation [251]; microelectrodes tolerate higher charge densities than the macroelectrode rule predicts [18]",
+     "resolution_reported": "Single-electrode resolution, somatotopically ordered in somatosensory cortex [248] and one phosphene per electrode in visual cortex [251]; percepts stable over months [248], stimulation performance holding over 1,500 days [250]",
+     "dominant_evidence_base": "Human: implanted participants with spinal cord injury [248,249,250] and a blind volunteer with a 96-channel occipital array for six months [251]; mammalian CNS review for the coupling account [34]",
+     "what_is_missing": "Revised charge-density damage thresholds for chronic human microstimulation [18,250]; single-participant designs throughout [248,249,250,251]",
+     "ref": "18;34;248;249;250;251"
+    },
+    {
+     "family": "TMS, single pulse and conventional rTMS",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Pulsed magnetic field inducing an electric field in tissue; dose is every device parameter that shapes that field [9]",
+     "proposed_primary_coupling": "Myelinated axon terminals of pyramidal cells and interneurons at the gyral crown, with spread through intracortical circuits and white matter (consensus, measured and modelled) [41]; modelling puts the lowest thresholds in intracortical axon terminals, with field magnitude mattering more than direction [57]",
+     "named_rival": "Substantial somatosensory and auditory co-stimulation accompanies every pulse and must be controlled for [41]",
+     "dose_quantities_reported": "Coil geometry, waveform, pulse parameters, train and session timing [9]; percentage of motor threshold as the clinical norm [15]; modelled E-field reported in 308 different ways [14]",
+     "resolution_reported": "Simulated half-value depth 0.9–3.5 cm, with tangential spread 5 cm² for figure-8 and 34 cm² for circular coils, spherical head model [56]; current direction changes which interneuron circuits are recruited, read from epidural volleys [58]; the effective extent exceeds the induced field, since prefrontal rTMS reduced [<sup>11</sup>C]raclopride binding specifically in ipsilateral dorsal caudate in humans [143]",
+     "dominant_evidence_base": "Human consensus plus measured epidural volleys [41,58]; computational thresholds [57]; expert safety guideline, seizure risk low at conventional parameters [42]",
+     "what_is_missing": "An agreed E-field outcome measure [14]; a validated route from modelled field to physiology [15]",
+     "ref": "9;14;15;41;42;56;57;58;143"
+    },
+    {
+     "family": "TMS, theta burst and accelerated protocols",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Bursts of high-frequency pulses repeated at a theta rhythm [38]",
+     "proposed_primary_coupling": "As single-pulse TMS, at axon terminals [41]; after-effects read as LTP/LTD-like plasticity [38]",
+     "named_rival": "Which interneuron network a pulse recruits, indexed by anterior–posterior-current MEP latency, rather than plasticity capacity, explains responder status [59]",
+     "dose_quantities_reported": "20–190 s of stimulation; continuous versus intermittent pattern sets the direction of the excitability change [38]; a co-administered drug changes the delivered effect, with adjunctive D-cycloserine 100 mg over four weeks of iTBS giving a 6.15-point greater MADRS reduction (Hedges g = 0.99) and response 73.9% versus 29.3% in 50 patients [190]; accelerated protocols not established in this corpus",
+     "resolution_reported": "After-effects outlasting stimulation and persisting beyond the ~30 min typical of earlier rTMS [38]",
+     "dominant_evidence_base": "Human, healthy volunteers [38]; variability characterised in 56 adults [59]",
+     "what_is_missing": "Reproducibility and responder rates of the after-effects are disputed [38,59]; any accelerated-protocol source",
+     "ref": "38;41;59;190"
+    },
+    {
+     "family": "tDCS",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Sustained low-intensity current applied at the scalp [43]",
+     "proposed_primary_coupling": "Compartment-specific membrane polarisation: about 0.12 mV per mV/mm at the soma along the somato-dendritic axis, largest at dendritic tips, with no clear threshold (rat hippocampal slice) [36]; morphology-dependent, layer V pyramidal cells most sensitive (rat, in vitro) [49]",
+     "named_rival": "Fields too weak for direct effects: about 75% of scalp current is shunted, the minimum field affecting spiking is about 1 V/m in rat intracellular recordings, and 4–6 mA was needed to modulate human EEG alpha [50]",
+     "dose_quantities_reported": "Up to 4 mA and 60 min/day, from more than 300,000 pooled sessions with no serious adverse events [43]; 2 mA at the scalp produced about 0.8 V/m measured in cortex in 10 patients [40]; about 0.5 mV/mm peak measured in superficial cortex [211]",
+     "resolution_reported": "Polarisation time constants about 15–70 ms, with excitability changes outlasting the field by more than a second, rat slice [36]; field strength changed little with region or frequency in human and macaque recordings [211]; no focality figure in this corpus",
+     "dominant_evidence_base": "Rat slice and in vitro [36,49]; human intracranial measurement [40,211]; pooled human safety data [43]",
+     "what_is_missing": "Whether 1–2 mA modulates neurons directly [36,50]; a consensus in-tissue metric [14]",
+     "ref": "14;36;40;43;49;50;211"
+    },
+    {
+     "family": "tACS",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Sinusoidal current applied at the scalp [43]",
+     "proposed_primary_coupling": "Spike-timing entrainment without rate change, dose-dependent at human-feasible intensities in awake macaque [51,52]; network resonance amplifies weak fields, largest when stimulation matches the intrinsic rhythm (ferret slice plus simulation) [37,53]",
+     "named_rival": "Transcutaneous stimulation of peripheral nerves: anaesthetising the skin reduced tremor entrainment and peripheral stimulation alone reproduced the motor effects (rat and human) [54]; countered by entrainment persisting under topical anaesthesia in macaque [55]",
+     "dose_quantities_reported": "Same envelope as tDCS, to 4 mA and 60 min/day [43]; frequency relative to the intrinsic rhythm [53]; endogenous fields for comparison were 2–4 mV/mm in ferret cortex [37]",
+     "resolution_reported": "Phase locking altered without firing-rate change, including in macaque hippocampus and basal ganglia [51]; entrainment competes with ongoing oscillations and can reduce locking in strongly locked neurons [44]",
+     "dominant_evidence_base": "Awake macaque single units [44,51,52]; ferret slice and simulation [37,53]; rat and human [54,55]",
+     "what_is_missing": "Whether human effects at 1–2 mA are direct [50,54]; a state-dependent dose rule [44]",
+     "ref": "37;43;44;50;51;52;53;54;55"
+    },
+    {
+     "family": "tRNS",
+     "invasiveness": "Non-invasive",
+     "drive_physically": null,
+     "proposed_primary_coupling": null,
+     "named_rival": null,
+     "dose_quantities_reported": "Only as part of a pooled tES safety envelope with tDCS and tACS: to 4 mA and 60 min/day, no serious adverse events over more than 300,000 sessions [43]",
+     "resolution_reported": null,
+     "dominant_evidence_base": "Human safety pooling only [43]",
+     "what_is_missing": "Every mechanistic and dose-specific cell; absent from both comparison sources [30,31]",
+     "ref": "30;31;43"
+    },
+    {
+     "family": "Temporal interference",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Two kHz carriers at slightly different frequencies whose overlap produces a low-frequency amplitude envelope [39]",
+     "proposed_primary_coupling": "Envelope demodulation at the membrane: mouse neurons followed the envelope, hippocampal neurons were driven without driving overlying cortex, and motor responses were steered by current ratio [39]; in humans, modelled and cadaver-measured steering with changed hippocampal fMRI and improved episodic memory accuracy [45]",
+     "named_rival": "Passive membrane filtering cannot extract the envelope; ion-channel rectification can, and predicts tonic firing or conduction block in superficial tissue at intensities that reach deep targets (computational) [60]; modelled suprathreshold TI needs about 75–230 V/m against about 0.1–1 V/m attainable in the human brain [48]; in macaque, TI altered spike timing but not rate and was about 80% less potent than tACS [46]",
+     "dose_quantities_reported": "Carrier frequency, difference frequency, per-channel current and current ratio [39]; human studies mostly used 20 Hz or gamma-range envelopes [47]",
+     "resolution_reported": "Steering claimed from models and cadaver measurements rather than from in vivo field recordings [45]; spike-timing effects without rate change in macaque [46]",
+     "dominant_evidence_base": "Human systematic review: 48 records, 20 completed studies and 28 ongoing trials, 820 participants, well tolerated, evidence at Phase 1 level with efficacy untested [47]; mouse [39]; macaque [46]; computational [48,60]",
+     "what_is_missing": "Efficacy of any kind [47]; adjudication of suprathreshold feasibility [46,48]; measured human in-brain envelope amplitude",
+     "ref": "39;45;46;47;48;60"
+    },
+    {
+     "family": "VNS, cervical implanted",
+     "invasiveness": "Implanted nerve cuff; standard care [31]",
+     "drive_physically": "Current pulses delivered to the cervical vagus [140]",
+     "proposed_primary_coupling": "Recruitment of vagal afferents driving phasic locus coeruleus firing: rapid phasic bursts from 0.1 mA, with rate rising with current and pulse width, and pulse frequency shifting burst timing without changing total activity (rat) [140]",
+     "named_rival": "Not established in this corpus for the implanted route",
+     "dose_quantities_reported": "Current amplitude, pulse frequency, pulse width, train duration, inter-train interval [140]; effective dose often omitted in implantable practice [2]",
+     "resolution_reported": "Half-second trains produce phasic bursts in rat locus coeruleus; trigeminal pulse-locked activity appears only above 1.2 mA, giving an amplitude window that separates the two [140]",
+     "dominant_evidence_base": "Rat direct recordings across a parameter grid [140]; clinical use as standard care [31]",
+     "what_is_missing": "Fibre-class selectivity: the vagus is a bundle of molecularly distinct afferent classes whose transduction is poorly established [157]; any human recording of the engaged pathway",
+     "ref": "2;31;140;157"
+    },
+    {
+     "family": "taVNS, transcutaneous auricular",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Current pulses at the auricular branch of the vagus [146]",
+     "proposed_primary_coupling": "Assumed to be the same afferent recruitment as cervical VNS [140]; in humans indexed only by proxies [146]",
+     "named_rival": "Null engagement: pooled continuous stimulation gives strong evidence for no pupil effect (g = 0.002, BF01 = 21.9) while pulsed stimulation gives strong evidence for one (g = 0.36, BF10 = 50.8) [146]",
+     "dose_quantities_reported": "Amplitude, pulse width, frequency, and pulsed versus continuous delivery as the decisive parameter [146]",
+     "resolution_reported": "Not established in this corpus; the human read-out is a pupil proxy rather than a spatial or temporal measurement [146]",
+     "dominant_evidence_base": "Human living Bayesian meta-analysis, 18 studies, N = 771 [146]; rat parametric work by extension [140]",
+     "what_is_missing": "A direct human measure of target engagement; separation of vagal from trigeminal recruitment at the ear [140,157]",
+     "ref": "140;146;157"
+    },
+    {
+     "family": "Trigeminal nerve stimulation",
+     "invasiveness": null,
+     "drive_physically": null,
+     "proposed_primary_coupling": null,
+     "named_rival": null,
+     "dose_quantities_reported": "Appears only as a recruitment control during VNS, where pulse-locked trigeminal activity appeared above 1.2 mA in rat [140]",
+     "resolution_reported": null,
+     "dominant_evidence_base": "Rat, as a control condition in a VNS parameter study [140]",
+     "what_is_missing": "Any source treating the trigeminal nerve as the intended target; it appears in neither cross-modality comparison source [30,31]",
+     "ref": "30;31;140"
+    },
+    {
+     "family": "Hypoglossal nerve stimulation",
+     "invasiveness": "Implanted nerve cuff with a respiration sensor; serious adverse events in under 2% [252]",
+     "drive_physically": "Current pulses to the hypoglossal nerve, gated to inspiration, producing timed tongue-protrusor contraction [252]",
+     "proposed_primary_coupling": "Excitation of a somatic motor nerve, with a mechanical endpoint (airway patency) rather than a modulated state [252]",
+     "named_rival": null,
+     "dose_quantities_reported": "Pulse width 90 against 120 µs and frequency 33 against 40 Hz, amplitude in volts, therapeutic window counted in tolerable voltage steps; the longer, faster configuration lowered the amplitude needed for functional protrusion across all three electrode configurations without changing the usable window [253]",
+     "resolution_reported": "Stimulation gated to the respiratory cycle, so the temporal unit is the breath [252]; no spatial figure in this corpus",
+     "dominant_evidence_base": "Human: 126 CPAP-intolerant patients, median apnoea–hypopnoea index down 68% from 29.3 to 9.0 events/hour at 12 months, with a randomised therapy-withdrawal substudy confirming device dependence [252]; pooled analysis of 30 studies (549 patients across 26 single-arm studies, 273 across 4 randomised trials), index down 20.11 events/hour (95% CI 23.13 to 17.10) at one year and 15.60 beyond [254]",
+     "what_is_missing": "Randomised evidence: only 4 of the 30 pooled studies were randomised [254]",
+     "ref": "252;253;254"
+    },
+    {
+     "family": "Occipital nerve stimulation",
+     "invasiveness": "Implanted occipital nerve leads [255]",
+     "drive_physically": "Current pulses to the occipital nerves, producing paraesthesia in the stimulated field [255]",
+     "proposed_primary_coupling": null,
+     "named_rival": "Not established in this corpus; a 30% intensity arm matched the 100% arm, so a dose-dependent therapeutic effect cannot be separated from a non-specific one [255]",
+     "dose_quantities_reported": "Intensity expressed as a percentage of the individually determined paraesthesia-to-near-discomfort range rather than in mA, set at 100% or 30% [255]",
+     "resolution_reported": null,
+     "dominant_evidence_base": "Human: randomised, double-blind, multicentre phase 3 dose-controlled trial in medically intractable chronic cluster headache, median weekly attack frequency falling substantially by weeks 21–24 (p < 0.0001), similarly in both arms [255]",
+     "what_is_missing": "A sham comparison, which an unmistakable paraesthesia makes impossible, and with it the mechanism of benefit [255]",
+     "ref": 255
+    },
+    {
+     "family": "Spinal cord stimulation, epidural",
+     "invasiveness": "Implanted epidural electrode; standard care [31]",
+     "drive_physically": "Current pulses in the epidural space over the spinal cord [2]",
+     "proposed_primary_coupling": "Recruitment of large myelinated dorsal-root afferents rather than motoneurons or interneurons directly, which then engage motor pools trans-synaptically; modelled and confirmed in rats for intensity and electrode position [61]",
+     "named_rival": null,
+     "dose_quantities_reported": "Amplitude, pulse width, frequency, waveform; classification proposed by target plus waveform and dose, with effective dose often omitted [2]; charge-density and charge-per-phase limit by inheritance [17]",
+     "resolution_reported": "Recruitment order and threshold as a function of electrode position, modelled and rat-validated [61]; kHz waveforms optimised to inactivate sodium channels from the closed state can block conduction without an onset burst (computational) [62]",
+     "dominant_evidence_base": "Computational model with rat validation [61,62]; expert consensus taxonomy [2]; clinical use [31]",
+     "what_is_missing": "Human mechanism data; frequency and duty-cycle terms in the safety rule [18]",
+     "ref": "2;17;18;31;61;62"
+    },
+    {
+     "family": "Peripheral nerve stimulation and functional electrical stimulation",
+     "invasiveness": "Surface electrodes through to fully implanted systems [245]",
+     "drive_physically": "Charge-balanced current pulses to intact peripheral motor nerves, with the safety envelope set by charge-injection limits rather than by seizure or cognitive risk [245]",
+     "proposed_primary_coupling": "Excitation of peripheral motor axons, with contraction graded by amplitude, pulse width and frequency [245]",
+     "named_rival": "Recruitment is non-selective, spatially fixed and temporally synchronous rather than following the size principle, and the textbook strict reverse (large-to-small) order is not supported; synchronous firing of the same units is the source of the rapid fatigue [246]",
+     "dose_quantities_reported": "Amplitude, pulse width and frequency modulation as the grading variables [245]; the same peripheral drive alone reproduced tACS motor effects in rats and humans [54]; kHz waveforms optimised to inactivate sodium channels from the closed state block conduction without an onset burst (computational) [62]",
+     "resolution_reported": "Spatially fixed recruitment, so the stimulated population does not rotate as in voluntary contraction [246]; the outcome is a graded mechanical action rather than a modulated state [245]",
+     "dominant_evidence_base": "Human: meta-analysis of 18 randomised trials after stroke, moderate pooled effect on activity driven mainly by upper-limb function with smaller gains in walking speed [247]; family review across upper and lower extremity, bladder, bowel and respiratory neuroprostheses [245]",
+     "what_is_missing": "A selective recruitment method that reproduces the size principle, and fatigue-resistant parameter sets [246]",
+     "ref": "54;62;245;246;247"
+    },
+    {
+     "family": "Low-intensity transcranial ultrasound",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Focused pressure wave, pulsed, delivered through the skull [20]",
+     "proposed_primary_coupling": "Contested, with at least four candidates: intramembrane cavitation rectified into capacitance change (computational) [65]; mechanosensitive channels — TREK-1, TREK-2, TRAAK and NaV1.5 currents modulated by up to about 23% at 10 MHz and 0.3–4.9 W/cm² in oocytes [67], Piezo1 required in vivo in mouse cortex [68], astrocytic TRPA1 driving Best1 glutamate release onto neuronal NMDA receptors [69], and CFTR chloride flow at 0.8 MHz and 0.20 MPa in HEK cells [70]; acoustic radiation force, with responses growing from 0.5 to 43 MHz, which excludes cavitation in salamander retina [66]; and heating, where suppression tracked temperature and was independent of duty cycle, peak pressure and modulation frequency in rat thalamus [71]",
+     "named_rival": "Peripheral confound rather than direct coupling: guinea-pig activation was abolished by auditory-nerve transection or cochlear fluid removal [74], mouse cortical patterns matched the auditory pathway [75], and in humans the standard motor inhibition was driven by auditory stimulation across four experiments [77]; countered by intact motor responses in genetically deaf mice once pulse edges were smoothed [76]; scalp somatosensory sensation is a further route, driven by particle displacement [78]",
+     "dose_quantities_reported": "Six reporting domains: transducer and drive system, drive settings, free-field acoustic parameters, pulse timing, in situ exposure estimates and intensity parameters [20]; mechanical index at or below 1.9 as non-significant risk plus three alternative thermal criteria, by the authors' statement expert opinion and not safety limits [19]; across 32 studies and 37 experiments, duty cycle (p = 0.046) and sonication duration (p = 0.04) predicted direction of effect while I<sub>SPPA</sub> alone did not (p = 0.256) [79]",
+     "resolution_reported": "Not established in this corpus as a measured human focal volume; in situ exposure is estimated rather than measured [20]; response duration tracked pulse duration in mouse [76]",
+     "dominant_evidence_base": "Human systematic review and meta-analysis, self-declared provisional [79]; human experiments [77,78]; rodent [68,71,74,75,76]; in vitro [66,67,70]; computational [65]",
+     "what_is_missing": "Which parameter sets the direction of effect [71,79]; complete parameter reporting [79]; the threshold for significant risk [19]",
+     "ref": "19;20;65;66;67;68;69;70;71;74;75;76;77;78;79"
+    },
+    {
+     "family": "HIFU and MRgFUS ablation",
+     "invasiveness": "Transcranial but tissue-destructive: an irreversible lesion without an incision [86]",
+     "drive_physically": "High-intensity focused ultrasound absorbed as heat at the focus [85]",
+     "proposed_primary_coupling": "Thermal coagulation, with dose expressed as cumulative equivalent minutes at 43 °C [85]",
+     "named_rival": "Not established in this corpus; the same physical modality is reversible at low intensity, so thermal dose rather than modality decides [85,86]",
+     "dose_quantities_reported": "Temperature and thermal dose [85]; achievable peak temperature limited by skull density ratio (positive, p = 0.009) and skull volume (negative, p = 0.023) in 25 patients [87]",
+     "resolution_reported": "Lesion placed accurately enough to beat a sham procedure [86]; no millimetre figure in this corpus; effect is immediate and permanent [86]",
+     "dominant_evidence_base": "Human randomised sham-controlled trial: hand tremor 18.1 to 9.6 at three months versus 16.0 to 15.8 with sham, gait disturbance in 36% and paraesthesia or numbness in 38% [86]; human retrospective series [87]",
+     "what_is_missing": "A per-patient account of skull transmission [87]; comparison against DBS on the same endpoints [31]",
+     "ref": "31;85;86;87"
+    },
+    {
+     "family": "FUS blood–brain barrier opening",
+     "invasiveness": "Non-invasive device plus intravenous microbubbles [82]",
+     "drive_physically": "Low-pressure focused ultrasound driving oscillation of circulating microbubbles at the vessel wall [80]",
+     "proposed_primary_coupling": "Microbubble cavitation at the endothelium rather than absorption in tissue, which is why it works far below ablative intensity [80]",
+     "named_rival": "Sterile inflammation as an intrinsic consequence: damage-associated molecular patterns and a parenchymal inflammatory response lasting about 24 h, compared by the authors to ischaemia or mild traumatic brain injury (rat) [83]; against microbubble dose as the controlling variable, with no significant NF-κB change at clinical imaging doses and oedema, degeneration and microhaemorrhage at high doses (rat) [84]",
+     "dose_quantities_reported": "Temporal peak acoustic power 0.2–11.5 W in rabbit [80]; 0.28 ± 0.05 MPa mean peak pressure at 551.5 kHz, 10 ms bursts, 2 Hz PRF, held at a fraction of the ultraharmonic-emission threshold, with opening and no detectable damage at 50% scaling [81]; microbubble dose [84]",
+     "resolution_reported": "Opening confined to the targeted volume and imageable by contrast-enhanced MR, reversible and repeatable [80,82]; enhancement scaled linearly with the chosen pressure fraction [81]",
+     "dominant_evidence_base": "Rabbit [80] and rat [81,83,84]; human phase I in five patients with Alzheimer's disease, safe and reversible with no group-level amyloid change [82]",
+     "what_is_missing": "Therapeutic benefit as distinct from barrier opening [82]; an agreed inflammatory threshold [83,84]",
+     "ref": "80;81;82;83;84"
+    },
+    {
+     "family": "Transcranial pulse stimulation",
+     "invasiveness": "Non-invasive and neuronavigated, with high tolerability and no serious adverse events reported [228]",
+     "drive_physically": "Single ultrashort ultrasound shockwave pulses of roughly 3 µs rather than a continuous or tone-burst beam, so the drive has essentially no duty cycle [228]",
+     "proposed_primary_coupling": "Not established in this corpus: the introductory paper lists candidates — transient membrane pore formation, neurotransmitter and neurotrophin changes, microglial activation, nitric oxide signalling — without establishing one [228]; in mice, clinical-range energy produced calcium influx, raised c-Fos in dentate gyrus and transiently reorganised limbic network connectivity, reverting within about ten minutes [230]",
+     "named_rival": "A second mechanism appears at a modest energy increase: 0.25 mJ/mm² triggered spreading depolarisation waves where 0.05 mJ/mm² produced the direct activation pattern (mouse) [230]",
+     "dose_quantities_reported": "Energy flux density 0.2–0.3 mJ/mm², about 3 µs per pulse, 5 Hz, about 6,000 pulses per session, with measured temporal-peak intensity falling roughly 80–90% through human skull [228]; the randomised trial used 6,000 pulses at 0.20 mJ/mm² and 5 Hz [229]",
+     "resolution_reported": "Neuronavigated focal delivery [228]; mouse network changes reverting to baseline within about ten minutes [230]; no measured human focal volume",
+     "dominant_evidence_base": "Human: the sham-controlled primary endpoint was negative — in a double-blind crossover trial in 60 patients on standard therapy, CERAD corrected total score rose 2.22 points after verum against 1.00 after sham at three months, but the condition-by-session interaction was not significant (P = .68), with benefit only in a prespecified subgroup aged 70 or under and successful blinding [229]; the 35-patient open-label series it supersedes reported three-month improvement correlated with memory-network connectivity [228]; mouse imaging [230]",
+     "what_is_missing": "A confirmed clinical effect, since the sham-controlled trial does not reproduce the open-label result [228,229]; an established coupling mechanism [228,230]",
+     "ref": "228;229;230"
+    },
+    {
+     "family": "Peripheral and organ-directed ultrasound",
+     "invasiveness": "Fully non-invasive, with no adverse clinical or laboratory effects in the first human study [256,259]",
+     "drive_physically": "Focused ultrasound aimed at a sub-organ visceral target — splenic, hepatic or hepatoportal — rather than at a nerve trunk or the brain [256]",
+     "proposed_primary_coupling": "Mechanical activation of nerve terminals inside the organ with afferent relay to brain: splenic stimulation engaged the cholinergic anti-inflammatory pathway comparably with surgical VNS and hepatic stimulation altered glucose regulation, with imaging showing engagement of metabolism-related brain regions [256]; the hepatoportal effect required an intact liver-to-brain pathway, verified by denervation, in mice, rats and swine [258]",
+     "named_rival": "A local tissue effect rather than a neural reflex [256]; in humans the effect did not differ by stimulation mode or across a roughly fifteen-fold intensity difference, which is hard to reconcile with a dose-dependent mechanical-neural mechanism [259]",
+     "dose_quantities_reported": "Human: three minutes delivered in intermittent 15 s intervals, either swept continuously at 11.7 mW/cm² or focused-pulsed at 174.8–225.4 mW/cm² [259]; in mice the benefit depended on specific stimulation parameters [257]",
+     "resolution_reported": "Sub-organ targeting rather than focality in neural tissue [256]; in humans, ex vivo TNF production fell for more than two hours and returned to baseline by 24 h [259]",
+     "dominant_evidence_base": "Human first-in-human study in healthy volunteers [259]; rodent work from two independent groups [256,257], with single-cell RNA sequencing implicating T and B cell populations [257]; cross-species to swine [258]",
+     "what_is_missing": "Any human measurement of the neurotransmitter relay, which remains inferred from the preclinical work, and any energy–response relationship [259]",
+     "ref": "256;257;258;259"
+    },
+    {
+     "family": "Transcranial photobiomodulation",
+     "invasiveness": "Non-invasive",
+     "drive_physically": "Red to near-infrared light applied at the scalp, for example an 810 nm LED helmet or a 905 nm laser [22]",
+     "proposed_primary_coupling": "Cytochrome c oxidase as photoacceptor, argued from competition with potassium cyanide and from efficacy tracking the enzyme's absorption spectrum, with 670 and 830 nm effective and 728 nm not; cell death fell from 83.6% to 43.5% at 300 µM KCN in primary neurons [88]; nitric oxide photodissociation as the signalling step [89]",
+     "named_rival": "Insufficient delivered dose: more than 99% of light absorbed or scattered by human skull, maximum transmittance 0.31% for a 905 nm laser and 0.71% for an 810 nm LED helmet, with mitochondrial responses appearing only 14–775 times above the transmitted level [22]; against Monte Carlo simulation putting up to about 15% of incident energy at cortex transcranially and about 1% intranasally, reduced by melanin [23]",
+     "dose_quantities_reported": "Wavelength, irradiance in mW/cm², fluence in J/cm², with a claimed biphasic dose response in which low fluence stimulates more than high [21]",
+     "resolution_reported": "Deposition concentrated in ventromedial prefrontal cortex in simulation [23]; no measured focal volume or time constant in this corpus",
+     "dominant_evidence_base": "In vitro primary neurons and HeLa cells [88,89]; human skull specimens with in vitro dose comparison [22]; photon-transport simulation [23]; proponent review [21]",
+     "what_is_missing": "Agreement on the fraction of light reaching cortex [22,23]; skin pigmentation as a reported covariate [23]; any dose standard [21]",
+     "ref": "21;22;23;88;89"
+    },
+    {
+     "family": "Drug, intravenous",
+     "invasiveness": "Injected; non-surgical but systemic [166]",
+     "drive_physically": "A molecule delivered to plasma and distributed by blood flow and barrier transport [164]",
+     "proposed_primary_coupling": "Ligand binding at a receptor, described by affinity, occupancy and efficacy in the operational model [91], with exposure at the target site, target binding and expression of pharmacological activity as the three steps that have to be shown separately [24]; for neurosteroids, positive allosteric modulation of GABA-A rather than agonism [179]",
+     "named_rival": "The coupling step can be membrane-biophysical rather than a lock-and-key receptor event, with anaesthetic-sensitive sites in ordered lipid domains [184]; and receptor location can decide the effect, since psychedelic plasticity requires intracellular rather than surface 5-HT2A receptors [92]",
+     "dose_quantities_reported": "Ketamine 0.5 mg/kg as a single infusion, with improvement at 110 min, response 71% and remission 29% at day 1 (n = 18, crossover) [166]; brexanolone as a single 60 h titrated infusion, Hamilton reduction 14.6 versus 12.1 points at 60 h [180]; occupancy as a dose proxy, 38–87% D2 predicting response with thresholds near 65% for response, 72% for extrapyramidal symptoms and 78% for hyperprolactinaemia [26], and windows of 65–80% D2 and 70–80% SERT [27]; plasma exposure as AUC and C<sub>max</sub> [25]",
+     "resolution_reported": "Spatial selectivity comes from receptor distribution and barrier transport, not from delivery [164]; temporal profile is pharmacokinetic, and the ketamine effect outlasted clearance by about a week [166]",
+     "dominant_evidence_base": "Human randomised trials [166,180]; human PET [26,27]; systematic review of 110 studies and 37,193 participants [28]",
+     "what_is_missing": "Measured target-site concentration rather than modelled [164]; an efficacy term alongside occupancy, since partial agonists keep extrapyramidal risk low at high occupancy [28]",
+     "ref": "24;25;26;27;28;91;92;164;166;179;180;184"
+    },
+    {
+     "family": "Drug, oral",
+     "invasiveness": "Non-invasive [181]",
+     "drive_physically": "A molecule absorbed from the gut into plasma [186]",
+     "proposed_primary_coupling": "As intravenous: receptor binding and occupancy [91]",
+     "named_rival": "As intravenous [184,92]",
+     "dose_quantities_reported": "Zuranolone 50 mg once daily for 14 days, Hamilton-17 least-squares mean difference −4.0 (95% CI −6.3 to −1.7), n = 196 [181]; levodopa dosing complicated by erratic plasma uptake and large dose-to-dose variability [186]",
+     "resolution_reported": "Temporal profile imposed by absorption: pulsatile versus continuous exposure of the same receptors gives different long-term outcomes [186]; no spatial selectivity beyond receptor distribution [164]",
+     "dominant_evidence_base": "Human phase 3 trial [181]; clinical pharmacology review [186]",
+     "what_is_missing": "Delivery consistency rather than receptor pharmacology as the limiting factor [186]; whether these agents outperform existing treatments, judged insufficient by one review [181]",
+     "ref": "91;92;164;181;184;186"
+    },
+    {
+     "family": "Drug, intranasal",
+     "invasiveness": "Non-invasive, self-administered [169]",
+     "drive_physically": "A molecule deposited on nasal mucosa [161]",
+     "proposed_primary_coupling": "Direct nose-to-brain transport along olfactory and trigeminal pathways by perineural and perivascular bulk flow [161]",
+     "named_rival": "Systemic absorption rather than direct transport; the pharmacokinetic evidence for a direct human route is contested [161]",
+     "dose_quantities_reported": "Flexibly dosed intranasal esketamine added to a newly started oral antidepressant, n = 227, greater MADRS improvement by day 28, with dissociation, nausea, vertigo, dysgeusia and dizziness generally resolving within about 1.5 h [169]",
+     "resolution_reported": "Simulation of intranasal light puts about 1% of energy at cortex, which is the nearest analogue in this corpus rather than a drug measurement [23]; no measured human nose-to-brain distribution",
+     "dominant_evidence_base": "Human phase 3 registration trial [169]; mechanism review, mixed species [161]",
+     "what_is_missing": "Quantification of the direct fraction in humans [161]; blinding, since dissociative effects are unmasking [169]",
+     "ref": "23;161;169"
+    },
+    {
+     "family": "Drug, inhaled",
+     "invasiveness": "Non-invasive [185]",
+     "drive_physically": "A gas taken up across the alveolar membrane [185]",
+     "proposed_primary_coupling": "Anaesthetic action at sites inside ion channels and within the plasma membrane [184]",
+     "named_rival": null,
+     "dose_quantities_reported": "Nitrous oxide, one-hour inhalations at 25% or 50%, n = 24 crossover: improvement versus placebo (P = 0.01), no difference between concentrations (P = 0.58), adverse events far fewer at 25% (P < 0.001) [185]",
+     "resolution_reported": "Separation from placebo emerged at weeks 1 and 2 rather than at 2 or 24 hours, so the outcome outlasts exposure by weeks [185]; no spatial selectivity reported",
+     "dominant_evidence_base": "Human phase 2 crossover trial [185]; in vitro mechanism review [184]",
+     "what_is_missing": "Dose–response for efficacy, which saturated while side effects remained dose-dependent [185]",
+     "ref": "184;185"
+    },
+    {
+     "family": "Drug, intrathecal",
+     "invasiveness": "Implanted pump and catheter [163]",
+     "drive_physically": "A molecule infused into the cerebrospinal fluid compartment [163]",
+     "proposed_primary_coupling": "Receptor occupancy placed at the spinal cord rather than the brain: GABA-B agonism where the circuit is, not where the side effects are [163]",
+     "named_rival": null,
+     "dose_quantities_reported": "Continuous pump infusion of baclofen: tone fell in all 20 patients and spasms were reduced in 18 of 19, maintained over a mean 19.2 months, in patients who had failed the oral route [163]",
+     "resolution_reported": "Compartment-level rather than focal selectivity; continuous rather than pulsed delivery [163]",
+     "dominant_evidence_base": "Human randomised double-blind crossover trial, n = 20 [163]",
+     "what_is_missing": "Target-site concentration measurement [164]; comparison with implanted stimulation on the same endpoint [2]",
+     "ref": "2;163;164"
+    },
+    {
+     "family": "Drug, convection-enhanced",
+     "invasiveness": "Implanted intraparenchymal catheter [160]",
+     "drive_physically": "A sustained pressure gradient driving bulk flow of infusate through the extracellular space [160]",
+     "proposed_primary_coupling": "Convective transport replacing diffusion, so distribution is set by infusion physics rather than by molecular diffusivity [160]",
+     "named_rival": null,
+     "dose_quantities_reported": "Infusion rate, volume, catheter placement and tissue hydraulic conductivity; distribution-to-infusion volume about 6:1 for ¹¹¹In-transferrin and about 13:1 for ¹⁴C-sucrose, with local concentrations orders of magnitude above achievable systemic levels [160]",
+     "resolution_reported": "Centimetres of spread rather than millimetres, with the large molecule more uniformly distributed at 24 h [160]",
+     "dominant_evidence_base": "Mixed-species intraparenchymal infusion experiments [160]",
+     "what_is_missing": "Human outcome data in this corpus; comparison with FUS barrier opening as the other route for large molecules [80,160]",
+     "ref": "80;160"
+    },
+    {
+     "family": "Sensory entrainment",
+     "invasiveness": "Non-invasive and home-delivered, with adherence of 85–90% and no serious treatment-related adverse events over six months [234]",
+     "drive_physically": "Patterned light and sound delivered to the sense organs at a chosen frequency [231]",
+     "proposed_primary_coupling": "Sensory transduction into a rhythmic cortical response whose amplitude is resonant rather than flat: human EEG stepped across 1–100 Hz flicker showed peaks near 10, 20, 40 and 80 Hz [231]",
+     "named_rival": "Linear superposition rather than entrainment: steady-state responses were reproduced by shifting and summing rate-matched transient evoked responses, with no signature of oscillatory entrainment at the stimulation frequency (human) [232]",
+     "dose_quantities_reported": "Frequency as the dose axis, with measured resonance peaks [231]; 40 Hz combined light and sound, one hour daily for three months [233]; EEG-verified 40 Hz audio-visual delivery over six months [234]",
+     "resolution_reported": "Frequency specificity in the driven response [231]; delivery is whole-pathway rather than focal, since selectivity comes from the sense organ and not from a field [231,232]",
+     "dominant_evidence_base": "Human: the largest sham-controlled trial missed its primary cognitive composite in 70 analysable patients with mild-to-moderate Alzheimer's disease randomised 2:1, with nominally favourable unadjusted secondaries — MMSE decline reduced 76%, ADCS-ADL decline 77%, whole-brain volume loss 69% [234]; pilot work showed tolerability and reliable EEG entrainment, and in 15 patients less ventricular dilation and hippocampal atrophy [233]; human EEG mechanism studies [231,232]",
+     "what_is_missing": "Whether the driven response involves an entrained oscillator at all [231,232]; a positive primary endpoint [234]; multiplicity-adjusted secondary outcomes [234]",
+     "ref": "231;232;233;234"
+    },
+    {
+     "family": "Galvanic vestibular stimulation",
+     "invasiveness": "Non-invasive transmastoid electrodes, described as simple and safe [235]",
+     "drive_physically": "Direct or alternating current passed between mastoid electrodes into the vestibular periphery [235]",
+     "proposed_primary_coupling": "DC bias of firing in vestibular primary afferents at the spike-initiation zone rather than at the hair cell or the central nuclei, with irregular afferents most sensitive; the vector of biased signals converging in the vestibular nuclei predicts the direction and size of body sway across montages [235]",
+     "named_rival": null,
+     "dose_quantities_reported": "Current amplitude 0.1–4 mA, session duration 12 s to 24 h, and direct, sinusoidal or stochastic waveforms, extracted from 53 clinical trials, some parameters near-standard within an indication and others with no convention [237]",
+     "resolution_reported": "Organ-level selectivity set by montage and polarity rather than by focality of the field [235]; evokes eye movements and postural responses without head motion, so vestibular processing can be dissociated from actual acceleration [236]",
+     "dominant_evidence_base": "Human: review-level forward model from montage to sway [235]; systematic parameter review across 53 clinical trials in vestibular loss, cerebellar ataxia, Parkinson's disease, post-stroke neglect, motion sickness and balance impairment [237]; cross-species mechanism review [236]",
+     "what_is_missing": "Parameter consensus across indications, and pooled efficacy estimates by indication [237]",
+     "ref": "235;236;237"
+    },
+    {
+     "family": "Static magnetic field stimulation",
+     "invasiveness": "Non-invasive and home-deliverable without supervision [241]",
+     "drive_physically": "A constant magnetic field held over the scalp, with no time variation and therefore no induced electric field [238]",
+     "proposed_primary_coupling": "Not established in this corpus: no accepted transduction pathway exists for a static field, and the reported excitability change was localised to intracortical rather than peripheral or spinal mechanisms by control conditions [238]",
+     "named_rival": "Non-replication: ten minutes at matched magnet geometry produced no MEP modulation in 18 subjects, with or without a concurrent attentional task [240]",
+     "dose_quantities_reported": "Flux density at cortex, about 160–170 mT at 2 cm from the scalp for a 45 × 30 mm N45 magnet and about 160–245 mT for N52 magnets, with protocols of 5–15 min, 20–30 min or two hours, up to three daily sessions [241]",
+     "resolution_reported": "Focality set by magnet geometry, with effects reported as site-dependent across motor, somatosensory and visual cortex, cerebellum and spinal cord [239]; after-effects outlasting a ten-minute application by several minutes [238]",
+     "dominant_evidence_base": "Human: single-session excitability studies, with MEP amplitude reduced by up to about 25% after ten minutes [238]; qualitative pooling of 27 studies, predominantly inhibitory, with no aggregated effect sizes [239]; four randomised clinical trials, including 50 patients with levodopa-induced dyskinesia and a phase 2 ALS trial with no short-term functional difference but a 73% lower risk of death or tracheostomy at 18 months [241]",
+     "what_is_missing": "A pooled effect-size estimate, so the effect size rests on single studies [239]; replication of the excitability effect [238,240]; any transduction mechanism [238]",
+     "ref": "238;239;240;241"
+    },
+    {
+     "family": "Cortical cooling",
+     "invasiveness": "Implanted or intraoperative surface device; cooling produced no appreciable cortical damage even at low temperatures [242]",
+     "drive_physically": "Heat extraction from tissue, delivered in preclinical work by thermoelectric (Peltier) devices [242]",
+     "proposed_primary_coupling": "Temperature dependence of channel kinetics and synaptic release, so the drive slows every temperature-dependent conductance and release step at once [242]",
+     "named_rival": null,
+     "dose_quantities_reported": "Target temperature: about 20 °C terminates paroxysmal activity in vitro and below 24 °C aborts seizures within seconds in vivo [242]; cooling a songbird premotor nucleus slowed song by up to 45% while leaving acoustic structure intact, graded with temperature [244]; achieved human cortical cooling was only about 0.6–2 °C at 10–15 mm depth [243]",
+     "resolution_reported": "Region-specific and graded, present only while cooled: cooling one nucleus changed behavioural tempo while cooling the downstream nucleus did not [244]; thermal penetration limited to the first 10–15 mm from the human cortical surface [243]",
+     "dominant_evidence_base": "Preclinical: in vitro and in vivo seizure work, reviewed [242]; songbird causal manipulation [244]; human and canine intraoperative thermometry [243]",
+     "what_is_missing": "The gap between species: the 20–24 °C that works preclinically [242] cannot currently be delivered at depth in human cortex, where surface cooling achieved 0.6–2 °C [243]; any human therapeutic series",
+     "ref": "242;243;244"
+    },
+    {
+     "family": "BCI with write-in stimulation",
+     "invasiveness": "Implanted penetrating arrays in participants who also carry recording arrays [250]",
+     "drive_physically": "Charge injection through array electrodes used as an input channel alongside neural recording [248]",
+     "proposed_primary_coupling": "Direct cortical excitation writing contact location and pressure information into somatosensory cortex for closed-loop prosthetic control [248]",
+     "named_rival": null,
+     "dose_quantities_reported": "Per-electrode amplitude, with detection thresholds of a median 31.5 µA at day 100 falling to 10.4 µA at day 1500 [250]; amplitude and frequency set the modality of the percept as well as its magnitude [249]",
+     "resolution_reported": "Single-electrode write-in, with percepts stable over months [248]; stimulated arrays retained signal amplitude better than unstimulated ones over 1,500 days [250]",
+     "dominant_evidence_base": "Human: single-participant implanted series [248,249,250] and a six-month 96-channel visual cortex implant [251]; the corpus's other closed-loop exemplars gate a fixed drive on a measured signal rather than writing in — biomarker-gated DBS [135] and cavitation-feedback ultrasound [81]",
+     "what_is_missing": "Performance of a full decode-and-write-in loop as a system, and any multi-participant series [248,250]",
+     "ref": "81;135;248;249;250;251"
+    }
+   ],
+   "fields": [
+    "family",
+    "invasiveness",
+    "drive_physically",
+    "proposed_primary_coupling",
+    "named_rival",
+    "dose_quantities_reported",
+    "resolution_reported",
+    "dominant_evidence_base",
+    "what_is_missing",
+    "ref"
+   ]
+  },
+  "provenance": "synthesised from cited data"
+ },
+ {
+  "id": "fig7",
+  "label": "Figure 7",
+  "title": "The dispute map: 23 live disagreements and their rival positions",
+  "kind": "network",
+  "synthesis": "conceptual",
+  "refs": [
+   17,
+   18,
+   22,
+   23,
+   26,
+   28,
+   29,
+   35,
+   39,
+   40,
+   44,
+   45,
+   46,
+   47,
+   48,
+   50,
+   54,
+   55,
+   60,
+   65,
+   66,
+   68,
+   70,
+   71,
+   74,
+   75,
+   76,
+   77,
+   79,
+   83,
+   84,
+   93,
+   94,
+   95,
+   97,
+   100,
+   107,
+   108,
+   109,
+   116,
+   117,
+   119,
+   121,
+   123,
+   124,
+   125,
+   129,
+   130,
+   133,
+   144,
+   145,
+   146,
+   149,
+   150,
+   151,
+   161,
+   162,
+   167,
+   168,
+   170,
+   171,
+   173,
+   174,
+   175,
+   176,
+   178,
+   187,
+   188,
+   202,
+   203
+  ],
+  "data": "figures/data/fig7-disputes.json",
+  "caption": "One node per dispute from section 14, each linked to the rival positions named there, with the species and evidence kind of each position on its own node. Each dispute carries a property saying whether the split is about mechanism (12), dose (7) or endpoint (4). Most disputes have two positions; the ultrasound transducer, the tDCS after-effect, ketamine's active species, 5-HT2A necessity and transcutaneous vagal engagement have three or four.",
+  "how_to_read": "Pick a dispute node and read its question, then read each position hanging off it as a claim with its own preparation attached. Use the split property to set your expectations: a dose split can often be closed by reporting parameters, while a mechanism split usually needs a new experiment, and an endpoint split means the two sides measured different things. In almost none of these is one side simply wrong, so read the pair as two claims measured differently rather than as a right answer and a wrong one. The identifiers on the dispute nodes are the ones the graph will carry, so you can follow any of them back to its entry in section 14.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "sham-and-confound-design",
+   "acoustic-mechanotransduction",
+   "connectivity-based-targeting"
+  ],
+  "discussed_in": [
+   "v0-14-open-questions"
+  ],
+  "cites": [],
+  "source": "Built from section 14 of the review, one dispute node per numbered entry (14.1 to 14.23) and one position node per position that section names, with each position's species and evidence kind taken from the same entry. The mechanism/dose/endpoint classification is this volume's, assigned from what each entry says the evidence turns on; several entries could be read either way, and the ones the prose itself resolves into dose rather than mechanism are marked dose. Position wording is compressed from the entries and carries their reference numbers; nothing is quantitative.",
+  "graph": {
+   "layout": "layered",
+   "nodes": [
+    {
+     "id": "H-tes-entrainment",
+     "label": "14.1 Transcranial field entrainment",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-tes-entrainment",
+     "question": "Do 1-2 mA transcranial currents modulate cortical neurons directly?",
+     "split_about": "mechanism",
+     "position_count": 2,
+     "shared_evidence_refs": [
+      35,
+      40
+     ]
+    },
+    {
+     "id": "H-tes-entrainment-p1",
+     "label": "Direct cortical entrainment",
+     "kind": "position",
+     "of_dispute": "H-tes-entrainment",
+     "detail": "tACS entrained weakly locked macaque units and desynchronised strongly locked ones, and did so through topical scalp anaesthesia",
+     "species": "macaque",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      44,
+      55
+     ]
+    },
+    {
+     "id": "H-tes-entrainment-p2",
+     "label": "Peripheral, or too weak",
+     "kind": "position",
+     "of_dispute": "H-tes-entrainment",
+     "detail": "rat recordings put the minimum effective field near 1 mV/mm, and skin anaesthesia removed tACS tremor entrainment that peripheral nerve stimulation reproduced",
+     "species": "rat and human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      50,
+      54
+     ]
+    },
+    {
+     "id": "H-ti-suprathreshold",
+     "label": "14.2 Temporal interference thresholds in humans",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-ti-suprathreshold",
+     "question": "Does temporal interference reach neural thresholds in the human brain?",
+     "split_about": "dose",
+     "position_count": 2,
+     "shared_evidence_refs": [
+      46,
+      47
+     ]
+    },
+    {
+     "id": "H-ti-suprathreshold-p1",
+     "label": "Envelope neuromodulation",
+     "kind": "position",
+     "of_dispute": "H-ti-suprathreshold",
+     "detail": "anaesthetised mice followed the envelope, and human TI changed hippocampal fMRI activity and memory accuracy",
+     "species": "mouse and human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      39,
+      45
+     ]
+    },
+    {
+     "id": "H-ti-suprathreshold-p2",
+     "label": "Unreachable in a human head",
+     "kind": "position",
+     "of_dispute": "H-ti-suprathreshold",
+     "detail": "modelled suprathreshold TI needs about 75-230 V/m against 0.1-1 V/m delivered, and passive filtering cannot demodulate the envelope",
+     "species": "human models",
+     "evidence_kind": "computational",
+     "refs": [
+      48,
+      60
+     ]
+    },
+    {
+     "id": "H-tus-mechanism",
+     "label": "14.3 The ultrasound transducer",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-tus-mechanism",
+     "question": "What converts a pressure wave into a change in neural activity?",
+     "split_about": "mechanism",
+     "position_count": 4
+    },
+    {
+     "id": "H-tus-mechanism-p1",
+     "label": "Intramembrane cavitation",
+     "kind": "position",
+     "of_dispute": "H-tus-mechanism",
+     "detail": "leaflets separate under acoustic drive, rectifying pressure into a capacitance change",
+     "species": "model",
+     "evidence_kind": "computational",
+     "refs": [
+      65
+     ]
+    },
+    {
+     "id": "H-tus-mechanism-p2",
+     "label": "Acoustic radiation force",
+     "kind": "position",
+     "of_dispute": "H-tus-mechanism",
+     "detail": "retinal responses grew from 0.5 to 43 MHz, opposite to the cavitation prediction",
+     "species": "salamander, ex vivo",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      66
+     ]
+    },
+    {
+     "id": "H-tus-mechanism-p3",
+     "label": "Mechanosensitive channels",
+     "kind": "position",
+     "of_dispute": "H-tus-mechanism",
+     "detail": "Piezo1 knockout cut evoked calcium and EMG; CFTR carried ultrasound-evoked chloride current",
+     "species": "mouse and cells",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      68,
+      70
+     ]
+    },
+    {
+     "id": "H-tus-mechanism-p4",
+     "label": "Heat",
+     "kind": "position",
+     "of_dispute": "H-tus-mechanism",
+     "detail": "rat thalamic suppression tracked temperature, not duty cycle",
+     "species": "rat",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      71
+     ]
+    },
+    {
+     "id": "H-tus-confound",
+     "label": "14.4 The ultrasound auditory confound",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-tus-confound",
+     "question": "Are reported ultrasound effects produced at the focus or through the ear?",
+     "split_about": "mechanism",
+     "position_count": 2,
+     "shared_evidence_refs": [
+      79
+     ]
+    },
+    {
+     "id": "H-tus-confound-p1",
+     "label": "Auditory-driven",
+     "kind": "position",
+     "of_dispute": "H-tus-confound",
+     "detail": "activation abolished by auditory nerve transection, mouse imaging matched the auditory pathway, and human motor inhibition tracked auditory stimulation",
+     "species": "guinea pig, mouse, human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      74,
+      75,
+      77
+     ]
+    },
+    {
+     "id": "H-tus-confound-p2",
+     "label": "Genuine at the focus",
+     "kind": "position",
+     "of_dispute": "H-tus-confound",
+     "detail": "envelope smoothing removed the auditory brainstem response but left the mouse motor response intact, and deaf mice matched hearing ones",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      76
+     ]
+    },
+    {
+     "id": "H-fus-bbb-inflammation",
+     "label": "14.5 Barrier opening and sterile inflammation",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-fus-bbb-inflammation",
+     "question": "Is focused-ultrasound blood-brain-barrier opening an inflammatory injury?",
+     "split_about": "dose",
+     "position_count": 2
+    },
+    {
+     "id": "H-fus-bbb-inflammation-p1",
+     "label": "An inflammatory event",
+     "kind": "position",
+     "of_dispute": "H-fus-bbb-inflammation",
+     "detail": "damage-associated molecular patterns and a parenchymal sterile inflammatory response lasting about 24 hours",
+     "species": "rat",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      83
+     ]
+    },
+    {
+     "id": "H-fus-bbb-inflammation-p2",
+     "label": "A dose effect",
+     "kind": "position",
+     "of_dispute": "H-fus-bbb-inflammation",
+     "detail": "NF-kB activation tracked microbubble dose, absent at clinical imaging doses",
+     "species": "rat",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      84
+     ]
+    },
+    {
+     "id": "H-pbm-dose",
+     "label": "14.6 Photobiomodulation delivered dose",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-pbm-dose",
+     "question": "Does enough near-infrared light reach cortex for transcranial photobiomodulation?",
+     "split_about": "dose",
+     "position_count": 2
+    },
+    {
+     "id": "H-pbm-dose-p1",
+     "label": "Insufficient",
+     "kind": "position",
+     "of_dispute": "H-pbm-dose",
+     "detail": "maximum transmittance through human skull 0.31-0.71%, with cell responses needing 14-775 times that level",
+     "species": "human skull specimens and cells",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      22
+     ]
+    },
+    {
+     "id": "H-pbm-dose-p2",
+     "label": "Sufficient",
+     "kind": "position",
+     "of_dispute": "H-pbm-dose",
+     "detail": "Monte Carlo photon transport put up to about 15% of incident energy at cortex",
+     "species": "human models",
+     "evidence_kind": "computational",
+     "refs": [
+      23
+     ]
+    },
+    {
+     "id": "H-gamma-40hz",
+     "label": "14.7 40 Hz sensory stimulation",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-gamma-40hz",
+     "question": "Does 40 Hz sensory stimulation entrain gamma and reduce amyloid?",
+     "split_about": "endpoint",
+     "position_count": 2
+    },
+    {
+     "id": "H-gamma-40hz-p1",
+     "label": "Yes",
+     "kind": "position",
+     "of_dispute": "H-gamma-40hz",
+     "detail": "optogenetic 40 Hz lowered amyloid, and audiovisual 40 Hz raised CSF influx with clearance-dependent amyloid removal",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      123,
+      124
+     ]
+    },
+    {
+     "id": "H-gamma-40hz-p2",
+     "label": "No",
+     "kind": "position",
+     "of_dispute": "H-gamma-40hz",
+     "detail": "large-scale recordings found no native gamma engagement, flicker avoidance and no plaque change",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      125
+     ]
+    },
+    {
+     "id": "H-tdcs-plasticity",
+     "label": "14.8 The tDCS after-effect account",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-tdcs-plasticity",
+     "question": "Is the after-effect of tDCS cortical LTP-like plasticity?",
+     "split_about": "mechanism",
+     "position_count": 4
+    },
+    {
+     "id": "H-tdcs-plasticity-p1",
+     "label": "LTP-like plasticity",
+     "kind": "position",
+     "of_dispute": "H-tdcs-plasticity",
+     "detail": "sustained MEP change read as associative plasticity, as in paired associative stimulation",
+     "species": "human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      97,
+      100
+     ]
+    },
+    {
+     "id": "H-tdcs-plasticity-p2",
+     "label": "Peripheral co-stimulation",
+     "kind": "position",
+     "of_dispute": "H-tdcs-plasticity",
+     "detail": "six tDCS results re-read as cranial and cervical nerve co-stimulation",
+     "species": "human",
+     "evidence_kind": "review",
+     "refs": [
+      109
+     ]
+    },
+    {
+     "id": "H-tdcs-plasticity-p3",
+     "label": "Unreliable",
+     "kind": "position",
+     "of_dispute": "H-tdcs-plasticity",
+     "detail": "430 participants across 22 theta-burst studies varied widely, and 59 studies found no single-session cognitive effect",
+     "species": "human",
+     "evidence_kind": "systematic review",
+     "refs": [
+      107,
+      108
+     ]
+    },
+    {
+     "id": "H-tdcs-plasticity-p4",
+     "label": "Glial",
+     "kind": "position",
+     "of_dispute": "H-tdcs-plasticity",
+     "detail": "the effect required astrocytic calcium",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      121
+     ]
+    },
+    {
+     "id": "H-connectivity-targeting",
+     "label": "14.9 Connectivity-based targeting",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-connectivity-targeting",
+     "question": "Does subgenual cingulate connectivity predict rTMS outcome well enough to target by?",
+     "split_about": "endpoint",
+     "position_count": 2
+    },
+    {
+     "id": "H-connectivity-targeting-p1",
+     "label": "Yes",
+     "kind": "position",
+     "of_dispute": "H-connectivity-targeting",
+     "detail": "across 98 healthy subjects, sites with better reported efficacy were more strongly anticorrelated with subgenual cingulate",
+     "species": "human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      129
+     ]
+    },
+    {
+     "id": "H-connectivity-targeting-p2",
+     "label": "Too weak to target by",
+     "kind": "position",
+     "of_dispute": "H-connectivity-targeting",
+     "detail": "in 295 treated patients the association was about r = -0.16, some 3% of outcome variance",
+     "species": "human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      130
+     ]
+    },
+    {
+     "id": "H-dbs-mechanism",
+     "label": "14.10 Deep brain stimulation mechanism",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-dbs-mechanism",
+     "question": "How does high-frequency deep brain stimulation produce a lesion-like effect?",
+     "split_about": "mechanism",
+     "position_count": 2
+    },
+    {
+     "id": "H-dbs-mechanism-p1",
+     "label": "Informational lesion",
+     "kind": "position",
+     "of_dispute": "H-dbs-mechanism",
+     "detail": "modelled high-frequency drive makes output spiking regular and almost variance-free",
+     "species": "model",
+     "evidence_kind": "computational",
+     "refs": [
+      133
+     ]
+    },
+    {
+     "id": "H-dbs-mechanism-p2",
+     "label": "Excitation and antidromic activation",
+     "kind": "position",
+     "of_dispute": "H-dbs-mechanism",
+     "detail": "high-frequency stimulation drives efferent axons rather than silencing them",
+     "species": "model",
+     "evidence_kind": "computational",
+     "refs": [
+      60
+     ]
+    },
+    {
+     "id": "H-charge-safety",
+     "label": "14.11 The charge-density safety rule",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-charge-safety",
+     "question": "Does the charge and charge-density rule bound safe stimulation?",
+     "split_about": "dose",
+     "position_count": 2,
+     "shared_evidence_refs": [
+      16
+     ]
+    },
+    {
+     "id": "H-charge-safety-p1",
+     "label": "The Shannon line",
+     "kind": "position",
+     "of_dispute": "H-charge-safety",
+     "detail": "a log-linear boundary fitted to tissue-damage data became the design rule for macroelectrodes",
+     "species": "cat cortex data, fitted",
+     "evidence_kind": "review",
+     "refs": [
+      17
+     ]
+    },
+    {
+     "id": "H-charge-safety-p2",
+     "label": "Out of scope",
+     "kind": "position",
+     "of_dispute": "H-charge-safety",
+     "detail": "the equation omits frequency, duty cycle, current density and electrode size, and microelectrodes deliver more charge without damage",
+     "species": "mixed",
+     "evidence_kind": "review",
+     "refs": [
+      18
+     ]
+    },
+    {
+     "id": "H-inflammatory-reflex",
+     "label": "14.12 The inflammatory-reflex framing",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-inflammatory-reflex",
+     "question": "Is vagal control of splenic TNF a reflex arc, or a drivable pathway?",
+     "split_about": "mechanism",
+     "position_count": 2
+    },
+    {
+     "id": "H-inflammatory-reflex-p1",
+     "label": "A reflex",
+     "kind": "position",
+     "of_dispute": "H-inflammatory-reflex",
+     "detail": "a hard-wired loop with afferent limb, central integration and efferent cholinergic limb, with ChAT-expressing splenic T cells completing the arc",
+     "species": "rodent",
+     "evidence_kind": "review and primary experimental",
+     "refs": [
+      149,
+      150
+     ]
+    },
+    {
+     "id": "H-inflammatory-reflex-p2",
+     "label": "Drivable but not a reflex",
+     "kind": "position",
+     "of_dispute": "H-inflammatory-reflex",
+     "detail": "the disynaptic vagus-to-splenic-nerve link is rejected, since vagal stimulation drives no splenic nerve spikes",
+     "species": "rodent",
+     "evidence_kind": "review",
+     "refs": [
+      151
+     ]
+    },
+    {
+     "id": "H-tavns-engagement",
+     "label": "14.13 Transcutaneous vagal target engagement",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-tavns-engagement",
+     "question": "Does transcutaneous auricular vagus nerve stimulation engage noradrenergic targets in humans?",
+     "split_about": "dose",
+     "position_count": 3
+    },
+    {
+     "id": "H-tavns-engagement-p1",
+     "label": "Null",
+     "kind": "position",
+     "of_dispute": "H-tavns-engagement",
+     "detail": "continuous cymba conchae stimulation in 66 participants left pupil, cortisol and cardiac vagal activity unchanged",
+     "species": "human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      145
+     ]
+    },
+    {
+     "id": "H-tavns-engagement-p2",
+     "label": "Protocol-dependent",
+     "kind": "position",
+     "of_dispute": "H-tavns-engagement",
+     "detail": "pulsed delivery gave an effect (g = 0.36) and continuous delivery evidence for the null (g = 0.002)",
+     "species": "human",
+     "evidence_kind": "systematic review",
+     "refs": [
+      146
+     ]
+    },
+    {
+     "id": "H-tavns-engagement-p3",
+     "label": "Weak proxy",
+     "kind": "position",
+     "of_dispute": "H-tavns-engagement",
+     "detail": "locus coeruleus recording with pupillometry gave a variable, state-dependent mapping",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      144
+     ]
+    },
+    {
+     "id": "H-hnk-active-species",
+     "label": "14.14 Ketamine's active species",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-hnk-active-species",
+     "question": "Is (2R,6R)-hydroxynorketamine the antidepressant species, and does it have a target?",
+     "split_about": "mechanism",
+     "position_count": 3
+    },
+    {
+     "id": "H-hnk-active-species-p1",
+     "label": "Yes, without NMDA inhibition",
+     "kind": "position",
+     "of_dispute": "H-hnk-active-species",
+     "detail": "the metabolite acted without NMDA receptor inhibition and required AMPA receptor activation",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      117
+     ]
+    },
+    {
+     "id": "H-hnk-active-species-p2",
+     "label": "No target found",
+     "kind": "position",
+     "of_dispute": "H-hnk-active-species",
+     "detail": "screens across thousands of human proteins found no direct interaction with any proposed target",
+     "species": "human protein panels",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      167
+     ]
+    },
+    {
+     "id": "H-hnk-active-species-p3",
+     "label": "A shared downstream step",
+     "kind": "position",
+     "of_dispute": "H-hnk-active-species",
+     "detail": "NMDA antagonist pretreatment abolished the effects of ketamine, the metabolite and two unrelated compounds alike; an earlier account routes it through eEF2 kinase",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      168,
+      116
+     ]
+    },
+    {
+     "id": "H-5ht2a-necessity",
+     "label": "14.15 5-HT2A necessity",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-5ht2a-necessity",
+     "question": "Is postsynaptic 5-HT2A signalling necessary for psychedelic-induced plasticity?",
+     "split_about": "mechanism",
+     "position_count": 3
+    },
+    {
+     "id": "H-5ht2a-necessity-p1",
+     "label": "Postsynaptic 5-HT2A",
+     "kind": "position",
+     "of_dispute": "H-5ht2a-necessity",
+     "detail": "the standard account, with the hallucinogenic and the plasticity question separated",
+     "species": "mixed",
+     "evidence_kind": "review",
+     "refs": [
+      173
+     ]
+    },
+    {
+     "id": "H-5ht2a-necessity-p2",
+     "label": "Presynaptic and afferent",
+     "kind": "position",
+     "of_dispute": "H-5ht2a-necessity",
+     "detail": "strengthening occurred where postsynaptic 5-HT2A is absent and needed presynaptic 5-HT2A on thalamic axons",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      174
+     ]
+    },
+    {
+     "id": "H-5ht2a-necessity-p3",
+     "label": "TrkB rather than 5-HT2A",
+     "kind": "position",
+     "of_dispute": "H-5ht2a-necessity",
+     "detail": "plasticity required TrkB, not 5-HT2A, while head-twitch required 5-HT2A",
+     "species": "mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      119
+     ]
+    },
+    {
+     "id": "H-subjective-experience",
+     "label": "14.16 The subjective-experience question",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-subjective-experience",
+     "question": "Is the subjective experience necessary for a psychedelic's enduring therapeutic effect?",
+     "split_about": "mechanism",
+     "position_count": 2,
+     "shared_evidence_refs": [
+      178
+     ]
+    },
+    {
+     "id": "H-subjective-experience-p1",
+     "label": "Necessary",
+     "kind": "position",
+     "of_dispute": "H-subjective-experience",
+     "detail": "with drug intensity controlled, specific subjective features predict outcome across human studies",
+     "species": "human",
+     "evidence_kind": "review",
+     "refs": [
+      175
+     ]
+    },
+    {
+     "id": "H-subjective-experience-p2",
+     "label": "Not necessary",
+     "kind": "position",
+     "of_dispute": "H-subjective-experience",
+     "detail": "the experience-to-outcome link is largely correlational, and lasting changes can occur without it",
+     "species": "mixed",
+     "evidence_kind": "review",
+     "refs": [
+      176
+     ]
+    },
+    {
+     "id": "H-ketamine-vs-ect",
+     "label": "14.17 Ketamine versus ECT",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-ketamine-vs-ect",
+     "question": "Is ketamine non-inferior to electroconvulsive therapy for depression?",
+     "split_about": "endpoint",
+     "position_count": 2
+    },
+    {
+     "id": "H-ketamine-vs-ect-p1",
+     "label": "Inferior for remission",
+     "kind": "position",
+     "of_dispute": "H-ketamine-vs-ect",
+     "detail": "remission 63% with ECT against 46% with ketamine in hospitalised patients, so non-inferiority failed",
+     "species": "human",
+     "evidence_kind": "primary clinical trial",
+     "refs": [
+      171
+     ]
+    },
+    {
+     "id": "H-ketamine-vs-ect-p2",
+     "label": "Non-inferior for response",
+     "kind": "position",
+     "of_dispute": "H-ketamine-vs-ect",
+     "detail": "response 55.4% with ketamine against 41.2% with ECT in 403 outpatients, meeting non-inferiority",
+     "species": "human",
+     "evidence_kind": "primary clinical trial",
+     "refs": [
+      170
+     ]
+    },
+    {
+     "id": "H-nose-to-brain",
+     "label": "14.18 Intranasal direct transport",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-nose-to-brain",
+     "question": "Does intranasal dosing reach the brain other than through systemic absorption?",
+     "split_about": "dose",
+     "position_count": 2
+    },
+    {
+     "id": "H-nose-to-brain-p1",
+     "label": "Yes, an anatomical route",
+     "kind": "position",
+     "of_dispute": "H-nose-to-brain",
+     "detail": "olfactory and trigeminal pathways with perineural and perivascular bulk flow",
+     "species": "mixed",
+     "evidence_kind": "review",
+     "refs": [
+      161
+     ]
+    },
+    {
+     "id": "H-nose-to-brain-p2",
+     "label": "Not shown quantitatively",
+     "kind": "position",
+     "of_dispute": "H-nose-to-brain",
+     "detail": "of about 100 studies, twelve met pharmacokinetic criteria and two rat studies supported direct transport, with no human evidence",
+     "species": "mostly animal",
+     "evidence_kind": "systematic review",
+     "refs": [
+      162
+     ]
+    },
+    {
+     "id": "H-d2-occupancy",
+     "label": "14.19 Receptor-occupancy thresholds",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-d2-occupancy",
+     "question": "Is there a universal receptor-occupancy therapeutic window?",
+     "split_about": "dose",
+     "position_count": 2,
+     "shared_evidence_refs": [
+      27
+     ]
+    },
+    {
+     "id": "H-d2-occupancy-p1",
+     "label": "A threshold",
+     "kind": "position",
+     "of_dispute": "H-d2-occupancy",
+     "detail": "raclopride PET put occupancy at 38-87%, with response, extrapyramidal symptoms and hyperprolactinaemia likelier above about 65, 72 and 78%",
+     "species": "human",
+     "evidence_kind": "primary clinical trial",
+     "refs": [
+      26
+     ]
+    },
+    {
+     "id": "H-d2-occupancy-p2",
+     "label": "It breaks for partial agonists",
+     "kind": "position",
+     "of_dispute": "H-d2-occupancy",
+     "detail": "in 110 studies and 37,193 participants, extrapyramidal risk rose above 75-85% occupancy for antagonists while partial agonists kept it low",
+     "species": "human",
+     "evidence_kind": "systematic review",
+     "refs": [
+      28
+     ]
+    },
+    {
+     "id": "H-serotonin-premise",
+     "label": "14.20 The serotonin premise",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-serotonin-premise",
+     "question": "Does the serotonin-deficit premise behind serotonergic antidepressants hold?",
+     "split_about": "mechanism",
+     "position_count": 2
+    },
+    {
+     "id": "H-serotonin-premise-p1",
+     "label": "No deficit evidence",
+     "kind": "position",
+     "of_dispute": "H-serotonin-premise",
+     "detail": "no association between serotonin metabolites and depression, and no genotype-by-stress interaction in the largest studies",
+     "species": "human",
+     "evidence_kind": "systematic review",
+     "refs": [
+      188
+     ]
+    },
+    {
+     "id": "H-serotonin-premise-p2",
+     "label": "Function-based, no deficit required",
+     "kind": "position",
+     "of_dispute": "H-serotonin-premise",
+     "detail": "the action sits in early changes to emotional and social information processing and in drug-induced plasticity",
+     "species": "human",
+     "evidence_kind": "review",
+     "refs": [
+      187
+     ]
+    },
+    {
+     "id": "H-tep-origin",
+     "label": "14.21 The origin of the TMS-evoked potential",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-tep-origin",
+     "question": "How much of the TMS-evoked EEG potential is transcranial rather than sensory?",
+     "split_about": "endpoint",
+     "position_count": 2
+    },
+    {
+     "id": "H-tep-origin-p1",
+     "label": "Largely sensory",
+     "kind": "position",
+     "of_dispute": "H-tep-origin",
+     "detail": "a realistic sham reproducing auditory and somatosensory effects evoked responses resembling real TMS, early and late",
+     "species": "human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      202
+     ]
+    },
+    {
+     "id": "H-tep-origin-p2",
+     "label": "Separable",
+     "kind": "position",
+     "of_dispute": "H-tep-origin",
+     "detail": "an optimised sham left early components and beta responses only with real TMS",
+     "species": "human",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      203
+     ]
+    },
+    {
+     "id": "H-magnetogenetics",
+     "label": "14.22 Magnetogenetics",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-magnetogenetics",
+     "question": "Can magnetic fields gate ferritin-tethered ion channels as reported?",
+     "split_about": "mechanism",
+     "position_count": 2
+    },
+    {
+     "id": "H-magnetogenetics-p1",
+     "label": "Yes, as reported",
+     "kind": "position",
+     "of_dispute": "H-magnetogenetics",
+     "detail": "a TRPV4-ferritin fusion permitted magnetic control in imaging, slice and in vivo electrophysiology and behaviour",
+     "species": "zebrafish and mouse",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      95
+     ]
+    },
+    {
+     "id": "H-magnetogenetics-p2",
+     "label": "Physically impossible",
+     "kind": "position",
+     "of_dispute": "H-magnetogenetics",
+     "detail": "required forces, torques and heating exceed what paramagnetic ferritin can supply by five to ten orders of magnitude",
+     "species": "first-principles calculation",
+     "evidence_kind": "computational",
+     "refs": [
+      94
+     ]
+    },
+    {
+     "id": "H-dreadd-actuator",
+     "label": "14.23 The chemogenetic actuator",
+     "term": "hypothesis-group",
+     "kind": "dispute",
+     "hypothesis_group": "H-dreadd-actuator",
+     "question": "Is clozapine-N-oxide inert at targets other than the designer receptor?",
+     "split_about": "mechanism",
+     "position_count": 2
+    },
+    {
+     "id": "H-dreadd-actuator-p1",
+     "label": "Inert by design",
+     "kind": "position",
+     "of_dispute": "H-dreadd-actuator",
+     "detail": "designer receptors activated by clozapine-N-oxide and not acetylcholine, with a Gi-coupled member silencing hippocampal neurons",
+     "species": "yeast, human cells, rodent",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      93
+     ]
+    },
+    {
+     "id": "H-dreadd-actuator-p2",
+     "label": "Acting through clozapine",
+     "kind": "position",
+     "of_dispute": "H-dreadd-actuator",
+     "detail": "the injected compound does not enter the brain and binds weakly; it is converted to clozapine, which enters and occupies the receptor",
+     "species": "rodent and macaque",
+     "evidence_kind": "primary experimental",
+     "refs": [
+      29
+     ]
+    }
+   ],
+   "edges": [
+    {
+     "from": "H-tes-entrainment",
+     "to": "H-tes-entrainment-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      44,
+      55
+     ]
+    },
+    {
+     "from": "H-tes-entrainment",
+     "to": "H-tes-entrainment-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      50,
+      54
+     ]
+    },
+    {
+     "from": "H-ti-suprathreshold",
+     "to": "H-ti-suprathreshold-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      39,
+      45
+     ]
+    },
+    {
+     "from": "H-ti-suprathreshold",
+     "to": "H-ti-suprathreshold-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      48,
+      60
+     ]
+    },
+    {
+     "from": "H-tus-mechanism",
+     "to": "H-tus-mechanism-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      65
+     ]
+    },
+    {
+     "from": "H-tus-mechanism",
+     "to": "H-tus-mechanism-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      66
+     ]
+    },
+    {
+     "from": "H-tus-mechanism",
+     "to": "H-tus-mechanism-p3",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      68,
+      70
+     ]
+    },
+    {
+     "from": "H-tus-mechanism",
+     "to": "H-tus-mechanism-p4",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      71
+     ]
+    },
+    {
+     "from": "H-tus-confound",
+     "to": "H-tus-confound-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      74,
+      75,
+      77
+     ]
+    },
+    {
+     "from": "H-tus-confound",
+     "to": "H-tus-confound-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      76
+     ]
+    },
+    {
+     "from": "H-fus-bbb-inflammation",
+     "to": "H-fus-bbb-inflammation-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      83
+     ]
+    },
+    {
+     "from": "H-fus-bbb-inflammation",
+     "to": "H-fus-bbb-inflammation-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      84
+     ]
+    },
+    {
+     "from": "H-pbm-dose",
+     "to": "H-pbm-dose-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      22
+     ]
+    },
+    {
+     "from": "H-pbm-dose",
+     "to": "H-pbm-dose-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      23
+     ]
+    },
+    {
+     "from": "H-gamma-40hz",
+     "to": "H-gamma-40hz-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      123,
+      124
+     ]
+    },
+    {
+     "from": "H-gamma-40hz",
+     "to": "H-gamma-40hz-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      125
+     ]
+    },
+    {
+     "from": "H-tdcs-plasticity",
+     "to": "H-tdcs-plasticity-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      97,
+      100
+     ]
+    },
+    {
+     "from": "H-tdcs-plasticity",
+     "to": "H-tdcs-plasticity-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      109
+     ]
+    },
+    {
+     "from": "H-tdcs-plasticity",
+     "to": "H-tdcs-plasticity-p3",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      107,
+      108
+     ]
+    },
+    {
+     "from": "H-tdcs-plasticity",
+     "to": "H-tdcs-plasticity-p4",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      121
+     ]
+    },
+    {
+     "from": "H-connectivity-targeting",
+     "to": "H-connectivity-targeting-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      129
+     ]
+    },
+    {
+     "from": "H-connectivity-targeting",
+     "to": "H-connectivity-targeting-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      130
+     ]
+    },
+    {
+     "from": "H-dbs-mechanism",
+     "to": "H-dbs-mechanism-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      133
+     ]
+    },
+    {
+     "from": "H-dbs-mechanism",
+     "to": "H-dbs-mechanism-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      60
+     ]
+    },
+    {
+     "from": "H-charge-safety",
+     "to": "H-charge-safety-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      17
+     ]
+    },
+    {
+     "from": "H-charge-safety",
+     "to": "H-charge-safety-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      18
+     ]
+    },
+    {
+     "from": "H-inflammatory-reflex",
+     "to": "H-inflammatory-reflex-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      149,
+      150
+     ]
+    },
+    {
+     "from": "H-inflammatory-reflex",
+     "to": "H-inflammatory-reflex-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      151
+     ]
+    },
+    {
+     "from": "H-tavns-engagement",
+     "to": "H-tavns-engagement-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      145
+     ]
+    },
+    {
+     "from": "H-tavns-engagement",
+     "to": "H-tavns-engagement-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      146
+     ]
+    },
+    {
+     "from": "H-tavns-engagement",
+     "to": "H-tavns-engagement-p3",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      144
+     ]
+    },
+    {
+     "from": "H-hnk-active-species",
+     "to": "H-hnk-active-species-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      117
+     ]
+    },
+    {
+     "from": "H-hnk-active-species",
+     "to": "H-hnk-active-species-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      167
+     ]
+    },
+    {
+     "from": "H-hnk-active-species",
+     "to": "H-hnk-active-species-p3",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      168,
+      116
+     ]
+    },
+    {
+     "from": "H-5ht2a-necessity",
+     "to": "H-5ht2a-necessity-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      173
+     ]
+    },
+    {
+     "from": "H-5ht2a-necessity",
+     "to": "H-5ht2a-necessity-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      174
+     ]
+    },
+    {
+     "from": "H-5ht2a-necessity",
+     "to": "H-5ht2a-necessity-p3",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      119
+     ]
+    },
+    {
+     "from": "H-subjective-experience",
+     "to": "H-subjective-experience-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      175
+     ]
+    },
+    {
+     "from": "H-subjective-experience",
+     "to": "H-subjective-experience-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      176
+     ]
+    },
+    {
+     "from": "H-ketamine-vs-ect",
+     "to": "H-ketamine-vs-ect-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      171
+     ]
+    },
+    {
+     "from": "H-ketamine-vs-ect",
+     "to": "H-ketamine-vs-ect-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      170
+     ]
+    },
+    {
+     "from": "H-nose-to-brain",
+     "to": "H-nose-to-brain-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      161
+     ]
+    },
+    {
+     "from": "H-nose-to-brain",
+     "to": "H-nose-to-brain-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      162
+     ]
+    },
+    {
+     "from": "H-d2-occupancy",
+     "to": "H-d2-occupancy-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      26
+     ]
+    },
+    {
+     "from": "H-d2-occupancy",
+     "to": "H-d2-occupancy-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      28
+     ]
+    },
+    {
+     "from": "H-serotonin-premise",
+     "to": "H-serotonin-premise-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      188
+     ]
+    },
+    {
+     "from": "H-serotonin-premise",
+     "to": "H-serotonin-premise-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      187
+     ]
+    },
+    {
+     "from": "H-tep-origin",
+     "to": "H-tep-origin-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      202
+     ]
+    },
+    {
+     "from": "H-tep-origin",
+     "to": "H-tep-origin-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      203
+     ]
+    },
+    {
+     "from": "H-magnetogenetics",
+     "to": "H-magnetogenetics-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      95
+     ]
+    },
+    {
+     "from": "H-magnetogenetics",
+     "to": "H-magnetogenetics-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      94
+     ]
+    },
+    {
+     "from": "H-dreadd-actuator",
+     "to": "H-dreadd-actuator-p1",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      93
+     ]
+    },
+    {
+     "from": "H-dreadd-actuator",
+     "to": "H-dreadd-actuator-p2",
+     "label": "rival position",
+     "relation": "position_of",
+     "refs": [
+      29
+     ]
+    }
+   ]
+  },
+  "provenance": "synthesised: conceptual diagram"
+ },
+ {
+  "id": "fig8",
+  "label": "Figure 8",
+  "title": "The corpus profile: what this volume's reference base is made of",
+  "kind": "chart",
+  "synthesis": "data",
+  "refs": [
+   206,
+   207,
+   208,
+   218
+  ],
+  "data": "figures/data/fig8-corpus-profile.csv",
+  "columns": [
+   {
+    "field": "dimension",
+    "label": "Dimension"
+   },
+   {
+    "field": "category",
+    "label": "Category"
+   },
+   {
+    "field": "count",
+    "label": "Count"
+   },
+   {
+    "field": "note",
+    "label": "Note"
+   },
+   {
+    "field": "ref",
+    "label": "Source"
+   }
+  ],
+  "chart": {
+   "type": "bar",
+   "orientation": "horizontal",
+   "x": {
+    "field": "category",
+    "label": "Category",
+    "scale": "linear"
+   },
+   "y": {
+    "field": "count",
+    "label": "Count",
+    "scale": "linear"
+   },
+   "facet_by": "dimension"
+  },
+  "caption": "The volume's own reference base, counted four ways: by tier, by year, by species and by evidence kind, with the verification totals at the top. The base is 263 entries, 260 of them verified against a read abstract or full text and 80 flagged contested. Human references outnumber rodent ones by about two and a half to one, primate references number 13, and just over half the base falls in the tier the pack calls current. Counts were computed from references.yaml for this figure rather than copied from the prose.",
+  "how_to_read": "Read each panel as a count of references, not of findings or of studies: one paper can support many claims in the review, and a heavily cited paper counts once. In the species panel, a reference tagged with several species is counted once under each tag, so that panel's total exceeds the number of references; the other panels partition the base exactly once. Use the year panel for the shape of the sweep rather than for the state of the field, since the bins are unequal in width. Treat \"n/a\" in the species panel as a reference with no species of its own, such as a consensus statement or an ontology.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "evidence-grading-and-translation"
+  ],
+  "discussed_in": [
+   "v0-13-evidence-and-translation",
+   "v0-12-methods-and-confounds"
+  ],
+  "cites": [],
+  "source": "Computed by this figure directly from the pack's own references.yaml, on the tier, year, species, evidence_kind, verified and contested fields, and not taken from the review's prose. It is therefore pack metadata rather than published data, and every row carries ref \"self\". Two notes on honesty: the computed total is 263 references with 260 verified, whereas the abstract of the review states 223 references with 221 verified, so the prose figure is out of date with respect to the file this figure counts; and the year bins are this figure's choice, not a field in the data. Nothing else is approximated - the counts are exact as of the file state at build time. The refs list carries the sources the surrounding corpus-profile discussion rests on rather than sources for the counts, because the counts are the pack's own metadata.",
+  "table": {
+   "rows": [
+    {
+     "dimension": "total",
+     "category": "references in references.yaml",
+     "count": 263,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "total",
+     "category": "verified against abstract or full text",
+     "count": 260,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "total",
+     "category": "not verified",
+     "count": 3,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "total",
+     "category": "flagged contested",
+     "count": 80,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "tier",
+     "category": "seminal",
+     "count": 36,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "tier",
+     "category": "classic",
+     "count": 38,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "tier",
+     "category": "current",
+     "count": 117,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "tier",
+     "category": "background",
+     "count": 72,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "1956-1979",
+     "count": 3,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "1980-1989",
+     "count": 6,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "1990-1999",
+     "count": 5,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "2000-2004",
+     "count": 15,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "2005-2009",
+     "count": 24,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "2010-2014",
+     "count": 30,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "2015-2019",
+     "count": 67,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "2020-2024",
+     "count": 87,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "year",
+     "category": "2025-2026",
+     "count": 26,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "human",
+     "count": 120,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "rodent",
+     "count": 49,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "mixed",
+     "count": 38,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "n/a",
+     "count": 29,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "computational",
+     "count": 26,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "in-vitro",
+     "count": 24,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "species",
+     "category": "nhp",
+     "count": 13,
+     "note": "a reference with several species tags is counted once per tag",
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "primary-experimental",
+     "count": 99,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "review",
+     "count": 56,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "primary-clinical-trial",
+     "count": 36,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "computational",
+     "count": 20,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "systematic-review",
+     "count": 19,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "consensus",
+     "count": 12,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "database",
+     "count": 12,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "guideline",
+     "count": 8,
+     "note": null,
+     "ref": "self"
+    },
+    {
+     "dimension": "evidence_kind",
+     "category": "textbook",
+     "count": 1,
+     "note": null,
+     "ref": "self"
+    }
+   ],
+   "fields": [
+    "dimension",
+    "category",
+    "count",
+    "note",
+    "ref"
+   ]
+  },
+  "provenance": "synthesised from cited data"
+ },
+ {
+  "id": "fig9",
+  "label": "Figure 9",
+  "title": "The proposed starter schema: node types, predicates and their ontology anchors",
+  "kind": "network",
+  "synthesis": "conceptual",
+  "refs": [
+   29,
+   79,
+   91,
+   92,
+   131,
+   139,
+   150,
+   155,
+   156,
+   157,
+   158,
+   193,
+   208,
+   214,
+   215,
+   216,
+   217,
+   218,
+   223
+  ],
+  "data": "figures/data/fig9-schema.json",
+  "caption": "The starter schema of section 15 drawn as a graph: node types as nodes, each carrying the ontology that anchors it, and the main predicates as edges, each carrying the properties that must travel with it. Ten of the seventeen node types are marked unanchored, including the two the section says have no ontology at all - the stimulation protocol, which has to be authored, and outcome measures - together with the protein slot inside the transducer and receptor nodes, the hypothesis group and the path. The claim edge appears as a node because confounds, hypothesis groups and paths attach to claim edges rather than to entities.",
+  "how_to_read": "Read each node as a type, not an instance: \"transducer\" is the class that cytochrome c oxidase or Piezo1 would be an instance of. The anchor tells you which ontology supplies identifiers for that type; where the node is marked unanchored, you would have to author the vocabulary yourself, and the section says as much. Read each edge label as the predicate and the property list as what an import would reject the edge for missing. Take the whole figure as a starting point offered for redesign, not as a specification.",
+  "explain": [],
+  "hotspots": [],
+  "concepts": [
+   "property-graphs-and-ontologies",
+   "dose-and-parameter-sets"
+  ],
+  "discussed_in": [
+   "v0-15-from-text-to-graph"
+  ],
+  "cites": [],
+  "source": "Built from section 15 of the review: the node types, anchors and predicates are the rows of the table in section 15.5, and the required edge properties are that table's fourth column. Three nodes not named as rows in the table are added so that every predicate has a defined endpoint - compartment and receptor, which the drug-drive row's predicates point at, and claim edge, which the confound, hypothesis-group and path rows point at - each anchored from the same section's text. The plasticity-state and circuit-state nodes come from the predicates in their rows. Where the section gives a predicate without fixing its range, the edge notes say so. Nothing is quantitative, and the schema is a proposal, not a standard.",
+  "graph": {
+   "layout": "layered",
+   "nodes": [
+    {
+     "id": "drive-nominal",
+     "label": "Drive, nominal",
+     "term": "dose-parameter-set",
+     "anchor": "protocol module, to author [193]",
+     "unanchored": true,
+     "note": "Parameter set with units and not-reported markers; no ontology in the corpus covers stimulation protocols or device parameters [79,193]."
+    },
+    {
+     "id": "delivered-quantity",
+     "label": "Delivered quantity, effective",
+     "term": "effective-stimulus",
+     "anchor": "protocol module, to author [79]",
+     "unanchored": true,
+     "note": "Measured or modelled, orientation, neural element, unit and species travel with the edge [79]."
+    },
+    {
+     "id": "drug-drive",
+     "label": "Drug drive",
+     "term": "route-of-administration",
+     "anchor": "ChEBI [217]",
+     "unanchored": false,
+     "note": "Route, schedule, exposure measure, active species and compartment reached are properties, not annotations [29,92]."
+    },
+    {
+     "id": "transducer",
+     "label": "Transducer",
+     "term": "transducer",
+     "anchor": "Cell Ontology [215]; GO cellular component [216]; protein slot open",
+     "unanchored": true,
+     "note": "The protein slot is named but unanchored: the corpus holds no reference describing a protein ontology [215,216,217]."
+    },
+    {
+     "id": "compartment",
+     "label": "Compartment",
+     "term": "receptor-compartment",
+     "anchor": "GO cellular component [216]",
+     "unanchored": false,
+     "note": "Receptor compartment is an attribute of the coupling node, because the same agonist acts differently inside the cell and at the surface [92]."
+    },
+    {
+     "id": "receptor",
+     "label": "Receptor",
+     "term": "operational-model",
+     "anchor": "receptor-pharmacology vocabulary [91]; protein slot open",
+     "unanchored": true,
+     "note": "Affinity, occupancy, efficacy, the operational model, allosteric and ligand-selective states are settled as concepts, not as identifiers [91]."
+    },
+    {
+     "id": "cell-population",
+     "label": "Cell population",
+     "term": "preparation",
+     "anchor": "Cell Ontology [215]; Neuron Phenotype Ontology for neurons [156]",
+     "unanchored": false,
+     "note": "Neuron types are decomposed into phenotypes rather than named as classes [156]."
+    },
+    {
+     "id": "plasticity-state",
+     "label": "Plasticity state",
+     "term": "ltp-like-plasticity",
+     "anchor": "none in this corpus",
+     "unanchored": true,
+     "note": "Carries protocol, readout, preparation and responder fraction; direction is a distribution over participants, not a sign."
+    },
+    {
+     "id": "molecular-endpoint",
+     "label": "Molecular endpoint",
+     "term": "convergence",
+     "anchor": "Gene Ontology [216]",
+     "unanchored": false,
+     "note": "Carries assay, preparation, direction and a one-laboratory flag, or incoming edges are not comparable [118,216]."
+    },
+    {
+     "id": "circuit-target",
+     "label": "Circuit / target",
+     "term": "target-definition",
+     "anchor": "Uberon [214]",
+     "unanchored": false,
+     "note": "Anatomical, functional and connectivity-derived targets are different nodes [131]."
+    },
+    {
+     "id": "circuit-state",
+     "label": "Circuit state",
+     "term": "state-dependence",
+     "anchor": "none in this corpus",
+     "unanchored": true,
+     "note": "Brain state and biomarker travel with the modulating edge, with the perturbation method named [131,139]."
+    },
+    {
+     "id": "body-system",
+     "label": "Body-system node, including non-neuronal relays",
+     "term": "interoception",
+     "anchor": "Uberon [214]; Cell Ontology [215]",
+     "unanchored": false,
+     "note": "Admits non-neuronal relays: ChAT-expressing T cells and epithelial sensor cells [150,158]."
+    },
+    {
+     "id": "outcome",
+     "label": "Outcome measures",
+     "term": "clinical-response",
+     "anchor": "clinical measure, open",
+     "unanchored": true,
+     "note": "Unanchored: no ontology in this corpus covers outcome measures; the node carries effect size as reported, population and comparator."
+    },
+    {
+     "id": "confound",
+     "label": "Confound",
+     "term": "co-stimulation",
+     "anchor": "protocol module, to author",
+     "unanchored": true,
+     "note": "Controls applied, blinding check and engagement shown; a confound is a node with edges to the claims it threatens [79]."
+    },
+    {
+     "id": "hypothesis-group",
+     "label": "Hypothesis group",
+     "term": "hypothesis-group",
+     "anchor": "none",
+     "unanchored": true,
+     "note": "Holds rival claim edges together with the discriminating experiment."
+    },
+    {
+     "id": "path",
+     "label": "Path",
+     "term": "claim-path",
+     "anchor": "none",
+     "unanchored": true,
+     "note": "Ordered claim edges, recording species changes and the weakest link; mechanism is a path, not an edge [223]."
+    },
+    {
+     "id": "claim-edge",
+     "label": "Claim edge",
+     "term": "predicate",
+     "anchor": "ECO for evidence type [218]; GRADE for certainty [208]",
+     "unanchored": false,
+     "note": "Every claim edge carries evidence type, certainty, species and preparation, and a link to its source, plus the dose and state that qualify its sign; an edge without these is not importable [155,208,218]."
+    }
+   ],
+   "edges": [
+    {
+     "from": "drive-nominal",
+     "to": "delivered-quantity",
+     "label": "delivers",
+     "predicate": "delivers",
+     "required_edge_properties": "parameter set with units; not-reported markers distinct from zero",
+     "refs": [
+      79,
+      193
+     ]
+    },
+    {
+     "from": "delivered-quantity",
+     "to": "transducer",
+     "label": "couples_via",
+     "predicate": "couples_via",
+     "required_edge_properties": "measured or modelled; orientation; neural element; unit; species",
+     "refs": [
+      79
+     ]
+    },
+    {
+     "from": "drug-drive",
+     "to": "compartment",
+     "label": "exposes",
+     "predicate": "exposes",
+     "required_edge_properties": "route, schedule, exposure measure, compartment reached",
+     "refs": [
+      29,
+      92
+     ]
+    },
+    {
+     "from": "drug-drive",
+     "to": "receptor",
+     "label": "binds",
+     "predicate": "binds",
+     "required_edge_properties": "active species, because the injected compound is not always the molecule that binds",
+     "refs": [
+      29,
+      91
+     ]
+    },
+    {
+     "from": "transducer",
+     "to": "cell-population",
+     "label": "activates",
+     "predicate": "activates",
+     "required_edge_properties": "compartment; discriminating test; rival-edge link",
+     "refs": [
+      91,
+      92
+     ]
+    },
+    {
+     "from": "cell-population",
+     "to": "plasticity-state",
+     "label": "undergoes",
+     "predicate": "undergoes",
+     "required_edge_properties": "protocol; readout; preparation; responder fraction",
+     "refs": []
+    },
+    {
+     "from": "cell-population",
+     "to": "molecular-endpoint",
+     "label": "converges_on",
+     "predicate": "converges_on",
+     "required_edge_properties": "assay; preparation; direction; one-laboratory flag",
+     "refs": [
+      118,
+      216
+     ]
+    },
+    {
+     "from": "circuit-target",
+     "to": "circuit-state",
+     "label": "modulates",
+     "predicate": "modulates",
+     "required_edge_properties": "target definition, brain state, biomarker, perturbation method",
+     "refs": [
+      131,
+      139
+     ]
+    },
+    {
+     "from": "circuit-target",
+     "to": "body-system",
+     "label": "projects_to",
+     "predicate": "projects_to",
+     "required_edge_properties": "structural connectivity only, as SCKAN records it; predicate range is not fixed by the source",
+     "refs": [
+      155
+     ]
+    },
+    {
+     "from": "body-system",
+     "to": "outcome",
+     "label": "drives",
+     "predicate": "drives",
+     "required_edge_properties": "physiological rather than structural; afferent or efferent, branch, and sign on the branch",
+     "refs": [
+      150,
+      155,
+      157,
+      158
+     ]
+    },
+    {
+     "from": "molecular-endpoint",
+     "to": "outcome",
+     "label": "results_in",
+     "predicate": "results_in",
+     "required_edge_properties": "effect size as reported; population; comparator",
+     "refs": []
+    },
+    {
+     "from": "confound",
+     "to": "claim-edge",
+     "label": "threatens",
+     "predicate": "threatens",
+     "required_edge_properties": "controls applied; blinding check; engagement shown",
+     "refs": [
+      79
+     ]
+    },
+    {
+     "from": "confound",
+     "to": "claim-edge",
+     "label": "rebuts",
+     "predicate": "rebuts",
+     "required_edge_properties": "counter-edge for a rebuttal of the confound",
+     "refs": [
+      79
+     ]
+    },
+    {
+     "from": "hypothesis-group",
+     "to": "claim-edge",
+     "label": "rival_of",
+     "predicate": "rival_of",
+     "required_edge_properties": "holds between claim edges, with the discriminating experiment attached",
+     "refs": []
+    },
+    {
+     "from": "path",
+     "to": "claim-edge",
+     "label": "orders",
+     "predicate": "orders",
+     "required_edge_properties": "ordered claim edges from intervention to outcome, as DrugMechDB curates paths",
+     "refs": [
+      223
+     ]
+    }
+   ]
+  },
+  "provenance": "synthesised: conceptual diagram"
+ }
+]

@@ -1,0 +1,46 @@
+mode: topic
+slug: neuromodulation-atlas
+title: 'Neuromodulation: an atlas of exogenous drives, from coupling to outcome'
+short_title: Neuromodulation
+question: For each way of driving the nervous system from outside, what is known about the chain from
+  the drive to the outcome, at every level of organisation, and where is each link established, inferred
+  or contested?
+purpose: both — PhD-level teaching and the evidence base for graph schema design
+as_of: '2026-09-15'
+authors:
+- Manuscript Interrogator (commissioned review)
+venue: Commissioned review — not peer reviewed
+year: 2026
+concept_levels: true
+volumes:
+- id: v0
+  title: Foundations
+  status: ready
+- id: v1
+  title: Vagus and cranial nerve stimulation
+  status: planned
+delivery: pages
+github_account: danieladamek
+audience: first-year PhD student in neuroscience, bioengineering or pharmacology, new to this field
+reading_minutes: 110
+palette:
+  groups:
+    device: '#2a5aa6'
+    drug: '#7b2c5e'
+permissions:
+  text: builder-authored; no third-party text reproduced beyond quotations of 25 words or fewer, attributed
+  figures: synthesised by the builder from cited data; no published figure images reproduced
+builder:
+  name: Manuscript Interrogator
+  version: '0.7'
+  date: '2026-09-15'
+plain_abstract: 'There are many ways to change how the nervous system behaves from outside the body: magnetic
+  pulses through the skull, electrodes implanted in the brain or on a nerve, focused ultrasound, light,
+  and drugs given by injection, by mouth, up the nose or into the spinal fluid. They have almost nothing
+  physical in common, but each one can be described the same way: something is delivered, it couples to
+  tissue by some mechanism, cells respond, molecules change, circuits and whole body systems shift, and
+  eventually something measurable happens to the person. This volume follows that chain for every method
+  usable in people, and is strict about what is actually known at each link, in which species, at what
+  dose, and on what evidence. It catalogues twenty-three disputes the field has not settled, and it ends
+  by proposing how all of this could be represented as a graph database. Written by the Manuscript Interrogator;
+  not peer reviewed; current as of 15 September 2026.'

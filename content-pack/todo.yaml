@@ -1,0 +1,270 @@
+- where: references/7
+  what: Not verified in the sweep — DOI or abstract unreachable; may not support any claim.
+- where: references/191
+  what: Not verified in the sweep — DOI or abstract unreachable; may not support any claim.
+- where: references/224
+  what: Not verified in the sweep — DOI or abstract unreachable; may not support any claim.
+- where: scope/sweep
+  what: 'marr1982vision: unverified (MIT Press/direct.mit.edu blocked). Confirm DOI and levels passage.'
+- where: scope/sweep
+  what: 'vanlankveld2024dosimetry: a journal version exists (PMC12339309, title ends ''skin tone''); PMC
+    blocked by reCAPTCHA. Get the journal DOI and update the citation.'
+- where: scope/sweep
+  what: 'tittelmeier2025penetration: confirm tissue preparation (cadaver/ex vivo skull?) from full text;
+    brainstimjrnl.com returned 403.'
+- where: scope/sweep
+  what: 'shannon1992safe: OpenAlex abstract was thin; confirm k-parameter statement from full text (IEEE
+    blocked).'
+- where: scope/sweep
+  what: 'gomez2017chemogenetics: confirm full author list and species (mouse/rat/rhesus).'
+- where: scope/sweep
+  what: 'mccreery1990charge: species is cat; schema has no ''cat'' value — editor to choose representation
+    (entered as animal-cat).'
+- where: scope/sweep
+  what: 'Sources blocked: PMC (reCAPTCHA), PubMed (empty page), Europe PMC (JS/429), brainstimjrnl.com
+    (403), IOPscience (robots), Wiley (403), Cell Press (403), MIT Press (robots). OpenAlex /works?search
+    endpoint returned 429 every time, so those searches have no hit counts; /works/doi: lookups worked.'
+- where: scope/sweep
+  what: 'Not included by count limit: Nadim & Bucher 2014 (10.1016/j.conb.2014.05.003, cellular neuromodulation
+    review; OpenAlex abstract looked unreliable); Saturnino 2019 SimNIBS 2.1 chapter (10.1007/978-3-030-21293-3_1,
+    verified via NCBI Bookshelf); Krejcar & Namazi 2025 multiscale review (10.3389/fncel.2'
+- where: scope/sweep
+  what: OpenAlex/Crossref/Europe PMC intermittently rate-limited (429); PubMed and PMC blocked by reCAPTCHA;
+    cell.com, pnas.org, physoc/Wiley, onlinelibrary, IOP (robots) returned 403.
+- where: scope/sweep
+  what: 'Add López-Alonso V et al. 2014 Brain Stimul 7(3):372-380, doi 10.1016/j.brs.2014.02.004 (variability):
+    DOI resolved, abstract not readable; verified: false.'
+- where: scope/sweep
+  what: 'Add Kilgore KL, Bhadra N. Reversible nerve conduction block using kHz frequency AC. Neuromodulation
+    2014;17(3):242-255, doi 10.1111/ner.12100: metadata resolved, no abstract read; verified: false.'
+- where: scope/sweep
+  what: 'Add McIntyre CC, Grill WM 2002 J Neurophysiol 88(4):1592-1604, doi 10.1152/jn.2002.88.4.1592
+    (DBS ''which element''): publisher page 403; verified: false.'
+- where: scope/sweep
+  what: 'Optional: Opitz A et al. 2016 Sci Rep 6:31236, doi 10.1038/srep31236 (intracranial E-fields ~0.5
+    mV/mm, ohmic, 10% frequency dependence): abstract read and verified, left out only to stay near the
+    reference target.'
+- where: scope/sweep
+  what: 'Optional: Hannah R, Rothwell JC 2017 Brain Stimul 10(1):106-115, doi 10.1016/j.brs.2016.09.008
+    (pulse width + current direction select M1 circuits): abstract read and verified, left out for count.'
+- where: scope/sweep
+  what: 'Optional: Radman T et al. 2007 J Neurosci 27(11):3030-3036, doi 10.1523/JNEUROSCI.0095-07.2007
+    (spike timing amplifies weak-field effects, 5 mV/mm): abstract read and verified, left out for count.'
+- where: scope/sweep
+  what: 'Optional: Wischnewski M, Alekseichuk I, Opitz A. 2023 Trends Cogn Sci 27(2):189-205, doi 10.1016/j.tics.2022.11.013
+    (tACS mechanisms review): verified.'
+- where: scope/sweep
+  what: Second 2025 TI systematic review in J Neural Eng (doi 10.1088/1741-2552/ae0524) found but blocked
+    by robots.txt; not read.
+- where: scope/sweep
+  what: Khatoun et al. 2019 PNAS comment on krause2019 (peripheral mechanism) not retrieved; add if dissent
+    table needs it.
+- where: scope/sweep
+  what: Confirm Grossman 2017 DOI (10.1016/j.cell.2017.05.024) at doi.org; the abstract was read on the
+    MIT page, which did not list the DOI.
+- where: scope/sweep
+  what: Confirm demchenko2025human author list, volume and pages, and DOI of the Brain Stimulation version.
+- where: scope/sweep
+  what: Confirm species in terzuolo1956 (crustacean stretch receptor presumed) from full text.
+- where: scope/sweep
+  what: Dorsal-column fibre-diameter recruitment modelling (e.g., Lempka 2020 Neuromodulation, doi 10.1111/ner.13037,
+    abstract read) could be added if v0-4 needs an SCS-specific source.
+- where: scope/sweep
+  what: Reference count is 34, two above the 26-32 target. The slice's mandated coverage list enumerated
+    roughly that many distinct primary sources. If the editor needs to cut, the two most droppable without
+    losing a requested claim are chang2016sdr (skull density ratio, arguably v0-3 dose) and karu2005no
+    (
+- where: scope/sweep
+  what: 'Tier distribution is skewed: only 8 of 34 refs are 2021 or later, because the acoustic/optical/chemical
+    coupling-mechanism literature this slice covers is overwhelmingly pre-2021. Per the brief''s tier
+    definitions those older papers were filed as seminal (field built on them) or background (definitio'
+- where: scope/sweep
+  what: 'The PNAS sterile-inflammation exchange could not be read in session: pnas.org returned 403 for
+    both Silburt, Lipsman & Aubert (10.1073/pnas.1710761114, PNAS 2017;114:E6735-E6736, metadata confirmed
+    via OpenAlex) and the Kovacs, Burks & Frank reply (10.1073/pnas.1711544114, PNAS 2017;114:E6737-E6738,'
+- where: scope/sweep
+  what: 'Verified but deliberately not kept, all good candidates if the section needs more depth: Sorum
+    et al. 2021 PNAS 10.1073/pnas.2006980118 (TRAAK activated through the lipid membrane; the best 2021+
+    mechanosensitive-channel paper and the natural modern replacement for kubanek2016channels); Chen et
+    al. '
+- where: scope/sweep
+  what: 'Logged but not verified or kept: Yang et al. 2022 Nat Commun 10.1038/s41467-022-28040-1 (focused
+    ultrasound excites cortical neurons via mechanosensitive calcium accumulation and ion channel amplification)
+    — surfaced in search, abstract not read. Worth adding to v0-5 as the amplification-cascade acc'
+- where: scope/sweep
+  what: 'Blocked sources this session: pmc.ncbi.nlm.nih.gov and pubmed.ncbi.nlm.nih.gov (reCAPTCHA interstitial),
+    www.ebi.ac.uk Europe PMC REST (HTTP 429 on every attempt), api.semanticscholar.org (429), colab.ws
+    (403), ouci.dntb.gov.ua (only the homepage is reachable without a work id), brainstimjrnl.com (4'
+- where: scope/sweep
+  what: 'Note for the graph schema (v0-15): three refs here argue that the acting cause differs from the
+    nominal stimulus — gomez2017cno (administered compound vs acting metabolite), guo2018cochlear/kop2024auditory
+    (intended target vs peripheral route), vargas2023intracellular (receptor identity vs receptor '
+- where: scope/sweep
+  what: 'Tier schema has no slot for influential pre-2021 primary papers that are not field-founding;
+    ziemann2008gating, huang2007nmda, kronberg2017dcs, corp2020variability, horvath2015quantitative, cheeran2008bdnf,
+    aydinabidin2008cfos, autry2011nmda, zanos2016hnk, monai2016astrocyte, iaccarino2016gamma are '
+- where: scope/sweep
+  what: bliss1973longlasting species is rabbit in vivo; schema lacks 'rabbit', set to mixed.
+- where: scope/sweep
+  what: Find an independent replication/refutation of casarotto2021trkb / moliner2023psychedelics TrkB
+    binding (only Gold & Wong 2024 comment, 10.1038/s41380-024-02615-4, found; judged too thin).
+- where: scope/sweep
+  what: Find a pooled analysis of BDNF Val66Met effects on NIBS response (dissent for cheeran2008bdnf).
+- where: scope/sweep
+  what: Find a counter to zanos2016hnk NMDA-independence, and published critiques of horvath2015quantitative
+    (e.g., Price & Hamilton 2015) - not collected.
+- where: scope/sweep
+  what: 'ong2025subthreshold: Europe PMC listed only ''Ong RCS, Tang AD, et al.''; confirm full author
+    list and stimulation intensity from full text (science.org 403).'
+- where: scope/sweep
+  what: Slice brief was truncated after 'gating of stimulation-induced plasticity (Ziemann/'; coverage
+    inferred from section definitions.
+- where: scope/sweep
+  what: 'Verified in this session but not written up for space (target was 26-32); all have resolved DOIs
+    and abstracts read, so a later slice can adopt them cheaply: cash2021targeting (10.1016/j.biopsych.2020.05.033,
+    review of connectivity-based TMS targeting, positive pole with fox2012sgacc); desideri2018n'
+- where: scope/sweep
+  what: 'Seminal share is high for this slice (12/32, 37%) rather than the 20-25% target: the circuit-targeting,
+    DBS-mechanism, LC-gain and inflammatory-reflex canon is almost entirely pre-2021, and reclassifying
+    those primary papers as ''background'' would misstate their role. 2021+ count is 13/32, above the '
+- where: scope/sweep
+  what: 'Not found in this session: a 2021+ authoritative review devoted specifically to dopaminergic
+    OR serotonergic gain/plasticity gating; brzosko2019stdp is used to cover DA, 5-HT, ACh and NE mechanistically.
+    Searches for a standalone modern serotonin-neuromodulation review returned mostly narrow topics '
+- where: scope/sweep
+  what: 'Not found: a primary paper on 40 Hz sensory entrainment and glymphatic/clearance mechanisms that
+    is not already in collected.txt (iaccarino2016gamma, soula2023fortyhz, murdock2024glymphatic cover
+    it). Left uncollected per slice instruction.'
+- where: scope/sweep
+  what: 'Blocked or flaky this session: www.ebi.ac.uk Europe PMC REST endpoint (proxy 403 — use europepmc.org/api/get/articleApi
+    instead); Europe PMC multi-DOI OR queries return 500, so single-DOI queries only; PubMed/PMC not attempted
+    (reCAPTCHA per earlier slices); nature.com article pages worked for the L'
+- where: scope/sweep
+  what: 'Author-count uncertainty: poe2020bluespot has a long author list (13+ named on the Nature byline);
+    citation uses ''et al.'' after six. Verify exact list if the graph needs full authorship.'
+- where: scope/sweep
+  what: 'tesser2026resetra: Nature Medicine assigns it 2026;32(1):369-378 although it was announced in
+    2025 press coverage; the slice brief called it ''Nat Med 2025''. Use the 2026 volume/page data as
+    recorded here.'
+- where: scope/sweep
+  what: 'Open question for v0-14 flagged but not resolved by any single reference: whether phase-locked/entrainment-based
+    protocols work by imposing phase (fries2005coherence logic) or by biasing state-dependent plasticity
+    thresholds (zrenner2018realtime logic). The two mechanisms predict different dose-resp'
+- where: scope/sweep
+  what: 'mcgirr2025ocd is unverified: abstract unobtainable this session. Retry via institutional access
+    to Am J Psychiatry 182(3):307-311, or substitute/add the same group''s fibromyalgia DCS+iTBS RCT (Neuropsychopharmacology
+    2026, 10.1038/s41386-026-02441-y) and their single-day accelerated TMS + DCS trial '
+- where: scope/sweep
+  what: No peer-reviewed publication of the phase 3 psilocybin trials (COMP005, COMP006) exists as of
+    2026-09-15 — only company press releases, a 52-week open-label topline, and ASCP 2026 poster coverage.
+    raison2023psilocybin (JAMA phase 2) and Goodwin 2022 NEJM (10.1056/NEJMoa2206443, phase 2b) are the
+    pee
+- where: scope/sweep
+  what: 'moncrieff2022serotonin: volume/issue/pages left out of the citation deliberately. OpenAlex reports
+    Mol Psychiatry 24(2):236-251, which conflicts with the 2022 online-first date and looks like a bad
+    record. Confirm the print citation before typesetting.'
+- where: scope/sweep
+  what: 'raison2023psilocybin: OpenAlex gives only the first page (JAMA 330(9):843). Confirm the end page.'
+- where: scope/sweep
+  what: 'Requested but deliberately deferred to stay inside the 26-32 reference cap, all located and citable:
+    (a) an authoritative general PK/routes source — Currie GM, J Nucl Med Technol 2018;46(3):221-230,
+    10.2967/jnmt.117.199638, verified this session but weak; a textbook (Rowland & Tozer; Goodman & Gilma'
+- where: scope/sweep
+  what: Xenon as an anaesthetic/neuroprotective case was not found in a usable primary or review form
+    within this slice's searches; needs a dedicated query round.
+- where: scope/sweep
+  what: 'Not covered by this slice and worth a follow-up: transdermal and depot/long-acting injectable
+    routes (rivastigmine patch, LAI antipsychotics) as the pharmacological analogue of continuous versus
+    intermittent stimulation; and intranasal insulin or oxytocin human studies as the best-controlled
+    human t'
+- where: scope/sweep
+  what: 'Blocked or unusable this session: pubmed.ncbi.nlm.nih.gov (reCAPTCHA), nejm.org (403), psychiatryonline.org
+    (403), colab.ws (403), ouci.dntb.gov.ua search (no results rendered), sciencedirect abstract pages
+    worked only for Neuromodulation. Europe PMC articleApi and OpenAlex single-DOI lookups were r'
+- where: scope/sweep
+  what: 'wiethoff2014variability (10.1016/j.brs.2014.02.003, Brain Stimul 2014;7(3):468-475): metadata
+    resolved but abstract not read (Europe PMC 429, OpenAlex has no abstract); not included, add if needed.'
+- where: scope/sweep
+  what: 'polania2018studying (10.1038/s41593-017-0054-4, Nat Neurosci 2018;21:174-187): abstract read
+    on nature.com; left out only to keep to the target count. Strong v0-12/v0-13 review candidate.'
+- where: scope/sweep
+  what: 'jackson2016animal (10.1016/j.clinph.2016.08.016, Clin Neurophysiol 2016;127(11):3425-3454): abstract
+    read; left out for count; species-translation backup.'
+- where: scope/sweep
+  what: 'scangos2021closedloop (10.1038/s41591-021-01480-w, Nat Med 2021;27:1696-1700; n=1 closed-loop
+    depression): OpenAlex abstract read; left out for count.'
+- where: scope/sweep
+  what: 'lefaucheur2017tdcs (10.1016/j.clinph.2016.10.087, Clin Neurophysiol 2017;128(1):56-92): came
+    up by accident; abstract not read.'
+- where: scope/sweep
+  what: 'Not found: a multi-lab registered-report replication in brain stimulation. The Big TMS Data pooled
+    analysis (corp2020variability) is the closest; search more.'
+- where: scope/sweep
+  what: 'Overlap with slice E: NPO (gillespie2022npo) and closed-loop (Little 2013, Zrenner 2018); reconcile
+    keys when merging.'
+- where: scope/sweep
+  what: 'Blocked or rate-limited: Europe PMC (intermittent 429), ScienceDirect (intermittent 429/404),
+    PubMed not tried.'
+- where: scope/sweep
+  what: 'lisanby2001mstprimates (10.1001/archpsyc.58.2.199) is verified: false - DOI and bibliographic
+    record resolved but no abstract available from OpenAlex or Europe PMC. Read the Arch Gen Psychiatry
+    letter full text to confirm the train frequency, coil and intensity used for deliberate seizure induction '
+- where: scope/sweep
+  what: MST family has no verified parameter source for clinical human practice (frequency, %MSO, train
+    duration, anaesthetic). Cretaz E, Brunoni AR, Lafer B. Neural Plast. 2015;2015:521398 (10.1155/2015/521398)
+    was located and its abstract read (8 studies, 30-40% remission, better cognitive profile than EC
+- where: scope/sweep
+  what: 'TPS coupling mechanism has no verified authoritative review in this slice: Alti et al. CNS Neurosci
+    Ther. 2025 (10.1111/cns.70325, ''Clarifying the specificity of transcranial pulse stimulation'') was
+    identified but OpenAlex returned HTTP 429 and PMC was reCAPTCHA-blocked. Retry for the specificity/me'
+- where: scope/sweep
+  what: 'GVS dose modelling: Truong DQ, et al. PLoS One. 2024;19(8):e0309007 (10.1371/journal.pone.0309007)
+    was located and verified (1 mA modelled, 15-40% of current entering the cranial cavity, 0.013-0.028
+    V/m at the vestibular organs, up to ~3-fold left/right asymmetry) but cut for slice budget. Add it
+    if'
+- where: scope/sweep
+  what: 'ONS in chronic migraine: Silberstein SD, et al. Cephalalgia. 2012;32(16):1165-1179 (10.1177/0333102412462642)
+    was verified (157 patients, primary endpoint missed, 6.1 vs 3.0 fewer headache days) but cut for slice
+    budget; it is the second ONS indication and a further sham-design case for v0-12.'
+- where: scope/sweep
+  what: 'ECT dissent not collected: Read J, Kirsch I, McGrath L (BJPsych Advances / Ethical Hum Psychol
+    Psychiatry, 2019-2020) challenge the quality of the ECT-versus-sham trials underlying ukect2003meta,
+    with published rebuttals in the same journal. Collect the pair if v0-14 is to represent this dispute.'
+- where: scope/sweep
+  what: 'Blocked or flaky in this slice: PMC (reCAPTCHA on all pmc.ncbi.nlm.nih.gov articles); physoc/Wiley
+    onlinelibrary and journals.physiology.org (403); resmedjournal.com (403, reached via ScienceDirect
+    instead); OpenAlex intermittently 429.'
+- where: scope/sweep
+  what: 'tSMS mechanism: no verified primary source for the transduction step. Candidate found but not
+    fetched: Sci Rep 2024 (10.1038/s41598-024-51845-7) on static magnetic stimulation inducing axon-initial-segment
+    structural plasticity in inhibitory cortical neurons - would fill the coupling-mechanism cell,'
+- where: scope/sweep
+  what: Cortical cooling in human epilepsy has no verified clinical trial in this slice; rothman2009cooling
+    and smyth2015coolingtemps are preclinical and intraoperative respectively. Search for any implanted
+    thermoelectric device trial after 2020.
+- where: references/7
+  what: 'Collected in the sweep but cited nowhere in the volume (Marr D. Vision: A Computational Investigation
+    into the Human…). Either it earns a citation in a later volume or it should be dropped; numbers are
+    never reused, so it stays in place until then.'
+- where: references/64
+  what: Collected in the sweep but cited nowhere in the volume (Antal A, Alekseichuk I, Bikson M, et al.
+    Low intensity trans…). Either it earns a citation in a later volume or it should be dropped; numbers
+    are never reused, so it stays in place until then.
+- where: references/191
+  what: Collected in the sweep but cited nowhere in the volume (McGirr A, Cole J, Patten SB, Adams B.
+    Intermittent theta bur…). Either it earns a citation in a later volume or it should be dropped; numbers
+    are never reused, so it stays in place until then.
+- where: references/224
+  what: Collected in the sweep but cited nowhere in the volume (Lisanby SH, Luber B, Finck AD, Schroeder
+    C, Sackeim HA. Deli…). Either it earns a citation in a later volume or it should be dropped; numbers
+    are never reused, so it stays in place until then.
+- where: claims.yaml
+  what: '86 claims carry no species: C0001, C0002, C0003, C0004, C0005, C0009, C0010, C0011, C0012, C0013,
+    C0014, C0015 …. Most are resource or definitional edges where species does not apply; the schema should
+    probably allow species: [n/a] explicitly.'
+- where: volumes/v0/review.md
+  what: Nine figure markers are placed and figures.yaml defines all nine; the app build will fail loudly
+    if a marker and an id ever drift apart.
+- where: scope.yaml
+  what: The T1 orienting pre-sweep (three agents, ~61 searches) was not logged query-by-query; only the
+    T3 and top-up sweeps are in search_strategy.queries. Stated here rather than implied.

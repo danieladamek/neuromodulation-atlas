@@ -1,0 +1,2999 @@
+{
+ "topic": "neurostimulation and neuromodulation — every human-applicable modality, device and pharmacological, traced from exogenous drive through biophysical coupling, cellular, subcellular and molecular cascades, circuits and body systems to outcome",
+ "question": "For each way of driving the nervous system from outside, what is actually known about the chain from the drive to the outcome, at every level of organisation — and where is each link established, inferred or contested? Written so that every mechanism claim can become a node or edge in a graph.",
+ "purpose": "both — PhD-level teaching and the evidence base for graph schema design, equal weight",
+ "lineage": "same effort as the Behavioral Physiology neuromodulation extension. The ExogenousDrive → CouplingMechanism vocabulary is the starting point; the review reports where the literature fits it and where it does not.",
+ "graph_edges": {
+  "chain": "full chain, evidence-tiered — inferred links are kept and tiered low, never dropped",
+  "contested": "competing-hypothesis map — rival hypotheses named, edge property supported | contested"
+ },
+ "boundary": {
+  "in": [
+   "every modality applicable to humans, device and pharmacological, with pharmacology a full peer (route as a first-class node)",
+   "optogenetics, chemogenetics, sonogenetics, magnetogenetics as mechanism evidence only",
+   "dose theory and parameter spaces as published data (E-field, charge, ISPTA/MI, fluence, mg/kg, exposure)",
+   "biophysical, cellular, subcellular, molecular, circuit and systemic (autonomic, immune, endocrine, sensory) levels",
+   "confounds (sham design, auditory/somatosensory co-stimulation, unblinding) as first-class content",
+   "ontology anchors for schema design (SCKAN, NPO, UBERON, GO, ChEBI, CL, ECO; DrugMechDB as precedent)"
+  ],
+  "out": [
+   "device engineering and manufacturing",
+   "regulatory and reimbursement detail beyond a one-line status",
+   "practical clinical protocols — how to deliver or program a treatment",
+   "recreational or non-clinical drug use; preparation, sourcing and use guidance",
+   "genetic actuators as chapters in their own right"
+  ],
+  "rationale": ""
+ },
+ "time_window": {
+  "current_from": 2021,
+  "seminal": "any age where the field is built on it"
+ },
+ "stance": "competing-hypothesis map",
+ "depth": "textbook",
+ "anchors_note": "T1 field-sketch landmarks (Nitsche & Paulus 2000; Huang 2005; Peterchev 2012; Legon 2014; Elias 2016; Grossman 2017; Lipsman 2018; Vargas 2023), the SCKAN reference paper (Front Neuroinform 2025, 10.3389/fninf.2025.1541184; author list to re-verify, sources disagree), the ITRUSST consensus papers and DrugMechDB (Sci Data 2023). Builder chooses the rest. Converted to anchors[] entries in T3.",
+ "anchors": [],
+ "excluded": [],
+ "assumed": false,
+ "interview": {
+  "T0": {
+   "delivery": "private repo, changed mid-session to public Pages",
+   "lineage": "same effort go broader",
+   "structure": "one app in volumes",
+   "purpose": "both equal weight"
+  },
+  "roundA": {
+   "boundary": "human-applicable + tools as evidence",
+   "chain": "full chain evidence-tiered",
+   "stance": "competing-hypothesis map",
+   "first_volume_after_V0": "VNS and cranial nerve"
+  },
+  "roundB": {
+   "V0_depth": "beyond deep, ~20k words / 120+ refs",
+   "exclusions": "all four offered",
+   "slug": "neuromodulation-atlas",
+   "anchors": "sketch landmarks + SCKAN"
+  }
+ },
+ "volumes_plan": {
+  "form": "one app in volumes; one commissioned review per volume, one KICKOFF per volume, shared glossary and evidence tiers",
+  "volumes": [
+   {
+    "id": "V0",
+    "title": "Foundations — dose, levels of organisation, coupling physics, shared endpoints, evidence and confounds, modality map",
+    "depth": "textbook"
+   },
+   {
+    "id": "V1",
+    "title": "Vagus and cranial nerve stimulation (cervical VNS, taVNS, trigeminal, hypoglossal, occipital)",
+    "depth": "deep"
+   },
+   {
+    "id": "V2+",
+    "title": "remaining families, order TBD — DBS/aDBS; ECT/MST; TMS; tES/TI; SCS/PNS/FES/ICMS/BCI; ultrasound (TUS, HIFU, BBB opening, TPS, peripheral FUS); tPBM; pharmacology and routes; other (GVS, eTNS, 40 Hz sensory, tSMS, cortical cooling)",
+    "depth": "deep"
+   }
+  ]
+ },
+ "volumes": {
+  "v0": {
+   "depth": "textbook",
+   "outline_approved": "2026-09-15",
+   "search_strategy": {
+    "run_on": "2026-09-15",
+    "sources": [
+     "web search",
+     "OpenAlex (works/doi lookup)",
+     "Europe PMC articleApi",
+     "publisher pages",
+     "eLife",
+     "arXiv/bioRxiv"
+    ],
+    "queries": [
+     {
+      "q": "Glossary of Neurostimulation Terminology Neuromodulation 2022 International Neuromodulation Society",
+      "source": "web search",
+      "hits": 8,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Peterchev 2012 Fundamentals of transcranial electric and magnetic stimulation dose Brain Stimulation doi",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ITRUSST consensus biophysical safety transcranial ultrasound 2025 doi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ITRUSST standardised reporting transcranial ultrasound stimulation checklist Brain Stimulation",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Tittelmeier 2025 Brain Stimulation transcranial photobiomodulation penetration",
+      "source": "web search",
+      "hits": 8,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "systematic review electric field modelling outcome measures transcranial stimulation 2024 no consensus metric",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ITRUSST consensus",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Glossary of Neurostimulation Terminology",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "definition of neuromodulation classification implantable electrical modulation chronic pain",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Insufficient low-level near infrared light penetration transcranial photobiomodulation",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "systematic review large-scale tES TMS electric field modeling outcome measure selection",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Glossary of Neurostimulation Terminology Collaborative Neuromodulation Foundation",
+      "source": "Crossref",
+      "hits": 513616,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "A Definition of Neuromodulation and Classification of Implantable Electrical Modulation for Chronic Pain",
+      "source": "Crossref",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Insufficient low-level near infrared light penetration challenges efficacy transcranial photobiomodulation",
+      "source": "Crossref",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ITRUSST consensus",
+      "source": "Crossref",
+      "hits": 99321,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "near infrared light penetration transcranial photobiomodulation efficacy (2025 filter)",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"A Definition of Neuromodulation and Classification of Implantable Electrical Modulation for Chronic Pain\" sciencedirect",
+      "source": "web search",
+      "hits": 5,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "SimNIBS 4 Puonti Saturnino Thielscher open-source software electric field modeling",
+      "source": "web search",
+      "hits": 7,
+      "kept": 3,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ROAST realistic volumetric approach simulate transcranial electric stimulation Huang Datta Bikson Parra",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Shannon 1992 model of safe levels for electrical stimulation IEEE Transactions Biomedical Engineering",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Cogan 2016 tissue damage thresholds during therapeutic electrical stimulation Journal of Neural Engineering Shannon limit",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Thielscher Antunes Saturnino 2015 field modeling for transcranial magnetic stimulation SimNIBS 2.0 EMBC",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "outcome measure selection alters results electric field modeling",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Van Hoornweder \"outcome measure selection\" electric field modeling Human Brain Mapping 2024 doi",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Van Hoornweder Nuyts Caulfield 2024 \"electric field\" outcome measures systematic review published journal",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "2026 Biomedical Engineering Letters advanced non-invasive brain neuromodulation comparison review",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Neurotherapeutics 2024 neuromodulation spectrum noninvasive brain stimulation to deep brain stimulation review",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "optogenetics versus chemogenetics temporal resolution comparison review DREADDs",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Nadim Bucher 2014 neuromodulation of neurons and synapses Current Opinion Neurobiology",
+      "source": "web search",
+      "hits": 8,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Marder 2012 \"Neuromodulation of neuronal circuits: back to the future\" Neuron doi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Churchland Sejnowski 1988 \"Perspectives on cognitive neuroscience\" Science levels of organization",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "multiscale brain modeling review 2022 2023 bridging scales molecules to behavior neuroscience",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "quest for multiscale brain modeling",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "PET receptor occupancy review drug development dose selection antipsychotic D2 occupancy therapeutic window",
+      "source": "web search",
+      "hits": 10,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "exposure-response analysis review pharmacokinetic pharmacodynamic principles CPT Pharmacometrics tutorial",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Morgan 2012 \"Can the flow of medicines be improved\" three pillars of survival exposure target binding pharmacology Drug Discovery Today",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Kapur Zipursky Jones Remington 2000 D2 occupancy clinical response side effects PET haloperidol Am J Psychiatry",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"Antipsychotic dose, dopamine D2 receptor occupancy and extrapyramidal side-effects\" systematic review 2023 doi",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "McCreery Agnew Yuen Bullara 1990 charge density and charge per phase as cofactors in neural injury",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "International Neuromodulation Society definition \"neuromodulation is the alteration of nerve activity through targeted delivery of a stimulus\"",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Huang Chen Carroll Hamblin 2009 \"Biphasic dose response in low level light therapy\" Dose-Response",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Bikson 2019 \"Transcranial electrical stimulation nomenclature\" Brain Stimulation doi",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"Simulation-based dosimetry of transcranial and intranasal photobiomodulation of the human brain\"",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Marr 1982 Vision computational investigation MIT Press levels of analysis 2010 reissue",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Van Lankveld Chen 2025 simulation-based dosimetry photobiomodulation skin tone journal doi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Rattay analysis of models for external stimulation of axons",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Bikson effects of uniform extracellular DC electric fields rat hippocampal slices",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Radman role of cortical cell type and morphology uniform electric field",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Voroslakos direct effects of TES on brain circuits rats humans",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Huang measurements and models of electric fields in vivo human brain TES",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Frohlich McCormick endogenous electric fields neocortical network",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Bikson 2004 J Physiol effects of uniform extracellular DC electric fields excitability rat hippocampal slices",
+      "source": "web search",
+      "hits": 10,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Radman 2009 Brain Stimulation role of cortical cell type and morphology uniform electric field stimulation",
+      "source": "web search",
+      "hits": 6,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Vöröslakos 2018 Nature Communications direct effects of transcranial electric stimulation on brain circuits in rats and humans",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Huang 2017 eLife measurements and models of electric fields in the in vivo human brain during TES",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Fröhlich McCormick 2010 Neuron endogenous electric fields may guide neocortical network activity",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Krause 2019 PNAS tACS entrains single-neuron activity in the primate brain",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Rattay 1986 Analysis of models for external stimulation of axons activating function",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Ranck 1975 Which elements are excited in electrical stimulation of mammalian CNS",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "McIntyre Grill 2002 Extracellular stimulation of central neurons waveform frequency J Neurophysiol",
+      "source": "web search",
+      "hits": 10,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Terzuolo Bullock 1956 Measurement of imposed voltage gradient adequate to modulate neuronal firing PNAS",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Opitz 2016 Sci Rep spatiotemporal structure of intracranial electric fields TES humans NHP",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Johnson 2020 Science Advances dose-dependent effects of tACS on spike timing awake NHP",
+      "source": "web search",
+      "hits": 9,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Asamoah 2019 Nat Commun tACS motor effects transcutaneous stimulation of peripheral nerves",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Vieira Krause Pack 2020 PLOS Biology tACS entrains neural activity while somatosensory input is blocked",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Krause 2022 PLOS Biology brain stimulation competes with ongoing oscillations spike timing primate",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Grossman 2017 Cell noninvasive deep brain stimulation via temporally interfering electric fields",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Violante 2023 Nature Neuroscience non-invasive TI stimulation of the human hippocampus",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "2025 systematic review temporal interference stimulation humans evidence",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "crossref bibliographic: Human applications of transcranial temporal interference stimulation systematic review",
+      "source": "Crossref",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "crossref bibliographic: Systematic review of experimental studies in humans on transcranial TI stimulation",
+      "source": "Crossref",
+      "hits": 3,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Mirzakhalili 2020 Cell Systems biophysics of temporal interference stimulation conduction block",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Deng Lisanby Peterchev 2013 Brain Stimulation depth-focality tradeoff 50 coil designs",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Di Lazzaro Rothwell corticospinal activity evoked and modulated by non-invasive stimulation I-waves",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Aberra Peterchev 2020 simulation of TMS in head model with morphologically-realistic cortical neurons",
+      "source": "web search",
+      "hits": 10,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Siebner 2022 Clin Neurophysiol TMS of the brain: what is stimulated? consensus",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Huang Edwards Rounis Bhatia Rothwell 2005 Neuron theta burst stimulation",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Hamada 2013 Cerebral Cortex role of interneuron networks in driving human motor cortical plasticity",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "López-Alonso 2014 Brain Stimulation inter-individual variability NIBS paradigms",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Rossi 2021 Clin Neurophysiol safety and recommendations for TMS use IFCN",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Antal 2017 Clin Neurophysiol low intensity tES safety ethical legal regulatory guidelines",
+      "source": "web search",
+      "hits": 10,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Shannon 1992 A model of safe levels for electrical stimulation charge density",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Merrill Bikson Jefferys 2005 electrical stimulation of excitable tissue safe protocols",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "kilohertz frequency alternating current nerve conduction block mechanism review Kilgore Bhadra",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Capogrosso 2013 J Neurosci computational model epidural electrical stimulation spinal sensorimotor circuits",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Ali Sejnowski Fröhlich 2013 J Neurosci tACS network resonance",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Hannah Rothwell 2017 pulse duration current direction specificity TMS motor cortex",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Lempka 2020 patient-specific analysis neural activation spinal cord stimulation dorsal column",
+      "source": "web search",
+      "hits": 7,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "temporal interference human electric field envelope insufficient suprathreshold critique modeling cadaver",
+      "source": "web search",
+      "hits": 10,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Wang Aberra Grill Peterchev J Neural Eng responses of model cortical neurons to TI stimulation",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Di Lazzaro Rothwell 2014 J Physiol abstract I-waves epidural recordings",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.brs.2014.02.004",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1109/10.126616",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1111/ner.12100",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1113/jphysiol.2014.274316",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.42.9.687",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1103/PhysRevX.4.011004 (Plaksin NICE model)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.1015771108 (Krasovitski bilayer sonophore)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/srep24170 (Kubanek ion channel currents)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.cub.2019.08.021 (Oh astrocytic TRPA1)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/ncomms9264 (Ibsen sonogenetics)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/s41467-022-28205-y (Duque hsTRPA1)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.neuron.2010.05.008 (Tufail transcranial pulsed US)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/nn.3620 (Legon human tFUS S1)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.2300291120 (Piezo1 ultrasound)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.2006980118 (Sorum TRAAK)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.brs.2019.07.015 (Darrow thermal neuroinhibition)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.neuron.2018.04.036 (Guo cochlear pathway)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.neuron.2018.05.009 (Sato indirect auditory)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.brs.2019.03.005 (Mohammadjavadi deaf mouse)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.brs.2020.08.014 (Braun auditory masking)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1148/radiol.2202001804 (Hynynen BBB opening)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/s41467-018-04529-6 (Lipsman first-in-human BBB)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1148/radiol.11111417 (O'Reilly cavitation feedback control)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.1614777114 (Kovacs sterile inflammation)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.1710761114 (Silburt letter)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/0360-3016(84)90379-1 (Sapareto & Dewey CEM43)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1056/NEJMoa1600159 (Elias MRgFUS thalamotomy)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.3171/2015.3.JNS142592 (Chang skull density ratio)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1074/jbc.M409650200 (Wong-Riley cytochrome c oxidase)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.2203/dose-response.09-027.Hamblin (biphasic dose)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/nn1525 (Boyden ChR2)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/nn.4091 (Deisseroth opsin toolbox review)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/s41591-021-01351-4 (Sahel optogenetic therapy)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1126/science.adf0435 (Vargas intracellular 5-HT2A)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1073/pnas.0700293104 (Armbruster DREADDs)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1126/science.aan2475 (Gomez CNO back-metabolism)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/nrd.2015.21 (Banks blood-brain interface)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.7554/eLife.17210 (Meister physical limits to magnetogenetics)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1038/nn.4265 (Wheeler Magneto)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1126/science.1261821 (Chen wireless magnetothermal DBS)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1113/jphysiol.2011.211953 (Oliviero tSMS)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "doi:10.1016/j.tips.2004.02.012 (Kenakin receptor theory)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "search=Low-intensity ultrasound activates transmembrane chloride flow through CFTR",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "search=Insufficient low-level near infrared light penetration challenges the efficacy of transcranial photobiomodulation",
+      "source": "OpenAlex",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Piezo1 mediates ultrasound neuromodulation PNAS 2023 mouse brain",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "CFTR ultrasound neuromodulation mechanosensitive 2024 paper",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Tittelmeier 2025 Brain Stimulation photobiomodulation penetration dosimetry transcranial light",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "inTUS resource transcranial ultrasound stimulation meta-analysis eLife 100827 Caffaratti",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "transcranial ultrasound stimulation human tactile scalp sensation somatosensory confound peripheral",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "elifesciences.org/reviewed-preprints/100827v1 (full text incl. caveats)",
+      "source": "eLife reviewed preprint page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.neuron.2018.04.036 abstract",
+      "source": "Europe PMC articleApi (europepmc.org)",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.neuron.2018.05.009 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.brs.2019.03.005 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.brs.2019.07.015 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.cub.2019.08.021 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1523/JNEUROSCI.2394-18.2019 (Menz radiation force)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.7554/eLife.88762 (Kop auditory confounds)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1056/NEJMoa1600159 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1002/lsm.20148 (Karu nitric oxide)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/s41591-021-01351-4 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/nrd.2015.21 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.tips.2004.02.012 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/nn.4265 abstract",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TITLE:\"Low-intensity ultrasound activates transmembrane chloride flow through CFTR\"",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TITLE:\"Insufficient low-level near infrared light penetration\"",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TITLE:\"Thermal dose determination in cancer therapy\"",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TITLE:\"Reply to Silburt\" (Kovacs/Burks/Frank PNAS reply)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.7150/thno.21630 (McMahon & Hynynen microbubble dose)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1073/pnas.1711047114 (guessed DOI for Kovacs reply)",
+      "source": "Europe PMC articleApi",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TITLE:\"Parameter optimisation for mitigating somatosensory confounds during transcranial ultrasonic stimulation\"",
+      "source": "Europe PMC articleApi",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect PII S1935861X25002608 (Kop somatosensory parameters)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect PII S1935861X25002694 (Tittelmeier NIR penetration)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "nature.com/articles/nn1525 (Boyden abstract)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "PMC10767314 (CFTR paper full text)",
+      "source": "PMC",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "pubmed.ncbi.nlm.nih.gov/29804919 (Guo record)",
+      "source": "PubMed",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "brainstimjrnl.com S1935-861X(25)00269-4 fulltext",
+      "source": "publisher page",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "pnas.org/doi/10.1073/pnas.1710761114 and /10.1073/pnas.1711544114 (Silburt letter + Kovacs reply full text)",
+      "source": "publisher page",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "api.semanticscholar.org graph DOI:10.1016/j.neuron.2018.04.036",
+      "source": "Semantic Scholar API",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ebi.ac.uk europepmc REST search DOI:10.1016/j.neuron.2018.04.036 (and .05.009)",
+      "source": "Europe PMC REST (ebi.ac.uk)",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "colab.ws/articles/10.1016/j.neuron.2018.04.036",
+      "source": "colab.ws",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ouci.dntb.gov.ua ?s=10.1016/j.neuron.2018.04.036",
+      "source": "OUCI",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Ziemann Siebner 2008 \"Modifying motor learning through gating and homeostatic metaplasticity\" Brain Stimulation",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "antidepressants do not directly bind TrkB replication challenge Casarotto 2021 failed",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "repetitive magnetic stimulation cellular molecular mechanisms review 2022 2023 synaptic plasticity glia",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Vlachos repetitive magnetic stimulation induces structural plasticity dendritic spines calcium stores organotypic",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "transcranial direct current stimulation microglia astrocytes neuroinflammation mechanism 2022 study",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "BDNF Val66Met polymorphism response to non-invasive brain stimulation meta-analysis no effect",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "rTMS immediate early genes c-Fos Zif268 expression rat cortex frequency dependent",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "brain stimulation mitochondria bioenergetics mechanism rTMS tDCS 2021 2022 2023",
+      "source": "web search",
+      "hits": 10,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "large-scale analysis interindividual variability theta burst stimulation Corp 2020 Brain Stimulation",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "homeostatic synaptic plasticity review 2022 2023 synaptic scaling mechanisms Turrigiano",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "rTMS microglia TSPO PET human or rodent neuroinflammation 2023 2024",
+      "source": "web search",
+      "hits": 7,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI lookups (single-DOI) for known seminal/candidate papers",
+      "source": "OpenAlex works/doi + Europe PMC articleApi",
+      "hits": 30,
+      "kept": 27,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Hulsey 2017 parametric characterization neural activity locus coeruleus vagus nerve stimulation Experimental Neurology doi",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Roosevelt 2006 increased extracellular norepinephrine cortex hippocampus vagus nerve stimulation rat Brain Research doi",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "RESET-RA vagus nerve stimulation rheumatoid arthritis randomized sham-controlled Nature Medicine 2025",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "SCKAN Frontiers in Neuroinformatics 2025 1541184 connectivity knowledge base autonomic nervous system",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Gillespie \"Neuron Phenotype Ontology\" journal doi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "transcutaneous auricular vagus nerve stimulation no effect noradrenergic markers pupil salivary alpha-amylase P300 null 2022 2023",
+      "source": "web search",
+      "hits": 7,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "cholinergic anti-inflammatory pathway review",
+      "source": "web search",
+      "hits": 7,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Poe Foote Eschenko Johansen locus coeruleus review Nature Reviews Neuroscience 2020",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "vagus nerve stimulation cortical plasticity requires cholinergic basal forebrain Hulsey 2016 or Meyers 2019 noradrenergic",
+      "source": "web search",
+      "hits": 8,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Prescott Liberles \"internal senses of the vagus nerve\" Neuron 2022 doi",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "review non-invasive brain stimulation effects on cortisol HPA axis systematic review 2022 2023",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "review neuroimmune crosstalk HPA axis sympathetic nervous system immune regulation Nature Reviews 2021 2022 2023",
+      "source": "web search",
+      "hits": 8,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "dopamine neuromodulation gain control synaptic plasticity review three-factor learning rule neuromodulators",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "EEG phase-triggered TMS mu-rhythm excitability replication null 2021 2022 brain-state-dependent stimulation",
+      "source": "web search",
+      "hits": 7,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "serotonin neuromodulation review mechanisms gain plasticity cortex Neuron review 2021 2022",
+      "source": "web search",
+      "hits": 8,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.tics.2005.08.011",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.neuron.2015.09.034",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.biopsych.2012.04.028",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1002/ana.24974",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1002/ana.23951",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.brs.2017.11.016",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1523/JNEUROSCI.21-15-j0003.2001",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1038/35013070",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1038/nature01321",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1126/science.1209985",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1146/annurev.neuro.28.061604.135709",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1038/s41562-021-01161-1",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1176/appi.ajp.20220306",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.biopsych.2020.05.033",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1097/00001756-200405190-00011",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.expneurol.2017.01.005 (guessed Hulsey DOI — wrong paper)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1016/j.brainres.2006.08.093 (guessed Roosevelt DOI — wrong paper)",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "OpenAlex works/doi:10.1038/s41583-020-0360-9",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.brs.2017.11.016",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.biopsych.2012.04.028",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.tics.2005.08.011",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.neuron.2015.09.034",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/35013070",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/nature01321",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/s41562-021-01161-1",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.biopsych.2020.05.033",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:27988257 (Hulsey 2017)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:16962076 (Roosevelt 2006)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:41429981 (RESET-RA)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:35267146 (Neuron Phenotype Ontology)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:35300992 (CAP in humans)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:24411268 (CAP critical review)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:34990045 (D'Agostini taVNS null)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:41207482 (NIBS cortisol meta-analysis)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi EXT_ID:26834568 (Fremaux three-factor)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.cell.2016.05.011",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1126/science.aat5236",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.tics.2010.09.001",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/s41583-019-0271-1 (wrong DOI for LC review)",
+      "source": "Europe PMC",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.7554/eLife.70510",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1002/ana.25234",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/s41591-024-03196-z",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.neuron.2012.08.036",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.neuron.2019.05.041",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.tins.2020.10.007",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1016/j.neuron.2022.01.005 (guessed Prescott DOI — wrong paper)",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/nn.4477",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1038/nrneurol.2017.105",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi DOI:10.1152/jn.00808.2007",
+      "source": "Europe PMC",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Europe PMC articleApi multi-DOI batch (4 DOIs, OR query)",
+      "source": "Europe PMC",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "frontiersin.org fninf.2025.1541184 full text (author list resolution)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect.com/science/article/pii/S0896627321010370 (Prescott & Liberles)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect.com/science/article/abs/pii/S1935861X16000024 (Hulsey 2016)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect.com/science/article/abs/pii/S001448861930127X (Hulsey 2019)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect.com/science/article/pii/S1935861X25000245 (Pervaz meta-analysis)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect.com/science/article/pii/S1935861X24000597 (Melo serotonin/tDCS)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "frontiersin.org fnins.2022.849291 full text (Morrison drugs do not block VNS plasticity)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "nature.com/articles/s41583-020-0360-9 (Poe LC review abstract)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "journals.plos.org 10.1371/journal.pone.0208747 (Desideri nil effects)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "eneuro.org 11/11/ENEURO.0450-24.2024 (Perera state-dependent)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Bobo 1994 PNAS convection-enhanced delivery of macromolecules in the brain DOI",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Lochhead Thorne intranasal delivery of biologics to the central nervous system 2012 DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Merkus 'can nasal drug delivery bypass the blood-brain barrier' critique intranasal CNS delivery",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ziconotide intrathecal randomized controlled trial Staats 2004 JAMA DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Penn 1989 New England Journal Medicine intrathecal baclofen severe spasticity double-blind DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Deer Polyanalgesic Consensus Conference 2017 intrathecal drug delivery guidelines Neuromodulation DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "blood-brain barrier drug delivery review efflux transporters P-glycoprotein determinants CNS penetration 2022 Pharmacological Reviews",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "'The Impact of P-Glycoprotein on CNS Drug Efflux and Variability in Response' 2025 doi journal",
+      "source": "web search",
+      "hits": 6,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Berman 2000 'antidepressant effects of ketamine in depressed patients' Biological Psychiatry DOI",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Zarate 2006 randomized trial ketamine treatment-resistant major depression Archives of General Psychiatry DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Yamaguchi 2018 '(2R,6R)-hydroxynorketamine is not essential for the antidepressant actions of ketamine in mice' DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Bonaventura 2022 Molecular Psychiatry molecular and behavioral ketamine (2R,6R)-hydroxynorketamine NMDA receptor occupancy",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "'Target deconvolution studies of (2R,6R)-hydroxynorketamine: an elusive search' Bonaventura Molecular Psychiatry 2022 doi 10.1038",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "2024 review ketamine antidepressant mechanism debate NMDA versus hydroxynorketamine opioid both sides Neuropsychopharmacology",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Popova 2019 TRANSFORM-2 esketamine nasal spray treatment-resistant depression American Journal of Psychiatry DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Anand 2023 NEJM ELEKT-D ketamine versus electroconvulsive therapy treatment-resistant depression DOI",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Ekstrand 2022 KetECT ketamine versus electroconvulsive therapy randomized trial International Journal of Neuropsychopharmacology DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Yaden Griffiths 2021 'subjective effects of psychedelics are necessary for their enduring therapeutic effects' DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Olson 2021 'subjective effects of psychedelics may not be necessary for their enduring therapeutic effects' ACS Pharmacology DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "psychedelic mechanism review 2025 5-HT2A receptor cortical plasticity critical period dendritic spine Nature Reviews",
+      "source": "web search",
+      "hits": 8,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "COMP005 phase 3 psilocybin COMP360 treatment-resistant depression published trial results 2025",
+      "source": "web search",
+      "hits": 6,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "COMP005 psilocybin phase 3 trial published New England Journal of Medicine 2025 single dose COMP360 6 weeks MADRS",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "'COMP005' OR 'COMP 005' psilocybin phase 3 peer-reviewed publication 2026 journal",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Muthukumaraswamy 2021 blinding expectancy confounds psychedelic randomized controlled trials DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Meltzer-Brody 2018 brexanolone injection postpartum depression Lancet phase 3 DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Deligiannidis zuranolone postpartum depression SKYLARK randomized trial American Journal of Psychiatry 2023 DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Cochrane review 2025 neurosteroids brexanolone zuranolone postnatal depression",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Belelli Lambert 2005 'neurosteroids: endogenous regulators of the GABA-A receptor' Nature Reviews Neuroscience DOI tonic inhibition",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "general anaesthesia mechanisms review 2023 propofol ketamine nitrous oxide xenon molecular targets consciousness circuits",
+      "source": "web search",
+      "hits": 9,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "nitrous oxide treatment-resistant depression randomized trial Nagele 25% 50% concentration Science Translational Medicine",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "levodopa mechanism review dopamine replacement dyskinesia pulsatile stimulation 2023 review Parkinson pharmacology",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "LeWitt 'Levodopa therapy for Parkinson's disease: pharmacokinetics and pharmacodynamics' Movement Disorders DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Moncrieff 2023 umbrella review serotonin theory of depression Molecular Psychiatry DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Harmer Duman Cowen 2017 'How do antidepressants work' Lancet Psychiatry novel perspectives DOI",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "cholinesterase inhibitors mechanism review donepezil cholinergic system Alzheimer 2023 review attention network",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "McGirr 2022 JAMA Psychiatry D-cycloserine intermittent theta burst stimulation depression randomized clinical trial DOI",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "McGirr Cole Patten Adams 2025 obsessive-compulsive disorder iTBS D-cycloserine randomized clinical trial results Yale-Brown",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Ziemann 2015 'TMS and drugs revisited' Clinical Neurophysiology pharmaco-TMS plasticity DOI",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1073/pnas.91.6.2076",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1016/j.addr.2011.11.002",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.2165/00126839-200708030-00001",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1001/jama.291.1.63",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1016/S0006-3223(99)00230-9",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1001/archpsyc.63.8.856",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1126/science.1190287",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1038/s41386-018-0084-y",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.3390/ijms252413658",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1176/appi.ajp.2019.19020172",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1124/pr.115.011478",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1056/NEJMoa2206443",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1056/NEJMoa2206443",
+      "source": "Crossref API",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1016/S0140-6736(18)31551-4",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1176/appi.ajp.20220785",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1002/14651858.CD014624.pub2",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1001/jama.2023.14530",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1038/nrn1703",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1038/nrn2372",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1176/appi.ajp.20240181",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1016/j.clinph.2014.08.028",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1038/s41380-022-01661-0",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1016/S2215-0366(17)30015-9",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1002/14651858.CD005593",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1002/cpt.2545",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1002/jbt.70190",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1002/mds.26082",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1126/scitranslmed.abe1376",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1038/jcbfm.2012.126",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.2967/jnmt.117.199638",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "works/doi:10.1113/jphysiol.2003.049916",
+      "source": "OpenAlex",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.addr.2011.11.002 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.2165/00126839-200708030-00001 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/S0006-3223(99)00230-9 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/s41386-018-0084-y (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/s41380-022-01673-w (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1124/pr.115.011478 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1021/acsptsci.0c00194 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1021/acsptsci.0c00192 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1080/17512433.2021.1933434 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1056/NEJMoa2206443 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/S0140-6736(18)31551-4 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1056/NEJMoa2302399 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1056/NEJM198906083202303 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/j.clinph.2014.08.028 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1016/S2215-0366(17)30015-9 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/nrn2372 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1038/nrn1703 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1126/scitranslmed.abe1376 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI:10.1176/appi.ajp.20240181 (abstract)",
+      "source": "Europe PMC articleApi",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "jneurosci.org/content/43/6/1038 (publisher page)",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "nature.com/articles/s41380-025-03169-9",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "nature.com/articles/s41380-025-03257-w",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "jamanetwork.com/journals/jamapsychiatry/fullarticle/2796973",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "academic.oup.com/ijnp/article/25/5/339/6451171",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "annualreviews.org/content/journals/10.1146/annurev-biochem-030222-121430",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sciencedirect.com/science/article/abs/pii/S1094715924000667",
+      "source": "publisher page",
+      "hits": 1,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "nejm.org/doi/10.1056/NEJMoa2206443",
+      "source": "publisher page",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "psychiatryonline.org/doi/10.1176/appi.ajp.20240181",
+      "source": "publisher page",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "colab.ws/articles/10.1056/NEJMoa2206443",
+      "source": "aggregator page",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "pubmed.ncbi.nlm.nih.gov/35768639/",
+      "source": "PubMed",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "ouci.dntb.gov.ua search for 10.1176/appi.ajp.20240181",
+      "source": "aggregator page",
+      "hits": 0,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Buch 2017 tDCS motor learning reporting checklist Clinical Neurophysiology",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "sham tDCS blinding integrity systematic review 2021-2023",
+      "source": "web search",
+      "hits": 9,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TMS sham coil design somatosensory auditory confound Duecker Sack",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "RATES checklist reporting transcranial electrical stimulation ContES 2023",
+      "source": "web search",
+      "hits": 8,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Fonteneau 2019 Sham tDCS hidden source of variability",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Neuron Phenotype Ontology NPO Gillespie Neuroinformatics 2022 SPARC SCKAN",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "EEG phase-dependent TMS MEP mu-rhythm no effect replication failure",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Alekseichuk 2019 comparative modeling TMS tES mouse monkey human",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Conde 2019 non-transcranial TMS-evoked potential ambiguity",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "TMS-EEG sensory confound counter-evidence optimized sham Gordon/Belardinelli/Rocchi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "test-retest reliability inter-individual variability TBS 2022-2023",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Jackson Bikson 2016 animal models of tDCS methods and mechanisms",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "single-DOI lookups (27) for metadata/abstracts",
+      "source": "OpenAlex works/doi",
+      "hits": 27,
+      "kept": 22,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "DOI abstract lookups (Lopez-Alonso, Heroux, Button, Lefaucheur 2020)",
+      "source": "Europe PMC REST (ebi.ac.uk)",
+      "hits": 4,
+      "kept": 4,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "magnetic seizure therapy mechanism seizure induction parameters versus electroconvulsive therapy randomized trial",
+      "source": "web search",
+      "hits": 7,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "magnetic seizure therapy review mechanism high-frequency rTMS 100 Hz seizure induction anesthesia parameters Cretaz Brunoni",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"Optimal frequency for seizure induction with electroconvulsive therapy and magnetic seizure therapy\" Deng Peterchev Brain Stimulation doi",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "transcranial pulse stimulation TPS Alzheimer's disease ultrashort shockwave energy flux density 0.2 mJ/mm2 Beisteiner",
+      "source": "web search",
+      "hits": 10,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "transcranial pulse stimulation randomized sham-controlled trial Alzheimer's 2024 2025 double-blind",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"Ultrasound Neuromodulation With Transcranial Pulse Stimulation in Alzheimer Disease\" randomized clinical trial JAMA doi 2025",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"Clarifying the Specificity of Transcranial Pulse Stimulation\" doi 2025",
+      "source": "web search",
+      "hits": 8,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Herrmann 2001 human EEG responses 1-100 Hz flicker resonance phenomena visual cortex Experimental Brain Research",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Cognito Therapeutics OVERTURE gamma sensory stimulation 40 Hz audio-visual Alzheimer randomized trial results Hajos",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Capilla 2011 steady-state visual evoked potentials explained by temporal superposition of transient event-related responses PLoS ONE",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "galvanic vestibular stimulation review current parameters irregular afferents mechanism Fitzpatrick Day",
+      "source": "web search",
+      "hits": 6,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"A review of parameter settings for galvanic vestibular stimulation in clinical applications\" 2025 doi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Oliviero 2011 transcranial static magnetic field stimulation human motor cortex Journal of Physiology 0.5 tesla",
+      "source": "web search",
+      "hits": 8,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "transcranial static magnetic field stimulation tSMS meta-analysis effect size motor cortex excitability review mechanism",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Rivadulla Foffani Oliviero magnetic field strength reproducibility neodymium magnets transcranial static magnetic field stimulation Neuromodulation 2014",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "static magnetic field stimulation mechanism neuronal activity animal cortex diamagnetic anisotropy membrane Oliviero Aguilar review 2023",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"Home-based transcranial static magnetic field stimulation\" IFCN handbook chapter doi Clinical Neurophysiology Practice",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "focal cortical cooling epilepsy human seizure suppression temperature 20 degrees reversible Rothman",
+      "source": "web search",
+      "hits": 8,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "\"temperatures achieved in human and canine neocortex during intraoperative passive or active focal cooling\" doi",
+      "source": "web search",
+      "hits": 7,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "functional electrical stimulation recruitment order reverse recruitment fatigue review clinical evidence neuroprosthesis",
+      "source": "web search",
+      "hits": 9,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "hypoglossal nerve stimulation mechanism of action stimulation parameters amplitude pulse width 90 microseconds 33 Hz review obstructive sleep apnea",
+      "source": "web search",
+      "hits": 9,
+      "kept": 2,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "peripheral focused ultrasound splenic stimulation failure to replicate negative anti-inflammatory heating confound critique",
+      "source": "web search",
+      "hits": 9,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Cotero 2019 \"Noninvasive sub-organ ultrasound stimulation for targeted neuromodulation\" Nature Communications doi",
+      "source": "web search",
+      "hits": 10,
+      "kept": 1,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "Read Kirsch McGrath electroconvulsive therapy depression review quality sham ECT trials meta-analyses 2019 doi",
+      "source": "web search",
+      "hits": 8,
+      "kept": 0,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "single-DOI metadata/abstract lookups: 10.1001/archpsyc.58.3.303, 10.1001/archpsyc.58.2.199, 10.1088/1741-2560/8/1/016007, 10.1001/jamapsychiatry.2023.4599, 10.1002/advs.201902583, 10.1155/2015/521398,",
+      "source": "OpenAlex works/doi",
+      "hits": 13,
+      "kept": 11,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "abstract lookups: 10.1038/nature07448, 10.1016/j.nurt.2008.12.002, 10.1146/annurev.bioeng.6.040803.140103, 10.1126/scitranslmed.aaf8083, 10.1089/ther.2014.0025, 10.1088/1741-2552/ac18ad, 10.7554/eLife",
+      "source": "Europe PMC REST (europepmc.org/api/get/articleApi)",
+      "hits": 24,
+      "kept": 23,
+      "date": "2026-09-15"
+     },
+     {
+      "q": "publisher/preprint full-text or abstract pages: biorxiv 10.1101/665471v1.full (TPS parameters); sciencedirect PII S2667174325000254, S1935861X25003444, S1935861X23017436, S1094715921064278, S095461112",
+      "source": "publisher pages via WebFetch",
+      "hits": 17,
+      "kept": 16,
+      "date": "2026-09-15"
+     }
+    ],
+    "snowball": [
+     "forward from SimNIBS publications page (simnibs.github.io): kept 3 (Thielscher 2015, Saturnino 2019 JNE, Puonti 2020)",
+     "from Tittelmeier 2025 topic: searched for strongest counter-dosimetry paper: kept 1 (Van Lankveld 2024 preprint)",
+     "from Van Hoornweder search results: kept 1 (Numssen 2024 E-field-based dosing)",
+     "from Kapur 2000 occupancy threshold: kept 1 counter/qualifier (Siafis 2023)",
+     "from chemogenetics temporal-resolution topic: kept 1 exposure caveat (Gomez 2017)",
+     "forward from johnson2020dose (search results page): kept 1 (vieira2024temporal)",
+     "forward from krause2019transcranial / vieira2020tacs (search results page): kept 1 (krause2022brain)",
+     "forward from aberra2020simulation (search results page): kept 1 (siebner2022transcranial)",
+     "forward from antal2017low (search results page): kept 1 (antal2026low, 2017-2025 update)",
+     "sideways from TI critique search: kept 1 (wang2022responses)",
+     "sideways from kHz block search: kept 1 (yi2020kilohertz)",
+     "backward from Caffaratti 2024 (inTUS): the directionality hypothesis it tests is the NICE model — kept plaksin2014 as the model source; also confirmed duty-cycle/sonication-duration as the parameter axes to carry into v0-3 and v0-14.",
+     "backward from Kovacs 2017 (sterile inflammation): located the PNAS exchange (Silburt et al. 10.1073/pnas.1710761114; Kovacs reply 10.1073/pnas.1711544114) and the substantive counter-experiment McMahon & Hynynen 2017 — kept 1 (mcmahon2017); the two PNAS letters are metadata-resolved but their text was not readable this session (pnas.org 403), so they are logged in todo rather than cited.",
+     "forward from Kubanek 2016 (K2P channels): found Sorum et al. 2021 PNAS 10.1073/pnas.2006980118 (TRAAK activated through the lipid membrane, single-channel kinetics) — verified but not kept, to stay near the slice target; strong 2021+ replacement candidate.",
+     "from the CFTR web search: surfaced Yang et al. 2022 Nat Commun 10.1038/s41467-022-28040-1 (mechanosensitive calcium accumulation and ion-channel amplification) and a 2023 review of mechanosensitive-channel sonogenetics — logged, not kept.",
+     "forward from Kop 2024 (auditory confound): same group's Kop et al. 2025 Brain Stimulation parameter-optimisation paper for somatosensory confounds — kept 1 (kop2025somatosensory).",
+     "backward from Meister 2016: the two claim papers it disputes are Wheeler 2016 (Magneto/ferritin-TRPV4) and Stanley/Friedman ferritin-TRPV1 work; kept wheeler2016 as the named contested claim. Chen et al. 2015 Science magnetothermal DBS (10.1126/science.1261821) verified as the physically uncontested nanoparticle-heating contrast — not kept, see todo.",
+     "forward from casarotto2021trkb (Europe PMC comment search): found Gold & Wong 2024 Mol Psychiatry comment (10.1038/s41380-024-02615-4); read it, judged too thin (catecholamine-hypothesis restatement, no data) - kept 0",
+     "from web search on BDNF Val66Met: Ramasawmy 2025 Clin Neurophysiol Pract (10.1016/j.cnp.2025.08.009) read; not kept (prefrontal tDCS category learning, peripheral to cellular claims) - kept 0",
+     "from web search: Lenz 2016 Nat Commun (10.1038/ncomms10020, rMS weakens dendritic inhibitory synapses) read; dropped for length in favour of lu2025itbs600 - kept 0",
+     "from web search: Ly 2018 Cell Rep psychedelic plasticity (10.1016/j.celrep.2018.05.022) read; dropped because psychedelics pack covers it; moliner2023psychedelics kept - kept 0",
+     "Nitsche 2003 J Physiol (10.1113/jphysiol.2003.049916) and Anil 2023 PLoS Comput Biol (10.1371/journal.pcbi.1011027) read; dropped for slice size (candidates if another slice needs tDCS pharmacology / computational homeostatic rewiring)",
+     "forward from tracey2002reflex (inflammatory reflex): kept 3 (rosasballina2011tcells, martelli2014critical, alen2022cholinergic)",
+     "forward from hulsey2016cholinergic (neuromodulator dependence of VNS plasticity): kept 2 (hulsey2017locus, morrison2022drugs)",
+     "forward from fox2012sgacc (sgACC connectivity targeting): kept 2 (siddiqi2021circuits, elbau2023connectivity)",
+     "forward from imam2025sckan (SPARC knowledge engineering): kept 1 (gillespie2022npo)",
+     "backward from zrenner2018realtime (brain-state-dependent TMS): kept 0 written, 2 verified candidates logged in todo",
+     "forward from zanos2016hnk (already collected): found the metabolite controversy chain — bonaventura2022hnk (target deconvolution, negative) and zanos2023nmdar (NMDAR-activation requirement); kept 2. Yamaguchi 2018 Neuropsychopharmacology (10.1038/s41386-018-0084-y) read and verified but not kept (redundant with bonaventura2022hnk, which cites it) — available if a third dissent voice is wanted.",
+     "forward from vargas2023intracellular (already collected): led to the 5-HT2A necessity dispute — drewko2025psychedelic (review of the necessity evidence) and ekins2025presynaptic (plasticity in neurons lacking postsynaptic 5-HT2A); kept 2.",
+     "backward from cole2022dcycloserine: the same group's OCD replication (mcgirr2025ocd) and the pharmaco-TMS framework paper (ziemann2015drugs); kept 2.",
+     "lateral from anand2023elektd: the opposite-direction ketamine-vs-ECT trial (ekstrand2022ketect); kept 1.",
+     "forward from Conde 2019 (sensory confound) to Gordon 2021 optimized sham: kept 1 (dissent pair)",
+     "from Zrenner 2018 phase-triggered TMS (slice E) to Desideri 2018 nil effects: kept 1 (dissent)",
+     "from DOI lookup 10.1016/j.clinph.2016.10.087 (intended Buch 2017, resolved to Lefaucheur 2017 tDCS guidelines): kept 0, abstract absent",
+     "backward from Deng 2024 MST-vs-ECT RCT to Lisanby 2001 NHP seizure induction and Deng 2011 FEM focality: kept 2",
+     "forward from Deng 2011 (ECT/MST field modelling) to Peterchev 2025 optimal-frequency NHP study: kept 1",
+     "forward from Beisteiner 2020 TPS to Matt 2025 sham-controlled crossover RCT and Karakatsani 2025 mouse mechanism study: kept 2",
+     "from Herrmann 2001 flicker resonance to Capilla 2011 superposition account: kept 1 (dissent pair on entrainment)",
+     "from Oliviero 2011 tSMS to Lorenz 2020 non-replication and Ammann 2026 IFCN chapter: kept 2 (dissent pair)",
+     "from Rothman 2009 focal cooling review to Smyth 2015 human/canine intraoperative thermometry: kept 1",
+     "from Cotero 2019 sub-organ pFUS to Zachs 2019 splenic arthritis study, Cotero 2022 hepatoportal, Zanos 2023 first-in-human: kept 3",
+     "from Peckham & Knutson 2005 FES review to Bickel 2011 recruitment-order critical appraisal: kept 1 (rival mechanism for 'reverse recruitment')"
+    ],
+    "inclusion": [
+     "human-applicable modality or a mechanism study bearing on one",
+     "primary study, authoritative review, consensus statement or guideline",
+     "DOI resolved and abstract or full text read in the sweep",
+     "English"
+    ],
+    "exclusion": [
+     "device engineering and manufacturing",
+     "regulatory and reimbursement detail",
+     "practical clinical protocols",
+     "recreational or non-clinical drug use",
+     "genetic actuators as a subject in their own right (kept only as mechanism evidence)",
+     "claims that could not be verified against a read abstract or full text"
+    ],
+    "known_gaps": [
+     "PubMed, PMC, Semantic Scholar, cell.com, pnas.org, NEJM, Wiley and IOP were unreachable or rate-limited from the sweep environment; abstracts came from OpenAlex, Europe PMC and publisher pages instead",
+     "two references remain unverified and may not support a claim (see todo.yaml)",
+     "no multi-laboratory registered-report replication in brain stimulation was found",
+     "no peer-reviewed phase 3 psilocybin publication existed as of the as_of date"
+    ]
+   },
+   "corpus_profile": {
+    "by_tier": {
+     "background": 72,
+     "current": 117,
+     "seminal": 36,
+     "classic": 38
+    },
+    "year_range": [
+     1956,
+     2026
+    ],
+    "concentration": "Seven parallel sweeps by topic slice, so no single senior author dominates; the ultrasound-mechanism and tES-entrainment literatures are each concentrated in a handful of labs, and that is stated where the text relies on them.",
+    "dissent_represented": true,
+    "by_species": {
+     "n/a": 29,
+     "mixed": 38,
+     "computational": 26,
+     "human": 120,
+     "in-vitro": 24,
+     "rodent": 49,
+     "nhp": 13
+    },
+    "by_evidence_kind": {
+     "consensus": 12,
+     "guideline": 8,
+     "review": 56,
+     "textbook": 1,
+     "computational": 20,
+     "systematic-review": 19,
+     "primary-experimental": 99,
+     "primary-clinical-trial": 36,
+     "database": 12
+    },
+    "verified": 260,
+    "unverified": 3,
+    "contested_entries": 80,
+    "note": "223 references after de-duplication by DOI across seven slices. 36 seminal / 28 classic / 88 current / 71 background under CONTENT-PACK v0.5 tiers."
+   }
+  }
+ }
+}

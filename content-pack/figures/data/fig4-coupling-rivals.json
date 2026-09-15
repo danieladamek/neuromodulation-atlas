@@ -1,0 +1,313 @@
+{
+  "nodes": [
+    {
+      "id": "drive-pressure",
+      "label": "Pressure wave (low-intensity ultrasound)",
+      "kind": "drive",
+      "term": "tus"
+    },
+    {
+      "id": "drive-microbubble",
+      "label": "Microbubble cavitation",
+      "kind": "drive",
+      "term": "cavitation"
+    },
+    {
+      "id": "drive-heat",
+      "label": "Heat",
+      "kind": "drive",
+      "term": "thermal-dose"
+    },
+    {
+      "id": "drive-light",
+      "label": "Light (red to near-infrared)",
+      "kind": "drive",
+      "term": "photobiomodulation"
+    },
+    {
+      "id": "drive-ligand",
+      "label": "Ligand",
+      "kind": "drive",
+      "term": "receptor-occupancy"
+    },
+    {
+      "id": "drive-magnetic",
+      "label": "Static or alternating magnetic field",
+      "kind": "drive",
+      "term": "magnetogenetics"
+    },
+    {
+      "id": "piezo1",
+      "label": "Piezo1 and other mechanosensitive channels",
+      "kind": "transducer",
+      "role": "proposed primary",
+      "term": "piezo1"
+    },
+    {
+      "id": "bilayer-sonophore",
+      "label": "Lipid bilayer as sonophore (intramembrane cavitation)",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "intramembrane-cavitation"
+    },
+    {
+      "id": "radiation-force",
+      "label": "Acoustic radiation force on tissue",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "acoustic-radiation-force"
+    },
+    {
+      "id": "astrocytic-trpa1",
+      "label": "Astrocytic TRPA1 with Best1 glutamate release",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "trpa1"
+    },
+    {
+      "id": "auditory-pathway",
+      "label": "Cochlea and auditory pathway (co-stimulation)",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "auditory-confound"
+    },
+    {
+      "id": "endothelium",
+      "label": "Oscillating microbubble at the vessel wall",
+      "kind": "transducer",
+      "role": "proposed primary",
+      "term": "microbubble"
+    },
+    {
+      "id": "sterile-inflammation",
+      "label": "Sterile inflammatory injury",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "sterile-inflammation"
+    },
+    {
+      "id": "temperature-kinetics",
+      "label": "Temperature dependence of channel kinetics and release",
+      "kind": "transducer",
+      "role": "proposed primary",
+      "term": "thermal-account"
+    },
+    {
+      "id": "mechanical-parameters",
+      "label": "Mechanical parameters (duty cycle, pressure)",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "duty-cycle"
+    },
+    {
+      "id": "cco",
+      "label": "Cytochrome c oxidase, with nitric oxide photodissociation",
+      "kind": "transducer",
+      "role": "proposed primary",
+      "term": "cytochrome-c-oxidase"
+    },
+    {
+      "id": "insufficient-light",
+      "label": "No transducer engaged: too little light arrives",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "transmittance"
+    },
+    {
+      "id": "surface-receptor",
+      "label": "Receptor binding site, described by affinity, occupancy and efficacy",
+      "kind": "transducer",
+      "role": "proposed primary",
+      "term": "operational-model"
+    },
+    {
+      "id": "intracellular-receptor",
+      "label": "Intracellular receptor pool and lipid-domain membrane sites",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "receptor-compartment"
+    },
+    {
+      "id": "metabolite",
+      "label": "A metabolite, not the injected compound, as the acting ligand",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "active-species"
+    },
+    {
+      "id": "ferritin-trpv4",
+      "label": "TRPV4 fused to ferritin (Magneto)",
+      "kind": "transducer",
+      "role": "proposed primary",
+      "term": "ferritin"
+    },
+    {
+      "id": "physically-infeasible",
+      "label": "No viable coupling term: forces and heating short by 5-10 orders of magnitude",
+      "kind": "transducer",
+      "role": "named rival",
+      "term": "order-of-magnitude-test"
+    }
+  ],
+  "edges": [
+    {
+      "from": "drive-pressure",
+      "to": "piezo1",
+      "label": "mouse motor cortex and amygdala, conditional knockout, ex vivo and in vivo",
+      "relation": "proposed primary",
+      "refs": [
+        68,
+        67,
+        70
+      ]
+    },
+    {
+      "from": "drive-pressure",
+      "to": "bilayer-sonophore",
+      "label": "computational bilayer-sonophore model, no measurement",
+      "relation": "rival",
+      "refs": [
+        65
+      ]
+    },
+    {
+      "from": "drive-pressure",
+      "to": "radiation-force",
+      "label": "ex vivo salamander retina, carrier frequency swept 0.5-43 MHz",
+      "relation": "rival",
+      "refs": [
+        66
+      ]
+    },
+    {
+      "from": "drive-pressure",
+      "to": "astrocytic-trpa1",
+      "label": "rodent and in vitro; in tension with neuronal Piezo1 deletion",
+      "relation": "rival",
+      "refs": [
+        69,
+        68
+      ]
+    },
+    {
+      "from": "drive-pressure",
+      "to": "auditory-pathway",
+      "label": "guinea pig nerve transection, mouse calcium imaging, four human experiments",
+      "relation": "rival",
+      "refs": [
+        74,
+        75,
+        77,
+        76
+      ]
+    },
+    {
+      "from": "drive-microbubble",
+      "to": "endothelium",
+      "label": "rabbit brain with contrast agent; rat cavitation-feedback control",
+      "relation": "proposed primary",
+      "refs": [
+        80,
+        81
+      ]
+    },
+    {
+      "from": "drive-microbubble",
+      "to": "sterile-inflammation",
+      "label": "rat, damage-associated molecular patterns at 24 h, against a microbubble-dose account",
+      "relation": "rival",
+      "refs": [
+        83,
+        84
+      ]
+    },
+    {
+      "from": "drive-heat",
+      "to": "temperature-kinetics",
+      "label": "rat thalamus with thermometry, suppression reproduced by heating through an optical fibre",
+      "relation": "proposed primary",
+      "refs": [
+        71,
+        85
+      ]
+    },
+    {
+      "from": "drive-heat",
+      "to": "mechanical-parameters",
+      "label": "human systematic review of 32 studies, self-declared tentative; predictions from the cavitation model",
+      "relation": "rival",
+      "refs": [
+        79,
+        65
+      ]
+    },
+    {
+      "from": "drive-light",
+      "to": "cco",
+      "label": "primary neuron culture against cyanide, action spectrum 670-880 nm; HeLa cells for the nitric oxide step",
+      "relation": "proposed primary",
+      "refs": [
+        88,
+        89
+      ]
+    },
+    {
+      "from": "drive-light",
+      "to": "insufficient-light",
+      "label": "human skull specimens, measured transmittance below 1%, against a Monte Carlo estimate of about 15%",
+      "relation": "rival",
+      "refs": [
+        22,
+        23
+      ]
+    },
+    {
+      "from": "drive-ligand",
+      "to": "surface-receptor",
+      "label": "receptor-theory review; human PET occupancy windows",
+      "relation": "proposed primary",
+      "refs": [
+        91,
+        26,
+        27
+      ]
+    },
+    {
+      "from": "drive-ligand",
+      "to": "intracellular-receptor",
+      "label": "rodent and in vitro, intracellular 5-HT2A; in vitro lipid domains for anaesthetics",
+      "relation": "rival",
+      "refs": [
+        92,
+        184
+      ]
+    },
+    {
+      "from": "drive-ligand",
+      "to": "metabolite",
+      "label": "rodent and macaque PET with pharmacology: clozapine-N-oxide converted to clozapine",
+      "relation": "rival",
+      "refs": [
+        29
+      ]
+    },
+    {
+      "from": "drive-magnetic",
+      "to": "ferritin-trpv4",
+      "label": "calcium imaging, slice and in vivo electrophysiology, zebrafish and mouse behaviour",
+      "relation": "proposed primary",
+      "refs": [
+        95
+      ]
+    },
+    {
+      "from": "drive-magnetic",
+      "to": "physically-infeasible",
+      "label": "first-principles calculation, no preparation",
+      "relation": "rival",
+      "refs": [
+        94
+      ]
+    }
+  ]
+}

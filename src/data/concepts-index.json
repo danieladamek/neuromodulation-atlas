@@ -1,0 +1,533 @@
+[
+ {
+  "id": "acoustic-mechanotransduction",
+  "title": "Acoustic coupling and mechanotransduction",
+  "one_liner": "What a pressure wave delivers to tissue - force, heat, bubble activity - and which structures are candidates for converting it into neural activity.",
+  "prerequisites": [
+   "dose-and-parameter-sets"
+  ],
+  "figures": [],
+  "terms": [
+   "tus",
+   "sonication",
+   "isppa",
+   "watts-per-square-centimetre",
+   "megapascal",
+   "mechanical-index",
+   "duty-cycle",
+   "in-situ-exposure",
+   "free-field-parameters",
+   "hydrophone",
+   "skull-density-ratio",
+   "intramembrane-cavitation",
+   "cavitation",
+   "microbubble",
+   "acoustic-radiation-force",
+   "mechanosensitive-channel",
+   "piezo1",
+   "trpa1",
+   "cem43"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "cable-theory-and-activating-function",
+  "title": "Cable theory and the activating function",
+  "one_liner": "Why an extracellular electrode excites a neuron through the second spatial derivative of the potential along its axis, not through the potential itself.",
+  "prerequisites": [
+   "electric-field-modelling"
+  ],
+  "figures": [],
+  "terms": [
+   "cable-model",
+   "activating-function",
+   "node-of-ranvier",
+   "myelinated-axon",
+   "current-distance-relation",
+   "chronaxie",
+   "recruitment-order",
+   "cathodal-stimulation",
+   "anodal-stimulation",
+   "conduction-block",
+   "sodium-channel-inactivation",
+   "morphologically-realistic-model"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "closed-loop-control",
+  "title": "Closed-loop control",
+  "one_liner": "When delivery depends on a measured state, the intervention becomes a control loop and dose stops being a setting in a table.",
+  "prerequisites": [
+   "dose-and-parameter-sets",
+   "oscillations-and-entrainment",
+   "metaplasticity-and-state-dependence"
+  ],
+  "figures": [],
+  "terms": [
+   "closed-loop-stimulation",
+   "adaptive-dbs",
+   "biomarker",
+   "beta-burst",
+   "local-field-potential",
+   "phase-triggered-stimulation",
+   "mu-rhythm",
+   "state-dependence",
+   "dose-parameter-set",
+   "ultraharmonic-emission"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "connectivity-based-targeting",
+  "title": "Connectivity-based targeting",
+  "one_liner": "Choosing where to stimulate from what a site is connected to, rather than from the coordinates of the site itself.",
+  "prerequisites": [
+   "electric-field-modelling"
+  ],
+  "figures": [],
+  "terms": [
+   "connectivity-based-targeting",
+   "target-definition",
+   "functional-connectivity",
+   "normative-connectome",
+   "subgenual-cingulate",
+   "dlpfc",
+   "rtms",
+   "deep-brain-stimulation",
+   "e-field"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "dose-and-parameter-sets",
+  "title": "Dose as a parameter set",
+  "one_liner": "Why a stimulation dose is a set of parameters with units rather than a single number.",
+  "prerequisites": [],
+  "figures": [],
+  "terms": [
+   "dose",
+   "dose-parameter-set",
+   "exposure",
+   "nominal-stimulus",
+   "effective-stimulus",
+   "charge-per-phase",
+   "charge-density",
+   "shannon-equation",
+   "mechanical-index",
+   "cem43",
+   "fluence",
+   "irradiance",
+   "receptor-occupancy",
+   "cmax"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "electric-field-modelling",
+  "title": "Electric field modelling as dosimetry",
+  "one_liner": "How finite-element models turn a device setting into an estimated electric field in a particular head, and what that estimate does and does not license.",
+  "prerequisites": [
+   "dose-and-parameter-sets"
+  ],
+  "figures": [],
+  "terms": [
+   "e-field",
+   "dosimetry",
+   "finite-element-head-model",
+   "simnibs",
+   "tissue-conductivity",
+   "current-shunting",
+   "e-field-outcome-measure",
+   "volts-per-metre",
+   "millivolts-per-millimetre",
+   "motor-threshold",
+   "depth-focality-tradeoff",
+   "current-density"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "evidence-grading-and-translation",
+  "title": "Evidence grading and translation",
+  "one_liner": "What a graded recommendation actually asserts, and what survives when a result crosses from rodent to human or from slice to patient.",
+  "prerequisites": [
+   "sham-and-confound-design"
+  ],
+  "figures": [],
+  "terms": [
+   "evidence-level",
+   "evidence-and-conclusion-ontology",
+   "meta-analysis",
+   "species-translation",
+   "preparation",
+   "non-inferiority",
+   "statistical-power",
+   "reproducibility",
+   "hedges-g",
+   "standardised-mean-difference",
+   "bayes-factor",
+   "clinical-response"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "field-neuron-coupling-geometry",
+  "title": "Field–neuron coupling geometry",
+  "one_liner": "How much a given field polarises a neuron depends on orientation, morphology and compartment, and on whether the cell is silent or already active.",
+  "prerequisites": [
+   "cable-theory-and-activating-function",
+   "electric-field-modelling"
+  ],
+  "figures": [],
+  "terms": [
+   "uniform-field",
+   "coupling-constant",
+   "somato-dendritic-axis",
+   "compartment-specific-polarisation",
+   "terminal-polarisation",
+   "modulation-versus-initiation",
+   "millivolts-per-millimetre",
+   "layer-v-pyramidal-neuron",
+   "gyral-crown",
+   "endogenous-field",
+   "entrainment",
+   "temporal-interference"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "graph-analytics-basics",
+  "title": "Graph analytics basics",
+  "one_liner": "Degree, betweenness, PageRank, communities, paths and projections — what each measures on a knowledge graph, and why every score needs a null model.",
+  "prerequisites": [
+   "property-graphs-and-ontologies"
+  ],
+  "figures": [],
+  "terms": [
+   "property-graph",
+   "claim-path",
+   "predicate",
+   "rival-edge",
+   "hypothesis-group",
+   "evidence-level",
+   "single-laboratory-claim"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "inflammatory-reflex",
+  "title": "The inflammatory reflex",
+  "one_liner": "The proposed neural circuit by which vagal activity suppresses macrophage cytokine release, step by step and with the species each step was shown in.",
+  "prerequisites": [
+   "receptor-theory-occupancy"
+  ],
+  "figures": [],
+  "terms": [
+   "inflammatory-reflex",
+   "vagus-nerve",
+   "vagus-nerve-stimulation",
+   "tavns",
+   "splenic-nerve",
+   "alpha7-nicotinic-receptor",
+   "acetylcholine",
+   "noradrenaline",
+   "tnf",
+   "nf-kb",
+   "neuropod-cell",
+   "interoception",
+   "hpa-axis",
+   "cortisol",
+   "pupillometry",
+   "proxy",
+   "sckan"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "ltp-ltd-plasticity",
+  "title": "LTP, LTD and what \"plasticity\" names",
+  "one_liner": "Long-lasting, input-dependent changes in synaptic strength: how they are induced, how they are measured, and what the word carries when it is borrowed for human stimulation studies.",
+  "prerequisites": [],
+  "figures": [],
+  "terms": [
+   "long-term-potentiation",
+   "long-term-depression",
+   "ltp-like-plasticity",
+   "spike-timing-dependent-plasticity",
+   "homeostatic-synaptic-scaling",
+   "dendritic-spine",
+   "nmda-receptor",
+   "ampa-receptor",
+   "paired-associative-stimulation",
+   "theta-burst-stimulation",
+   "itbs600",
+   "motor-evoked-potential",
+   "bdnf",
+   "organotypic-slice-culture",
+   "preparation"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "metaplasticity-and-state-dependence",
+  "title": "Metaplasticity and state dependence",
+  "one_liner": "Why the same stimulation dose produces opposite outcomes depending on what the tissue was doing beforehand, and how a sliding threshold formalises it.",
+  "prerequisites": [
+   "ltp-ltd-plasticity"
+  ],
+  "figures": [],
+  "terms": [
+   "metaplasticity",
+   "bcm-rule",
+   "homeostatic-metaplasticity",
+   "homeostatic-synaptic-scaling",
+   "state-dependence",
+   "preconditioning",
+   "phase-triggered-stimulation",
+   "mu-rhythm",
+   "gating",
+   "third-factor",
+   "response-variability",
+   "motor-evoked-potential"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "oscillations-and-entrainment",
+  "title": "Oscillations, phase and entrainment",
+  "one_liner": "What a neural oscillation is, how phase and coherence are measured, and what it takes for an applied rhythm to entrain an endogenous one.",
+  "prerequisites": [
+   "field-neuron-coupling-geometry"
+  ],
+  "figures": [],
+  "terms": [
+   "oscillation",
+   "entrainment",
+   "phase-locking",
+   "coherence",
+   "gamma-oscillation",
+   "network-resonance",
+   "local-field-potential",
+   "endogenous-field",
+   "tacs",
+   "mu-rhythm",
+   "beta-burst",
+   "forty-hz-stimulation",
+   "volts-per-metre",
+   "millivolts-per-millimetre"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "pharmacokinetics-and-routes",
+  "title": "Pharmacokinetics and routes of administration",
+  "one_liner": "How an administered amount becomes an exposure over time, and why the route is part of the dose rather than a detail of delivery.",
+  "prerequisites": [
+   "dose-and-parameter-sets",
+   "receptor-theory-occupancy"
+  ],
+  "figures": [],
+  "terms": [
+   "exposure",
+   "auc",
+   "cmax",
+   "exposure-response-analysis",
+   "route-of-administration",
+   "compartment",
+   "intrathecal",
+   "intranasal",
+   "convection-enhanced-delivery",
+   "blood-brain-barrier",
+   "brain-extracellular-fluid",
+   "pbpk-model",
+   "pulsatile-exposure",
+   "active-species",
+   "three-pillars"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "photon-transport-dosimetry",
+  "title": "Photon transport and optical dose",
+  "one_liner": "How light is attenuated by absorption and scattering in tissue, and why the dose that reaches cortex is the contested quantity in photobiomodulation.",
+  "prerequisites": [
+   "dose-and-parameter-sets"
+  ],
+  "figures": [],
+  "terms": [
+   "photobiomodulation",
+   "fluence",
+   "irradiance",
+   "transmittance",
+   "monte-carlo-photon-transport",
+   "melanin",
+   "cytochrome-c-oxidase",
+   "action-spectrum",
+   "mj-per-mm2",
+   "optogenetics",
+   "channelrhodopsin-2"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "property-graphs-and-ontologies",
+  "title": "Property graphs and ontologies",
+  "one_liner": "How a graph stores a claim: nodes and edges with typed properties, identifiers borrowed from community ontologies, and a query language that asks about paths.",
+  "prerequisites": [
+   "evidence-grading-and-translation"
+  ],
+  "figures": [],
+  "terms": [
+   "property-graph",
+   "predicate",
+   "curie",
+   "uberon",
+   "obo-foundry-ontology",
+   "evidence-and-conclusion-ontology",
+   "neuron-phenotype-ontology",
+   "sckan",
+   "drugmechdb",
+   "semmeddb",
+   "claim-path",
+   "rival-edge",
+   "protocol-module",
+   "evidence-level"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "receptor-theory-occupancy",
+  "title": "Receptor theory and occupancy",
+  "one_liner": "How affinity, occupancy and intrinsic efficacy connect a drug concentration to a measured response, and why occupancy alone does not fix the effect.",
+  "prerequisites": [
+   "dose-and-parameter-sets"
+  ],
+  "figures": [],
+  "terms": [
+   "receptor-occupancy",
+   "affinity",
+   "intrinsic-efficacy",
+   "operational-model",
+   "partial-agonist",
+   "allosteric-modulation",
+   "receptor-compartment",
+   "raclopride-pet",
+   "d2-receptor",
+   "positron-emission-tomography",
+   "target-engagement",
+   "active-species"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ {
+  "id": "sham-and-confound-design",
+  "title": "Sham and confound design",
+  "one_liner": "Why a control condition is a procedure with its own effects, and how a side channel can produce the whole result you wanted to attribute to the brain.",
+  "prerequisites": [],
+  "figures": [],
+  "terms": [
+   "sham",
+   "blinding",
+   "expectancy",
+   "active-placebo",
+   "co-stimulation",
+   "auditory-confound",
+   "peripheral-route",
+   "proxy",
+   "readout",
+   "reporting-checklist"
+  ],
+  "levels": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ }
+]

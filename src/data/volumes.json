@@ -1,0 +1,50 @@
+[
+ {
+  "id": "v0",
+  "title": "Foundations",
+  "status": "ready",
+  "as_of": "2026-09-15",
+  "depth": "textbook",
+  "outline_approved": "2026-09-15",
+  "sections": 16,
+  "words": 30350,
+  "blocks": {
+   "total": 413,
+   "cited": 362,
+   "framing": 25,
+   "synthesis": 101,
+   "uncited": 0
+  },
+  "synthesis_passages": 101,
+  "figures": [
+   "fig1",
+   "fig3",
+   "fig2",
+   "fig4",
+   "fig5",
+   "fig6",
+   "fig8",
+   "fig7",
+   "fig9"
+  ],
+  "references_cited": 259,
+  "claims": 458,
+  "has_math": true
+ },
+ {
+  "id": "v1",
+  "title": "Vagus and cranial nerve stimulation",
+  "status": "planned",
+  "as_of": "2026-09-15",
+  "depth": null,
+  "outline_approved": null,
+  "sections": 0,
+  "words": 0,
+  "blocks": null,
+  "synthesis_passages": 0,
+  "figures": [],
+  "references_cited": 0,
+  "claims": 0,
+  "has_math": false
+ }
+]

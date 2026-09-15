@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "id": "drive",
+      "label": "Drive",
+      "level": 1,
+      "term": "drive",
+      "note": "What is delivered: device parameters, or an administered amount and route [199,24]."
+    },
+    {
+      "id": "nominal-stimulus",
+      "label": "Nominal stimulus",
+      "level": 1,
+      "term": "nominal-stimulus",
+      "note": "What the experimenter set [24,199]."
+    },
+    {
+      "id": "effective-stimulus",
+      "label": "Effective stimulus",
+      "level": 1,
+      "term": "effective-stimulus",
+      "note": "What acted on the tissue: field at the neuron, pressure at the transducing cell, concentration at the receptor, or a co-stimulated peripheral input [24,199]."
+    },
+    {
+      "id": "coupling",
+      "label": "Coupling",
+      "level": 2,
+      "term": "coupling",
+      "note": "The physical or chemical event by which the drive first changes tissue [199]."
+    },
+    {
+      "id": "cellular",
+      "label": "Cellular",
+      "level": 3,
+      "note": "What a neuron or glial cell does in response [149]."
+    },
+    {
+      "id": "molecular",
+      "label": "Subcellular / molecular",
+      "level": 4,
+      "note": "Signalling that follows the cellular response and often outlasts the stimulus [149]."
+    },
+    {
+      "id": "circuit",
+      "label": "Circuit",
+      "level": 5,
+      "note": "How populations of connected cells change; wiring alone does not fix circuit function [5]."
+    },
+    {
+      "id": "system",
+      "label": "System",
+      "level": 6,
+      "note": "How a whole body system changes, such as arousal, autonomic or immune control [149]."
+    },
+    {
+      "id": "outcome",
+      "label": "Outcome",
+      "level": 7,
+      "note": "What is measured in the organism [199,24]."
+    }
+  ],
+  "edges": [
+    {
+      "from": "drive",
+      "to": "nominal-stimulus",
+      "label": "is specified as",
+      "direction": "forward",
+      "note": "Device parameters, or administered dose and route [9,24]."
+    },
+    {
+      "from": "nominal-stimulus",
+      "to": "effective-stimulus",
+      "label": "is usually inferred, not measured",
+      "direction": "forward",
+      "note": "Studies report the first and infer the second [24,199]."
+    },
+    {
+      "from": "effective-stimulus",
+      "to": "coupling",
+      "label": "acts on tissue at",
+      "direction": "forward"
+    },
+    {
+      "from": "coupling",
+      "to": "cellular",
+      "label": "changes what the cell does",
+      "direction": "forward",
+      "note": "For ultrasound this arrow has rival paths, neuronal and astrocytic [69]."
+    },
+    {
+      "from": "cellular",
+      "to": "molecular",
+      "label": "sets off signalling in",
+      "direction": "forward"
+    },
+    {
+      "from": "coupling",
+      "to": "molecular",
+      "label": "biophysics to molecules",
+      "direction": "forward",
+      "weakest_join": true,
+      "note": "Weakest join 1: the transducing cell and molecule are often unknown, and the drug side has the same gap between target and downstream step [69,168]. The Atlas's reading across the corpus, not a claim of any one source [24,69,199]."
+    },
+    {
+      "from": "molecular",
+      "to": "circuit",
+      "label": "changes populations in",
+      "direction": "forward",
+      "note": "Needs its own measurement or model; wiring does not determine it [5,8]."
+    },
+    {
+      "from": "circuit",
+      "to": "system",
+      "label": "changes the state of",
+      "direction": "forward",
+      "note": "Circuit-level theories carry much of the weight here [128,138]."
+    },
+    {
+      "from": "system",
+      "to": "outcome",
+      "label": "animal mechanism to human outcome",
+      "direction": "forward",
+      "weakest_join": true,
+      "note": "Weakest join 2: in 43% of 44 Phase II programmes it was unclear whether the mechanism had been tested in people, and chronic-antidepressant accounts place middle-level frameworks between receptor occupancy and symptom change [24,187]."
+    },
+    {
+      "from": "system",
+      "to": "circuit",
+      "label": "afferent feedback: a reflex loop is a cycle, not a line",
+      "direction": "feedback",
+      "note": "Central integration sets how strongly the efferent limb fires [149]."
+    }
+  ]
+}

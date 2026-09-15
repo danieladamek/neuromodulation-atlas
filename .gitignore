@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-volume-fixture/
+.venv/
+*.local
+.DS_Store
+*.tsbuildinfo
+test-results/
+playwright-report/
+scripts/.cache/
+.lighthouse/
+.claude/

@@ -1,0 +1,359 @@
+- id: fig1
+  label: Figure 1
+  title: "The drive to outcome chain, with the nominal and effective stimulus at the coupling join"
+  kind: pathway
+  synthesis: conceptual
+  data: figures/data/fig1-chain.json
+  caption: >-
+    The seven levels this volume uses to write any modality as one chain: drive, coupling, cellular,
+    subcellular/molecular, circuit, system, outcome. The nominal and effective stimulus are drawn as a
+    separate pair at the drive/coupling join, because what the operator set and what reached the tissue can
+    differ in magnitude and, for drugs, in identity. Two joins are marked as the weakest: biophysics to
+    molecules, where the transducing cell and molecule are often unknown, and animal mechanism to human
+    outcome, where a trial often cannot show whether the mechanism was engaged at all. The loop back from
+    system to circuit is there because a reflex has to be drawn as a cycle rather than a line.
+  how_to_read: >-
+    Read the solid arrows left to right as one pass from what is delivered to what is measured. Each arrow is
+    a place where a separate measurement or model is needed, not a step that follows automatically from the
+    one before it. Start at the drive, then look at the nominal/effective pair: if a study reports only the
+    nominal stimulus, everything downstream rests on an inference. The two arrows marked as weakest joins are
+    where this literature most often breaks, so when you read a claim that spans one of them, ask what was
+    measured on each side and in which species. Follow the feedback arrow if the system you are reading about
+    regulates itself, as the vagal immune loop does.
+  source: >-
+    Built from section 2 of the review. No cited paper states this seven-step chain; it is assembled by this
+    volume from the brain-stimulation chain of induced field to local and network effects to behaviour [199]
+    and the drug-development chain of exposure, target binding and pharmacological activity [24], with the
+    levels-of-organisation commitment from [6] and its limits from [5,8]. The worked example along the chain
+    is the vagal route to immune control [149]. The claim that these two joins are the weakest is the Atlas's
+    reading across the corpus, not a statement any one source makes. Nothing in the figure is quantitative,
+    so nothing in it is approximate; the node ordering is a conceptual scheme, not a measured sequence.
+  refs: [5, 6, 8, 24, 69, 90, 128, 138, 149, 168, 187, 199]
+  discussed_in: [v0-2-levels-and-the-chain]
+  concepts: [dose-and-parameter-sets, evidence-grading-and-translation]
+
+- id: fig2
+  label: Figure 2
+  title: "What counts as dose in each drive class, and what is missing"
+  kind: table
+  synthesis: data
+  data: figures/data/fig2-dose-quantities.csv
+  columns:
+    - field: drive_class
+      label: Drive class
+    - field: reported
+      label: What is reported
+    - field: standardised
+      label: What is standardised
+    - field: missing
+      label: What is missing
+    - field: ref
+      label: Sources
+  caption: >-
+    Eight drive classes set side by side on three questions: which quantities the literature reports, which
+    of them are standardised, and which are missing. No class reduces to a single intensity, and no two
+    classes report the same kind of quantity. ECT and MST are kept as separate rows, as section 3 keeps
+    them, because their dose traditions and their open questions differ.
+  how_to_read: >-
+    Pick a drive class and read across the three columns. The middle column tells you what you can expect
+    any competent paper in that family to report; the right-hand column tells you what you will not find
+    even in a good one. Treat the right-hand column as this volume's reading of the cited sources rather
+    than as a claim any single source makes. The numbers in brackets are reference numbers, so you can check
+    each cell against its source.
+  source: >-
+    A transcription of the table in section 3.8 of the review, with the same cell contents and the same
+    citations, rearranged into one row per drive class. Every row carries the reference numbers of the
+    sources its cells rest on. The "what is missing" column is this volume's reading of those sources, as
+    the prose states; the other two columns are as reported. Nothing is approximated or recomputed here.
+  refs: [2, 9, 10, 14, 15, 17, 18, 19, 20, 21, 22, 23, 25, 27, 28, 29, 71, 79, 81, 84, 85, 86, 87, 140, 163, 164, 180, 181, 225, 226, 260, 261]
+  discussed_in: [v0-3-dose]
+  concepts: [dose-and-parameter-sets, pharmacokinetics-and-routes]
+
+- id: fig3
+  label: Figure 3
+  title: "Field strengths and thresholds, measured and modelled, on a log scale"
+  kind: chart
+  synthesis: data
+  data: figures/data/fig3-field-strengths.csv
+  chart:
+    type: bar
+    orientation: horizontal
+    x: entry
+    y: value_low
+    y_high: value_high
+    unit: V/m
+    log_scale: true
+    group_by: provenance
+  columns:
+    - field: entry
+      label: Quantity
+    - field: value_low
+      label: Value or range low (V/m)
+    - field: value_high
+      label: Value or range high (V/m)
+    - field: species
+      label: Species
+    - field: provenance
+      label: Measured or modelled
+    - field: preparation
+      label: Preparation
+    - field: ref
+      label: Source
+  caption: >-
+    Nine field quantities in volts per metre, on a log axis, so measured human intracranial fields, rodent
+    thresholds and modelled temporal-interference thresholds can be seen against one another. The two
+    measured human values sit near or below the rodent threshold for changing spiking, and the modelled
+    temporal-interference threshold sits about two orders of magnitude above the field a tolerable scalp
+    current delivers. 1 mV/mm equals 1 V/m; values reported in mV/mm have been written in V/m without
+    other conversion.
+  how_to_read: >-
+    Read each bar as one quantity with its unit, not as a comparison of like with like. Check the "measured
+    or modelled" column before you compare two bars: a measured field in a patient and a threshold from a
+    neuron model are different kinds of number. Check the species column too, because the rodent threshold
+    and the human delivered field come from different preparations. The axis is logarithmic, so equal
+    spacing means equal ratio, and the gap between the delivered field and the modelled temporal-interference
+    threshold is a factor of roughly a hundred, not a small step. Ranges are drawn as bars from the low to
+    the high value as the source reports them.
+  source: >-
+    Values transcribed from sections 3.2, 4.2, 4.3 and 4.6 of the review, each row keeping its source, its
+    species and whether it was measured or modelled. Unit harmonisation is the only arithmetic: mV/mm is
+    written as V/m, which is an identity, not an approximation. The values are themselves approximate as
+    their sources report them (about 0.8 V/m, about 0.5 mV/mm, about 1 mV/mm, ranges of 0.1-1, 17-47,
+    75-230 V/m). The ferret row is an endogenous field measured during physiological activity, included as a
+    reference point rather than as a stimulation quantity, and it is neither human nor rodent. No two rows
+    were produced by the same procedure, so the figure compares literatures, not measurements.
+  refs: [36, 37, 40, 48, 50, 211, 212]
+  discussed_in: [v0-3-dose, v0-4-coupling-electromagnetic]
+  concepts: [electric-field-modelling, field-neuron-coupling-geometry]
+
+- id: fig4
+  label: Figure 4
+  title: "Coupling mechanisms and their named rivals, by drive"
+  kind: network
+  synthesis: conceptual
+  data: figures/data/fig4-coupling-rivals.json
+  caption: >-
+    Six drives, each joined to the transducer its literature proposes as primary and to the rival accounts
+    that explain the same observations. Pressure has the most crowded set: mechanosensitive channels, the
+    lipid bilayer itself, acoustic radiation force, astrocytic TRPA1, and the auditory pathway as a
+    confound that competes with all of them. Light and ligand have rivals that are not other transducers at
+    all: too little light arriving, and a metabolite rather than the injected compound doing the binding.
+    Each edge is labelled with the preparation the evidence comes from.
+  how_to_read: >-
+    Start at a drive node on the left and follow its edges. The edge labelled as proposed primary is the
+    account its own literature puts first; the edges labelled as rivals are the named competitors, not
+    weaker versions of the same idea. Read the preparation on each edge before you weigh two edges against
+    each other: a computational model, an oocyte, an ex vivo retina and a human volunteer are not
+    interchangeable evidence. Where a drive has several rivals, take them as unresolved rather than ranked,
+    because the section they come from does not choose between them.
+  source: >-
+    Built from section 5 of the review, with the electrical case left to section 4. The primary-versus-rival
+    labels follow how each source presents itself and how the prose frames the dispute; they are this
+    volume's arrangement, not a ranking of strength. Nothing in the figure is quantitative. The corpus
+    contains no study identifying the transducer in human tissue for ultrasound, so every pressure edge is
+    animal, in vitro or computational.
+  refs: [22, 23, 26, 27, 29, 65, 66, 67, 68, 69, 70, 71, 74, 75, 76, 77, 79, 80, 81, 83, 84, 85, 88, 89, 91, 92, 94, 95, 184]
+  discussed_in: [v0-5-coupling-acoustic-optical-chemical]
+  concepts: [acoustic-mechanotransduction, receptor-theory-occupancy, photon-transport-dosimetry]
+
+- id: fig5
+  label: Figure 5
+  title: "Convergence map: modalities and the molecular endpoints they are said to meet at"
+  kind: network
+  synthesis: conceptual
+  data: figures/data/fig5-convergence.json
+  caption: >-
+    Eleven modalities on one side and five shared molecular endpoints on the other: BDNF and TrkB, mTOR,
+    immediate-early genes, mitochondrial and metabolic state, and glial and inflammatory signalling. Every
+    edge carries the kind of evidence it rests on and the species it was measured in. Several edges are
+    marked contested, and two are marked as resting on one laboratory. The map shows a shared vocabulary
+    rather than a shared mechanism: a marker that rises by two different routes gives two different edges
+    with the same head node.
+  how_to_read: >-
+    Read an edge as "this drive was reported to change this endpoint, in this preparation, by this kind of
+    study" - not as "these drives work the same way". Before joining two edges into a convergence, check
+    that they carry the same assay and the same species; if they do not, the join is weaker than it looks.
+    Pay attention to the flags: contested edges have a published counter-result, single-laboratory edges
+    have no independent replication in this corpus, and the TSPO edge is a null obtained with a marker that
+    does not index activation in primates. Where an edge points at BDNF and TrkB, read the node's own note
+    first, because that one name covers four different kinds of measurement.
+  source: >-
+    Built from section 7 of the review only, and restricted to the endpoints and edges that section states.
+    No convergence is asserted that the prose does not: where the section says a marker is shared but the
+    mechanism is not, the edges are kept separate and flagged rather than merged. The strongest form of
+    convergence evidence named in that section - four unrelated compounds abolished by the same NMDA
+    receptor pretreatment in mice - is carried as a property of the contested ketamine edge rather than as a
+    node, because the section presents it as a shared requirement, not a sixth endpoint. Nothing is
+    quantitative and nothing is approximated; the arrangement of modalities against endpoints is this
+    volume's.
+  refs: [69, 83, 84, 88, 89, 92, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 148, 150, 167, 168, 173, 174]
+  discussed_in: [v0-7-molecular-subcellular-convergence]
+  concepts: [ltp-ltd-plasticity, evidence-grading-and-translation]
+
+- id: fig6
+  label: Figure 6
+  title: "The modality map: 36 families on eight shared axes"
+  kind: table
+  synthesis: data
+  data: figures/data/fig6-modality-map.csv
+  columns:
+    - field: family
+      label: Family
+    - field: invasiveness
+      label: Invasiveness
+    - field: drive_physically
+      label: What the drive is physically
+    - field: proposed_primary_coupling
+      label: Proposed primary coupling mechanism
+    - field: named_rival
+      label: Named rival
+    - field: dose_quantities_reported
+      label: Dose quantities actually reported
+    - field: resolution_reported
+      label: Spatial and temporal resolution as reported
+    - field: dominant_evidence_base
+      label: Dominant evidence base
+    - field: what_is_missing
+      label: What is missing
+    - field: ref
+      label: Sources
+  caption: >-
+    Thirty-six human-applicable families on eight shared axes. Cells that in the review read only "not
+    established in this corpus" are left empty here, so the gaps are visible as gaps: they cluster in the
+    named-rival column and in proposed primary coupling, while the evidence-base column has none. Reading
+    down the columns rather than across the rows shows that invasiveness does not track how well the
+    coupling step is specified.
+  how_to_read: >-
+    Read one row to see what a family's own literature says about itself, and read one column to compare
+    that claim across families. Treat an empty cell as "no source available to this section reports it",
+    not as zero and not as an absence in the world. Do not compare two spatial or temporal figures directly:
+    the TMS numbers are simulations, the tES field values are intracranial recordings, and ultrasound
+    exposure is reported twice, as free-field output and as an in situ estimate. The reference numbers in
+    each cell and in the sources column let you take any claim back to its paper.
+  source: >-
+    A transcription of the comparison table in section 10 of the review: 36 rows and eight content columns,
+    cell text as written there, with the citations kept inside the cells. The only change is that 21 cells
+    whose entire content was the placeholder "not established in this corpus" are stored as empty values so
+    that missing data is machine-visible; cells that qualify the placeholder with anything further are kept
+    in full. The ref column is assembled by this figure from the reference numbers appearing anywhere in the
+    row, so it is a row-level index rather than a per-cell citation. Every figure in the table is as reported
+    by that family's own literature, in its own preparation and units, and no two were produced by the same
+    procedure, so the table is a map of what each literature says about itself rather than a measurement of
+    the families against one another.
+  refs: [2, 4, 30, 31, 33, 34, 40, 56, 79, 135, 140, 211, 227, 229, 234, 248, 250, 255, 260, 261]
+  discussed_in: [v0-10-modality-map]
+  concepts: [dose-and-parameter-sets, evidence-grading-and-translation, closed-loop-control]
+
+- id: fig7
+  label: Figure 7
+  title: "The dispute map: 23 live disagreements and their rival positions"
+  kind: network
+  synthesis: conceptual
+  data: figures/data/fig7-disputes.json
+  caption: >-
+    One node per dispute from section 14, each linked to the rival positions named there, with the species
+    and evidence kind of each position on its own node. Each dispute carries a property saying whether the
+    split is about mechanism (12), dose (7) or endpoint (4). Most disputes have two positions; the ultrasound
+    transducer, the tDCS after-effect, ketamine's active species, 5-HT2A necessity and transcutaneous vagal
+    engagement have three or four.
+  how_to_read: >-
+    Pick a dispute node and read its question, then read each position hanging off it as a claim with its own
+    preparation attached. Use the split property to set your expectations: a dose split can often be closed
+    by reporting parameters, while a mechanism split usually needs a new experiment, and an endpoint split
+    means the two sides measured different things. In almost none of these is one side simply wrong, so read
+    the pair as two claims measured differently rather than as a right answer and a wrong one. The
+    identifiers on the dispute nodes are the ones the graph will carry, so you can follow any of them back to
+    its entry in section 14.
+  source: >-
+    Built from section 14 of the review, one dispute node per numbered entry (14.1 to 14.23) and one position
+    node per position that section names, with each position's species and evidence kind taken from the same
+    entry. The mechanism/dose/endpoint classification is this volume's, assigned from what each entry says
+    the evidence turns on; several entries could be read either way, and the ones the prose itself resolves
+    into dose rather than mechanism are marked dose. Position wording is compressed from the entries and
+    carries their reference numbers; nothing is quantitative.
+  refs: [17, 18, 22, 23, 26, 28, 29, 35, 39, 40, 44, 45, 46, 47, 48, 50, 54, 55, 60, 65, 66, 68, 70, 71, 74, 75, 76, 77, 79, 83, 84, 93, 94, 95, 97, 100, 107, 108, 109, 116, 117, 119, 121, 123, 124, 125, 129, 130, 133, 144, 145, 146, 149, 150, 151, 161, 162, 167, 168, 170, 171, 173, 174, 175, 176, 178, 187, 188, 202, 203]
+  discussed_in: [v0-14-open-questions]
+  concepts: [sham-and-confound-design, acoustic-mechanotransduction, connectivity-based-targeting]
+
+- id: fig8
+  label: Figure 8
+  title: "The corpus profile: what this volume's reference base is made of"
+  kind: chart
+  synthesis: data
+  data: figures/data/fig8-corpus-profile.csv
+  chart:
+    type: bar
+    orientation: horizontal
+    x: category
+    y: count
+    facet_by: dimension
+  columns:
+    - field: dimension
+      label: Dimension
+    - field: category
+      label: Category
+    - field: count
+      label: Count
+    - field: note
+      label: Note
+    - field: ref
+      label: Source
+  caption: >-
+    The volume's own reference base, counted four ways: by tier, by year, by species and by evidence kind,
+    with the verification totals at the top. The base is 263 entries, 260 of them verified against a read
+    abstract or full text and 80 flagged contested. Human references outnumber rodent ones by about two and
+    a half to one, primate references number 13, and just over half the base falls in the tier the pack
+    calls current. Counts were computed from references.yaml for this figure rather than copied from the
+    prose.
+  how_to_read: >-
+    Read each panel as a count of references, not of findings or of studies: one paper can support many
+    claims in the review, and a heavily cited paper counts once. In the species panel, a reference tagged
+    with several species is counted once under each tag, so that panel's total exceeds the number of
+    references; the other panels partition the base exactly once. Use the year panel for the shape of the
+    sweep rather than for the state of the field, since the bins are unequal in width. Treat "n/a" in the
+    species panel as a reference with no species of its own, such as a consensus statement or an ontology.
+  source: >-
+    Computed by this figure directly from the pack's own references.yaml, on the tier, year, species,
+    evidence_kind, verified and contested fields, and not taken from the review's prose. It is therefore
+    pack metadata rather than published data, and every row carries ref "self". Two notes on honesty: the
+    computed total is 263 references with 260 verified, whereas the abstract of the review states 223
+    references with 221 verified, so the prose figure is out of date with respect to the file this figure
+    counts; and the year bins are this figure's choice, not a field in the data. Nothing else is
+    approximated - the counts are exact as of the file state at build time. The refs list carries the
+    sources the surrounding corpus-profile discussion rests on rather than sources for the counts, because
+    the counts are the pack's own metadata.
+  refs: [206, 207, 208, 218]
+  discussed_in: [v0-13-evidence-and-translation, v0-12-methods-and-confounds]
+  concepts: [evidence-grading-and-translation]
+
+- id: fig9
+  label: Figure 9
+  title: "The proposed starter schema: node types, predicates and their ontology anchors"
+  kind: network
+  synthesis: conceptual
+  data: figures/data/fig9-schema.json
+  caption: >-
+    The starter schema of section 15 drawn as a graph: node types as nodes, each carrying the ontology that
+    anchors it, and the main predicates as edges, each carrying the properties that must travel with it. Ten
+    of the seventeen node types are marked unanchored, including the two the section says have no ontology at
+    all - the stimulation protocol, which has to be authored, and outcome measures - together with the
+    protein slot inside the transducer and receptor nodes, the hypothesis group and the path. The claim edge
+    appears as a node because confounds, hypothesis groups and paths attach to claim edges rather than to
+    entities.
+  how_to_read: >-
+    Read each node as a type, not an instance: "transducer" is the class that cytochrome c oxidase or Piezo1
+    would be an instance of. The anchor tells you which ontology supplies identifiers for that type; where
+    the node is marked unanchored, you would have to author the vocabulary yourself, and the section says as
+    much. Read each edge label as the predicate and the property list as what an import would reject the edge
+    for missing. Take the whole figure as a starting point offered for redesign, not as a specification.
+  source: >-
+    Built from section 15 of the review: the node types, anchors and predicates are the rows of the table in
+    section 15.5, and the required edge properties are that table's fourth column. Three nodes not named as
+    rows in the table are added so that every predicate has a defined endpoint - compartment and receptor,
+    which the drug-drive row's predicates point at, and claim edge, which the confound, hypothesis-group and
+    path rows point at - each anchored from the same section's text. The plasticity-state and circuit-state
+    nodes come from the predicates in their rows. Where the section gives a predicate without fixing its
+    range, the edge notes say so. Nothing is quantitative, and the schema is a proposal, not a standard.
+  refs: [29, 79, 91, 92, 131, 139, 150, 155, 156, 157, 158, 193, 208, 214, 215, 216, 217, 218, 223]
+  discussed_in: [v0-15-from-text-to-graph]
+  concepts: [property-graphs-and-ontologies, dose-and-parameter-sets]

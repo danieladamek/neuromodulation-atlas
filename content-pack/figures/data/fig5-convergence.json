@@ -1,0 +1,305 @@
+{
+  "nodes": [
+    {
+      "id": "anodal-dcs",
+      "label": "Anodal direct current stimulation",
+      "side": "modality",
+      "term": "anodal-stimulation"
+    },
+    {
+      "id": "tdcs",
+      "label": "tDCS (multi-session, rodent dose)",
+      "side": "modality",
+      "term": "tdcs"
+    },
+    {
+      "id": "rtms",
+      "label": "Repetitive TMS and theta-burst protocols",
+      "side": "modality",
+      "term": "rtms"
+    },
+    {
+      "id": "ketamine",
+      "label": "Ketamine and its metabolites",
+      "side": "modality",
+      "term": "ketamine"
+    },
+    {
+      "id": "antidepressants",
+      "label": "Classical and rapid-acting antidepressants",
+      "side": "modality",
+      "term": "trkb"
+    },
+    {
+      "id": "psychedelics",
+      "label": "Psychedelics (LSD, psilocin)",
+      "side": "modality",
+      "term": "psychedelic"
+    },
+    {
+      "id": "nir-light",
+      "label": "Near-infrared light",
+      "side": "modality",
+      "term": "photobiomodulation"
+    },
+    {
+      "id": "fus-microbubbles",
+      "label": "Focused ultrasound with microbubbles",
+      "side": "modality",
+      "term": "blood-brain-barrier-opening"
+    },
+    {
+      "id": "lifu",
+      "label": "Low-intensity ultrasound",
+      "side": "modality",
+      "term": "tus"
+    },
+    {
+      "id": "vns",
+      "label": "Vagus nerve stimulation",
+      "side": "modality",
+      "term": "vagus-nerve-stimulation"
+    },
+    {
+      "id": "forty-hz",
+      "label": "40 Hz sensory and optogenetic stimulation",
+      "side": "modality",
+      "term": "forty-hz-stimulation"
+    },
+    {
+      "id": "bdnf-trkb",
+      "label": "BDNF and TrkB",
+      "side": "endpoint",
+      "term": "bdnf",
+      "note": "One node name covers secreted protein in a mouse slice, translated protein after eEF2K deactivation, a human genotype and a structural claim about the receptor; the assay has to travel with the edge [110,111,116,118]."
+    },
+    {
+      "id": "mtor",
+      "label": "mTOR signalling and rapid synaptogenesis",
+      "side": "endpoint",
+      "term": "mtor"
+    },
+    {
+      "id": "ieg",
+      "label": "Immediate-early genes (c-Fos, zif268)",
+      "side": "endpoint",
+      "term": "immediate-early-gene",
+      "note": "Marks that tissue was driven; does not give the direction of a synaptic change [112]."
+    },
+    {
+      "id": "mitochondrial",
+      "label": "Mitochondrial and metabolic state",
+      "side": "endpoint",
+      "term": "mitochondrial-function"
+    },
+    {
+      "id": "cytokines",
+      "label": "Glial and inflammatory signalling, cytokines",
+      "side": "endpoint",
+      "term": "tnf"
+    }
+  ],
+  "edges": [
+    {
+      "from": "anodal-dcs",
+      "to": "bdnf-trkb",
+      "label": "experiment, mouse motor cortex slice: potentiation required BDNF secretion and TrkB activation",
+      "evidence_kind": "primary experimental",
+      "species": "mouse",
+      "refs": [
+        110
+      ]
+    },
+    {
+      "from": "anodal-dcs",
+      "to": "bdnf-trkb",
+      "label": "genotype association, human: Val66Met carriers responded differently across TMS and tDCS protocols, replication inconsistent",
+      "evidence_kind": "genotype association, indirect",
+      "species": "human",
+      "refs": [
+        111
+      ]
+    },
+    {
+      "from": "ketamine",
+      "to": "bdnf-trkb",
+      "label": "experiment, mouse: NMDA receptor blockade at rest deactivated eEF2 kinase and released BDNF mRNA for translation",
+      "evidence_kind": "primary experimental",
+      "species": "mouse",
+      "refs": [
+        116
+      ]
+    },
+    {
+      "from": "antidepressants",
+      "to": "bdnf-trkb",
+      "label": "structure, cell work and mouse behaviour from one laboratory: binding to a site in the TRKB transmembrane domain",
+      "evidence_kind": "primary experimental, single laboratory",
+      "species": "in vitro and mouse",
+      "single_laboratory": true,
+      "refs": [
+        118
+      ]
+    },
+    {
+      "from": "psychedelics",
+      "to": "bdnf-trkb",
+      "label": "same laboratory: LSD and psilocin bind TrkB, and mouse plasticity required TrkB but not 5-HT2A",
+      "evidence_kind": "primary experimental, single laboratory",
+      "species": "in vitro and mouse",
+      "single_laboratory": true,
+      "contested": true,
+      "note": "Rival accounts put the work at 5-HT2A, intracellular [92] or presynaptic [174], with the plasticity question treated as open [173].",
+      "refs": [
+        119,
+        92,
+        173,
+        174
+      ]
+    },
+    {
+      "from": "ketamine",
+      "to": "mtor",
+      "label": "experiment, rat prefrontal cortex: a single dose activated mTOR, raised synaptic proteins and added spines; rapamycin blocked both",
+      "evidence_kind": "primary experimental",
+      "species": "rat",
+      "refs": [
+        115
+      ]
+    },
+    {
+      "from": "ketamine",
+      "to": "mtor",
+      "label": "contested: no direct target found for (2R,6R)-hydroxynorketamine, against a shared downstream NMDA-receptor requirement across four unrelated compounds in mice",
+      "evidence_kind": "primary experimental and screening",
+      "species": "mouse and human protein panels",
+      "contested": true,
+      "refs": [
+        117,
+        167,
+        168,
+        120
+      ]
+    },
+    {
+      "from": "rtms",
+      "to": "ieg",
+      "label": "experiment, rat: 1 Hz and 10 Hz raised c-Fos across cortex, iTBS only in limbic cortices, so the response tracked pattern not pulse count",
+      "evidence_kind": "primary experimental",
+      "species": "rat",
+      "refs": [
+        112
+      ]
+    },
+    {
+      "from": "rtms",
+      "to": "ieg",
+      "label": "experiment, mouse: spatial transcriptomics after two low-intensity protocols changed plasticity-related genes by region, layer and protocol",
+      "evidence_kind": "primary experimental",
+      "species": "mouse",
+      "refs": [
+        113
+      ]
+    },
+    {
+      "from": "rtms",
+      "to": "bdnf-trkb",
+      "label": "direction needs a synaptic readout, not a marker: iTBS600 produced LTP with spine remodelling in mouse organotypic slice culture",
+      "evidence_kind": "primary experimental",
+      "species": "mouse",
+      "refs": [
+        114
+      ]
+    },
+    {
+      "from": "nir-light",
+      "to": "mitochondrial",
+      "label": "experiment, in vitro: light restored cytochrome c oxidase activity against cyanide, with an action spectrum matching the oxidised enzyme; nitric oxide proposed as the signalling step",
+      "evidence_kind": "primary experimental",
+      "species": "in vitro, primary neurons and HeLa cells",
+      "refs": [
+        88,
+        89
+      ]
+    },
+    {
+      "from": "tdcs",
+      "to": "mitochondrial",
+      "label": "experiment, rat: five days of 200 microamp anodal tDCS changed glycolysis, mitochondrial and calcium-signalling markers; current density far above human values",
+      "evidence_kind": "primary experimental",
+      "species": "rat",
+      "dose_does_not_transfer": true,
+      "refs": [
+        122
+      ]
+    },
+    {
+      "from": "lifu",
+      "to": "cytokines",
+      "label": "effector rather than endpoint: astrocytic TRPA1 opening drives Best1 glutamate release onto neuronal NMDA receptors",
+      "evidence_kind": "primary experimental",
+      "species": "rodent and in vitro",
+      "refs": [
+        69
+      ]
+    },
+    {
+      "from": "tdcs",
+      "to": "cytokines",
+      "label": "experiment, mouse: cortical astrocytic calcium surges with little neuronal firing change; the sensory enhancement required alpha1-adrenergic and IP3R2-dependent astrocytic calcium",
+      "evidence_kind": "primary experimental",
+      "species": "mouse",
+      "refs": [
+        121
+      ]
+    },
+    {
+      "from": "fus-microbubbles",
+      "to": "cytokines",
+      "label": "contested, rat: sterile inflammatory response lasting about 24 h, against no NF-kB change at clinical imaging microbubble doses",
+      "evidence_kind": "primary experimental",
+      "species": "rat",
+      "contested": true,
+      "refs": [
+        83,
+        84
+      ]
+    },
+    {
+      "from": "vns",
+      "to": "cytokines",
+      "label": "experiment, rat: stimulation during lethal endotoxaemia inhibited hepatic TNF synthesis, with ChAT-expressing splenic T cells required as a relay",
+      "evidence_kind": "primary experimental",
+      "species": "rat and mouse",
+      "refs": [
+        148,
+        150
+      ]
+    },
+    {
+      "from": "forty-hz",
+      "to": "cytokines",
+      "label": "contested, mouse: lower amyloid with microglial change and a glymphatic route, against a null finding no native gamma engagement and no plaque change",
+      "evidence_kind": "primary experimental",
+      "species": "mouse",
+      "contested": true,
+      "refs": [
+        123,
+        124,
+        125
+      ]
+    },
+    {
+      "from": "rtms",
+      "to": "cytokines",
+      "label": "null, macaque: cTBS or iTBS for three to four weeks changed neither TSPO PET nor MR spectroscopy, with TSPO not indexing activation in primates",
+      "evidence_kind": "primary experimental, null",
+      "species": "macaque",
+      "assay_validity_flag": true,
+      "refs": [
+        126,
+        127
+      ]
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "nodes": [
+    {
+      "id": "drive-nominal",
+      "label": "Drive, nominal",
+      "anchor": "protocol module, to author [193]",
+      "unanchored": true,
+      "note": "Parameter set with units and not-reported markers; no ontology in the corpus covers stimulation protocols or device parameters [79,193].",
+      "term": "dose-parameter-set"
+    },
+    {
+      "id": "delivered-quantity",
+      "label": "Delivered quantity, effective",
+      "anchor": "protocol module, to author [79]",
+      "unanchored": true,
+      "note": "Measured or modelled, orientation, neural element, unit and species travel with the edge [79].",
+      "term": "effective-stimulus"
+    },
+    {
+      "id": "drug-drive",
+      "label": "Drug drive",
+      "anchor": "ChEBI [217]",
+      "unanchored": false,
+      "note": "Route, schedule, exposure measure, active species and compartment reached are properties, not annotations [29,92].",
+      "term": "route-of-administration"
+    },
+    {
+      "id": "transducer",
+      "label": "Transducer",
+      "anchor": "Cell Ontology [215]; GO cellular component [216]; protein slot open",
+      "unanchored": true,
+      "note": "The protein slot is named but unanchored: the corpus holds no reference describing a protein ontology [215,216,217].",
+      "term": "transducer"
+    },
+    {
+      "id": "compartment",
+      "label": "Compartment",
+      "anchor": "GO cellular component [216]",
+      "unanchored": false,
+      "note": "Receptor compartment is an attribute of the coupling node, because the same agonist acts differently inside the cell and at the surface [92].",
+      "term": "receptor-compartment"
+    },
+    {
+      "id": "receptor",
+      "label": "Receptor",
+      "anchor": "receptor-pharmacology vocabulary [91]; protein slot open",
+      "unanchored": true,
+      "note": "Affinity, occupancy, efficacy, the operational model, allosteric and ligand-selective states are settled as concepts, not as identifiers [91].",
+      "term": "operational-model"
+    },
+    {
+      "id": "cell-population",
+      "label": "Cell population",
+      "anchor": "Cell Ontology [215]; Neuron Phenotype Ontology for neurons [156]",
+      "unanchored": false,
+      "note": "Neuron types are decomposed into phenotypes rather than named as classes [156].",
+      "term": "preparation"
+    },
+    {
+      "id": "plasticity-state",
+      "label": "Plasticity state",
+      "anchor": "none in this corpus",
+      "unanchored": true,
+      "note": "Carries protocol, readout, preparation and responder fraction; direction is a distribution over participants, not a sign.",
+      "term": "ltp-like-plasticity"
+    },
+    {
+      "id": "molecular-endpoint",
+      "label": "Molecular endpoint",
+      "anchor": "Gene Ontology [216]",
+      "unanchored": false,
+      "note": "Carries assay, preparation, direction and a one-laboratory flag, or incoming edges are not comparable [118,216].",
+      "term": "convergence"
+    },
+    {
+      "id": "circuit-target",
+      "label": "Circuit / target",
+      "anchor": "Uberon [214]",
+      "unanchored": false,
+      "note": "Anatomical, functional and connectivity-derived targets are different nodes [131].",
+      "term": "target-definition"
+    },
+    {
+      "id": "circuit-state",
+      "label": "Circuit state",
+      "anchor": "none in this corpus",
+      "unanchored": true,
+      "note": "Brain state and biomarker travel with the modulating edge, with the perturbation method named [131,139].",
+      "term": "state-dependence"
+    },
+    {
+      "id": "body-system",
+      "label": "Body-system node, including non-neuronal relays",
+      "anchor": "Uberon [214]; Cell Ontology [215]",
+      "unanchored": false,
+      "note": "Admits non-neuronal relays: ChAT-expressing T cells and epithelial sensor cells [150,158].",
+      "term": "interoception"
+    },
+    {
+      "id": "outcome",
+      "label": "Outcome measures",
+      "anchor": "clinical measure, open",
+      "unanchored": true,
+      "note": "Unanchored: no ontology in this corpus covers outcome measures; the node carries effect size as reported, population and comparator.",
+      "term": "clinical-response"
+    },
+    {
+      "id": "confound",
+      "label": "Confound",
+      "anchor": "protocol module, to author",
+      "unanchored": true,
+      "note": "Controls applied, blinding check and engagement shown; a confound is a node with edges to the claims it threatens [79].",
+      "term": "co-stimulation"
+    },
+    {
+      "id": "hypothesis-group",
+      "label": "Hypothesis group",
+      "anchor": "none",
+      "unanchored": true,
+      "note": "Holds rival claim edges together with the discriminating experiment.",
+      "term": "hypothesis-group"
+    },
+    {
+      "id": "path",
+      "label": "Path",
+      "anchor": "none",
+      "unanchored": true,
+      "note": "Ordered claim edges, recording species changes and the weakest link; mechanism is a path, not an edge [223].",
+      "term": "claim-path"
+    },
+    {
+      "id": "claim-edge",
+      "label": "Claim edge",
+      "anchor": "ECO for evidence type [218]; GRADE for certainty [208]",
+      "unanchored": false,
+      "note": "Every claim edge carries evidence type, certainty, species and preparation, and a link to its source, plus the dose and state that qualify its sign; an edge without these is not importable [155,208,218].",
+      "term": "predicate"
+    }
+  ],
+  "edges": [
+    {
+      "from": "drive-nominal",
+      "to": "delivered-quantity",
+      "label": "delivers",
+      "predicate": "delivers",
+      "required_edge_properties": "parameter set with units; not-reported markers distinct from zero",
+      "refs": [
+        79,
+        193
+      ]
+    },
+    {
+      "from": "delivered-quantity",
+      "to": "transducer",
+      "label": "couples_via",
+      "predicate": "couples_via",
+      "required_edge_properties": "measured or modelled; orientation; neural element; unit; species",
+      "refs": [
+        79
+      ]
+    },
+    {
+      "from": "drug-drive",
+      "to": "compartment",
+      "label": "exposes",
+      "predicate": "exposes",
+      "required_edge_properties": "route, schedule, exposure measure, compartment reached",
+      "refs": [
+        29,
+        92
+      ]
+    },
+    {
+      "from": "drug-drive",
+      "to": "receptor",
+      "label": "binds",
+      "predicate": "binds",
+      "required_edge_properties": "active species, because the injected compound is not always the molecule that binds",
+      "refs": [
+        29,
+        91
+      ]
+    },
+    {
+      "from": "transducer",
+      "to": "cell-population",
+      "label": "activates",
+      "predicate": "activates",
+      "required_edge_properties": "compartment; discriminating test; rival-edge link",
+      "refs": [
+        91,
+        92
+      ]
+    },
+    {
+      "from": "cell-population",
+      "to": "plasticity-state",
+      "label": "undergoes",
+      "predicate": "undergoes",
+      "required_edge_properties": "protocol; readout; preparation; responder fraction",
+      "refs": []
+    },
+    {
+      "from": "cell-population",
+      "to": "molecular-endpoint",
+      "label": "converges_on",
+      "predicate": "converges_on",
+      "required_edge_properties": "assay; preparation; direction; one-laboratory flag",
+      "refs": [
+        118,
+        216
+      ]
+    },
+    {
+      "from": "circuit-target",
+      "to": "circuit-state",
+      "label": "modulates",
+      "predicate": "modulates",
+      "required_edge_properties": "target definition, brain state, biomarker, perturbation method",
+      "refs": [
+        131,
+        139
+      ]
+    },
+    {
+      "from": "circuit-target",
+      "to": "body-system",
+      "label": "projects_to",
+      "predicate": "projects_to",
+      "required_edge_properties": "structural connectivity only, as SCKAN records it; predicate range is not fixed by the source",
+      "refs": [
+        155
+      ]
+    },
+    {
+      "from": "body-system",
+      "to": "outcome",
+      "label": "drives",
+      "predicate": "drives",
+      "required_edge_properties": "physiological rather than structural; afferent or efferent, branch, and sign on the branch",
+      "refs": [
+        150,
+        155,
+        157,
+        158
+      ]
+    },
+    {
+      "from": "molecular-endpoint",
+      "to": "outcome",
+      "label": "results_in",
+      "predicate": "results_in",
+      "required_edge_properties": "effect size as reported; population; comparator",
+      "refs": []
+    },
+    {
+      "from": "confound",
+      "to": "claim-edge",
+      "label": "threatens",
+      "predicate": "threatens",
+      "required_edge_properties": "controls applied; blinding check; engagement shown",
+      "refs": [
+        79
+      ]
+    },
+    {
+      "from": "confound",
+      "to": "claim-edge",
+      "label": "rebuts",
+      "predicate": "rebuts",
+      "required_edge_properties": "counter-edge for a rebuttal of the confound",
+      "refs": [
+        79
+      ]
+    },
+    {
+      "from": "hypothesis-group",
+      "to": "claim-edge",
+      "label": "rival_of",
+      "predicate": "rival_of",
+      "required_edge_properties": "holds between claim edges, with the discriminating experiment attached",
+      "refs": []
+    },
+    {
+      "from": "path",
+      "to": "claim-edge",
+      "label": "orders",
+      "predicate": "orders",
+      "required_edge_properties": "ordered claim edges from intervention to outcome, as DrugMechDB curates paths",
+      "refs": [
+        223
+      ]
+    }
+  ]
+}

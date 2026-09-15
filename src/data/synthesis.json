@@ -1,0 +1,709 @@
+[
+ {
+  "id": "syn-v0-abstract-1",
+  "section": "v0-abstract",
+  "excerpt": "Those three findings generalise into the volume's method: state the level, state the species and preparation, state the dose as reported, and keep rival explanations attached to the claim rather than resolved silently. T",
+  "words": 98,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-1-what-neuromodulation-is-1",
+  "section": "v0-1-what-neuromodulation-is",
+  "excerpt": "The first two senses are often merged in a single sentence, because a definition that says a therapy \"alters nerve activity\" names both the act and its result. That merge is harmless in a clinic. It is not harmless in a ",
+  "words": 59,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-1-what-neuromodulation-is-2",
+  "section": "v0-1-what-neuromodulation-is",
+  "excerpt": "A usage that fits these sources treats \"stimulation\" as the name of an act (a delivered electrical or magnetic drive) and \"modulation\" as the name of the aim or the result (a change in ongoing activity). On that reading,",
+  "words": 82,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-1-what-neuromodulation-is-3",
+  "section": "v0-1-what-neuromodulation-is",
+  "excerpt": "This volume uses \"neuromodulation\" for any exogenous drive that alters nerve activity and the chain of changes it sets off. It uses \"neuromodulator\" and \"neuromodulator system\" only in Marder's cellular sense, for endoge",
+  "words": 260,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-1-what-neuromodulation-is-4",
+  "section": "v0-1-what-neuromodulation-is",
+  "excerpt": "The rest of the volume writes every modality as a chain: drive → coupling → cellular → subcellular/molecular → circuit → system → outcome. Section 2 argues for the chain. Peterchev and colleagues separate the dose, meani",
+  "words": 181,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-2-levels-and-the-chain-1",
+  "section": "v0-2-levels-and-the-chain",
+  "excerpt": "The claim of this section is that every modality in the volume, device or drug, can be written as one chain: drive → coupling → cellular → subcellular/molecular → circuit → system → outcome. The drive is what is delivere",
+  "words": 158,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-2-levels-and-the-chain-2",
+  "section": "v0-2-levels-and-the-chain",
+  "excerpt": "Read together, these sources suggest that the chain is not a hierarchy in which the lower level fully determines the upper. It is a list of places where a separate measurement or model is needed. That is the sense in whi",
+  "words": 42,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-2-levels-and-the-chain-3",
+  "section": "v0-2-levels-and-the-chain",
+  "excerpt": "Written as the Atlas chain, the example reads as follows. *Drive*: an electrical stimulus applied to the vagus nerve, or a drug acting on the same pathway, both of which Tracey names as ways into the loop [149]. *Couplin",
+  "words": 145,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-2-levels-and-the-chain-4",
+  "section": "v0-2-levels-and-the-chain",
+  "excerpt": "Two joins fail more often than the others in this literature. One is between biophysics and molecules: between the physical coupling event and the molecular signalling that is supposed to follow from it. The other is bet",
+  "words": 64,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-2-levels-and-the-chain-5",
+  "section": "v0-2-levels-and-the-chain",
+  "excerpt": "The Atlas names the distinction these two sources draw. The *nominal stimulus* is what the experimenter set: the device parameters, or the administered dose and route. The *effective stimulus* is what actually acted on t",
+  "words": 79,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-2-levels-and-the-chain-6",
+  "section": "v0-2-levels-and-the-chain",
+  "excerpt": "Writing the chain as edges forces four choices. *Direction*: an edge runs from one level to another, so a reflex loop such as Tracey's has to be drawn as a cycle rather than a line [149]. *Sign of effect*: an edge must s",
+  "words": 138,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-3-dose-1",
+  "section": "v0-3-dose",
+  "excerpt": "The result is a gap between two levels. The device-side dose is well defined and often badly reported [2,9]. The exposure at the tissue can be modelled, and has been checked against intracranial recordings in a small num",
+  "words": 71,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-3-dose-2",
+  "section": "v0-3-dose",
+  "excerpt": "This is the strongest independent statement of this section's thesis in the corpus. It was made about a clinical therapy with its own dosing tradition, two years before the general tES/TMS definition, and it rejects the ",
+  "words": 41,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-3-dose-3",
+  "section": "v0-3-dose",
+  "excerpt": "The optical case shows that a mechanism demonstrated at the cell does not establish a delivered dose at the target [21,22]. It also adds a covariate, skin pigmentation, that has no counterpart in the electrical reporting",
+  "words": 35,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-3-dose-4",
+  "section": "v0-3-dose",
+  "excerpt": "Three requirements for the graph follow. First, dose is stored as a parameter set per drive class, each parameter with its unit: configuration, waveform and timing for electromagnetic drives, convulsive therapy included ",
+  "words": 60,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-3-dose-5",
+  "section": "v0-3-dose",
+  "excerpt": "Second, the nominal and effective stimulus are separate properties, never one field with a flag. Free-field and in situ acoustic values are two properties [20]. Device-side settings and modelled E-field are two propertie",
+  "words": 48,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-3-dose-6",
+  "section": "v0-3-dose",
+  "excerpt": "Third, any summary dose metric is named rather than assumed. An E-field value names its outcome measure [14]. A safety quantity names its rule and that rule's scope [17,18]. A thermal value names CEM43 or the temperature",
+  "words": 50,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-4-coupling-electromagnetic-1",
+  "section": "v0-4-coupling-electromagnetic",
+  "excerpt": "Two mechanisms therefore sit under the same word \"polarization\" and do not scale together: somatic polarisation, which is proportional to field magnitude along the somato-dendritic axis and has been measured in rodent sl",
+  "words": 79,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-4-coupling-electromagnetic-2",
+  "section": "v0-4-coupling-electromagnetic",
+  "excerpt": "What would settle it is a matched comparison rather than more of either kind of study: simultaneous intracranial recording and field measurement in humans at conventional 1–2 mA, with peripheral block applied in the same",
+  "words": 80,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-4-coupling-electromagnetic-3",
+  "section": "v0-4-coupling-electromagnetic",
+  "excerpt": "Coupling is a function of geometry and fibre type, so \"stimulation\" is not an edge. Four properties have to travel with it. First, orientation: the field component parallel to the somato-dendritic axis, because perpendic",
+  "words": 129,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-4-coupling-electromagnetic-4",
+  "section": "v0-4-coupling-electromagnetic",
+  "excerpt": "Two of those edges must also be able to carry rivals rather than a single mechanism: the route of low-intensity tES effects, cortical or peripheral [51,52,54,55], and the mechanism and feasibility of temporal interferenc",
+  "words": 52,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-5-coupling-acoustic-optical-chemical-1",
+  "section": "v0-5-coupling-acoustic-optical-chemical",
+  "excerpt": "The four families are not mutually exclusive and are not resolved. Each has its strongest evidence in a different preparation: a model for intramembrane cavitation [65], heterologous expression and knockout for channels ",
+  "words": 104,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-5-coupling-acoustic-optical-chemical-2",
+  "section": "v0-5-coupling-acoustic-optical-chemical",
+  "excerpt": "The installed transducer converts a mechanism question into a delivery question. Because the actuator's identity, kinetics and cell-type distribution are known by construction, a negative result implicates delivery rathe",
+  "words": 80,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-5-coupling-acoustic-optical-chemical-3",
+  "section": "v0-5-coupling-acoustic-optical-chemical",
+  "excerpt": "Three things follow for a schema. First, the transducer is a node rather than an edge label: cytochrome c oxidase [88], Piezo1 [68], astrocytic TRPA1 [69], CFTR [70], the bilayer itself [65], the microbubble [80], the re",
+  "words": 164,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-6-cellular-responses-1",
+  "section": "v0-6-cellular-responses",
+  "excerpt": "Four constructs, four preparations: in vivo rabbit hippocampus, a simulation fitted to visual development, a review-level abstraction, and rat cortical culture [96–99]. None was established in an intact awake human, and ",
+  "words": 58,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-6-cellular-responses-2",
+  "section": "v0-6-cellular-responses",
+  "excerpt": "What \"LTP-like\" claims in the human work is a resemblance in three properties: the effect follows patterned input, it outlasts the input, and its sign depends on the pattern [38,100]. What it does not claim is a measured",
+  "words": 74,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-6-cellular-responses-3",
+  "section": "v0-6-cellular-responses",
+  "excerpt": "The blockade logic has a structural limit. That memantine abolishes an after-effect in six people establishes that the after-effect needs NMDA receptors somewhere in the measured pathway [105]; it does not establish wher",
+  "words": 113,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-6-cellular-responses-4",
+  "section": "v0-6-cellular-responses",
+  "excerpt": "These results place glia in the chain as participants for at least one drive, in rodents [121,124], while the only primate-level assay of stimulation-driven glial activation collected here is negative [126]. The cellular",
+  "words": 49,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-6-cellular-responses-5",
+  "section": "v0-6-cellular-responses",
+  "excerpt": "\"Plasticity\" cannot be one edge. The same word covers an in vivo rabbit field potential [96], a multiplicative change in quantal amplitude in rat culture [99], a spine count in mouse organotypic slice [114] and an MEP ch",
+  "words": 60,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-6-cellular-responses-6",
+  "section": "v0-6-cellular-responses",
+  "excerpt": "Direction needs a distribution, not a sign. When 39–45% of participants move the expected way and responses are bimodal [204], and when the same protocol's outcome flips with prior stimulation [101] or with the phase at ",
+  "words": 89,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-1",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "That recurrence is the reason to build one graph rather than one per modality: if the endpoints are shared, a finding about a drug constrains what to expect of a device, and the chain from drive to outcome can be joined ",
+  "words": 55,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-2",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "The first is that a shared marker is not a shared mechanism. BDNF protein can rise because activity-dependent secretion was potentiated, as in the direct-current slice work [110], or because NMDA receptor blockade at res",
+  "words": 147,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-3",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "The corpus for this volume contains no independent replication of the TRKB transmembrane binding site by a laboratory other than the one that proposed it [118,119]. Until there is one, \"antidepressants and psychedelics c",
+  "words": 55,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-4",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "The mTOR and eEF2K findings are rat and mouse, at doses given in mg/kg by injection, with spine counts and phosphorylation states as readouts [115,116]. The corpus for this volume contains no measurement of mTOR activati",
+  "words": 66,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-5",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "Two things follow. The chain has at least four joins — drive to entrainment, entrainment to glial state, glial state to clearance, clearance to plaque load — and the supporting papers do not all measure the same ones: th",
+  "words": 132,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-6",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "An endpoint node cannot be the molecule. \"BDNF\" as a node collapses secreted protein in a mouse slice [110], translated protein after eEF2K deactivation in mouse cortex [116], a human genotype [111], and a structural bin",
+  "words": 57,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-7-molecular-subcellular-convergence-7",
+  "section": "v0-7-molecular-subcellular-convergence",
+  "excerpt": "Convergence edges are weaker than they look unless the assay is shared. Two drives that both \"raise BDNF\", measured by different assays in different species, support a much weaker join than two drives whose effects are a",
+  "words": 132,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-8-circuits-networks-neuromodulators-1",
+  "section": "v0-8-circuits-networks-neuromodulators",
+  "excerpt": "The circuit-level vocabulary therefore arrives with an interaction term: efficacy is a function of the applied drive and the ongoing state jointly, not of the drive alone [37,44,53]. The supporting results are ferret sli",
+  "words": 58,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-8-circuits-networks-neuromodulators-2",
+  "section": "v0-8-circuits-networks-neuromodulators",
+  "excerpt": "Outcome data do not separate the two accounts, because both predict benefit at high frequency [133]. They differ in what they predict about the nucleus's output: variance-free driven firing carrying no information, versu",
+  "words": 81,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-8-circuits-networks-neuromodulators-3",
+  "section": "v0-8-circuits-networks-neuromodulators",
+  "excerpt": "The dispute is not whether connectivity carries information about outcome but how much, and under which definition of the target [129,130]. The same measure yields a usable targeting rule when the target is a literature-",
+  "words": 59,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-8-circuits-networks-neuromodulators-4",
+  "section": "v0-8-circuits-networks-neuromodulators",
+  "excerpt": "A circuit-level edge cannot be written as drive → effect. It needs the target definition attached, because the same connectivity measure supports a targeting rule under one definition and explains 3% of variance under an",
+  "words": 136,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-8-circuits-networks-neuromodulators-5",
+  "section": "v0-8-circuits-networks-neuromodulators",
+  "excerpt": "One requirement follows from the gate claims. A statement that a device effect requires a neuromodulator system is only as strong as the manipulation behind it: source-nucleus lesion and receptor antagonism give opposite",
+  "words": 58,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-9-body-systems-1",
+  "section": "v0-9-body-systems",
+  "excerpt": "Dose is a parameter set and not a dial (section 3), and the record this volume works from does not carry the current, frequency, pulse width or train duration of that rat stimulation [148]. The founding experiment theref",
+  "words": 58,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-9-body-systems-2",
+  "section": "v0-9-body-systems",
+  "excerpt": "For the graph, this is the section's most consequential single result: an edge in a drive-to-outcome chain can have a non-neuronal cell at one end, so the schema cannot restrict nodes to neurons, axons and brain regions ",
+  "words": 42,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-9-body-systems-3",
+  "section": "v0-9-body-systems",
+  "excerpt": "The dispute is therefore not about whether a device works but about what the device is doing to what. One side holds that stimulation engages a hard-wired homeostatic loop that already regulates cytokines [149,150]; the ",
+  "words": 109,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-9-body-systems-4",
+  "section": "v0-9-body-systems",
+  "excerpt": "An eleven-point difference in responder rate, sham-controlled, in a refractory population, is a real result and a modest one, and it does not adjudicate the mechanism dispute: a benefit of this size is compatible with bo",
+  "words": 39,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-9-body-systems-5",
+  "section": "v0-9-body-systems",
+  "excerpt": "Three schema consequences follow. First, direction belongs on the edge and not in the node name. Afferent and efferent vagal routes have different anatomy, different transducers and different consequences, and the foundi",
+  "words": 174,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-1",
+  "section": "v0-10-modality-map",
+  "excerpt": "Every spatial and temporal figure in the table is as reported by that family's own literature, in that literature's own preparation and units. No two were produced by the same procedure. The TMS depth and spread figures ",
+  "words": 135,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-2",
+  "section": "v0-10-modality-map",
+  "excerpt": "Where no source available to this section reports a quantity for a family, the cell reads \"not established in this corpus\". The table has 36 rows and 288 content cells, of which 22 are the placeholder alone and 33 contai",
+  "words": 96,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-3",
+  "section": "v0-10-modality-map",
+  "excerpt": "Eleven of the listed families appear in neither of the corpus's cross-modality sources [30,31]: magnetic seizure therapy, epidural cortical stimulation as a therapy, intracortical microstimulation, transcranial random no",
+  "words": 109,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-4",
+  "section": "v0-10-modality-map",
+  "excerpt": "Three families have almost nothing even so. tRNS has no mechanistic or parameter-specific source at all: it appears only inside a pooled tES safety envelope covering tDCS, tACS, tRNS and related methods together across m",
+  "words": 103,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-5",
+  "section": "v0-10-modality-map",
+  "excerpt": "Two families remain thin for reasons other than a missing literature. Spinal cord stimulation rests on one computational model validated in rats and one expert taxonomy, with no human mechanism source [2,61]. Cortical co",
+  "words": 150,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-6",
+  "section": "v0-10-modality-map",
+  "excerpt": "Two of the newly filled rows have a negative sham-controlled trial as their best evidence, in both cases postdating a positive uncontrolled result. For transcranial pulse stimulation, a double-blind sham-controlled cross",
+  "words": 154,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-10-modality-map-7",
+  "section": "v0-10-modality-map",
+  "excerpt": "Read down the columns rather than across the rows and two patterns show. First, invasiveness does not track how well the coupling step is specified. The two best-specified coupling accounts belong at opposite ends of the",
+  "words": 238,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-11-pharmacology-as-neuromodulation-1",
+  "section": "v0-11-pharmacology-as-neuromodulation",
+  "excerpt": "The ketamine dispute has the shape of the device disputes in sections 4 and 5: rival mechanisms, each strongest in a different preparation, the human data unable to discriminate. Naming an active species is not bookkeepi",
+  "words": 146,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-11-pharmacology-as-neuromodulation-2",
+  "section": "v0-11-pharmacology-as-neuromodulation",
+  "excerpt": "Three requirements follow. First, route, exposure profile and compartment reached are properties of the drive node rather than annotations on it: the same molecule given orally and intrathecally [163], or by 60-hour infu",
+  "words": 175,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-12-methods-and-confounds-1",
+  "section": "v0-12-methods-and-confounds",
+  "excerpt": "The guess-questionnaire dispute would be settled by trials that probe blinding during the session, before outcomes are known, and report both in-session and end-of-study guesses [196,197].",
+  "words": 25,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-12-methods-and-confounds-2",
+  "section": "v0-12-methods-and-confounds",
+  "excerpt": "The two tACS results need not conflict: a peripheral route can produce a human motor effect and a direct route can entrain macaque neurons [54,55]. Either way, the test for a given claim is to block or match the peripher",
+  "words": 40,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-12-methods-and-confounds-3",
+  "section": "v0-12-methods-and-confounds",
+  "excerpt": "What stays unreported in practice, on this evidence, is what checklists cannot force: in-session blinding checks [196], expectancy in drug trials [178], scalp and auditory sensation in ultrasound [77,78], thermal measure",
+  "words": 37,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-12-methods-and-confounds-4",
+  "section": "v0-12-methods-and-confounds",
+  "excerpt": "Three schema rules follow. First, every edge carries a record of its confound controls: sham type, when blinding was checked, masking, sensory matching, and whether engagement was shown [77,196,199]. Second, a confound i",
+  "words": 84,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-12-methods-and-confounds-5",
+  "section": "v0-12-methods-and-confounds",
+  "excerpt": "Pooled estimates need the same treatment: a human ultrasound meta-analysis [79] inherits whatever confound its inputs carried [77], so the graph should record that dependency, not only the pooled number.",
+  "words": 27,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-1",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "A level A is therefore a statement about one edge: drive to outcome, in one indication, against sham, with the protocol fixed. It says nothing about the coupling, cellular or molecular steps, and does not license any mec",
+  "words": 53,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-2",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "The consequence for rodent mechanism work is specific. An experiment run at fields a human montage cannot produce still shows that a coupling mechanism exists; it does not show that the human protocol engages it. What tr",
+  "words": 48,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-3",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "Where this corpus supports a direction of bias, effects shrink as controls tighten and samples grow. Low power inflates published effect sizes [207]; only about 45–50% of surveyed electrical-stimulation researchers could",
+  "words": 57,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-4",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "Two things about dose change here. Delivered charge falls as effect rises, so intensity stops indexing dose [135]. And because the threshold or marker is set per site or per patient, the delivered parameters form a distr",
+  "words": 63,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-5",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "First, every edge carries an evidence tier in two fields: a GRADE-style certainty and an evidence type from a vocabulary such as ECO, so \"level A for depression\" and \"measured in 27 rats\" stay distinguishable [208,218]. ",
+  "words": 55,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-6",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "Third, clinical-efficacy edges and mechanism edges are separate types. An efficacy edge needs indication, comparator, endpoint and setting [170,171]; approval is not certainty [182]; and a mechanism of disease is not inf",
+  "words": 46,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-13-evidence-and-translation-7",
+  "section": "v0-13-evidence-and-translation",
+  "excerpt": "Fourth, each dose node records whether its parameters were fixed or feedback-controlled. If controlled, it records the control variable, the threshold rule, whether the variable was endogenous or stimulation-entrained, a",
+  "words": 37,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-1",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — intracranial recording in one human with and without scalp anaesthesia, the measured field reported beside the effect [40,50,54].",
+  "words": 21,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-2",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — intracranial human recording at tolerated currents, rate and timing reported separately; a timing-only effect reconciles all four [45,46,48,60].",
+  "words": 20,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-3",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — one preparation, a factorial sweep of frequency, duty cycle and pressure with thermometry, in knockout and wild-type tissue [65,68,71].",
+  "words": 21,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-4",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — human studies with acoustically matched sham, masked and unmasked arms, hearing and deaf participants, envelope reported as dose [74,76,77].",
+  "words": 22,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-5",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — a dose-ranging study reporting microbubble dose, acoustic parameters and inflammatory markers together; that moves the question from whether barrier opening inflames the brain to at what dose [",
+  "words": 30,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-6",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — in-situ transmittance during a device protocol, reported in the same units as the simulation and against a dose–response curve for the endpoint claimed; the two sides may not yet disagree about",
+  "words": 36,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-7",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — a pre-registered multi-site replication in one mouse line; the clearance claim survives the entrainment null if the route is vasomotor [124,125].",
+  "words": 23,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-8",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — hold the cortical field constant while blocking scalp afferents, with a read-out other than the MEP [107,121].",
+  "words": 19,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-9",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — a randomised comparison of connectivity-derived against anatomical targets; a group gradient can coexist with a useless individual predictor [129,130].",
+  "words": 19,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-10",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — nucleus-output and cortical antidromic recording in patients at therapeutic and subtherapeutic frequencies, analysed as a pattern statistic [133].",
+  "words": 20,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-11",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — damage thresholds measured across frequency, duty cycle and electrode size in one preparation; until then the rule is a fitted envelope, and the parameters it omits belong in the dose record ra",
+  "words": 38,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-12",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — splenic nerve recording during physiological endotoxaemia with and without vagotomy; only one framing licenses an edge labelled reflex, and the therapeutic claim survives either way [149,151].",
+  "words": 29,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-13",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — a human study with a read-out validated against direct noradrenergic measurement, pulsed against continuous delivery within participants [145,146].",
+  "words": 19,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-14",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — matched dosing of the metabolite with and without the downstream block, plus target identification that assumes no high-affinity site [116,167].",
+  "words": 23,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-15",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — compartment-specific deletion, presynaptic and postsynaptic separately, in several regions; all three positions hold if necessity is regional [119,173,174].",
+  "words": 21,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-16",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — a trial blocking the subjective effect at constant exposure, with de-blinding measured; one percept carries both mechanism and confound [175,176,178].",
+  "words": 22,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-17",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — one trial stratified by severity and setting with remission primary in both arms; on present evidence the comparison is conditional on both, not a property of the modalities [170,171].",
+  "words": 31,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-18",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — paired intranasal and intravenous dosing at matched systemic exposure with a central read-out in humans; since the route exists, the quantity in dispute is the direct fraction [161,162].",
+  "words": 30,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-19",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — occupancy read out with a pharmacodynamic term beside it, in one design spanning antagonists and partial agonists; a window that holds only for antagonists is a property of the drug class, not ",
+  "words": 35,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-20",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — nothing as posed: the positions answer different questions, and a drug can work without its putative target deficit existing [188].",
+  "words": 22,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-21",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — both sham procedures applied to the same participants with pre-registered component definitions; a mostly sensory potential fits both [202,203].",
+  "words": 21,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-22",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — nothing biological: the objection is dimensional, so only a revised coupling mechanism with its own energy budget engages it [94,95].",
+  "words": 22,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-23",
+  "section": "v0-14-open-questions",
+  "excerpt": "**What would settle it** — occupancy measured for the administered compound and its metabolites in the same animals, with a ligand-only arm; the administered compound and the acting ligand are separate objects and belong",
+  "words": 35,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-14-open-questions-24",
+  "section": "v0-14-open-questions",
+  "excerpt": "The entries have a shape the graph must accommodate. In almost none is one side simply wrong: the rivals are two claims measured differently — a modelled threshold against a behavioural effect [45,48], a binding assay ag",
+  "words": 114,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-1",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "1. **Nominal and effective stimulus are separate nodes, not one node with a flag** (sections 2, 3, 5). What the operator set and what reached the tissue can differ in magnitude and, for drugs, in identity: the injected c",
+  "words": 522,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-2",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Protein-level identity — a specific receptor subunit or channel isoform as an entity distinct from its gene — needs a protein ontology alongside these. The corpus for this volume contains no reference describing one, so ",
+  "words": 41,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-3",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "No ontology in this volume's corpus covers stimulation protocols or device parameters adequately. The nearest things are reporting standards and repositories, which say what to write down but supply no identifiers or cla",
+  "words": 91,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-4",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Its required slots follow from sections 3, 4, 5 and 12: drive class; device and its configuration, including electrode or coil or transducer geometry; waveform with amplitude, pulse width, frequency, phase and polarity; ",
+  "words": 104,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-5",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Where these would lose what this volume needs is in edge semantics. An edge typed only by predicate and endpoints cannot hold a parameter set with units, a nominal-versus-effective pair, a preparation, a confound-control",
+  "words": 73,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-6",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Every claim edge, whatever its predicate, carries the same four properties: evidence type [218], certainty [208], species and preparation, and a link to its source, plus the dose and state that qualify its sign. An edge ",
+  "words": 38,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-7",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Consensus and reporting documents are the most efficient entry point to a modality, because they name the parameters a field has agreed matter: RATES, from a three-round Delphi study with 38 experts [193], and GRADE for ",
+  "words": 95,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-8",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Searching by modality name returns the recent tier. Three strategies in this volume's sweep returned the seminal tier instead. First, search by the dispute rather than the technique — name the two rivals and the question",
+  "words": 126,
+  "volume": "v0"
+ },
+ {
+  "id": "syn-v0-15-from-text-to-graph-9",
+  "section": "v0-15-from-text-to-graph",
+  "excerpt": "Four kinds of result deserve scepticism on the evidence collected here. A pooled human estimate whose authors call it tentative, limited by selection bias and incomplete parameter reporting, as the ultrasound meta-analys",
+  "words": 117,
+  "volume": "v0"
+ }
+]
