@@ -29,7 +29,7 @@ npm run build && npm run preview   # http://localhost:4173
 | Command | What it does |
 |---|---|
 | `npm run build:content` | Validates the pack (zod), parses every ready volume, links terms, renders markdown and KaTeX to hast, validates `claims.yaml`, emits `src/data/*` and the graph exports; **fails loudly** |
-| `npm run build` | `tsc -b && vite build` → static `dist/` (set `BASE_PATH=/neuromodulation-atlas/` for the Pages sub-path) |
+| `npm run build` | `tsc -b && vite build` → static `dist/` (set `BASE_PATH=/neuromodulation-atlas/` for the Pages sub-path). Every route also gets its own `index.html` shell, so a shared deep link answers 200 on GitHub Pages rather than 404-with-a-body; `404.html` stays as the fallback |
 | `npm test` | Vitest: pack schemas, claims rules, term matcher, parser, figure data, notepad, graph analytics, graph exports, the Cypher read-only guard |
 | `npm run test:e2e` | Playwright against `dist/` on :4173 **and** a second build with an extra volume on :4174 |
 | `npm run build:fixture-volume` | Builds that second app from a fixture pack in which `v1` is ready (used by the volume test) |

@@ -12,14 +12,34 @@ const DATA_DIR = path.resolve(ROOT, process.env.DATA_DIR ?? 'src/data');
 const PUBLIC_DIR = path.resolve(ROOT, process.env.PUBLIC_DIR ?? 'public');
 const OUT_DIR = path.resolve(ROOT, process.env.OUT_DIR ?? 'dist');
 
-/** SPA deep links on GitHub Pages need a 404.html that is a copy of index.html (as in Bioactive Explorer). */
-function spaFallback(): Plugin {
+/**
+ * GitHub Pages serves a static tree, so a client-routed deep link only works through `404.html` — and then answers
+ * with HTTP 404, which is a poor thing to hand someone who was sent a link to a section or a claim. Every route this
+ * app has is known at build time, so each one also gets its own `index.html` shell and answers 200. `404.html`
+ * remains the fallback for everything else.
+ */
+function staticRouteShells(): Plugin {
   return {
-    name: 'spa-404-fallback',
+    name: 'static-route-shells',
     apply: 'build',
     closeBundle() {
       const index = path.join(OUT_DIR, 'index.html');
-      if (fs.existsSync(index)) fs.copyFileSync(index, path.join(OUT_DIR, '404.html'));
+      if (!fs.existsSync(index)) return;
+      const html = fs.readFileSync(index);
+      fs.writeFileSync(path.join(OUT_DIR, '404.html'), html);
+      const data = <T,>(file: string): T[] => {
+        const p = path.join(DATA_DIR, file);
+        return fs.existsSync(p) ? (JSON.parse(fs.readFileSync(p, 'utf8')) as T[]) : [];
+      };
+      const routes = ['read', 'glossary', 'concepts', 'figures', 'graph', 'references', 'methods', 'about'];
+      for (const v of data<{ id: string }>('volumes.json')) routes.push(`read/${v.id}`);
+      for (const c of data<{ id: string }>('concepts-index.json')) routes.push(`concepts/${c.id}`);
+      for (const f of data<{ id: string }>('figures-index.json')) routes.push(`figures/${f.id}`);
+      for (const r of routes) {
+        fs.mkdirSync(path.join(OUT_DIR, r), { recursive: true });
+        fs.writeFileSync(path.join(OUT_DIR, r, 'index.html'), html);
+      }
+      console.log(`static shells: ${routes.length} routes + 404.html`);
     },
   };
 }
@@ -36,7 +56,7 @@ const CHUNKS: [string, RegExp][] = [
 export default defineConfig({
   base: process.env.BASE_PATH ?? '/',
   publicDir: PUBLIC_DIR,
-  plugins: [react(), spaFallback()],
+  plugins: [react(), staticRouteShells()],
   resolve: {
     alias: [
       { find: '@/data', replacement: DATA_DIR },
