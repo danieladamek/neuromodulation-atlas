@@ -35,6 +35,17 @@ npm run build && npm run preview   # http://localhost:4173
 | `npm run build:fixture-volume` | Builds that second app from a fixture pack in which `v1` is ready (used by the volume test) |
 | `python3 ../../tools/validate_pack.py content-pack` | The pack-side validator (needs `pyyaml`); `build:content` enforces the same rules |
 
+`npm test` parses every statement of the Cypher export with the official Neo4j parser. The *load* path has its own
+test, gated on `NEO4J_TEST_URL` so it can never reach a default endpoint or your own database:
+
+```bash
+NEO4J_TEST_URL=bolt://localhost:7699 npx vitest run tests/unit/neo4j-load.test.ts
+```
+
+It was last run against a throwaway Neo4j 2025.08 (its own config and data dir, bolt on :7699, HTTP off, auth off):
+880 nodes, 458 relationships, the nine null results round-tripping as `'null-result'` with their notes, and a second
+run of the whole file changing nothing.
+
 ## Editing the content pack
 
 `content-pack/` is the **only** source of scientific content (APP-SPEC §6). The app never adds facts, and gaps are
