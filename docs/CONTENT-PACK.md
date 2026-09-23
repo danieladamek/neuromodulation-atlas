@@ -1,12 +1,12 @@
 ---
 type: spec
 project: manuscript-interrogator
-version: 0.7
+version: 0.8
 ---
 
 # CONTENT-PACK — the structured input Claude Code builds from
 
-**Version 0.7 · 2026-09-15.** The content pack is authored by the Manuscript Interrogator Cowork project (research role) and is the **only** source of scientific content in a generated app (APP-SPEC §6). Claude Code validates it in `scripts/build-content.ts` and fails loudly on any violation below. Everything is UTF-8 YAML/Markdown so Daniel can review it in Obsidian before dispatch.
+**Version 0.8 · 2026-09-23.** The content pack is authored by the Manuscript Interrogator Cowork project (research role) and is the **only** source of scientific content in a generated app (APP-SPEC §6). Claude Code validates it in `scripts/build-content.ts` and fails loudly on any violation below. Everything is UTF-8 YAML/Markdown so Daniel can review it in Obsidian before dispatch.
 
 ## Modes
 
@@ -417,7 +417,25 @@ claims:
 
 Optional on a claim: `finding: null-result` plus `finding_note`, for an edge whose asserted result is a null or a failed replication. Without it a reader of the predicate alone misreads a negative result as a positive one, since the vocabulary has no negation. `finding` defaults to `positive` when absent. The value is spelled `null-result`, not `null`, because bare `null` is YAML for nothing.
 
-Rules the validator enforces: ids unique; `type`, `predicate`, `level` and `evidence` come from `vocabulary`; `refs` non-empty, every `n` exists and is `verified: true`; `section` exists; `term` (when given) resolves to the glossary; `status: contested` names a `hypothesis` rival id that exists; every hypothesis group has ≥ 2 rivals and every rival is used by at least one claim (warning); `status: inferred` requires `synthesis: true` or `evidence: inferred`, and vice versa; `xref` is a CURIE (`PREFIX:local`) when given. Ontology prefixes the builder should prefer: `UBERON`, `CL`, `GO`, `CHEBI`, `PR`, `NCBITaxon`, `ECO`, `ILX`/`NIFSTD`, `NPO`, SCKAN population ids.
+Optional on a claim, from v0.8, two **role slots**, which make a participant addressable instead of implicit (SCHEMA-PROPOSAL-G4-01, approved 2026-09-23):
+
+```yaml
+    mediator:                  # 1–3 middle terms, each a node like subject/object, each with a role
+      - { label: "Piezo1 and other mechanosensitive channels", type: CouplingMechanism,
+          term: piezo1, role: proposed_primary }
+    threatens: [C0201, C0203]  # on a confound claim: the claims whose inference it undermines
+    threatens_note: "activation ascended through the auditory system rather than arising at the focus"
+```
+
+`mediator` records that the source asserted one mechanism *through* a middle term. Split into two binary claims, the pack says two independent things and cannot record that rejecting the middle term falsifies both. `role` takes a closed vocabulary — `proposed_primary | named_rival | required_relay | permissive_gate` — which is the distinction the coupling figure otherwise draws by hand.
+
+`threatens` aims a confound at an inference rather than at a node. "The auditory pathway confounds transcranial ultrasound" is not what the source showed; it confounds *the inference from the focus to the observed activation*. The claim's own `subject`/`object` are unchanged, so no existing claim id changes what it asserts.
+
+Both are optional, and both are for new claims and new volumes: a claim id is never re-aritied (SCHEMA-PROPOSAL-G4-01 §10). `co_required_with`, for conjunctions among `required_for` claims, was considered and held.
+
+Rules the validator enforces: ids unique; `type`, `predicate`, `level` and `evidence` come from `vocabulary`; `refs` non-empty, every `n` exists and is `verified: true`; `section` exists; `term` (when given) resolves to the glossary; `status: contested` names a `hypothesis` rival id that exists; every hypothesis group has ≥ 2 rivals and every rival is used by at least one claim (warning); `status: inferred` requires `synthesis: true` or `evidence: inferred`, and vice versa; `xref` is a CURIE (`PREFIX:local`) when given. From v0.8: `mediator` has 1–3 entries, each with a `type` from `vocabulary.node_types`, a resolving `term`/`xref`, and a `role` from `proposed_primary | named_rival | required_relay | permissive_gate`; a `predicate: couples_via` claim without a `mediator` is a warning; `threatens` is only allowed where `subject.type: Confound` or `predicate: confounds`, every id in it exists, and no claim threatens itself.
+
+Ontology prefixes the builder should prefer: `UBERON`, `CL`, `GO`, `CHEBI`, `PR`, `NCBITaxon`, `ECO`, `ILX`/`NIFSTD`, `NPO`, SCKAN population ids.
 
 The app turns `claims.yaml` into the `/graph` lab and into downloadable Cypher, CSV and GraphML (APP-SPEC §4.1). The vocabulary is a starting schema, not a final one — the point of publishing it is that Daniel can redesign it.
 
@@ -464,3 +482,4 @@ The app turns `claims.yaml` into the `/graph` lab and into downloadable Cypher, 
 - v0.5 (2026-09-15) — **`tier: classic`** for pre-window primaries the field leans on without being founded on them, and the textbook band raised to 200–250 references (25–40 seminal). Daniel's ruling on the V0 sweep (223 refs, 74 candidate seminals): the missing thing was an honest label, not a smaller corpus.
 - v0.6 (2026-09-15) — textbook word band scaled to the corpus (18,000–40,000; 200–250 references needs 25,000–40,000). Set after V0 came in at 29,577 words with 220 references cited: the old 25,000 ceiling predated the corpus and would have meant cutting cited material.
 - v0.7 (2026-09-15) — optional `finding: null-result` + `finding_note` on a claim, after V0 extraction produced nine edges whose asserted result was a null that the predicate alone would have read as positive. Spelled `null-result` because bare `null` is YAML for nothing.
+- v0.8 (2026-09-23) — **n-ary claim roles**: optional `mediator` (1–3 middle terms with a closed `role` vocabulary) and `threatens` + `threatens_note` on confound claims, so a mechanism's middle term and a confound's target are addressable rather than implicit. Daniel approved SCHEMA-PROPOSAL-G4-01 on 2026-09-23; `co_required_with` was held. Additive and optional — a v0.7 pack is a valid v0.8 pack, and no claim id is re-aritied.
