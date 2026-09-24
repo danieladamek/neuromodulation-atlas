@@ -45,7 +45,7 @@
   .bx-prose       { @apply text-[15px] leading-7 text-ink-muted dark:text-night-muted; }
   .bx-kbd         { @apply rounded border border-[color:var(--bx-line)] px-1 font-mono text-[11px]; }
   .bx-muted       { @apply text-ink-muted dark:text-night-muted; }
-  /* new for Manuscript Interrogator apps */
+  /* atlas-specific components */
   .bx-term        { @apply underline decoration-dotted decoration-[color:var(--bx-accent)] underline-offset-[3px] cursor-help rounded-sm hover:bg-paper-2 dark:hover:bg-night-2; }
   .bx-cite        { @apply align-super text-[11px] font-semibold text-[color:var(--bx-accent)] hover:underline cursor-pointer; }
   .bx-foldout     { @apply bx-card mt-2 mb-4 p-3 text-sm border-l-4 border-l-[color:var(--bx-accent)]; }

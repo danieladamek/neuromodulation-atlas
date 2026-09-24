@@ -14,6 +14,10 @@ import type { ConceptMeta, FigureMeta, SectionMeta, TermShort, VolumeMeta } from
  */
 export const manifest = manifestJson;
 export const provenance = provenanceJson;
+/** The byline readers see (manifest.authors). The builder record stays in provenance as metadata, never as a byline. */
+export const byline = manifest.authors.join('; ');
+/** The first author's name without its parenthetical, for "under …'s direction". */
+export const authorName = manifest.authors[0].replace(/\s*\(.*\)\s*$/, '');
 export const terms = termsJson as unknown as TermShort[];
 export const conceptsIndex = conceptsIndexJson as unknown as ConceptMeta[];
 export const figuresIndex = figuresIndexJson as unknown as FigureMeta[];

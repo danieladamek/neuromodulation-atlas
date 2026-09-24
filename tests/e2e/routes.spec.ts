@@ -50,7 +50,7 @@ test('the app never implies peer review, and says the sweep date on /, /read and
 test('the volume index lists v0 as ready and v1 as coming', async ({ page }) => {
   await page.goto('/read');
   await expect(page.getByTestId('volume-card-v0')).toContainText(/ready/);
-  await expect(page.getByTestId('volume-card-v0')).toContainText(/30,350 words|30,350/);
+  await expect(page.getByTestId('volume-card-v0')).toContainText(/30,352 words/);
   const v1 = page.getByTestId('volume-card-v1');
   await expect(v1).toContainText(/coming/);
   await expect(v1.getByRole('link')).toHaveCount(0);
@@ -113,4 +113,22 @@ test('/about and the footer state the licences: content CC BY 4.0, code MIT (A3)
   await expect(page.getByTestId('licence')).toContainText(/App code: MIT/);
   await expect(page.locator('footer')).toContainText(/Content CC BY 4\.0, code MIT/);
   await expect(page.locator('footer')).toContainText(/Not peer reviewed/);
+});
+
+test('readers see "Neuromodulation Atlas" and Daniel Adamek as author; no page names Manuscript Interrogator or "Explorer" (A3)', async ({ page }) => {
+  for (const [route] of ROUTES) {
+    await page.goto(route);
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    if (route === '/graph') await expect(page.getByTestId('view-counts')).toBeVisible();
+    const text = await page.locator('body').innerText();
+    expect(text, route).not.toMatch(/Manuscript Interrogator/i);
+    expect(text, route).not.toMatch(/Explorer/);
+    await expect(page).toHaveTitle(/Neuromodulation Atlas/);
+    await expect(page.locator('header.sticky')).toContainText('Neuromodulation Atlas');
+  }
+  await page.goto('/about');
+  await expect(page.locator('main')).toContainText(/drafted with AI assistance under Daniel Adamek’s direction/);
+  await expect(page.locator('main')).toContainText(/not peer reviewed/i);
+  await page.goto('/methods');
+  await expect(page.locator('main')).toContainText(/drafted with AI assistance under Daniel Adamek’s direction/);
 });

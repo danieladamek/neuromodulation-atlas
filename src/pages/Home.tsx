@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LATEST_AS_OF, asOfLong, conceptsIndex as concepts, figuresIndex as figures, manifest, provenance, readyVolumes, terms, volumes } from '@/lib/data';
+import { authorName, LATEST_AS_OF, asOfLong, conceptsIndex as concepts, figuresIndex as figures, manifest, provenance, readyVolumes, terms, volumes } from '@/lib/data';
 
 export default function Home() {
   const first = readyVolumes[0];
@@ -31,7 +31,7 @@ export default function Home() {
         <h2 id="plain-h" className="text-xl">In plain language</h2>
         <p className="bx-prose mt-2">{manifest.plain_abstract}</p>
         <p className="mt-2 text-xs bx-muted">
-          Written by {manifest.builder.name} v{manifest.builder.version} from a scoped literature sweep that closed on {asOfLong(LATEST_AS_OF)}.
+          Written by {authorName} with AI assistance, from a scoped literature sweep that closed on {asOfLong(LATEST_AS_OF)}.
           It is <strong>not</strong> peer reviewed and has had no external scientific review of any kind — see <Link className="underline" to="/about">About</Link> and <Link className="underline" to="/methods">Methods</Link>.
         </p>
       </section>
@@ -79,7 +79,7 @@ export default function Home() {
       )}
 
       <section className="mt-8 grid gap-3 sm:grid-cols-3 text-sm">
-        <Link to="/figures" className="bx-card p-3 hover:bg-paper-2 dark:hover:bg-night-2"><span className="font-semibold">Figures →</span><span className="block bx-muted mt-1">{figures.length} figures, all synthesised by the builder. No published figure image is reproduced.</span></Link>
+        <Link to="/figures" className="bx-card p-3 hover:bg-paper-2 dark:hover:bg-night-2"><span className="font-semibold">Figures →</span><span className="block bx-muted mt-1">{figures.length} figures, all synthesised from the cited works. No published figure image is reproduced.</span></Link>
         <Link to="/references" className="bx-card p-3 hover:bg-paper-2 dark:hover:bg-night-2"><span className="font-semibold">References →</span><span className="block bx-muted mt-1">{provenance.references.total} works in four tiers, each with a summary of what it found and why it is cited.</span></Link>
         <Link to="/methods" className="bx-card p-3 hover:bg-paper-2 dark:hover:bg-night-2"><span className="font-semibold">Methods →</span><span className="block bx-muted mt-1">The scope, the interview, every search query, and every gap this app knows it has.</span></Link>
       </section>

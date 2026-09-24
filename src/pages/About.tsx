@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LATEST_AS_OF, asOfLong, manifest, provenance, readyVolumes } from '@/lib/data';
+import { authorName, LATEST_AS_OF, asOfLong, manifest, provenance, readyVolumes } from '@/lib/data';
 
 export default function About() {
   return (
@@ -10,14 +10,14 @@ export default function About() {
         <span className="bx-asof">Current as of {LATEST_AS_OF}</span>
       </p>
       <p className="mt-3">
-        <strong>{manifest.short_title} Explorer</strong> is an interactive textbook-and-journal built around one commissioned review, <em>{manifest.title}</em>, which arrives in volumes.
+        <strong>{manifest.short_title} Atlas</strong> is an interactive textbook-and-journal built around one commissioned review, <em>{manifest.title}</em>, which arrives in volumes.
         It is written for {manifest.audience}.
       </p>
 
       <h2 className="text-2xl mt-8 text-ink dark:text-night-ink">Who wrote this, and what it is not</h2>
       <p className="mt-2">
-        The review, its glossary, the 101s, the figures, the reference summaries and every claim in the graph were written by <strong>{manifest.builder.name} v{manifest.builder.version}</strong>
-        {' '}({manifest.builder.date}) — an AI research builder working from a scoped literature sweep — and reviewed by its commissioner. This app was rendered from that content pack by Claude Code.
+        The review, its glossary, the 101s, the figures, the reference summaries and every claim in the graph were <strong>drafted with AI assistance under {authorName}’s direction</strong>,
+        {' '}working from a scoped literature sweep, and reviewed by the author. They are <strong>not peer reviewed</strong>. This app was rendered from that content pack by Claude Code.
       </p>
       <p className="mt-2"><strong>{manifest.venue}.</strong></p>
       <p className="mt-2">
@@ -28,7 +28,7 @@ export default function About() {
 
       <h2 className="text-2xl mt-8 text-ink dark:text-night-ink">Figures and the graph</h2>
       <p className="mt-2">
-        All {provenance.figures.total} figures are the builder’s own — {provenance.figures.by_synthesis.data ?? 0} synthesised from values published in the cited works and {provenance.figures.by_synthesis.conceptual ?? 0} drawn
+        All {provenance.figures.total} figures were made for this review — {provenance.figures.by_synthesis.data ?? 0} synthesised from values published in the cited works and {provenance.figures.by_synthesis.conceptual ?? 0} drawn
         as conceptual diagrams. <strong>No published figure image is reproduced.</strong> The <Link className="underline" to="/graph">graph lab</Link> shows only what the pack’s claims.yaml states: every edge is one claim,
         with its references, and contested, inferred and null-result claims are marked as such. Connecting it to your own Neo4j happens entirely in your browser; this site stores nothing you type there.
       </p>
@@ -57,7 +57,7 @@ export default function About() {
 
       <h2 className="text-2xl mt-8 text-ink dark:text-night-ink">Built with</h2>
       <ul className="list-disc pl-5 mt-2">
-        <li>Content pack: {manifest.builder.name} v{manifest.builder.version} ({manifest.builder.date}); app rendered by Claude Code from <code className="font-mono text-xs">KICKOFF.md</code>.</li>
+        <li>Content pack: drafted with AI assistance under {authorName}’s direction; app rendered by Claude Code from <code className="font-mono text-xs">KICKOFF.md</code>.</li>
         <li>Vite, React, TypeScript, Tailwind, unified/remark/rehype and KaTeX (at build time), Recharts, d3-force and d3-zoom, graphology for the in-browser analytics, floating-ui, and the official neo4j-driver for the optional connection panel.</li>
         <li>A static site on GitHub Pages: no backend, no tracking, no runtime content fetch. Notes, the L1–L4 choice and the theme live only in your browser.</li>
       </ul>

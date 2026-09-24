@@ -1,6 +1,6 @@
 {
  "slug": "neuromodulation-atlas",
- "pack_hash": "e96cb3f0cdd933940462c17fa02dc16aa6702e9e82f443111340f38dac6b5472",
+ "pack_hash": "30a992fce9102bc4d145907bdee558156e463a698dfca0c33c325da489f56e46",
  "mode": "topic",
  "as_of": "2026-09-15",
  "builder": {
@@ -15,7 +15,7 @@
    "status": "ready",
    "as_of": "2026-09-15",
    "sections": 16,
-   "words": 30350,
+   "words": 30352,
    "blocks": {
     "total": 413,
     "cited": 362,
@@ -39,7 +39,7 @@
   }
  ],
  "sections": 16,
- "words": 30350,
+ "words": 30352,
  "blocks": {
   "total": 413,
   "cited": 362,

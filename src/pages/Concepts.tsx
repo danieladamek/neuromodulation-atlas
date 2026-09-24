@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { conceptsIndex, getFigure, getTerm } from '@/lib/data';
+import { authorName, conceptsIndex, getFigure, getTerm } from '@/lib/data';
 
 export default function Concepts() {
   const ordered = [...conceptsIndex].sort((a, b) => a.prerequisites.length - b.prerequisites.length || a.title.localeCompare(b.title));
@@ -7,7 +7,7 @@ export default function Concepts() {
     <div className="mx-auto max-w-3xl px-4 py-8">
       <h1 className="text-3xl sm:text-4xl">Concepts (101s)</h1>
       <p className="bx-prose mt-2">
-        {conceptsIndex.length} introductions to what this review presumes you know, written by the content-pack builder at four levels —
+        {conceptsIndex.length} introductions to what this review presumes you know, drafted with AI assistance under {authorName}’s direction, at four levels —
         L1 intuition, L2 undergraduate, L3 graduate, L4 expert — each authored separately rather than generated from the others. Pick a level on
         any 101 and the choice follows you to the next. Each ends with a self-check. Start with the ones that have no prerequisites.
       </p>

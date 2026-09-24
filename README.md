@@ -1,14 +1,15 @@
-# Neuromodulation Explorer
+# Neuromodulation Atlas
 
 An interactive **textbook-and-journal** built around one commissioned review — *Neuromodulation: an atlas of exogenous
 drives, from coupling to outcome* — which arrives in **volumes**, plus a **graph lab** over every mechanism claim the
 review makes.
 
-> **Commissioned review — NOT PEER REVIEWED.** Written by the Manuscript Interrogator (an AI research builder) and
-> reviewed by its commissioner; it has had no external scientific review of any kind. The literature sweep closed on
+> **Commissioned review — NOT PEER REVIEWED.** Written by Daniel Adamek with AI assistance: the review, glossary,
+> 101s, figures, reference summaries and claims were drafted with AI assistance under the author's direction and
+> reviewed by the author. It has had no external scientific review of any kind. The literature sweep closed on
 > **15 September 2026**, and the app says so on `/`, `/read` and `/about`.
 
-Volume 0 (*Foundations*) is ready: 16 sections, 30,350 words, 263 references, 300 glossary terms, 18 levelled 101s,
+Volume 0 (*Foundations*) is ready: 16 sections, 30,352 words, 263 references, 300 glossary terms, 18 levelled 101s,
 nine synthesised figures and **458 claims** in a claims-only graph. Volume 1 (*Vagus and cranial nerve stimulation*)
 is declared and shown as coming; when it is written it is **added to this app**, never forked into another one.
 
@@ -182,6 +183,6 @@ profile, every synthesis passage, and every `TODO(author)` in the pack.
   `src/data/*`, `public/provenance.json` and `public/graph/*`, and the site's rendered text and figures.
 - Quotations of 25 words or fewer stay with their sources (`manifest.permissions`). Cited works belong to their
   authors and publishers. No published figure image is reproduced.
-- **Citing:** [`CITATION.cff`](CITATION.cff). The atlas is a commissioned review assembled with an AI-assisted builder
-  (Manuscript Interrogator) under the author's direction. It is **not peer reviewed**, and its sweep closed on
+- **Citing:** [`CITATION.cff`](CITATION.cff). The atlas is a commissioned review by Daniel Adamek, drafted with AI
+  assistance under the author's direction. It is **not peer reviewed**, and its sweep closed on
   15 September 2026.

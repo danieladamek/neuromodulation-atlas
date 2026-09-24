@@ -85,7 +85,7 @@ describe('the real volume', () => {
   it('holds the citation gate at zero uncited blocks, with the counts tools/validate_pack.py reports', () => {
     expect(parsed.uncited).toEqual([]);
     expect(parsed.blocks).toEqual({ total: 413, cited: 362, framing: 25, synthesis: 101 });
-    expect(parsed.sections.reduce((a, s) => a + s.words, 0)).toBe(30350);
+    expect(parsed.sections.reduce((a, s) => a + s.words, 0)).toBe(30352);
   });
   it('gives all 101 synthesis passages an id that deep-links into the reader', () => {
     expect(parsed.synthesis).toHaveLength(101);

@@ -5,7 +5,7 @@ import buildErrorsJson from '@/data/build-errors.json';
 import synthesisJson from '@/data/synthesis.json';
 import warningsJson from '@/data/warnings.json';
 import type { BuildError, ScopeJson, SynthesisPassage, TodoItem, VolumeScope } from '@/types';
-import { AS_OF, asOfLong, assetUrl, getTerm, manifest, provenance, readerHref, readyVolumes, sectionTitle, volumes } from '@/lib/data';
+import { authorName, byline, AS_OF, asOfLong, assetUrl, getTerm, provenance, readerHref, readyVolumes, sectionTitle, volumes } from '@/lib/data';
 import { loadScope, useAsync } from '@/lib/heavy';
 
 const todo = todoJson as TodoItem[];
@@ -146,7 +146,7 @@ export default function Methods() {
       <p className="mt-2">
         It does not claim exhaustiveness, it is not PRISMA, and it has had no external scientific review of any kind. What it offers instead is traceability: every claim carries a
         citation to a verified reference, every inference is marked as one, and the scope, the interview and the full search strategy are published below so you can see what was
-        looked for and what was deliberately left out. Rendered by Claude Code from a content pack written by {manifest.builder.name} v{manifest.builder.version} ({manifest.builder.date}).
+        looked for and what was deliberately left out. Rendered by Claude Code from a content pack drafted with AI assistance under {authorName}’s direction. It is not peer reviewed.
       </p>
       <p className="mt-2 text-sm">
         On this page: <a className="underline" href="#counts">counts</a> · <a className="underline" href="#volumes">volumes</a> · <a className="underline" href="#scope">scope</a> · <a className="underline" href="#interview">interview</a> ·
@@ -251,7 +251,7 @@ export default function Methods() {
       <H2 id="synthesis">Every synthesis passage ({synthesis.length})</H2>
       <p className="mt-2">
         A <em>synthesis</em> passage states a conclusion the cited works do not individually state. They are marked in the reader with a quiet left rule and the word <em>synthesis</em> —
-        not as a defect, but visibly, so you can always tell the builder’s inference from a cited result.
+        not as a defect, but visibly, so you can always tell the review’s own inference from a cited result.
       </p>
       <ol className="mt-3 grid gap-2 text-sm">
         {synthesis.map((s) => (
@@ -296,7 +296,7 @@ export default function Methods() {
 
       <H2 id="written">What was written by whom</H2>
       <ul className="list-disc pl-5 mt-2">
-        <li><strong>Written by the content-pack builder</strong> ({manifest.builder.name} v{manifest.builder.version}): the review, the plain-language abstract, the glossary, the {provenance.concepts} levelled 101s, the figures and their data, the reference summaries, the scope and search log, and every claim in claims.yaml. It is the only source of scientific content in this app.</li>
+        <li><strong>Drafted with AI assistance under {authorName}’s direction</strong> ({byline}): the review, the plain-language abstract, the glossary, the {provenance.concepts} levelled 101s, the figures and their data, the reference summaries, the scope and search log, and every claim in claims.yaml. It is the only source of scientific content in this app.</li>
         <li><strong>Rendered as written by this build</strong> (Claude Code): the review’s prose is structured, linked and rendered, never rephrased. No fact, definition, summary, number, node or edge was added, and no gap was filled.</li>
         <li><strong>Done by this build:</strong> parsing, the citation-coverage gate, term linking, citation fold-outs, figure components, the L1–L4 switch, claims validation, the graph canvas and in-browser analytics, the Cypher/CSV/GraphML/JSON exports, and this provenance record.</li>
       </ul>

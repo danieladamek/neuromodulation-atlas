@@ -5,8 +5,8 @@ import ExplainChips from './ExplainChips';
 import FigureBody from './FigureBody';
 
 const SYNTH_NOTE: Record<string, string> = {
-  data: 'Assembled by the builder from values published in the cited works. Values are as published — nothing pooled, converted or re-analysed except where the source note says so.',
-  conceptual: 'Drawn by the builder from the mechanisms reported in the cited works. It is a diagram, not data.',
+  data: 'Assembled from values published in the cited works. Values are as published — nothing pooled, converted or re-analysed except where the source note says so.',
+  conceptual: 'Drawn from the mechanisms reported in the cited works. It is a diagram, not data.',
 };
 
 /** InfographicFrame pattern: title, the figure, caption, "How to read this", what it is made of. */
@@ -48,7 +48,7 @@ export default function FigureFrame({ figure }: { figure: Figure }) {
       <p className="mt-4 text-xs bx-muted"><span className="font-semibold">Source: </span>{figure.source}</p>
       <p className="mt-1 text-xs bx-muted">
         <span className="font-semibold">Synthesis: </span>
-        {figure.synthesis === 'data' ? 'synthesised from data across the cited works' : 'a conceptual diagram drawn by the builder'} — no published figure image is reproduced anywhere in this app.
+        {figure.synthesis === 'data' ? 'synthesised from data across the cited works' : 'a conceptual diagram drawn from the cited works'} — no published figure image is reproduced anywhere in this app.
       </p>
     </figure>
   );

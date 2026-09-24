@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import type { Section, SectionMeta, VolumeMeta } from '@/types';
-import { asOfLong, getSection, getVolume, manifest, provenance, sectionOfAnchor, sectionsByVolume, volumes } from '@/lib/data';
+import { authorName, asOfLong, getSection, getVolume, manifest, provenance, sectionOfAnchor, sectionsByVolume, volumes } from '@/lib/data';
 import { loadKatexCss, loadVolume, useAsync } from '@/lib/heavy';
 import { useNotepad } from '@/lib/notepad-context';
 import { anchoredQuote } from '@/lib/notepad';
@@ -35,7 +35,7 @@ function Banner({ vol }: { vol: VolumeMeta }) {
     <div className="bx-banner no-print" data-testid="review-banner">
       <div className="flex items-start gap-3">
         <p className="flex-1">
-          Written by the {manifest.builder.name} from {provenance.references.total} sources, current as of {asOfLong(vol.as_of ?? undefined)}.
+          Written by {authorName} with AI assistance, from {provenance.references.total} sources, current as of {asOfLong(vol.as_of ?? undefined)}.
           Every claim is cited; passages marked <em>synthesis</em> draw conclusions the cited works do not individually state.
           This is a commissioned review and is <strong>not peer reviewed</strong>.
         </p>

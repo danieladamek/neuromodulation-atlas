@@ -27,6 +27,6 @@ The application code is licensed separately under MIT (see `LICENSE`).
 
 ## Attribution
 
-Please cite the atlas as described in `CITATION.cff`, and say that it is a commissioned review assembled with an
-AI-assisted builder (Manuscript Interrogator) under the author's direction, and that it is **not peer reviewed**.
+Please cite the atlas as described in `CITATION.cff`, and say that it is a commissioned review drafted with AI
+assistance under the author's direction, and that it is **not peer reviewed**.
 Its literature sweep closed on 15 September 2026.

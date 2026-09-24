@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { getConcept, getFigure, getTerm, readerHref, sectionTitle, terms } from '@/lib/data';
+import { authorName, getConcept, getFigure, getTerm, readerHref, sectionTitle, terms } from '@/lib/data';
 import { loadGlossary, useAsync } from '@/lib/heavy';
 import type { GlossaryEntry } from '@/types';
 import KindChip from '@/components/ui/KindChip';
@@ -26,7 +26,7 @@ export default function Glossary() {
       <h1 className="text-3xl sm:text-4xl">Glossary</h1>
       <p className="bx-prose mt-2">
         {terms.length} terms — scientific, methodological, statistical, notation and drug names. Every entry is linkable (<code className="font-mono text-xs">/glossary#term-id</code>) and links back to
-        the review sections where it appears, the figures that use it, and the graph nodes that name it. Definitions were written by the content-pack builder; see <Link className="underline" to="/methods">Methods</Link>.
+        the review sections where it appears, the figures that use it, and the graph nodes that name it. Definitions were drafted with AI assistance under {authorName}’s direction; see <Link className="underline" to="/methods">Methods</Link>.
       </p>
       <div className="mt-4 flex flex-wrap gap-2 no-print">
         <label className="sr-only" htmlFor="glossary-q">Search the glossary</label>
