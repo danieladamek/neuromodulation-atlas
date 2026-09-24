@@ -1,12 +1,12 @@
 ---
 type: spec
 project: manuscript-interrogator
-version: 0.8
+version: 0.8.1
 ---
 
 # CONTENT-PACK — the structured input Claude Code builds from
 
-**Version 0.8 · 2026-09-23.** The content pack is authored by the Manuscript Interrogator Cowork project (research role) and is the **only** source of scientific content in a generated app (APP-SPEC §6). Claude Code validates it in `scripts/build-content.ts` and fails loudly on any violation below. Everything is UTF-8 YAML/Markdown so Daniel can review it in Obsidian before dispatch.
+**Version 0.8.1 · 2026-09-24.** The content pack is authored by the Manuscript Interrogator Cowork project (research role) and is the **only** source of scientific content in a generated app (APP-SPEC §6). Claude Code validates it in `scripts/build-content.ts` and fails loudly on any violation below. Everything is UTF-8 YAML/Markdown so Daniel can review it in Obsidian before dispatch.
 
 ## Modes
 
@@ -83,7 +83,7 @@ question: >                               # the question behind the topic, in Da
   in humans, and which methods can and cannot show it?
 purpose: orientation                      # orientation | direction | teaching | grant-background (T0)
 as_of: 2026-09-14                         # the date the sweep closed — stamped in the app, non-negotiable
-authors: ["Manuscript Interrogator (commissioned review)"]
+authors: ["Manuscript Interrogator (commissioned review)"]   # or the human author with an AI disclosure, e.g. ["Daniel Adamek (with AI assistance)"] — see v0.8.1
 venue: "Commissioned review — not peer reviewed"
 year: 2026
 permissions:
@@ -483,3 +483,4 @@ The app turns `claims.yaml` into the `/graph` lab and into downloadable Cypher, 
 - v0.6 (2026-09-15) — textbook word band scaled to the corpus (18,000–40,000; 200–250 references needs 25,000–40,000). Set after V0 came in at 29,577 words with 220 references cited: the old 25,000 ceiling predated the corpus and would have meant cutting cited material.
 - v0.7 (2026-09-15) — optional `finding: null-result` + `finding_note` on a claim, after V0 extraction produced nine edges whose asserted result was a null that the predicate alone would have read as positive. Spelled `null-result` because bare `null` is YAML for nothing.
 - v0.8 (2026-09-23) — **n-ary claim roles**: optional `mediator` (1–3 middle terms with a closed `role` vocabulary) and `threatens` + `threatens_note` on confound claims, so a mechanism's middle term and a confound's target are addressable rather than implicit. Daniel approved SCHEMA-PROPOSAL-G4-01 on 2026-09-23; `co_required_with` was held. Additive and optional — a v0.7 pack is a valid v0.8 pack, and no claim id is re-aritied.
+- v0.8.1 (2026-09-24) — **authorship in topic mode.** `authors` may name the human author with an explicit AI-assistance disclosure (`"Daniel Adamek (with AI assistance)"`) instead of the builder, and apps render `authors` as the byline, not `builder.name`. `builder` stays required as provenance metadata. Daniel's decision for the atlas's v0.1.0 release. Documentation only; no validator change.

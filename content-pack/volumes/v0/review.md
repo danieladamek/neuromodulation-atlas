@@ -1340,7 +1340,7 @@ Every claim edge, whatever its predicate, carries the same four properties: evid
 ### 15.6 How to read this literature
 
 <!-- framing -->
-What follows is advice for the reader going to the sources; the builder's own judgement is marked as such.
+What follows is advice for the reader going to the sources; the author's own judgement is marked as such.
 
 <!-- synthesis -->
 Consensus and reporting documents are the most efficient entry point to a modality, because they name the parameters a field has agreed matter: RATES, from a three-round Delphi study with 38 experts [193], and GRADE for certainty of evidence [208]. No single journal carries this literature. In this volume's corpus the transducer and relay papers appeared in general journals such as *Science* [29,92,150,158], the reporting standard in *Nature Protocols* [193], the ultrasound repository in *eLife* [79], the level reviews in *Nature Reviews Neuroscience* and *Neuron* [139,157], and the ontologies and graphs in data and informatics journals [155,156,222,223]. Following one modality's specialist journal misses most of these.
