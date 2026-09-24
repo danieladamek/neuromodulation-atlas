@@ -19,10 +19,37 @@ const OUT_DIR = path.resolve(ROOT, process.env.OUT_DIR ?? 'dist');
  * app has is known at build time, so each one also gets its own `index.html` shell and answers 200. `404.html`
  * remains the fallback for everything else.
  */
+// Each static route's page module, so its shell can modulepreload that page's chunk (E1). Without it the route chunk
+// is only requested once the entry chunk has run, which put a whole extra round trip in front of /graph's first paint.
+const ROUTE_PAGES: [RegExp, string][] = [
+  [/^read$/, 'ReadIndex'], [/^read\//, 'ReadVolume'], [/^glossary$/, 'Glossary'], [/^concepts$/, 'Concepts'], [/^concepts\//, 'Concept'],
+  [/^figures$/, 'Figures'], [/^figures\//, 'Figure'], [/^graph$/, 'Graph'], [/^references$/, 'References'], [/^methods$/, 'Methods'], [/^about$/, 'About'],
+];
+
 function staticRouteShells(): Plugin {
+  let base = '/';
+  const pageChunks = new Map<string, string[]>();   // page name → the chunk files it needs, page chunk first
   return {
     name: 'static-route-shells',
     apply: 'build',
+    configResolved(c) { base = c.base; },
+    generateBundle(_opts, bundle) {
+      const chunks = Object.values(bundle).filter((c) => c.type === 'chunk');
+      const byFile = new Map(chunks.map((c) => [c.fileName, c]));
+      for (const c of chunks) {
+        const m = c.facadeModuleId?.match(/\/src\/pages\/(\w+)\.tsx$/);
+        if (!m) continue;
+        const files: string[] = [];
+        const visit = (f: string) => {
+          if (files.includes(f)) return;
+          files.push(f);
+          const ch = byFile.get(f);
+          if (ch?.type === 'chunk') ch.imports.forEach(visit);
+        };
+        visit(c.fileName);
+        pageChunks.set(m[1], files);
+      }
+    },
     closeBundle() {
       const index = path.join(OUT_DIR, 'index.html');
       if (!fs.existsSync(index)) return;
@@ -36,9 +63,18 @@ function staticRouteShells(): Plugin {
       for (const v of data<{ id: string }>('volumes.json')) routes.push(`read/${v.id}`);
       for (const c of data<{ id: string }>('concepts-index.json')) routes.push(`concepts/${c.id}`);
       for (const f of data<{ id: string }>('figures-index.json')) routes.push(`figures/${f.id}`);
+      const shellFor = (route: string) => {
+        const page = ROUTE_PAGES.find(([re]) => re.test(route))?.[1];
+        const text = html.toString();
+        const links = (page ? pageChunks.get(page) ?? [] : [])
+          .map((f) => base + f)
+          .filter((href) => !text.includes(`"${href}"`))
+          .map((href) => `    <link rel="modulepreload" crossorigin href="${href}">`);
+        return links.length ? text.replace('</head>', `${links.join('\n')}\n  </head>`) : text;
+      };
       for (const r of routes) {
         fs.mkdirSync(path.join(OUT_DIR, r), { recursive: true });
-        fs.writeFileSync(path.join(OUT_DIR, r, 'index.html'), html);
+        fs.writeFileSync(path.join(OUT_DIR, r, 'index.html'), shellFor(r));
       }
       console.log(`static shells: ${routes.length} routes + 404.html`);
     },
@@ -67,6 +103,9 @@ function previewNoindex(): Plugin {
 
 const CHUNKS: [string, RegExp][] = [
   ['react', /node_modules\/(react|react-dom|react-router|react-router-dom|scheduler|@remix-run)\//],
+  // Shared by d3-zoom (graph) and recharts (charts). In either chunk they would drag the other along: /graph used to
+  // download all of recharts for these two (E1).
+  ['d3-shared', /node_modules\/d3-(interpolate|color)\//],
   ['charts', /node_modules\/(recharts|recharts-scale|victory-vendor|d3-(shape|path|interpolate|color|format|time|time-format|array|scale))\//],
   ['graph', /node_modules\/(graphology[^/]*|d3-(force|quadtree|dispatch|timer|zoom|selection|drag|transition|ease))\//],
   ['neo4j', /node_modules\/neo4j-driver[^/]*\//],

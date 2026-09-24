@@ -35,6 +35,7 @@ import { LEVELS, levelOf, linkConceptCitations, splitConceptBody, type LevelId }
 import { validateClaims } from './lib/claims';
 import { isNullResult, slugify, type ClaimsModel } from '../src/lib/claims-model';
 import { toCypher, toEdgesCsv, toGraphml, toJson, toNodesCsv } from '../src/lib/graph-export';
+import { computeLayout } from '../src/lib/graph-layout';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PACK = path.resolve(ROOT, process.env.CONTENT_PACK ?? 'content-pack');
@@ -409,6 +410,8 @@ emitData('todo.json', todo);
 emitData('synthesis.json', synthesis);
 if (scope) emitData('scope.json', scope);
 if (claimsModel) emitData('claims.json', claimsModel);
+// E1: the full atlas's canvas layout, computed once here so /graph runs no simulation for it (src/lib/graph-layout.ts).
+if (claimsModel) emitData('graph-layout.json', computeLayout(claimsModel.nodes, claimsModel.claims), true);
 emitData('search.json', [
   ...glossary.map((t) => ({ kind: 'term', id: t.id, title: t.term, subtitle: t.short, to: `/glossary#${t.id}`, hay: `${t.term} ${t.variants.join(' ')} ${t.short}`.toLowerCase() })),
   ...concepts.map((c) => ({ kind: 'concept', id: c.id, title: c.title, subtitle: c.one_liner, to: `/concepts/${c.id}`, hay: `${c.title} ${c.one_liner}`.toLowerCase() })),

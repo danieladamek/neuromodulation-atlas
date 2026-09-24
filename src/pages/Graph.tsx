@@ -3,7 +3,8 @@ import { Link, useSearchParams } from 'react-router-dom';
 import type { ClaimsModel } from '@/types';
 import { isNullResult } from '@/lib/claims-model';
 import { assetUrl, provenance, readyVolumes } from '@/lib/data';
-import { loadClaims, loadReferences, useAsync } from '@/lib/heavy';
+import { loadClaims, loadGraphLayout, loadReferences, useAsyncAfterPaint } from '@/lib/heavy';
+import type { LayoutFile } from '@/lib/graph-layout';
 import { toCypher, toEdgesCsv, toGraphml, toJson, toNodesCsv } from '@/lib/graph-export';
 import { TYPE_STYLE, styleForType } from '@/lib/graph-style';
 import { downloadBlob } from '@/components/figures/download';
@@ -20,8 +21,9 @@ const LABELS: Record<FilterKey, string> = {
 };
 
 export default function Graph() {
-  const model = useAsync(loadClaims);
-  const references = useAsync(loadReferences);
+  const model = useAsyncAfterPaint(loadClaims);
+  const layout = useAsyncAfterPaint(loadGraphLayout);
+  const references = useAsyncAfterPaint(loadReferences);
   const [params, setParams] = useSearchParams();
   const [highlight, setHighlight] = useState<Set<string>>(new Set());
   const [restingOn, setRestingOn] = useState<number[] | null>(null);
@@ -45,21 +47,41 @@ export default function Graph() {
     if (refs) setRestingOn(refs.split(',').map(Number).filter(Number.isFinite));
   }, [params]);
 
-  if (!model) {
-    return (
-      <div className="mx-auto max-w-7xl px-4 py-8">
-        <h1 className="text-3xl sm:text-4xl">The claims graph</h1>
-        {/* as tall as a screen, so the footer does not start in view and then jump down when the claims arrive */}
-        <p className="mt-4 min-h-[80vh] bx-muted" role="status">Loading {provenance.claims?.total ?? ''} claims…</p>
-      </div>
-    );
-  }
-  return <GraphLab model={model} references={references} params={params} setParam={setParam} setParams2={setParams2} highlight={highlight} setHighlight={setHighlight} restingOn={restingOn} setRestingOn={setRestingOn} />;
+  // One container and one intro for both states: remounting the intro when the claims arrive would make it a new,
+  // later largest-contentful-paint candidate (E1).
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-8">
+      <GraphIntro />
+      {model && layout
+        ? <GraphLab model={model} layout={layout} references={references} params={params} setParam={setParam} setParams2={setParams2} highlight={highlight} setHighlight={setHighlight} restingOn={restingOn} setRestingOn={setRestingOn} />
+        // as tall as a screen, so the footer does not start in view and then jump down when the claims arrive
+        : <p className="mt-4 min-h-[80vh] bx-muted" role="status">Loading {provenance.claims?.total ?? ''} claims…</p>}
+    </div>
+  );
 }
 
-function GraphLab({ model, references, params, setParam, setParams2, highlight, setHighlight, restingOn, setRestingOn }: {
+/**
+ * The heading and intro, drawn from provenance (in the first chunk) so they paint before the claims chunk arrives:
+ * this paragraph is the route's largest contentful paint (E1). provenance.json is written from the same claims model.
+ */
+function GraphIntro() {
+  return (
+    <>
+      <h1 className="text-3xl sm:text-4xl">The claims graph</h1>
+      <p className="bx-prose mt-2 max-w-3xl">
+        Every mechanism claim the review argues, as a typed and cited edge: <strong>{provenance.claims?.total} claims</strong> between <strong>{provenance.claims?.nodes} nodes</strong>, from
+        {' '}<code className="font-mono text-xs">content-pack/claims.yaml</code> and nothing else. No node or edge is derived from the prose, the glossary or the figures, and nothing is
+        added here that the review does not state. Contested claims are dashed and open the competing-hypothesis group they belong to; inferred claims carry the synthesis mark;
+        the {provenance.claims?.null_results.length} null results are marked ∅ wherever they appear.
+      </p>
+    </>
+  );
+}
+
+function GraphLab({ model, layout, references, params, setParam, setParams2, highlight, setHighlight, restingOn, setRestingOn }: {
   model: ClaimsModel;
-  references: ReturnType<typeof useAsync<Awaited<ReturnType<typeof loadReferences>>>>;
+  layout: LayoutFile;
+  references: Awaited<ReturnType<typeof loadReferences>> | undefined;
   params: URLSearchParams;
   setParam: (k: string, v: string | null) => void;
   setParams2: (changes: Record<string, string | null>) => void;
@@ -132,14 +154,7 @@ function GraphLab({ model, references, params, setParam, setParams2, highlight, 
   const filtered = { label: viewLabel };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8">
-      <h1 className="text-3xl sm:text-4xl">The claims graph</h1>
-      <p className="bx-prose mt-2 max-w-3xl">
-        Every mechanism claim the review argues, as a typed and cited edge: <strong>{model.claims.length} claims</strong> between <strong>{model.nodes.length} nodes</strong>, from
-        {' '}<code className="font-mono text-xs">content-pack/claims.yaml</code> and nothing else. No node or edge is derived from the prose, the glossary or the figures, and nothing is
-        added here that the review does not state. Contested claims are dashed and open the competing-hypothesis group they belong to; inferred claims carry the synthesis mark;
-        the {provenance.claims?.null_results.length} null results are marked ∅ wherever they appear.
-      </p>
+    <>
 
       <section className="bx-card mt-5 p-3" aria-labelledby="filters-h">
         <div className="flex flex-wrap items-center gap-2">
@@ -172,7 +187,7 @@ function GraphLab({ model, references, params, setParam, setParams2, highlight, 
 
       <div className="mt-4 lg:grid lg:grid-cols-[minmax(0,1fr)_24rem] lg:gap-4">
         <div className="min-w-0">
-          <GraphCanvas nodes={nodes} claims={claims} selected={selected} highlight={highlight} onSelect={select} />
+          <GraphCanvas nodes={nodes} claims={claims} layout={claims.length === model.claims.length ? layout.positions : undefined} selected={selected} highlight={highlight} onSelect={select} />
           <details className="mt-2 text-sm">
             <summary className="cursor-pointer bx-muted">Node types in this view ({[...new Set(nodes.map((n) => n.type))].length})</summary>
             <ul className="mt-1 flex flex-wrap gap-2 text-xs">
@@ -263,6 +278,6 @@ function GraphLab({ model, references, params, setParam, setParams2, highlight, 
         The graph is the review’s claims, not a knowledge base: it is as complete as {readyVolumes.map((v) => `Volume ${v.id.slice(1)}`).join(' and ')}, and it grows when a volume does.
         Section 15 of the review proposes the schema behind it, and <Link className="underline" to="/methods#graph">Methods</Link> records how it was validated.
       </p>
-    </div>
+    </>
   );
 }

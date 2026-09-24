@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { forceCenter, forceCollide, forceLink, forceManyBody, forceSimulation, forceX, forceY, type Simulation, type SimulationLinkDatum, type SimulationNodeDatum } from 'd3-force';
+import type { Simulation, SimulationLinkDatum, SimulationNodeDatum } from 'd3-force';
 import { select } from 'd3-selection';
 import { zoom, zoomIdentity, type D3ZoomEvent } from 'd3-zoom';
 import type { AtlasClaim, AtlasNode } from '@/types';
 import { isNullResult } from '@/lib/claims-model';
 import { styleForType } from '@/lib/graph-style';
+import { LAYOUT_TICKS, createSimulation, degrees, nodeRadius, type LayoutFile, type LayoutLink } from '@/lib/graph-layout';
 
 interface Sim extends SimulationNodeDatum { id: string; label: string; type: string; degree: number }
 type Link = SimulationLinkDatum<Sim> & { claim: AtlasClaim };
@@ -12,55 +13,55 @@ type Link = SimulationLinkDatum<Sim> & { claim: AtlasClaim };
 interface Props {
   nodes: AtlasNode[];
   claims: AtlasClaim[];
+  /** Build-time positions for exactly these nodes (the full atlas). A filtered view passes none and is laid out here. */
+  layout?: LayoutFile['positions'];
   selected: { kind: 'node' | 'claim'; id: string } | null;
   highlight: Set<string>;               // node ids to emphasise (analytics, paths)
   onSelect: (s: { kind: 'node' | 'claim'; id: string } | null) => void;
   height?: number;
 }
 
-const radius = (d: Sim) => 4 + Math.min(9, Math.sqrt(d.degree) * 2.2);
+const radius = nodeRadius;
 
 /**
  * Neo4j-Browser-style canvas over the claims, and nothing else: one circle per node, one line per claim. Contested
  * claims are dashed, inferred claims carry a ◆ synthesis mark at their midpoint, and null results carry ∅ — none of
- * them is distinguished by colour alone. Layout is a force simulation run in slices so the page stays responsive;
- * the equivalent keyboard-accessible view is the claims table below the canvas.
+ * them is distinguished by colour alone. The full atlas arrives laid out from the build (E1); a filtered view runs the
+ * same force simulation in slices so the page stays responsive. The equivalent keyboard-accessible view is the claims
+ * table below the canvas.
  */
-export default function GraphCanvas({ nodes, claims, selected, highlight, onSelect, height = 560 }: Props) {
+export default function GraphCanvas({ nodes, claims, layout, selected, highlight, onSelect, height = 560 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const gRef = useRef<SVGGElement>(null);
-  const simRef = useRef<Simulation<Sim, Link> | null>(null);
+  const simRef = useRef<Simulation<Sim, LayoutLink<Sim>> | null>(null);
   const [tick, setTick] = useState(0);
   const [transform, setTransform] = useState(zoomIdentity);
-  const [laying, setLaying] = useState(true);
+  const [laying, setLaying] = useState(!layout);
   const [hover, setHover] = useState<{ x: number; y: number; text: string } | null>(null);
 
-  const { simNodes, links } = useMemo(() => {
-    const degree = new Map<string, number>();
-    for (const c of claims) { degree.set(c.source, (degree.get(c.source) ?? 0) + 1); degree.set(c.target, (degree.get(c.target) ?? 0) + 1); }
-    const simNodes: Sim[] = nodes.map((n) => ({ id: n.id, label: n.label, type: n.type, degree: degree.get(n.id) ?? 0 }));
+  const { simNodes, links, preset } = useMemo(() => {
+    const degree = degrees(claims);
+    const preset = !!layout && nodes.every((n) => layout[n.id]);
+    const simNodes: Sim[] = nodes.map((n) => {
+      const p = preset ? layout![n.id] : undefined;
+      return { id: n.id, label: n.label, type: n.type, degree: degree.get(n.id) ?? 0, ...(p ? { x: p[0], y: p[1] } : {}) };
+    });
     const byId = new Map(simNodes.map((n) => [n.id, n]));
     const links: Link[] = claims.filter((c) => byId.has(c.source) && byId.has(c.target)).map((c) => ({ source: byId.get(c.source)!, target: byId.get(c.target)!, claim: c }));
-    return { simNodes, links };
-  }, [nodes, claims]);
+    return { simNodes, links, preset };
+  }, [nodes, claims, layout]);
 
   // Layout runs in slices after first paint, then stops — no permanent animation loop, and nothing competes with
   // the page's own rendering while the reader is still seeing it appear.
   useEffect(() => {
+    if (preset) { setLaying(false); return; }
     setLaying(true);
     let start = 0;
-    const sim = forceSimulation<Sim, Link>(simNodes)
-      .force('link', forceLink<Sim, Link>(links).id((d) => d.id).distance(70).strength(0.6))
-      .force('charge', forceManyBody().strength(-110).distanceMax(600))
-      .force('collide', forceCollide<Sim>().radius((d) => radius(d) + 6))
-      .force('x', forceX(0).strength(0.045))
-      .force('y', forceY(0).strength(0.06))
-      .force('centre', forceCenter(0, 0))
-      .stop();
+    const sim = createSimulation<Sim>(simNodes, links);
     simRef.current = sim;
     let frame = 0;
     let done = 0;
-    const TOTAL = 160;
+    const TOTAL = LAYOUT_TICKS;
     const run = () => {
       const slice = Math.min(16, TOTAL - done);
       for (let i = 0; i < slice; i++) sim.tick();
@@ -71,7 +72,7 @@ export default function GraphCanvas({ nodes, claims, selected, highlight, onSele
     };
     start = window.setTimeout(() => { frame = requestAnimationFrame(run); }, 60);
     return () => { window.clearTimeout(start); cancelAnimationFrame(frame); sim.stop(); };
-  }, [simNodes, links]);
+  }, [simNodes, links, preset]);
 
   // pan and zoom
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { ClaimsModel, Concept, Figure, GlossaryEntry, Reference, ScopeJson, Section } from '@/types';
+import type { LayoutFile } from '@/lib/graph-layout';
 
 /** Full data files as separate chunks in dist/ (loaded from the app's own bundle — never a runtime content fetch). */
 const cache = new Map<string, Promise<unknown>>();
@@ -25,11 +26,29 @@ export const loadFigures = () => once('figures', () => import('@/data/figures.js
 export const loadReferences = () => once('references', () => import('@/data/references.json').then((m) => m.default as unknown as Reference[]));
 export const loadScope = () => once('scope', () => import('@/data/scope.json').then((m) => m.default as unknown as ScopeJson));
 export const loadClaims = () => once('claims', () => import('@/data/claims.json').then((m) => m.default as unknown as ClaimsModel));
+export const loadGraphLayout = () => once('graph-layout', () => import('@/data/graph-layout.json').then((m) => m.default as unknown as LayoutFile));
 export const loadKatexCss = () => once('katex-css', () => import('katex/dist/katex.min.css'));
 
 /** Resolve a loader into state; `undefined` while loading. */
 export function useAsync<T>(load: () => Promise<T>): T | undefined {
   const [v, setV] = useState<T | undefined>(undefined);
   useEffect(() => { let live = true; load().then((x) => { if (live) setV(x); }); return () => { live = false; }; }, [load]);
+  return v;
+}
+
+/**
+ * `useAsync`, but the load starts only after the route has painted once (two animation frames, or 250 ms in a tab
+ * that isn't rendering frames). /graph uses it so ~220 kB of claims and references don't compete with its first
+ * paint (E1).
+ */
+export function useAsyncAfterPaint<T>(load: () => Promise<T>): T | undefined {
+  const [v, setV] = useState<T | undefined>(undefined);
+  useEffect(() => {
+    let live = true; let started = false; let r2 = 0;
+    const start = () => { if (started) return; started = true; load().then((x) => { if (live) setV(x); }); };
+    const r1 = requestAnimationFrame(() => { r2 = requestAnimationFrame(start); });
+    const t = window.setTimeout(start, 250);
+    return () => { live = false; cancelAnimationFrame(r1); cancelAnimationFrame(r2); window.clearTimeout(t); };
+  }, [load]);
   return v;
 }

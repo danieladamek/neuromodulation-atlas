@@ -116,6 +116,13 @@ renderer; and SVG elements can carry `data-status` / `data-finding` attributes, 
 null result is never drawn as a positive finding. The keyboard-accessible equivalent of the canvas is the claims table
 directly beneath it.
 
+**Layout is precomputed.** The content build lays out the full atlas once (`src/lib/graph-layout.ts`, the same forces
+the browser uses, 160 ticks, seeded) into `src/data/graph-layout.json`, so `/graph` draws it with no simulation on the
+main thread. An unchanged pack gives a byte-identical file, and every browser now draws the same picture. A filtered
+view is a different subgraph and is still laid out in the browser, in slices. The route paints its heading and intro
+from `provenance.json` before the claims chunk arrives, and its static shell modulepreloads its own chunks. Lighthouse
+mobile on `/graph` went from 74–77 to 97 (total blocking time ~470 ms → ~10 ms).
+
 ## How the reader stays fast
 
 Markdown and KaTeX run **at build time**: `src/data/volumes/v0.json` holds hast trees, and each typeset formula is a

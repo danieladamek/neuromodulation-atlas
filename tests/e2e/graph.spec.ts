@@ -1,10 +1,32 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { expect, test } from '@playwright/test';
+
+const LAYOUT = JSON.parse(fs.readFileSync(path.resolve('src/data/graph-layout.json'), 'utf8')) as { positions: Record<string, [number, number]> };
 
 test('the graph lab renders every claim, and nothing but the claims', async ({ page }) => {
   await page.goto('/graph');
   await expect(page.getByTestId('view-counts')).toContainText(/Showing 458 of 458 claims and 880 of 880 nodes/);
   await expect(page.getByTestId('graph-canvas')).toBeVisible();
   await expect(page.getByTestId('claims-table')).toBeVisible();
+});
+
+test('the full atlas draws at its build-time layout with no simulation; a filtered view still lays itself out (E1)', async ({ page }) => {
+  await page.goto('/graph');
+  await expect(page.getByTestId('view-counts')).toContainText(/Showing 458 of 458 claims/);
+  await expect(page.getByText(/Laying out \d+ nodes/)).toHaveCount(0);
+  const drawn = await page.locator('[data-node] circle').evaluateAll((els) => els.map((c) => [c.parentElement!.getAttribute('data-node')!, Number(c.getAttribute('cx')), Number(c.getAttribute('cy'))] as const));
+  expect(drawn).toHaveLength(Object.keys(LAYOUT.positions).length);
+  for (const [id, x, y] of drawn) expect([x, y]).toEqual(LAYOUT.positions[id]);
+  // still exactly the marks it had: dashed contested edges, ∅ on the nine null results
+  await expect(page.locator('line[data-status="contested"][stroke-dasharray]')).toHaveCount(119);
+  await expect(page.locator('line[data-finding="null-result"]')).toHaveCount(9);
+
+  await page.getByTestId('preset-contested').click();
+  await expect(page.getByTestId('view-counts')).toContainText(/Showing 119 of 458 claims/);
+  await expect(page.getByText(/Laying out \d+ nodes/)).toHaveCount(0, { timeout: 15_000 });
+  const moved = await page.locator('[data-node] circle').evaluateAll((els) => els.filter((c) => Number.isFinite(Number(c.getAttribute('cx')))).length);
+  expect(moved).toBeGreaterThan(0);
 });
 
 test('contested claims are dashed, and opening one shows every rival position side by side', async ({ page }) => {
