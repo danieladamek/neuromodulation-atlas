@@ -9,7 +9,7 @@ Three findings shape the volume. First, dose is not intensity: the normative def
 Those three findings generalise into the volume's method: state the level, state the species and preparation, state the dose as reported, and keep rival explanations attached to the claim rather than resolved silently. Twenty-three live disputes are catalogued on that basis, each with its rivals, the measurement that divides them and what would settle it. The closing section turns the volume's requirements into a proposed graph schema, names the ontologies that can anchor each level, and identifies the one layer where the field has a consensus reporting checklist [193] but nothing to reuse as an ontology: stimulation protocols and device parameters.
 
 <!-- framing -->
-This is a scope-bounded commissioned review rather than a systematic one, written by the Manuscript Interrogator and not peer reviewed. Its literature sweep closed on 2026-09-15 and rests on 263 references, 260 of which were verified against a read abstract or full text. Volume 1 takes the first modality family in detail: vagus and cranial nerve stimulation.
+This is a scope-bounded commissioned review rather than a systematic one, written by Daniel Adamek with AI assistance and not peer reviewed. Its literature sweep closed on 2026-09-15 and rests on 263 references, 260 of which were verified against a read abstract or full text. Volume 1 takes the first modality family in detail: vagus and cranial nerve stimulation.
 
 <!-- section: v0-1-what-neuromodulation-is -->
 ## 1. What neuromodulation is, and what the word hides
