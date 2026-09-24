@@ -3322,7 +3322,7 @@
    "v0-12-methods-and-confounds"
   ],
   "cites": [],
-  "source": "Computed by this figure directly from the pack's own references.yaml, on the tier, year, species, evidence_kind, verified and contested fields, and not taken from the review's prose. It is therefore pack metadata rather than published data, and every row carries ref \"self\". Two notes on honesty: the computed total is 263 references with 260 verified, whereas the abstract of the review states 223 references with 221 verified, so the prose figure is out of date with respect to the file this figure counts; and the year bins are this figure's choice, not a field in the data. Nothing else is approximated - the counts are exact as of the file state at build time. The refs list carries the sources the surrounding corpus-profile discussion rests on rather than sources for the counts, because the counts are the pack's own metadata.",
+  "source": "Computed by this figure directly from the pack's own references.yaml, on the tier, year, species, evidence_kind, verified and contested fields, and not taken from the review's prose. It is therefore pack metadata rather than published data, and every row carries ref \"self\". The computed total, 263 references with 260 verified, matches the figure the review's abstract states. One note on honesty: the year bins are this figure's choice, not a field in the data. Nothing else is approximated - the counts are exact as of the file state at build time. The refs list carries the sources the surrounding corpus-profile discussion rests on rather than sources for the counts, because the counts are the pack's own metadata.",
   "table": {
    "rows": [
     {

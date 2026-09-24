@@ -2951,7 +2951,7 @@
     ],
     "known_gaps": [
      "PubMed, PMC, Semantic Scholar, cell.com, pnas.org, NEJM, Wiley and IOP were unreachable or rate-limited from the sweep environment; abstracts came from OpenAlex, Europe PMC and publisher pages instead",
-     "two references remain unverified and may not support a claim (see todo.yaml)",
+     "three references remain unverified and may not support a claim (see todo.yaml)",
      "no multi-laboratory registered-report replication in brain stimulation was found",
      "no peer-reviewed phase 3 psilocybin publication existed as of the as_of date"
     ]
@@ -2992,7 +2992,7 @@
     "verified": 260,
     "unverified": 3,
     "contested_entries": 80,
-    "note": "223 references after de-duplication by DOI across seven slices. 36 seminal / 28 classic / 88 current / 71 background under CONTENT-PACK v0.5 tiers."
+    "note": "263 references after de-duplication by DOI across seven slices. 36 seminal / 38 classic / 117 current / 72 background under CONTENT-PACK v0.5 tiers."
    }
   }
  }
