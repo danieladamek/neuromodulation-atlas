@@ -177,6 +177,11 @@ profile, every synthesis passage, and every `TODO(author)` in the pack.
 
 ## Licence
 
-App code: MIT. Review text, glossary, 101s, figures and claims: builder-authored teaching material — see
-`manifest.permissions`. No third-party text is reproduced beyond quotations of 25 words or fewer, each attributed and
-cited; cited works belong to their authors and publishers.
+- **Code: MIT** ([`LICENSE`](LICENSE)). This covers the application: `src/` (except `src/data/`), `scripts/`, `tests/`, configs.
+- **Content: CC BY 4.0** ([`LICENSE-CONTENT.md`](LICENSE-CONTENT.md)). This covers `content-pack/`, the generated
+  `src/data/*`, `public/provenance.json` and `public/graph/*`, and the site's rendered text and figures.
+- Quotations of 25 words or fewer stay with their sources (`manifest.permissions`). Cited works belong to their
+  authors and publishers. No published figure image is reproduced.
+- **Citing:** [`CITATION.cff`](CITATION.cff). The atlas is a commissioned review assembled with an AI-assisted builder
+  (Manuscript Interrogator) under the author's direction. It is **not peer reviewed**, and its sweep closed on
+  15 September 2026.

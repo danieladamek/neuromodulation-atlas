@@ -36,7 +36,15 @@ export default function About() {
       <h2 className="text-2xl mt-8 text-ink dark:text-night-ink">Licence and permissions</h2>
       <p className="mt-2"><strong>Text:</strong> {manifest.permissions.text}.</p>
       {manifest.permissions.figures && <p className="mt-2"><strong>Figures:</strong> {manifest.permissions.figures}.</p>}
-      <p className="mt-2">App code: MIT. Cited works belong to their authors and publishers; follow the DOI links to read them.</p>
+      <p className="mt-2" data-testid="licence">
+        <strong>Content: CC BY 4.0.</strong> The content pack, the data generated from it, the graph exports and the rendered text and figures are licensed under the
+        {' '}<a className="underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution 4.0 International licence</a>
+        {' '}(<a className="underline" href={`https://github.com/${manifest.github_account}/${manifest.slug}/blob/main/LICENSE-CONTENT.md`} target="_blank" rel="noreferrer">LICENSE-CONTENT.md</a>).
+        Quotations of 25 words or fewer stay with their sources. <strong>App code: MIT</strong>
+        {' '}(<a className="underline" href={`https://github.com/${manifest.github_account}/${manifest.slug}/blob/main/LICENSE`} target="_blank" rel="noreferrer">LICENSE</a>).
+        Cited works belong to their authors and publishers; follow the DOI links to read them. To cite the atlas, see
+        {' '}<a className="underline" href={`https://github.com/${manifest.github_account}/${manifest.slug}/blob/main/CITATION.cff`} target="_blank" rel="noreferrer">CITATION.cff</a>.
+      </p>
 
       <h2 className="text-2xl mt-8 text-ink dark:text-night-ink">How to report an error</h2>
       <p className="mt-2">

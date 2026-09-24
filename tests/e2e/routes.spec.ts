@@ -106,3 +106,11 @@ test('the public build carries no preview banner, and every page names the pack 
   await expect(page.getByTestId('build-stamp')).toContainText(prov.pack_hash.slice(0, 12));
   await expect(page.locator('meta[name="robots"]')).toHaveCount(0);
 });
+
+test('/about and the footer state the licences: content CC BY 4.0, code MIT (A3)', async ({ page }) => {
+  await page.goto('/about');
+  await expect(page.getByTestId('licence')).toContainText(/CC BY 4\.0/);
+  await expect(page.getByTestId('licence')).toContainText(/App code: MIT/);
+  await expect(page.locator('footer')).toContainText(/Content CC BY 4\.0, code MIT/);
+  await expect(page.locator('footer')).toContainText(/Not peer reviewed/);
+});

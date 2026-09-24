@@ -84,6 +84,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="mx-auto max-w-7xl px-4 py-6 text-sm bx-muted">
           {manifest.short_title} Explorer — a <strong>commissioned review</strong> in volumes, written by the {manifest.builder.name}, with a graph lab over its claims.
           {' '}<strong>Not peer reviewed.</strong> Current as of {LATEST_AS_OF}. Scientific content comes only from the content pack; see <Link className="underline" to="/methods">Methods</Link> and <Link className="underline" to="/about">About</Link>.
+          {' '}Content <a className="underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>, code MIT (<Link className="underline" to="/about">licence</Link>).
           {' '}<span data-testid="build-stamp">Pack <code className="font-mono" title={provenance.pack_hash}>{provenance.pack_hash.slice(0, 12)}</code> · build <code className="font-mono">{__BUILD_COMMIT__}</code>.</span>
         </div>
       </footer>
