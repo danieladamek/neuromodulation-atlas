@@ -4,14 +4,12 @@ message: >-
   has not been peer reviewed.
 type: software
 title: 'Neuromodulation: an atlas of exogenous drives, from coupling to outcome'
-version: 0.1.0
+version: 0.1.1
 authors:
   - family-names: Adamek
     given-names: Daniel
     affiliation: The University of Alabama in Huntsville
-license:
-  - MIT
-  - CC-BY-4.0
+license: CC-BY-4.0
 repository-code: 'https://github.com/danieladamek/neuromodulation-atlas'
 url: 'https://danieladamek.github.io/neuromodulation-atlas/'
 abstract: >-
@@ -22,9 +20,10 @@ abstract: >-
   references, 300 glossary terms, 18 levelled 101s, nine figures and 458 cited
   claims in a claims-only graph, of which 119 are contested and nine are null
   results. It is a commissioned review by Daniel Adamek, drafted with AI
-  assistance under the author's direction. It is not peer reviewed. Its literature sweep closed on 15 September 2026. The app code is
-  MIT-licensed; the content (the content pack, the data generated from it, the
-  graph exports and the rendered text and figures) is licensed CC BY 4.0.
+  assistance under the author's direction. It is not peer reviewed. Its
+  literature sweep closed on 15 September 2026. The app code is MIT-licensed;
+  the content (the content pack, the data generated from it, the graph exports
+  and the rendered text and figures) is licensed CC BY 4.0.
 keywords:
   - neuromodulation
   - brain stimulation

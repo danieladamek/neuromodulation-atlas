@@ -123,6 +123,7 @@ test('readers see "Neuromodulation Atlas" and Daniel Adamek as author; no page n
     const text = await page.locator('body').innerText();
     expect(text, route).not.toMatch(/Manuscript Interrogator/i);
     expect(text, route).not.toMatch(/Explorer/);
+    expect(text, route).not.toMatch(/\bthe builder\b|builder['’]s/i);
     await expect(page).toHaveTitle(/Neuromodulation Atlas/);
     await expect(page.locator('header.sticky')).toContainText('Neuromodulation Atlas');
   }
@@ -131,4 +132,14 @@ test('readers see "Neuromodulation Atlas" and Daniel Adamek as author; no page n
   await expect(page.locator('main')).toContainText(/not peer reviewed/i);
   await page.goto('/methods');
   await expect(page.locator('main')).toContainText(/drafted with AI assistance under Daniel Adamek’s direction/);
+});
+
+test('the home page states the byline once, under the plain-language summary (A5)', async ({ page }) => {
+  await page.goto('/');
+  const plain = page.locator('section[aria-labelledby="plain-h"]');
+  const text = await plain.innerText();
+  expect(text.match(/Written by/g) ?? []).toHaveLength(1);
+  expect(text.match(/not peer reviewed/gi) ?? []).toHaveLength(1);
+  await expect(plain).toContainText(/Written by Daniel Adamek with AI assistance/);
+  await expect(plain).toContainText(/15 September 2026/);
 });

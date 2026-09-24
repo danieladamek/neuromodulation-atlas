@@ -183,6 +183,7 @@ profile, every synthesis passage, and every `TODO(author)` in the pack.
   `src/data/*`, `public/provenance.json` and `public/graph/*`, and the site's rendered text and figures.
 - Quotations of 25 words or fewer stay with their sources (`manifest.permissions`). Cited works belong to their
   authors and publishers. No published figure image is reproduced.
+- **Versions:** [`CHANGELOG.md`](CHANGELOG.md) records what changed in each release and the pack hash it was built from. Zenodo reads [`.zenodo.json`](.zenodo.json).
 - **Citing:** [`CITATION.cff`](CITATION.cff). The atlas is a commissioned review by Daniel Adamek, drafted with AI
   assistance under the author's direction. It is **not peer reviewed**, and its sweep closed on
   15 September 2026.

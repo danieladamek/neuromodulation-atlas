@@ -1,7 +1,7 @@
 {
   "name": "neuromodulation-atlas",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Neuromodulation Atlas — a volume app over a commissioned review of exogenous drives from coupling to outcome, with a claims-only graph lab (NOT PEER REVIEWED; sweep closed 2026-09-15).",
   "scripts": {

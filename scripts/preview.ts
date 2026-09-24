@@ -22,8 +22,10 @@ const run = (cmd: string, args: string[], env: Record<string, string> = {}) => {
   if (r.status !== 0) { console.error(`\npreview: \`${cmd} ${args.join(' ')}\` failed — no preview.`); process.exit(r.status ?? 1); }
 };
 
-const busy = spawnSync('lsof', ['-ti', `:${PORT}`], { encoding: 'utf8' }).stdout.trim();
-if (busy) { console.error(`preview: something is already listening on :${PORT} (pid ${busy}). Stop it first.`); process.exit(1); }
+// Only a listening server blocks the preview. A browser (or the Claude desktop app) holding a client socket to :4180
+// is not a server, and used to make this check refuse to start (A5).
+const busy = spawnSync('lsof', ['-nP', `-iTCP:${PORT}`, '-sTCP:LISTEN', '-t'], { encoding: 'utf8' }).stdout.trim();
+if (busy) { console.error(`preview: something is already listening on :${PORT} (pid ${busy.split('\n').join(', ')}). Stop it first.`); process.exit(1); }
 
 run('npm', ['run', 'build:content']);
 run('npm', ['run', 'build'], { PREVIEW: '1', BASE_PATH: BASE, OUT_DIR: OUT });
