@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '@/lib/theme';
 import { useNotepad } from '@/lib/notepad-context';
-import { LATEST_AS_OF, manifest, readyVolumes } from '@/lib/data';
+import { LATEST_AS_OF, manifest, provenance, readyVolumes } from '@/lib/data';
 const SearchModal = lazy(() => import('./SearchModal'));
 
 const NAV = [
@@ -44,6 +44,15 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <a href="#main" className="sr-only-focusable fixed left-2 top-2 z-[80] rounded bg-ink px-3 py-2 text-paper">Skip to content</a>
+      {__PREVIEW__ && (
+        <div role="note" aria-label="Preview build" data-testid="preview-banner" className="bg-amber-400 text-black text-sm font-medium">
+          <div className="mx-auto max-w-7xl px-3 sm:px-4 py-2">
+            <strong>PREVIEW — not the public site.</strong> Awaiting Daniel's approval.
+            {' '}Pack <code className="font-mono" title={provenance.pack_hash}>{provenance.pack_hash.slice(0, 12)}</code>
+            {' '}· commit <code className="font-mono">{__BUILD_COMMIT__}</code>
+          </div>
+        </div>
+      )}
       <header className="sticky top-0 z-40 border-b border-[color:var(--bx-line)] bg-paper/90 dark:bg-night/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-3 sm:px-4 py-2.5">
           <Link to="/" className="font-display text-lg sm:text-xl font-semibold tracking-tight whitespace-nowrap">{manifest.short_title} <span className="bx-muted font-normal">Explorer</span></Link>
@@ -75,6 +84,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="mx-auto max-w-7xl px-4 py-6 text-sm bx-muted">
           {manifest.short_title} Explorer — a <strong>commissioned review</strong> in volumes, written by the {manifest.builder.name}, with a graph lab over its claims.
           {' '}<strong>Not peer reviewed.</strong> Current as of {LATEST_AS_OF}. Scientific content comes only from the content pack; see <Link className="underline" to="/methods">Methods</Link> and <Link className="underline" to="/about">About</Link>.
+          {' '}<span data-testid="build-stamp">Pack <code className="font-mono" title={provenance.pack_hash}>{provenance.pack_hash.slice(0, 12)}</code> · build <code className="font-mono">{__BUILD_COMMIT__}</code>.</span>
         </div>
       </footer>
     </div>

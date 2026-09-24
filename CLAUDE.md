@@ -64,8 +64,10 @@ The atlas publishes a graph *and* keeps a local development graph for model work
 
 - Account `danieladamek` (GrandsTech). Default branch `main`.
 - **Nothing reaches the public site without Daniel's approval** (the research loop, `notes/Workflow.md`).
-  - **Until H1 lands:** a push to `main` still deploys publicly via `.github/workflows/deploy.yml`, so push only when the item you're working says to, or Daniel says so.
-  - **After H1:** pushes produce a preview; the public deploy runs only on a release tag or a manual dispatch. Verify the live site after every public deploy.
+  - **Since H1 (2026-09-24):** a push to `main` (or a PR) runs `.github/workflows/ci.yml`: tests, content build, a check that the committed generated outputs match the pack, e2e, and a PREVIEW build uploaded as a workflow artifact. **It never deploys.**
+  - **Preview:** `npm run preview:local` builds the same bundle with `PREVIEW=1` into `dist-preview/` and serves it at `http://localhost:4180/neuromodulation-atlas/`, with a PREVIEW banner showing the pack hash and commit, and noindex. It prints the click-through checklist. Daniel approves by quoting the pack hash.
+  - **Public deploy:** `.github/workflows/deploy.yml` runs only on a `v*` tag push or a manual `workflow_dispatch`, and only when Daniel has approved that pack hash. Never tag or dispatch without his say-so. Afterwards, verify the live site and check that `pack_hash` in the live `/provenance.json` matches the approved one.
+  - Every build shows its pack hash and commit in the footer. `public/provenance.json` carries the full `pack_hash`.
 - `notes/`, `source/` and `🚀 *.md` are kept out of the repo via `.git/info/exclude`. Don't commit them.
 - `tools/` is currently untracked (vendored at promotion); whether to commit it is item E4.
 - Release work (tags, `CITATION.cff`, Zenodo) happens only through its backlog item (A3).

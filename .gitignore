@@ -1,6 +1,7 @@
 node_modules/
 dist/
 dist-volume-fixture/
+dist-preview/
 .venv/
 *.local
 .DS_Store

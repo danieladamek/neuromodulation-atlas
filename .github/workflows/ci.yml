@@ -1,0 +1,73 @@
+name: CI and preview
+
+# H1: a push to main (or a pull request) tests and builds, and produces a PREVIEW build as a workflow artifact.
+# It never deploys. The public site changes only through deploy.yml: a release tag or a manual dispatch.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:content
+      # The committed src/data/*, public/provenance.json and public/graph/* must be what this pack builds to.
+      - name: Generated outputs are committed
+        run: git diff --exit-code --stat -- src/data public
+      - run: npm run build
+        env:
+          PREVIEW: '1'
+          BASE_PATH: /${{ github.event.repository.name }}/
+          OUT_DIR: dist-preview
+      - name: Pack hash
+        id: pack
+        run: echo "hash=$(node -p "require('./public/provenance.json').pack_hash.slice(0,12)")" >> "$GITHUB_OUTPUT"
+      - name: Summary
+        run: |
+          {
+            echo "### Preview built — not deployed"
+            echo "pack \`${{ steps.pack.outputs.hash }}\` · commit \`${GITHUB_SHA::12}\`"
+            echo
+            echo "Click through locally with \`npm run preview:local\` (same build, served on :4180)."
+            echo "Publish only after approval: tag \`vX.Y.Z\` or run **Deploy to GitHub Pages** by hand."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview-${{ steps.pack.outputs.hash }}-${{ github.sha }}
+          path: dist-preview
+          retention-days: 14
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build:content
+      - run: npm run build
+      # Also builds the fixture app with an extra volume, on :4174, for the notes-survive-a-rebuild test.
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-results
+          path: test-results

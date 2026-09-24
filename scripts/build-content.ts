@@ -17,6 +17,7 @@
  * Environment (used by the fixture-volume build in tests; defaults are the real app):
  *   CONTENT_PACK=content-pack   DATA_DIR=src/data   PUBLIC_DIR=public
  */
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -452,8 +453,32 @@ const blocksAll = parsedVolumes.reduce((a, pv) => ({
 }), { total: 0, cited: 0, framing: 0, synthesis: 0, uncited: 0 });
 const queriesOf = (vid: string) => scope?.volumes?.[vid]?.search_strategy.queries ?? [];
 
+/**
+ * The pack hash names exactly which pack a build was made from, so a preview Daniel approves and the public deploy
+ * can be matched byte for byte (H1). sha256 over every pack file in sorted path order, each as `path NUL bytes NUL`;
+ * dotfiles and the build's own BUILD-ERRORS.md are left out, so the hash depends on the pack alone.
+ */
+function packHash(dir: string): string {
+  const files: string[] = [];
+  const walk = (d: string) => {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      if (e.name.startsWith('.')) continue;
+      const abs = path.join(d, e.name);
+      if (e.isDirectory()) walk(abs);
+      else if (e.isFile()) files.push(path.relative(dir, abs).split(path.sep).join('/'));
+    }
+  };
+  walk(dir);
+  const h = crypto.createHash('sha256');
+  for (const f of files.filter((f) => f !== 'BUILD-ERRORS.md').sort()) {
+    h.update(f); h.update('\0'); h.update(fs.readFileSync(path.join(dir, f))); h.update('\0');
+  }
+  return h.digest('hex');
+}
+
 const provenance = {
   slug: manifest?.slug ?? null,
+  pack_hash: packHash(PACK),
   mode: manifest?.mode ?? 'manuscript',
   as_of: manifest?.as_of ?? null,
   builder: manifest?.builder ?? null,
@@ -526,6 +551,7 @@ emitData('build-errors.json', errors);
 // ───────────────────────── summary
 console.log(`\ncontent build — ${manifest?.slug ?? '(no manifest)'} · mode ${manifest?.mode ?? '?'} · as of ${manifest?.as_of ?? '?'} · pack ${path.relative(ROOT, PACK)}`);
 console.table([
+  { item: 'pack hash', value: provenance.pack_hash.slice(0, 12) },
   { item: 'volumes (ready / planned)', value: `${READY.length} / ${VOLUMES.length - READY.length}` },
   { item: 'sections · words', value: `${sectionsOut.length} · ${totalWords}` },
   { item: 'blocks (cited/framing/synthesis)', value: `${blocksAll.total} (${blocksAll.cited}/${blocksAll.framing}/${blocksAll.synthesis})` },

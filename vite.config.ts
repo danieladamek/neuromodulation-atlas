@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -44,6 +45,26 @@ function staticRouteShells(): Plugin {
   };
 }
 
+/**
+ * H1: `PREVIEW=1` builds the preview Daniel clicks through before anything reaches the public site. It carries an
+ * unmistakable PREVIEW banner with the pack hash and commit, and is marked noindex. The public deploy never sets it.
+ */
+const PREVIEW = process.env.PREVIEW === '1';
+function buildCommit(): string {
+  try {
+    const sha = execSync('git rev-parse --short=12 HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    const dirty = execSync('git status --porcelain --untracked-files=no', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    return dirty ? `${sha}+uncommitted` : sha;
+  } catch { return 'unknown'; }
+}
+
+function previewNoindex(): Plugin {
+  return {
+    name: 'preview-noindex',
+    transformIndexHtml: (html) => (PREVIEW ? html.replace('<head>', '<head>\n    <meta name="robots" content="noindex, nofollow" />') : html),
+  };
+}
+
 const CHUNKS: [string, RegExp][] = [
   ['react', /node_modules\/(react|react-dom|react-router|react-router-dom|scheduler|@remix-run)\//],
   ['charts', /node_modules\/(recharts|recharts-scale|victory-vendor|d3-(shape|path|interpolate|color|format|time|time-format|array|scale))\//],
@@ -56,7 +77,8 @@ const CHUNKS: [string, RegExp][] = [
 export default defineConfig({
   base: process.env.BASE_PATH ?? '/',
   publicDir: PUBLIC_DIR,
-  plugins: [react(), staticRouteShells()],
+  plugins: [react(), previewNoindex(), staticRouteShells()],
+  define: { __PREVIEW__: JSON.stringify(PREVIEW), __BUILD_COMMIT__: JSON.stringify(buildCommit()) },
   resolve: {
     alias: [
       { find: '@/data', replacement: DATA_DIR },

@@ -97,3 +97,12 @@ test('dark mode toggle persists across reload', async ({ page }) => {
   await page.getByRole('button', { name: /switch to light theme/i }).click();
   await expect(page.locator('html')).not.toHaveClass(/dark/);
 });
+
+test('the public build carries no preview banner, and every page names the pack it was built from (H1)', async ({ page }) => {
+  const prov = await (await page.request.get('/provenance.json')).json();
+  expect(prov.pack_hash).toMatch(/^[0-9a-f]{64}$/);
+  await page.goto('/');
+  await expect(page.getByTestId('preview-banner')).toHaveCount(0);
+  await expect(page.getByTestId('build-stamp')).toContainText(prov.pack_hash.slice(0, 12));
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(0);
+});

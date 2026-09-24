@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "preview:local": "tsx scripts/preview.ts",
     "build:content": "tsx scripts/build-content.ts",
     "build:fixture-volume": "tsx scripts/build-volume-fixture.ts",
     "test": "vitest run",

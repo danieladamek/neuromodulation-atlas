@@ -136,8 +136,29 @@ src/lib/{claims-model,graph-export,graph-analytics,neo4j-guard,graph-style}.ts  
 src/components/{reader,figures,graph,concepts,notepad,ui}/
 src/pages/{Home,ReadIndex,ReadVolume,Glossary,Concepts,Concept,Figures,Figure,Graph,References,Methods,About,NotFound}.tsx
 tests/unit (Vitest) · tests/e2e (Playwright)
-.github/workflows/deploy.yml
+.github/workflows/ci.yml        push / PR: test, build, e2e, PREVIEW artifact; never deploys
+.github/workflows/deploy.yml    public deploy: v* tag or manual dispatch only
+scripts/preview.ts              npm run preview:local
 ```
+
+## Preview before public
+
+The public site is what the ISBS abstract and the DOI point at, so it changes only when Daniel approves.
+
+1. A push to `main` runs **CI and preview** (`ci.yml`). It tests, builds, checks that the committed `src/data/*`,
+   `public/provenance.json` and `public/graph/*` are exactly what the pack builds to, runs e2e, and uploads a PREVIEW
+   build as an artifact. Nothing is deployed.
+2. `npm run preview:local` builds that same bundle locally with `PREVIEW=1` and serves it at
+   `http://localhost:4180/neuromodulation-atlas/`. Every page carries an amber **PREVIEW — not the public site**
+   banner with the **pack hash** and commit, and is marked `noindex`. The script prints a click-through checklist.
+   It is private and costs nothing. The trade-off is that the preview has to run on Daniel's machine: there is no
+   link to send anyone else. A second Pages repo with a public but unlinked preview can be added later if that's
+   ever needed.
+3. Daniel approves a **pack hash**. The public deploy (`deploy.yml`) then runs on a `v*` release tag or a manual
+   dispatch, and nothing else. Afterwards `pack_hash` in the live `/provenance.json` must match the approved one.
+
+The pack hash is sha256 over every file in `content-pack/` in sorted path order (dotfiles and `BUILD-ERRORS.md` left
+out). The footer shows its first 12 characters on every build.
 
 ## Provenance
 

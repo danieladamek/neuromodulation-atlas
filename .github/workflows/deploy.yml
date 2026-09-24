@@ -1,8 +1,12 @@
 name: Deploy to GitHub Pages
 
+# H1: the public site updates only on Daniel's explicit action — pushing a release tag (v*) or dispatching this
+# workflow by hand. Pushes to main build a preview instead (ci.yml). Verify the live site after every run.
+# The github-pages environment must allow the v* tag pattern as well as main, or a tag run is refused at deploy.
+
 on:
   push:
-    branches: [main]
+    tags: ['v*']
   workflow_dispatch:
 
 permissions:
@@ -12,7 +16,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -27,32 +31,17 @@ jobs:
       - run: npm test
       # Validate + parse + link the content pack; fails loudly on any schema, citation, claim or id-ledger error.
       - run: npm run build:content
-      # Project site lives under /<repo>/ — vite.config.ts and the router both read BASE_PATH.
+      - name: Generated outputs are committed
+        run: git diff --exit-code --stat -- src/data public
+      # Project site lives under /<repo>/ — vite.config.ts and the router both read BASE_PATH. No PREVIEW here.
       - run: BASE_PATH="/${{ github.event.repository.name }}/" npm run build
       - run: cp dist/index.html dist/404.html   # SPA fallback for deep links on GitHub Pages
+      - name: Summary
+        run: echo "Deploying pack \`$(node -p "require('./public/provenance.json').pack_hash.slice(0,12)")\` · commit \`${GITHUB_SHA::12}\` · ref \`${GITHUB_REF_NAME}\`" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-  e2e:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm run build:content
-      - run: npm run build
-      # Also builds the fixture app with an extra volume, on :4174, for the notes-survive-a-rebuild test.
-      - run: npm run test:e2e
-      - uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: playwright-results
-          path: test-results
   deploy:
     needs: build
     runs-on: ubuntu-latest
