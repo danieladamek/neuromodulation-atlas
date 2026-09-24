@@ -45,6 +45,9 @@ test('a term popover opens by keyboard and closes with Esc, returning focus', as
   await page.keyboard.press('Escape');
   await expect(pop).toBeHidden();
   await expect(term).toBeFocused();
+  // Returning focus to the term must not start a hover-style preview that reopens the popover.
+  await page.waitForTimeout(400);
+  await expect(pop).toBeHidden();
 });
 
 test('a citation opens a fold-out carrying the reference summary', async ({ page }) => {

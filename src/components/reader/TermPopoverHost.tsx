@@ -16,6 +16,9 @@ export default function TermPopoverHost({ container }: { container: RefObject<HT
   const [open, setOpen] = useState<OpenState | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const overPanel = useRef(false);
+  // The term that close() is handing focus back to: that focusin must not start a fresh preview, or Esc would
+  // reopen the popover 120 ms after closing it.
+  const refocusing = useRef<HTMLElement | null>(null);
   const timers = useRef<{ show?: number; hide?: number }>({});
   const { refs, floatingStyles } = useFloating({
     open: !!open,
@@ -27,7 +30,7 @@ export default function TermPopoverHost({ container }: { container: RefObject<HT
 
   const close = useCallback((returnFocus: boolean) => {
     setOpen((s) => {
-      if (s) { s.el.setAttribute('aria-expanded', 'false'); if (returnFocus) s.el.focus(); }
+      if (s) { s.el.setAttribute('aria-expanded', 'false'); if (returnFocus) { refocusing.current = s.el; s.el.focus(); } }
       return null;
     });
   }, []);
@@ -46,7 +49,12 @@ export default function TermPopoverHost({ container }: { container: RefObject<HT
     };
     const onOver = (e: MouseEvent) => { const el = termButton(e.target); if (el) preview(el); };
     const onOut = (e: MouseEvent) => { if (termButton(e.target)) leave(); };
-    const onFocusIn = (e: FocusEvent) => { const el = termButton(e.target); if (el) preview(el); };
+    const onFocusIn = (e: FocusEvent) => {
+      const el = termButton(e.target);
+      if (el && el === refocusing.current) { refocusing.current = null; return; }
+      refocusing.current = null;
+      if (el) preview(el);
+    };
     const onFocusOut = (e: FocusEvent) => { if (termButton(e.target)) leave(); };
     const onClick = (e: MouseEvent) => {
       const el = termButton(e.target);
